@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetPalletPrint" targetNamespace="http://tempuri.org/DataSetPalletPrint.xsd" xmlns:mstns="http://tempuri.org/DataSetPalletPrint.xsd" xmlns="http://tempuri.org/DataSetPalletPrint.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetPalletPrint" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetPalletPrint" msprop:Generator_DataSetName="DataSetPalletPrint">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PalletDetail" msprop:Generator_UserTableName="PalletDetail" msprop:Generator_RowDeletedName="PalletDetailRowDeleted" msprop:Generator_RowChangedName="PalletDetailRowChanged" msprop:Generator_RowClassName="PalletDetailRow" msprop:Generator_RowChangingName="PalletDetailRowChanging" msprop:Generator_RowEvArgName="PalletDetailRowChangeEvent" msprop:Generator_RowEvHandlerName="PalletDetailRowChangeEventHandler" msprop:Generator_TableClassName="PalletDetailDataTable" msprop:Generator_TableVarName="tablePalletDetail" msprop:Generator_RowDeletingName="PalletDetailRowDeleting" msprop:Generator_TablePropName="PalletDetail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Seq" msprop:Generator_UserColumnName="Seq" msprop:Generator_ColumnVarNameInTable="columnSeq" msprop:Generator_ColumnPropNameInRow="Seq" msprop:Generator_ColumnPropNameInTable="SeqColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="LotNo" msprop:Generator_UserColumnName="LotNo" msprop:Generator_ColumnVarNameInTable="columnLotNo" msprop:Generator_ColumnPropNameInRow="LotNo" msprop:Generator_ColumnPropNameInTable="LotNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RCard" msprop:Generator_UserColumnName="RCard" msprop:Generator_ColumnVarNameInTable="columnRCard" msprop:Generator_ColumnPropNameInRow="RCard" msprop:Generator_ColumnPropNameInTable="RCardColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CartonCode" msprop:Generator_UserColumnName="CartonCode" msprop:Generator_ColumnVarNameInTable="columnCartonCode" msprop:Generator_ColumnPropNameInRow="CartonCode" msprop:Generator_ColumnPropNameInTable="CartonCodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MOCode" msprop:Generator_UserColumnName="MOCode" msprop:Generator_ColumnPropNameInRow="MOCode" msprop:Generator_ColumnVarNameInTable="columnMOCode" msprop:Generator_ColumnPropNameInTable="MOCodeColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,140 @@
+.igte_IGEditWithButtons
+{
+	font-size: 10px;
+	font-family: Segoe UI, Verdana, Arial, Sans-Serif;
+	background: White url(images/igte_Sprite.png) no-repeat 0 -46px;
+	height:24px;
+	width: 130px;
+	outline: 0;
+	border:solid 1px #C9C9C9;
+	
+	/* Rounded corners */
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+
+.igte_IGEdit
+{
+	font-size: 12px;
+	font-family: Segoe UI, Verdana, Arial, Sans-Serif;
+	background-color: #FFFFFF;
+	border:solid 1px #999999;
+	outline:0;
+	
+	color:#333333;
+	background: White url(images/igte_Sprite.png) no-repeat 0 -46px;
+	/* Rounded corners */
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+.igte_IGTextArea
+{
+	font-size: 12px;
+	font-family: Segoe UI, Verdana, Arial, Sans-Serif;
+	background-color: #FFFFFF;
+	border:solid 1px #999999;
+	outline:0;
+	resize:none;
+	
+	color:#333333;
+	background: White url(images/igte_Sprite.png) no-repeat 0 -46px;
+	/* Rounded corners */
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+.igte_IGEditInContainer
+{
+	font-size: 12px;
+	font-family: Segoe UI, Verdana, Arial, Sans-Serif;
+	background-color: Transparent;
+	border-width:0px;
+	outline:0;
+	color:#333333;
+	
+	padding:3px!important;
+}
+
+.igte_IGFocus
+{
+    background: White url(images/igte_Sprite.png) no-repeat 0 -46px;	
+}
+
+.igte_IGHover
+{
+	
+}
+
+.igte_IGInner
+{
+	border-width: 0;
+}
+
+.igte_IGInnerFocus
+{
+}
+
+.igte_IGInnerHover
+{
+}
+
+.igte_IGButtonSize
+{
+	/*width:15px;
+	height:100%;*/
+	
+	width:22px;
+	height:22px;
+}
+
+.igte_IGButton
+{
+    /* Rounded corners */
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	
+
+	background: #4F4F4F url(images/igte_Sprite.png) no-repeat;
+	line-height:normal;
+	/*border:solid 1px #699BC9;*/
+	border:none;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.igte_IGButtonFocus
+{
+}
+
+.igte_IGNullText
+{
+	color: #999999;
+}
+
+.igte_IGButtonHover
+{
+	background: #2686AE url(images/igte_Sprite.png) no-repeat -28px 0;
+}
+
+
+.igte_IGButtonPressed
+{
+	background: #3BB7EB url(images/igte_Sprite.png) no-repeat -56px 0;
+}
+
+
+.igte_IGButtonDisabled
+{
+	background: #A1A1A1 url(images/igte_Sprite.png) no-repeat -84px 0;
+}
+
+.igte_IGButtonImg
+{
+    
+}

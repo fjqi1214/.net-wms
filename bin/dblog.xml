@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LogSetting>
+	<LogFileCS name="Constr">Provider=OraOLEDB.Oracle.1;Password=123456;Persist Security Info=True;User ID=power0810;Data Source=sqc</LogFileCS>
+	<LogFileBS name="BS">false</LogFileBS>
+</LogSetting>

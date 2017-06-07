@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ACAE5260-6CC5-4F7C-AA46-505BE0CF04E1}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BenQGuru.eMES.PDAClient</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BenQGuru.eMES.PDAClient</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/BenQGuru.eMES.Client/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxMSCommLib">
+      <Name>AxMSCommLib</Name>
+      <HintPath>..\bin\AxMSCommLib.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Alert">
+      <Name>BenQGuru.eMES.Alert</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.Alert.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.BaseSetting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.ClientBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.CodeSoftPrint, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Common">
+      <Name>BenQGuru.eMES.Common</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.DataCollect, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Domain">
+      <Name>BenQGuru.eMES.Domain</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.DrawFlow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.IQC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.LotDataCollect, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Material, Version=1.0.4.13, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.MOModel">
+      <Name>BenQGuru.eMES.MOModel</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.MOModel.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.OQC">
+      <Name>BenQGuru.eMES.OQC</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.OQC.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Performance, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Report, Version=1.0.3231.27856, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.ReportViewBase, Version=1.0.3168.22806, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Rework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Security">
+      <Name>BenQGuru.eMES.Security</Name>
+      <HintPath>..\bin\BenQGuru.eMES.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.SMT">
+      <Name>BenQGuru.eMES.SMT</Name>
+      <HintPath>..\bin\BenQGuru.eMES.SMT.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.SPCDataCenter">
+      <Name>BenQGuru.eMES.SPCDataCenter</Name>
+      <HintPath>..\bin\BenQGuru.eMES.SPCDataCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.TS">
+      <Name>BenQGuru.eMES.TS</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.TS.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.TSModel">
+      <Name>BenQGuru.eMES.TSModel</Name>
+      <HintPath>..\bin\BenQGuru.eMES.TSModel.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.WatchPanel">
+      <Name>BenQGuru.eMES.WatchPanel</Name>
+      <HintPath>..\bin\BenQGuru.eMES.WatchPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.Helper">
+      <Name>BenQGuru.eMES.Web.Helper</Name>
+      <HintPath>..\bin\BenQGuru.eMES.Web.Helper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics2.Documents.Excel.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Documents.Excel.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Shared.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.Misc.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinChart.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinChart.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinDataSource.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinDataSource.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinEditors.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinExplorerBar.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinExplorerBar.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.ExcelExport.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinGrid.ExcelExport.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinGrid.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinSchedule.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinStatusBar.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinStatusBar.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabbedMdi.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinTabbedMdi.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinTabControl.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinToolbars.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTree.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinTree.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.OracleClient, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_32\System.Data.OracleClient\2.0.0.0__b77a5c561934e089\System.Data.OracleClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap">
+      <Name>System.Runtime.Serialization.Formatters.Soap</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="UserControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FExecuteASN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FExecuteASN.designer.cs">
+      <DependentUpon>FExecuteASN.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FExecuteASN.resx">
+      <DependentUpon>FExecuteASN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="App.ico" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="ApplicationRun.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Command\AbstractCommand.cs" />
+    <Compile Include="Command\CommandCollection.cs" />
+    <Compile Include="Command\CommandFile.cs" />
+    <Compile Include="Command\CommandWindows.cs" />
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="CSHelper.cs" />
+    <Compile Include="FChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChangePassword.designer.cs">
+      <DependentUpon>FChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDialogInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogin.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLotCollectionCartonForLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLotCollectionCartonForLot.designer.cs">
+      <DependentUpon>FLotCollectionCartonForLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLotCollectionCarton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLotCollectionCarton.designer.cs">
+      <DependentUpon>FLotCollectionCarton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLotTransferCarton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMessageBox.designer.cs">
+      <DependentUpon>FMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMessageBoxYesNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMessageBoxYesNo.designer.cs">
+      <DependentUpon>FMessageBoxYesNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase.designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSMTFeederReelWatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSMTLoadFeeder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridProgress.cs" />
+    <Compile Include="ListChangeHelper.cs" />
+    <Compile Include="LoginInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Menu\AbstractMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Menu\IMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Menu\MenuCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MultiLanguageHelper.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ApplicationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\MenuBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\MenuSerivce.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UltraWinGridHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="FChangePassword.resx">
+      <DependentUpon>FChangePassword.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDialogInput.resx">
+      <DependentUpon>FDialogInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInfoForm.resx">
+      <DependentUpon>FInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLotCollectionCartonForLot.resx">
+      <DependentUpon>FLotCollectionCartonForLot.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLotCollectionCarton.resx">
+      <DependentUpon>FLotCollectionCarton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLotTransferCarton.resx">
+      <DependentUpon>FLotTransferCarton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMessageBox.resx">
+      <DependentUpon>FMessageBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMessageBoxYesNo.resx">
+      <DependentUpon>FMessageBoxYesNo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTFeederReelWatch.resx">
+      <DependentUpon>FSMTFeederReelWatch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTLoadFeeder.resx">
+      <DependentUpon>FSMTLoadFeeder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSplashForm.resx">
+      <DependentUpon>FSplashForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

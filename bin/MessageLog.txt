@@ -1,0 +1,163 @@
+Error;$Error_Resource_Not_Exist;
+
+====漂=亮=的=分=割=线=====================
+Error;$Error_Resource_Not_Exist;
+
+====漂=亮=的=分=割=线=====================
+Error;$CS_MO_Status_Error $CS_Param_MOStatus=$mostatus_initial $Domain_MO=2007-00004;
+
+====漂=亮=的=分=割=线=====================
+Error;$Error_Resource_Not_Exist;
+
+====漂=亮=的=分=割=线=====================
+Error;;$Error_OQC_Act_less_than_Sample $Domain_OQCCheckGroup：CHKTYPE ;BenQGuru.eMES.DataCollect;   at BenQGuru.eMES.DataCollect.Action.ActionOQCPass.Execute(ActionEventArgs actionEventArgs) in H:\Roger\Hisense\Source\BenQGuru.eMES.DataCollect\Action\ActionOQCPass.cs:line 120;
+
+====漂=亮=的=分=割=线=====================
+Error;;$CS_Route_Failed M_TESTOP2 $RCard=HIRO 051910;BenQGuru.eMES.DataCollect;   at BenQGuru.eMES.DataCollect.Action.ActionOQCPass.Execute(ActionEventArgs actionEventArgs) in H:\Roger\Hisense\Source\BenQGuru.eMES.DataCollect\Action\ActionOQCPass.cs:line 202;
+
+====漂=亮=的=分=割=线=====================
+Error;;$CS_Route_Failed M_TESTOP2 $RCard=HIRO 051910;BenQGuru.eMES.DataCollect;   at BenQGuru.eMES.DataCollect.Action.ActionOQCPass.Execute(ActionEventArgs actionEventArgs) in H:\Roger\Hisense\Source\BenQGuru.eMES.DataCollect\Action\ActionOQCPass.cs:line 202;
+
+====漂=亮=的=分=割=线=====================
+Error;;$CS_Route_Failed M_TESTOP2 $RCard=HIRO 051910;BenQGuru.eMES.DataCollect;   at BenQGuru.eMES.DataCollect.Action.ActionOQCPass.Execute(ActionEventArgs actionEventArgs) in H:\Roger\Hisense\Source\BenQGuru.eMES.DataCollect\Action\ActionOQCPass.cs:line 202;
+
+====漂=亮=的=分=割=线=====================
+Error;;$CS_Route_Failed M_TESTOP2 $RCard=HIRO 051910;BenQGuru.eMES.DataCollect;   at BenQGuru.eMES.DataCollect.Action.ActionOQCPass.Execute(ActionEventArgs actionEventArgs) in H:\Roger\Hisense\Source\BenQGuru.eMES.DataCollect\Action\ActionOQCPass.cs:line 202;
+
+====漂=亮=的=分=割=线=====================
+Error;;$CS_Route_Failed M_TESTOP2 $RCard=HIRO 051910;BenQGuru.eMES.DataCollect;   at BenQGuru.eMES.DataCollect.Action.ActionOQCPass.Execute(ActionEventArgs actionEventArgs) in H:\Roger\Hisense\Source\BenQGuru.eMES.DataCollect\Action\ActionOQCPass.cs:line 202;
+
+====漂=亮=的=分=割=线=====================
+Error;$Error_Resource_Not_Exist;
+
+====漂=亮=的=分=割=线=====================
+Error;$Error_Resource_Not_Exist;
+
+====漂=亮=的=分=割=线=====================
+Error;$Error_Resource_Not_Exist;
+
+====漂=亮=的=分=割=线=====================
+Error;$CS_CMPleaseInputMO;
+
+====漂=亮=的=分=割=线=====================
+Error;$Error_Resource_Not_Exist;
+
+====漂=亮=的=分=割=线=====================
+Error;$Error_Resource_Not_Exist;
+
+====漂=亮=的=分=割=线=====================
+Error;$Error_User_Code_Empty;
+
+====漂=亮=的=分=割=线=====================
+Error;$CS_GRID_NO_RECORD;
+
+====漂=亮=的=分=割=线=====================
+Error;$CS_GRID_NO_RECORD;
+
+====漂=亮=的=分=割=线=====================
+Error;$CS_GRID_NO_RECORD;
+
+====漂=亮=的=分=割=线=====================
+Error;;$Error_Password_Not_Match;BenQGuru.eMES.Common;   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, String message, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 245
+   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 205
+   在 BenQGuru.eMES.Security.SecurityFacade.PasswordCheck(String userCode, String password) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 168
+   在 BenQGuru.eMES.Security.SecurityFacade.LoginCheck(String userCode, String password, Object[]& groups) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 99
+   在 BenQGuru.eMES.Client.FLogin.ucBtnLogin_Click(Object sender, EventArgs e) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Client\FLogin.cs:行号 437;
+
+====漂=亮=的=分=割=线=====================
+Error;$Error_Resource_Not_Exist;
+
+====漂=亮=的=分=割=线=====================
+Error;$Error_Resource_Not_Exist;
+
+====漂=亮=的=分=割=线=====================
+Error;;未将对象引用设置到对象的实例
+;BenQGuru.eMES.Client;   在 BenQGuru.eMES.Client.FLogin.ucBtnLogin_Click(Object sender, EventArgs e) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Client\FLogin.cs:行号 578;
+
+====漂=亮=的=分=割=线=====================
+Error;;$Error_Command_Execute;BenQGuru.eMES.Common;   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, String message, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 248
+   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 228
+   在 BenQGuru.eMES.Common.PersistBroker.OLEDBPersistBroker.Query(String commandText, String[] parameters, Type[] parameterTypes, Object[] parameterValues) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\PersistBroker\OLEDBPersistBroker.cs:行号 442
+   在 BenQGuru.eMES.Common.DomainDataProvider.SQLDomainDataProvider.CustomSearch(Type type, Object[] keyAttributeValus) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\DomainDataProvider\SQLDomainDataProvider.cs:行号 1140
+   在 BenQGuru.eMES.BaseSetting.UserFacade.GetUser(String userCode) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.BaseSetting\UserFacade.cs:行号 96
+   在 BenQGuru.eMES.Security.SecurityFacade.PasswordCheck(String userCode, String password) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 156
+   在 BenQGuru.eMES.Security.SecurityFacade.LoginCheck(String userCode, String password, Object[]& groups) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 99
+   在 BenQGuru.eMES.Client.FLogin.ucBtnLogin_Click(Object sender, EventArgs e) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Client\FLogin.cs:行号 473;ExecuteReader 要求已打开且可用的连接
+连接的当前状态为已关闭
+;BenQGuru.eMES.Common;   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, String message, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 248
+   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 228
+   在 BenQGuru.eMES.Common.PersistBroker.OLEDBPersistBroker.Query(String commandText, String[] parameters, Type[] parameterTypes, Object[] parameterValues) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\PersistBroker\OLEDBPersistBroker.cs:行号 442
+   在 BenQGuru.eMES.Common.DomainDataProvider.SQLDomainDataProvider.CustomSearch(Type type, Object[] keyAttributeValus) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\DomainDataProvider\SQLDomainDataProvider.cs:行号 1140
+   在 BenQGuru.eMES.BaseSetting.UserFacade.GetUser(String userCode) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.BaseSetting\UserFacade.cs:行号 96
+   在 BenQGuru.eMES.Security.SecurityFacade.PasswordCheck(String userCode, String password) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 156
+   在 BenQGuru.eMES.Security.SecurityFacade.LoginCheck(String userCode, String password, Object[]& groups) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 99
+   在 BenQGuru.eMES.Client.FLogin.ucBtnLogin_Click(Object sender, EventArgs e) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Client\FLogin.cs:行号 473;
+
+====漂=亮=的=分=割=线=====================
+Error;;$Error_Command_Execute;BenQGuru.eMES.Common;   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, String message, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 248
+   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 228
+   在 BenQGuru.eMES.Common.PersistBroker.OLEDBPersistBroker.Query(String commandText, String[] parameters, Type[] parameterTypes, Object[] parameterValues) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\PersistBroker\OLEDBPersistBroker.cs:行号 442
+   在 BenQGuru.eMES.Common.DomainDataProvider.SQLDomainDataProvider.CustomSearch(Type type, Object[] keyAttributeValus) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\DomainDataProvider\SQLDomainDataProvider.cs:行号 1140
+   在 BenQGuru.eMES.BaseSetting.UserFacade.GetUser(String userCode) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.BaseSetting\UserFacade.cs:行号 96
+   在 BenQGuru.eMES.Security.SecurityFacade.PasswordCheck(String userCode, String password) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 156
+   在 BenQGuru.eMES.Security.SecurityFacade.LoginCheck(String userCode, String password, Object[]& groups) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 99
+   在 BenQGuru.eMES.Client.FLogin.ucBtnLogin_Click(Object sender, EventArgs e) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Client\FLogin.cs:行号 473;ExecuteReader 要求已打开且可用的连接
+连接的当前状态为已关闭
+;BenQGuru.eMES.Common;   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, String message, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 248
+   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 228
+   在 BenQGuru.eMES.Common.PersistBroker.OLEDBPersistBroker.Query(String commandText, String[] parameters, Type[] parameterTypes, Object[] parameterValues) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\PersistBroker\OLEDBPersistBroker.cs:行号 442
+   在 BenQGuru.eMES.Common.DomainDataProvider.SQLDomainDataProvider.CustomSearch(Type type, Object[] keyAttributeValus) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\DomainDataProvider\SQLDomainDataProvider.cs:行号 1140
+   在 BenQGuru.eMES.BaseSetting.UserFacade.GetUser(String userCode) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.BaseSetting\UserFacade.cs:行号 96
+   在 BenQGuru.eMES.Security.SecurityFacade.PasswordCheck(String userCode, String password) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 156
+   在 BenQGuru.eMES.Security.SecurityFacade.LoginCheck(String userCode, String password, Object[]& groups) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 99
+   在 BenQGuru.eMES.Client.FLogin.ucBtnLogin_Click(Object sender, EventArgs e) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Client\FLogin.cs:行号 473;
+
+====漂=亮=的=分=割=线=====================
+Error;;$Error_Command_Execute;BenQGuru.eMES.Common;   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, String message, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 248
+   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 228
+   在 BenQGuru.eMES.Common.PersistBroker.OLEDBPersistBroker.Query(String commandText, String[] parameters, Type[] parameterTypes, Object[] parameterValues) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\PersistBroker\OLEDBPersistBroker.cs:行号 442
+   在 BenQGuru.eMES.Common.DomainDataProvider.SQLDomainDataProvider.CustomSearch(Type type, Object[] keyAttributeValus) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\DomainDataProvider\SQLDomainDataProvider.cs:行号 1140
+   在 BenQGuru.eMES.BaseSetting.UserFacade.GetUser(String userCode) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.BaseSetting\UserFacade.cs:行号 96
+   在 BenQGuru.eMES.Security.SecurityFacade.PasswordCheck(String userCode, String password) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 156
+   在 BenQGuru.eMES.Security.SecurityFacade.LoginCheck(String userCode, String password, Object[]& groups) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 99
+   在 BenQGuru.eMES.Client.FLogin.ucBtnLogin_Click(Object sender, EventArgs e) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Client\FLogin.cs:行号 473;ExecuteReader 要求已打开且可用的连接
+连接的当前状态为已关闭
+;BenQGuru.eMES.Common;   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, String message, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 248
+   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 228
+   在 BenQGuru.eMES.Common.PersistBroker.OLEDBPersistBroker.Query(String commandText, String[] parameters, Type[] parameterTypes, Object[] parameterValues) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\PersistBroker\OLEDBPersistBroker.cs:行号 442
+   在 BenQGuru.eMES.Common.DomainDataProvider.SQLDomainDataProvider.CustomSearch(Type type, Object[] keyAttributeValus) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\DomainDataProvider\SQLDomainDataProvider.cs:行号 1140
+   在 BenQGuru.eMES.BaseSetting.UserFacade.GetUser(String userCode) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.BaseSetting\UserFacade.cs:行号 96
+   在 BenQGuru.eMES.Security.SecurityFacade.PasswordCheck(String userCode, String password) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 156
+   在 BenQGuru.eMES.Security.SecurityFacade.LoginCheck(String userCode, String password, Object[]& groups) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 99
+   在 BenQGuru.eMES.Client.FLogin.ucBtnLogin_Click(Object sender, EventArgs e) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Client\FLogin.cs:行号 473;
+
+====漂=亮=的=分=割=线=====================
+Error;;$Error_Command_Execute;BenQGuru.eMES.Common;   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, String message, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 248
+   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 228
+   在 BenQGuru.eMES.Common.PersistBroker.OLEDBPersistBroker.Query(String commandText, String[] parameters, Type[] parameterTypes, Object[] parameterValues) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\PersistBroker\OLEDBPersistBroker.cs:行号 442
+   在 BenQGuru.eMES.Common.DomainDataProvider.SQLDomainDataProvider.CustomSearch(Type type, Object[] keyAttributeValus) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\DomainDataProvider\SQLDomainDataProvider.cs:行号 1140
+   在 BenQGuru.eMES.BaseSetting.UserFacade.GetUser(String userCode) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.BaseSetting\UserFacade.cs:行号 96
+   在 BenQGuru.eMES.Security.SecurityFacade.PasswordCheck(String userCode, String password) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 156
+   在 BenQGuru.eMES.Security.SecurityFacade.LoginCheck(String userCode, String password, Object[]& groups) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 99
+   在 BenQGuru.eMES.Client.FLogin.ucBtnLogin_Click(Object sender, EventArgs e) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Client\FLogin.cs:行号 473;ExecuteReader 要求已打开且可用的连接
+连接的当前状态为已关闭
+;BenQGuru.eMES.Common;   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, String message, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 248
+   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 228
+   在 BenQGuru.eMES.Common.PersistBroker.OLEDBPersistBroker.Query(String commandText, String[] parameters, Type[] parameterTypes, Object[] parameterValues) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\PersistBroker\OLEDBPersistBroker.cs:行号 442
+   在 BenQGuru.eMES.Common.DomainDataProvider.SQLDomainDataProvider.CustomSearch(Type type, Object[] keyAttributeValus) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\DomainDataProvider\SQLDomainDataProvider.cs:行号 1140
+   在 BenQGuru.eMES.BaseSetting.UserFacade.GetUser(String userCode) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.BaseSetting\UserFacade.cs:行号 96
+   在 BenQGuru.eMES.Security.SecurityFacade.PasswordCheck(String userCode, String password) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 156
+   在 BenQGuru.eMES.Security.SecurityFacade.LoginCheck(String userCode, String password, Object[]& groups) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 99
+   在 BenQGuru.eMES.Client.FLogin.ucBtnLogin_Click(Object sender, EventArgs e) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Client\FLogin.cs:行号 473;
+
+====漂=亮=的=分=割=线=====================
+Error;;$Error_Password_Not_Match;BenQGuru.eMES.Common;   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, String message, Exception innerException) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 245
+   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Common\Log.cs:行号 205
+   在 BenQGuru.eMES.Security.SecurityFacade.PasswordCheck(String userCode, String password) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 168
+   在 BenQGuru.eMES.Security.SecurityFacade.LoginCheck(String userCode, String password, Object[]& groups) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Security\SecurityFacade.cs:行号 99
+   在 BenQGuru.eMES.Client.FLogin.ucBtnLogin_Click(Object sender, EventArgs e) 位置 E:\Project\KNE-NJ\Source\BenQGuru.eMES.Client\FLogin.cs:行号 477;
+
+====漂=亮=的=分=割=线=====================
+Error;$Error_Resource_Not_Exist;
+
+====漂=亮=的=分=割=线=====================

@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BenQGuru.eMES.Domain.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="No3_CheckChar" Type="System.String" Scope="User">
+      <Value Profile="(Default)">W</Value>
+    </Setting>
+    <Setting Name="No5_CheckChar" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Z</Value>
+    </Setting>
+    <Setting Name="DB_CheckChar" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D</Value>
+    </Setting>
+    <Setting Name="SMT_CheckChar" Type="System.String" Scope="User">
+      <Value Profile="(Default)">S</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

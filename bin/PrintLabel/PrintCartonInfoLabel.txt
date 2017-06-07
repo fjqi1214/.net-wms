@@ -1,0 +1,10 @@
+[Esc]V0030[Esc]H0075[Esc]E05[Esc]L0203[Esc]S[$CurrentDate][Esc]L0403[Esc]S[$CartonNo]
+[Esc]V0080[Esc]H075[Esc]L0303[Esc]SLOT NO:[$LotNo]
+[Esc]V0130[Esc]H0090[Esc]L0307[Esc]S[$ItemDesc]
+[Esc]V0210[Esc]H0075[Esc]L0203[Esc]C       [$PartNo][Esc]L0203[Esc]S[$PO]
+[Esc]V0280[Esc]H0075[Esc]L0203[Esc]SQTY:[Esc]L0407[Esc]S[$CartonQty][Esc]L0202[Esc]S[$CartonWeight]
+[Esc]V0380[Esc]H0070[Esc]D102080*[$CartonNo]*
+[Esc]V0380[Esc]H0700[Esc]L0102[Esc]M[$LotOrItemRemark]
+[Esc]V0380[Esc]H0700[Esc]L0102[Esc]M[$ItemAbbreviation][$LotNo]-[$PadCartonQty]
+[Esc]V0480[Esc]H0070[Esc]L0102[Esc]M[$ShipModel]  [Esc]S[Esc]L0204[Esc]S[$ItemDescSuffix]
+[Esc]V520[Esc]H0580[Esc]L0101[Esc]MMADE  IN  MALAYSIA

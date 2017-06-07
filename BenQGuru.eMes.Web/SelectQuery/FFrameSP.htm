@@ -1,0 +1,32 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head >
+    <title></title>
+    <script language="javascript">
+        window.onload = function () {
+
+            var file = window.dialogArguments.File;
+            var codes = window.dialogArguments.Codes;
+            var others = window.dialogArguments.Others;
+            var defaultOthers;
+            var indexEnd = others.indexOf(')', 0);
+            if (indexEnd > 0) {
+                defaultOthers = others.substr(1, indexEnd - 1);
+                others = others.substr(indexEnd + 1, others.length - 1);
+            }
+            var code = '?Codes=';
+            if (file.indexOf("?") > 0)
+                code = '&Codes=';
+            frames[0].location.href = file + code + encodeURI(codes) + '&Others=' + encodeURI(others) + '&defaultOthers=' + encodeURI(defaultOthers);
+        }
+</script>
+
+
+</head>
+<body style="overflow:hidden;height:600px;">
+   <iframe marginwidth="1" marginheight="1" height="100%" width="100%" name="ifrm" scrolling="no" border="0" frameborder="0"></iframe>
+
+</body>
+</html>

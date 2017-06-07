@@ -1,0 +1,242 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<title>FHistroyQuantitySummaryQP</title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="C#" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link href="/power0810/Skin/StyleSheet.css" rel="stylesheet">
+	</HEAD>
+	<body scroll="yes" MS_POSITIONING="GridLayout">
+		<form name="Form1" method="post" action="FHistroyQuantitySummaryQP.aspx" id="Form1">
+			<input type="hidden" name="__EVENTTARGET"> <input type="hidden" name="__EVENTARGUMENT">
+			<table height="100%" width="100%">
+				<tr>
+					<td>
+						<table>
+							<tr>
+								<td colspan="8" valign="top">
+									<input type="button" value="Field List" onclick="OpenFieldList()"><br>
+									<div style='DISPLAY: block'>
+										<OBJECT id="OWCPivotTable1_PivotTable" style="WIDTH: 502px; HEIGHT: 217px" height="217"
+											width="502" classid="clsid:0002E552-0000-0000-C000-000000000046" VIEWASTEXT>
+											<PARAM NAME="XMLData" VALUE='<xml xmlns:x="urn:schemas-microsoft-com:office:excel">&#13;&#10; <x:PivotTable>&#13;&#10;  <x:OWCVersion>10.0.0.5605         </x:OWCVersion>&#13;&#10;  <x:DisplayScreenTips/>&#13;&#10;  <x:CubeProvider>msolap.2</x:CubeProvider>&#13;&#10;  <x:CacheDetails/>&#13;&#10; </x:PivotTable>&#13;&#10;</xml>'>
+											&#13&#10
+											<x:PivotTable>
+	&#13&#10  <x:OWCVersion>
+		10.0.0.5605       </x:OWCVersion>
+	&#13&#10  <x:DisplayScreenTips />
+	&#13&#10  <x:CubeProvider>
+	            	msolap.2</x:CubeProvider>
+	&#13&#10  <x:CacheDetails />
+	&#13&#10  <x:PivotView>
+	&#13&#10   <x:IsNotFiltered />
+	&#13&#10  </x:PivotView>
+	&#13&#10 </x:PivotTable>
+											&#13&#10</xml> '>
+										</OBJECT>
+										<div>
+											<script language="vbscript">			
+	Sub Load_OWCPivotTable1_PivotTable()
+
+		Document.Forms(0).OWCPivotTable1_PivotTable.ConnectionString = "provider=mspersist"
+		Document.Forms(0).OWCPivotTable1_PivotTable.CommandText	= "PivotTable_20060911_173749.xml"
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.AutoLayout
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.ExpandDetails = Document.Forms(0).OWCPivotTable1_PivotTable.Constants.plExpandNever
+
+
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.RowAxis.InsertFieldSet(Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Fieldsets("TimePeriodCode"))
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Fieldsets("TimePeriodCode").Fields(0).Caption = "时段代码"
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Fieldsets("TimePeriodCode").Fields(0).Expanded = "false"
+
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.RowAxis.InsertFieldSet(Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Fieldsets("ShiftDay"))
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Fieldsets("ShiftDay").Fields(0).Caption = "日期"
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Fieldsets("ShiftDay").Fields(0).Expanded = "false"
+
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.ColumnAxis.InsertFieldSet(Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Fieldsets("ModelCode"))
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Fieldsets("ModelCode").Fields(0).Caption = "产品别代码"
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Fieldsets("ModelCode").Fields(0).Expanded = "false"
+
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.ColumnAxis.InsertFieldSet(Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Fieldsets("ItemCode"))
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Fieldsets("ItemCode").Fields(0).Caption = "产品代码"
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Fieldsets("ItemCode").Fields(0).Expanded = "false"
+
+
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.DataAxis.InsertTotal( Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.AddTotal("投入数", Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Fieldsets("InputQty").Fields(0), Document.Forms(0).OWCPivotTable1_PivotTable.Constants.plFunctionSum) )
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.DataAxis.InsertTotal( Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.AddTotal("产出数", Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Fieldsets("Quantity").Fields(0), Document.Forms(0).OWCPivotTable1_PivotTable.Constants.plFunctionSum) )
+
+
+		PivotTableInit()
+	End Sub
+	Sub PivotTableInit()
+		Document.Forms(0).OWCPivotTable1_PivotTable.DisplayToolbar = False
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Label.Visible = False
+		Document.Forms(0).OWCPivotTable1_PivotTable.AllowDetails = False
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Rowaxis.FieldSets(0).Fields(0).SubtotalForeColor = "Green"
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.Rowaxis.FieldSets(1).Fields(0).SubtotalForeColor = "Green"
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.ColumnAxis.FieldSets(0).Fields(0).SubtotalForeColor = "Green"
+		Document.Forms(0).OWCPivotTable1_PivotTable.ActiveView.ColumnAxis.FieldSets(1).Fields(0).SubtotalForeColor = "Green"
+	End Sub
+	Sub OpenFieldList()
+		Document.Forms(0).OWCPivotTable1_PivotTable.DisplayFieldList = True
+	End Sub
+	Sub OWCPivotTable1_PivotTable_DblClick()
+		On Error Resume Next
+		Dim strValue
+		strValue = FormatMemeberValue(Document.Forms(0).OWCPivotTable1_PivotTable.Selection(0).Cell.ColumnMember)
+		strValue = strValue & vbCrLf & FormatMemeberValue(Document.Forms(0).OWCPivotTable1_PivotTable.Selection(0).Cell.RowMember)
+		strValue = strValue & vbCrLf & Document.Forms(0).OWCPivotTable1_PivotTable.Selection(0).Total.Name
+		Document.getElementById("txtValue").value = strValue
+	End Sub
+	Function FormatMemeberValue(mem)
+		Dim strValue
+		strValue = ""
+		While Not (mem Is Nothing)
+			If Not (mem.Field Is Nothing) And mem.IsTotal = False Then
+				strValue = mem.Field.Name & ":" & mem.Value & vbCrLf & strValue
+			End If
+			Set mem = mem.ParentMember
+		WEnd
+		FormatMemeberValue = strValue
+	End Function
+											</script>
+											<script language="vbscript">Load_OWCPivotTable1_PivotTable()</script>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="8">
+									<div style='DISPLAY: none'>
+										<OBJECT id="OWCChartSpace1_ChartSpace" codeBase="/power0810//download/owc10.exe" classid="clsid:0002E556-0000-0000-C000-000000000046"
+											VIEWASTEXT>
+											<PARAM NAME="XMLData" VALUE='<xml xmlns:x="urn:schemas-microsoft-com:office:excel">&#13;&#10; <x:ChartSpace>&#13;&#10;  <x:OWCVersion>10.0.0.5605         </x:OWCVersion>&#13;&#10;  <x:Width>15240</x:Width>&#13;&#10;  <x:Height>10160</x:Height>&#13;&#10;  <x:Palette>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#000000</x:Entry>&#13;&#10;   <x:Entry>#8080FF</x:Entry>&#13;&#10;   <x:Entry>#802060</x:Entry>&#13;&#10;   <x:Entry>#FFFFA0</x:Entry>&#13;&#10;   <x:Entry>#A0E0E0</x:Entry>&#13;&#10;   <x:Entry>#600080</x:Entry>&#13;&#10;   <x:Entry>#FF8080</x:Entry>&#13;&#10;   <x:Entry>#008080</x:Entry>&#13;&#10;   <x:Entry>#C0C0FF</x:Entry>&#13;&#10;   <x:Entry>#000080</x:Entry>&#13;&#10;   <x:Entry>#FF00FF</x:Entry>&#13;&#10;   <x:Entry>#80FFFF</x:Entry>&#13;&#10;   <x:Entry>#0080FF</x:Entry>&#13;&#10;   <x:Entry>#FF8080</x:Entry>&#13;&#10;   <x:Entry>#C0FF80</x:Entry>&#13;&#10;   <x:Entry>#FFC0FF</x:Entry>&#13;&#10;   <x:Entry>#FF80FF</x:Entry>&#13;&#10;  </x:Palette>&#13;&#10;  <x:DefaultFont>宋体</x:DefaultFont>&#13;&#10; </x:ChartSpace>&#13;&#10;</xml>'>
+											<PARAM NAME="ScreenUpdating" VALUE="-1">
+											<PARAM NAME="EnableEvents" VALUE="-1">
+											&#13&#10
+											<x:ChartSpace>
+	&#13&#10  <x:OWCVersion>
+		10.0.0.5605       </x:OWCVersion>
+	&#13&#10  <x:Width>
+		15240</x:Width>
+	&#13&#10  <x:Height>
+		10160</x:Height>
+	&#13&#10  <x:Palette>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+	            	#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+	            	#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+	            	#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+	            	#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#000000</x:Entry>
+	&#13&#10   <x:Entry>
+	            	#000000</x:Entry>
+	&#13&#10   <x:Entry>
+		#8080FF</x:Entry>
+	&#13&#10   <x:Entry>
+		#802060</x:Entry>
+	&#13&#10   <x:Entry>
+		#FFFFA0</x:Entry>
+	&#13&#10   <x:Entry>
+		#A0E0E0</x:Entry>
+	&#13&#10   <x:Entry>
+	            	#600080</x:Entry>
+	&#13&#10   <x:Entry>
+		#FF8080</x:Entry>
+	&#13&#10   <x:Entry>
+		#008080</x:Entry>
+	&#13&#10   <x:Entry>
+		#C0C0FF</x:Entry>
+	&#13&#10   <x:Entry>
+		#000080</x:Entry>
+	&#13&#10   <x:Entry>
+	            	#FF00FF</x:Entry>
+	&#13&#10   <x:Entry>
+		#80FFFF</x:Entry>
+	&#13&#10   <x:Entry>
+		#0080FF</x:Entry>
+	&#13&#10   <x:Entry>
+		#FF8080</x:Entry>
+	&#13&#10   <x:Entry>
+		#C0FF80</x:Entry>
+	&#13&#10   <x:Entry>
+	            	#FFC0FF</x:Entry>
+	&#13&#10   <x:Entry>
+		#FF80FF</x:Entry>
+	&#13&#10  </x:Palette>
+	&#13&#10  <x:DefaultFont>
+		宋体</x:DefaultFont>
+	&#13&#10 </x:ChartSpace>
+											&#13&#10</xml> '>
+										</OBJECT>
+										<div>
+											<script language="vbscript">			
+	Sub Load_OWCChartSpace1_ChartSpace()
+
+		Dim chConstants
+		Dim chtNewChart
+
+		Set chConstants = Document.Forms(0).OWCChartSpace1_ChartSpace.Constants
+
+
+
+	End Sub
+											</script>
+											<script language="vbscript">Load_OWCChartSpace1_ChartSpace()</script>
+											<span id="OWCChartSpace1"><input language="javascript" onclick="__doPostBack('OWCChartSpace1$cmdHidden','')" name="OWCChartSpace1:cmdHidden"
+													id="OWCChartSpace1_cmdHidden" type="button" style="WIDTH:0px;HEIGHT:0px"><input name="OWCChartSpace1:hdnCategory" id="OWCChartSpace1_hdnCategory" type="hidden"><input name="OWCChartSpace1:hdnSeries" id="OWCChartSpace1_hdnSeries" type="hidden"><input name="OWCChartSpace1:hdnValue" id="OWCChartSpace1_hdnValue" type="hidden"></span></div>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<textarea id="txtValue" cols="30" rows="6"></textarea>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</HTML>

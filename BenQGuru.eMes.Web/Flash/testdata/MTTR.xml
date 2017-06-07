@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	<item fieldcode="RES001" mttr="13"  totalmttr="14.1" tsqty="21">
+		<datemttr date="W0420" fieldcode="RES001" tsqty="9" mttr="13.6">
+			<mttrdetail modelcode="MODEL1"  itemcode="ITEM1" resourcecode="RES001" sn="SERILID001"  confirmdate="20060410" completedate="20060410" ttr="14.1"/>
+			<mttrdetail modelcode="MODEL1"  itemcode="ITEM1" resourcecode="RES001" sn="SERILID042"  confirmdate="20060410" completedate="20060410" ttr="13.7"/>
+			<mttrdetail modelcode="MODEL1"  itemcode="ITEM1" resourcecode="RES001" sn="SERILID027"  confirmdate="20060410" completedate="20060411" ttr="15.2"/>
+			<mttrdetail modelcode="MODEL1"  itemcode="ITEM1" resourcecode="RES001" sn="SERILID036"  confirmdate="20060410" completedate="20060411" ttr="11.6"/>
+			<mttrdetail modelcode="MODEL1"  itemcode="ITEM1" resourcecode="RES001" sn="SERILID026"  confirmdate="20060410" completedate="20060412" ttr="13.9"/>												
+			<mttrdetail modelcode="MODEL1"  itemcode="ITEM1" resourcecode="RES001" sn="SERILID053"  confirmdate="20060410" completedate="20060412" ttr="16.6"/>
+			<mttrdetail modelcode="MODEL1"  itemcode="ITEM1" resourcecode="RES001" sn="SERILID039"  confirmdate="20060410" completedate="20060412" ttr="10.7"/>
+			<mttrdetail modelcode="MODEL1"  itemcode="ITEM1" resourcecode="RES001" sn="SERILID072"  confirmdate="20060410" completedate="20060413" ttr="11.8"/>
+			<mttrdetail modelcode="MODEL1"  itemcode="ITEM1" resourcecode="RES001" sn="SERILID087"  confirmdate="20060410" completedate="20060413" ttr="13.4"/>												
+		</datemttr>
+		<datemttr date="W0421" fieldcode="RES001" tsqty="6" mttr="14.5">
+			<mttrdetail modelcode="MODEL1"  itemcode="ITEM1" resourcecode="RES001" sn="SERILID01"  confirmdate="20060410" completedate="20060410" ttr="14.1"/>
+			<mttrdetail modelcode="MODEL1"  itemcode="ITEM1" resourcecode="RES001" sn="SERILID026"  confirmdate="20060410" completedate="20060412" ttr="13.9"/>												
+			<mttrdetail modelcode="MODEL1"  itemcode="ITEM1" resourcecode="RES001" sn="SERILID053"  confirmdate="20060410" completedate="20060412" ttr="16.6"/>
+			<mttrdetail modelcode="MODEL1"  itemcode="ITEM1" resourcecode="RES001" sn="SERILID039"  confirmdate="20060410" completedate="20060412" ttr="10.7"/>
+			<mttrdetail modelcode="MODEL1"  itemcode="ITEM1" resourcecode="RES001" sn="SERILID072"  confirmdate="20060410" completedate="20060413" ttr="11.8"/>
+			<mttrdetail modelcode="MODEL1"  itemcode="ITEM1" resourcecode="RES001" sn="SERILID087"  confirmdate="20060410" completedate="20060413" ttr="13.4"/>															
+		</datemttr>		
+	</item>
+	<item fieldcode="RES002" mttr="14"  totalmttr="14.1" tsqty="21"></item>
+</data>

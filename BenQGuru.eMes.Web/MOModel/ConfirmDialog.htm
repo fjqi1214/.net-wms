@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>确认窗口(ConfirmWindow)</title>
+</head>
+
+
+<style type="text/css">		
+    .MyButton60
+    {
+        font-weight: bold;
+        font-size: 8pt;
+        background-image: url(../Skin/Image/ButtonGray.gif);
+        width: 87px;
+        cursor: hand;
+        color: #000000;
+        height: 23px;
+        background-color: transparent;
+        text-align: center;
+        border-style: none;
+        FONT-FAMILY: Arial;
+        font-size: 9pt;
+    }
+    .Message
+    {
+        FONT-FAMILY: Arial;
+        font-size: 9pt;
+    }
+</style>
+<body>
+<table width="350" border="0" cellspacing="0" cellpadding="6" align="center">
+	<tr>
+		<td width="100%" height="70">
+			<div align="left" style="OVERFLOW-Y: auto; OVERFLOW-X:hidden;WIDTH:350px;HEIGHT:100px;">
+			    <table width="100%" style="table-layout:fixed;">
+			        <tr>
+			            <td id="message" style="word-break:break-all;" class="Message">
+			            </td>
+			        </tr>
+			    </table>
+			</div>
+			<input type="hidden" id="rdHideReturnValue" name="rdHideReturnValue" value="0" />
+		</td>
+	</tr>
+</table>
+<br />
+<table width="350" border="0" cellspacing="0" cellpadding="0" align="center">
+	<tr>
+		<td>
+			<div align="center">
+				<input type="button" name="rdBtnOK" value=" 是(Y) " class="MyButton60" onclick="doBtnConfirmOKClick()">
+				<input type="button" name="rdBtnCancel" value=" 否(N) " class="MyButton60" onclick="doBtnConfirmCancelClick()">
+			</div>
+		</td>
+	</tr>
+</table>
+</body>
+<script type="text/javascript" language="javascript">
+    var message, mode, index;
+    var arguments = window.dialogArguments;
+    message = arguments;
+
+    document.all("message").innerText=message;
+    
+    /******** Register the event ********************/
+    window.onunload = doUnload;
+    document.onkeydown = doKeyDown;
+
+    /******** Event Handle **************************/
+    function doBtnConfirmOKClick() {
+        var theHide = document.getElementById("rdHideReturnValue");
+	    theHide.value = 1;
+	    doUnload();
+    }
+
+    function doBtnConfirmCancelClick() {
+        var theHide = document.getElementById("rdHideReturnValue");
+	    theHide.value = 0;
+	    doUnload();
+    }
+
+    function doUnload() {
+        var theHide = document.getElementById("rdHideReturnValue");
+	    self.close();
+	    window.returnValue = theHide.value
+    }
+    function doKeyDown() {
+	    if (event.keyCode == 27) {
+		    doBtnConfirmCancelClick();
+	    }
+    }
+</script>
+</html>

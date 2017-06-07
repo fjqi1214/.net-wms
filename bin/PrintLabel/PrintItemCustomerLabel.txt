@@ -1,0 +1,8 @@
+[Esc]V010[Esc]H075[Esc]D102080*[$PartNo]*
+[Esc]V100[Esc]H075[Esc]L0203[Esc]S[$PartNo]
+[Esc]V180[Esc]H075[Esc]D102080*[$CartonQty]*
+[Esc]V280[Esc]H075[Esc]L0302[Esc]S[$CartonQty]
+[Esc]V280[Esc]H475[Esc]L0202[Esc]SDATE:[$CurrentDate]
+[Esc]V380[Esc]H075[Esc]L0302[Esc]S[$ItemDesc]
+[Esc]V480[Esc]H075[Esc]L0502[Esc]S[$LOC]
+[Esc]V520[Esc]H550[Esc]L0102[Esc]STDK-Lambda Malaysia Sdn. Bhd.

@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{663C3CAC-79AD-4E8D-B151-E4C9231FAAE2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BenQGuru.eMES.WatchPanelNew</RootNamespace>
+    <AssemblyName>BenQGuru.eMES.WatchPanelNew</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BenQGuru.eMES.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\BenQGuru.eMES.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.Misc.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\System.Windows.Forms.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UserControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\UserControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationService.cs" />
+    <Compile Include="CustomEvent.cs" />
+    <Compile Include="Domin.cs" />
+    <Compile Include="FacConfigMessage.cs" />
+    <Compile Include="FCongifDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCongifDetail.designer.cs">
+      <DependentUpon>FCongifDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFacMessageEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFacMessageEdit.designer.cs">
+      <DependentUpon>FFacMessageEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFacWatchPanelNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFacWatchPanelNew.designer.cs">
+      <DependentUpon>FFacWatchPanelNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPanelConfigDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPanelConfigDetails.Designer.cs">
+      <DependentUpon>FPanelConfigDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSelectSSCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSelectSSCode.designer.cs">
+      <DependentUpon>FSelectSSCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSelectConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSelectConfig.Designer.cs">
+      <DependentUpon>FSelectConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSelectEquipmentId.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSelectEquipmentId.Designer.cs">
+      <DependentUpon>FSelectEquipmentId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FWatchPanelLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FWatchPanelLogin.Designer.cs">
+      <DependentUpon>FWatchPanelLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FCongifDetail.resx">
+      <DependentUpon>FCongifDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFacMessageEdit.resx">
+      <DependentUpon>FFacMessageEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFacWatchPanelNew.resx">
+      <DependentUpon>FFacWatchPanelNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPanelConfigDetails.resx">
+      <DependentUpon>FPanelConfigDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSelectSSCode.resx">
+      <DependentUpon>FSelectSSCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSelectConfig.resx">
+      <DependentUpon>FSelectConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSelectEquipmentId.resx">
+      <DependentUpon>FSelectEquipmentId.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FWatchPanelLogin.resx">
+      <DependentUpon>FWatchPanelLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ExceptionMessageControl.resx">
+      <DependentUpon>ExceptionMessageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FacMessageControl.resx">
+      <DependentUpon>FacMessageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FacProductMessageControlNew.resx">
+      <DependentUpon>FacProductMessageControlNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HearMessageControl.resx">
+      <DependentUpon>HearMessageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\NormalMessageControl.resx">
+      <DependentUpon>NormalMessageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SSCodeProductMessageControl.resx">
+      <DependentUpon>SSCodeProductMessageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TChartControl.resx">
+      <DependentUpon>TChartControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\WatchPanelDetails.resx">
+      <DependentUpon>WatchPanelDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UserControls\ExceptionMessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ExceptionMessageControl.designer.cs">
+      <DependentUpon>ExceptionMessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FacMessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\FacMessageControl.designer.cs">
+      <DependentUpon>FacMessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FacProductMessageControlNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\FacProductMessageControlNew.designer.cs">
+      <DependentUpon>FacProductMessageControlNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HearMessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HearMessageControl.designer.cs">
+      <DependentUpon>HearMessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NormalMessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\NormalMessageControl.designer.cs">
+      <DependentUpon>NormalMessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SSCodeProductMessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SSCodeProductMessageControl.Designer.cs">
+      <DependentUpon>SSCodeProductMessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TChartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TChartControl.Designer.cs">
+      <DependentUpon>TChartControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WatchPanelDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\WatchPanelDetails.Designer.cs">
+      <DependentUpon>WatchPanelDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WatchPanelFacade.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="background.jpg" />
+    <Content Include="Resources\%2801,00%29.png" />
+    <Content Include="Resources\%2837,25%29.png" />
+    <Content Include="Resources\%2844,16%29.png" />
+    <Content Include="Resources\%2844,25%29.png" />
+    <Content Include="Resources\%2845,00%29.png" />
+    <Content Include="Resources\%2845,25%29.png" />
+    <Content Include="Resources\%2846,00%29.png" />
+    <Content Include="Resources\%2846,18%29.png" />
+    <Content Include="Resources\%2846,41%29.png" />
+    <Content Include="Resources\%2848,25%29.png" />
+    <Content Include="Resources\bold.ico" />
+    <Content Include="Resources\center.ico" />
+    <None Include="Resources\Clean.gif" />
+    <Content Include="Resources\copy.ico" />
+    <Content Include="Resources\copy1.ico" />
+    <Content Include="Resources\cut.ico" />
+    <Content Include="Resources\cut1.ico" />
+    <Content Include="Resources\delete.ico" />
+    <None Include="Resources\FirstPassYield.gif" />
+    <Content Include="Resources\font.ico" />
+    <None Include="Resources\Humidity.gif" />
+    <Content Include="Resources\italic.ico" />
+    <Content Include="Resources\justify.ico" />
+    <Content Include="Resources\left.ico" />
+    <None Include="Resources\LOGO.gif" />
+    <None Include="Resources\Op.gif" />
+    <Content Include="Resources\paste.ico" />
+    <Content Include="Resources\paste1.ico" />
+    <Content Include="Resources\redo.ico" />
+    <Content Include="Resources\right.ico" />
+    <Content Include="Resources\save.ico" />
+    <None Include="Resources\Tempefature.gif" />
+    <Content Include="Resources\underlne.ico" />
+    <Content Include="Resources\undo.ico" />
+    <Content Include="WatchConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PickNOQueryGrid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PickNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PickNOQueryGridResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PickNOQueryGridResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitButton">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsAll" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Check" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitButtonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubmitButtonResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApplyButton">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PickLine" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApplyButtonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApplyButtonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInOutRule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DQMCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PickNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInOutRuleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInOutRuleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PickedView">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DQMCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PickedViewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PickedViewResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPickNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPickNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryPickNoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetKeyPartsInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CartonNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKeyPartsInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKeyPartsInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckInOutRule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsAll" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Check" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckInOutRuleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckInOutRuleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClosePickButton">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClosePickButtonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClosePickButtonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoicesDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dqmcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoicesDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInvoicesDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="PickNOQueryGridSoapIn">
+    <wsdl:part name="parameters" element="tns:PickNOQueryGrid" />
+  </wsdl:message>
+  <wsdl:message name="PickNOQueryGridSoapOut">
+    <wsdl:part name="parameters" element="tns:PickNOQueryGridResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitButtonSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitButton" />
+  </wsdl:message>
+  <wsdl:message name="SubmitButtonSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitButtonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApplyButtonSoapIn">
+    <wsdl:part name="parameters" element="tns:ApplyButton" />
+  </wsdl:message>
+  <wsdl:message name="ApplyButtonSoapOut">
+    <wsdl:part name="parameters" element="tns:ApplyButtonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInOutRuleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInOutRule" />
+  </wsdl:message>
+  <wsdl:message name="GetInOutRuleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInOutRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="PickedViewSoapIn">
+    <wsdl:part name="parameters" element="tns:PickedView" />
+  </wsdl:message>
+  <wsdl:message name="PickedViewSoapOut">
+    <wsdl:part name="parameters" element="tns:PickedViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPickNoSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPickNo" />
+  </wsdl:message>
+  <wsdl:message name="QueryPickNoSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPickNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetKeyPartsInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetKeyPartsInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetKeyPartsInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetKeyPartsInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckInOutRuleSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckInOutRule" />
+  </wsdl:message>
+  <wsdl:message name="CheckInOutRuleSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckInOutRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClosePickButtonSoapIn">
+    <wsdl:part name="parameters" element="tns:ClosePickButton" />
+  </wsdl:message>
+  <wsdl:message name="ClosePickButtonSoapOut">
+    <wsdl:part name="parameters" element="tns:ClosePickButtonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoicesDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInvoicesDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoicesDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInvoicesDetailsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PickDoneSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PickNOQueryGrid">
+      <wsdl:input message="tns:PickNOQueryGridSoapIn" />
+      <wsdl:output message="tns:PickNOQueryGridSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitButton">
+      <wsdl:input message="tns:SubmitButtonSoapIn" />
+      <wsdl:output message="tns:SubmitButtonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyButton">
+      <wsdl:input message="tns:ApplyButtonSoapIn" />
+      <wsdl:output message="tns:ApplyButtonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInOutRule">
+      <wsdl:input message="tns:GetInOutRuleSoapIn" />
+      <wsdl:output message="tns:GetInOutRuleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PickedView">
+      <wsdl:input message="tns:PickedViewSoapIn" />
+      <wsdl:output message="tns:PickedViewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickNo">
+      <wsdl:input message="tns:QueryPickNoSoapIn" />
+      <wsdl:output message="tns:QueryPickNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKeyPartsInfo">
+      <wsdl:input message="tns:GetKeyPartsInfoSoapIn" />
+      <wsdl:output message="tns:GetKeyPartsInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckInOutRule">
+      <wsdl:input message="tns:CheckInOutRuleSoapIn" />
+      <wsdl:output message="tns:CheckInOutRuleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClosePickButton">
+      <wsdl:input message="tns:ClosePickButtonSoapIn" />
+      <wsdl:output message="tns:ClosePickButtonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoicesDetails">
+      <wsdl:input message="tns:GetInvoicesDetailsSoapIn" />
+      <wsdl:output message="tns:GetInvoicesDetailsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PickDoneSoap" type="tns:PickDoneSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PickNOQueryGrid">
+      <soap:operation soapAction="http://tempuri.org/PickNOQueryGrid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitButton">
+      <soap:operation soapAction="http://tempuri.org/SubmitButton" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyButton">
+      <soap:operation soapAction="http://tempuri.org/ApplyButton" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInOutRule">
+      <soap:operation soapAction="http://tempuri.org/GetInOutRule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PickedView">
+      <soap:operation soapAction="http://tempuri.org/PickedView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickNo">
+      <soap:operation soapAction="http://tempuri.org/QueryPickNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKeyPartsInfo">
+      <soap:operation soapAction="http://tempuri.org/GetKeyPartsInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckInOutRule">
+      <soap:operation soapAction="http://tempuri.org/CheckInOutRule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClosePickButton">
+      <soap:operation soapAction="http://tempuri.org/ClosePickButton" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoicesDetails">
+      <soap:operation soapAction="http://tempuri.org/GetInvoicesDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PickDoneSoap12" type="tns:PickDoneSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PickNOQueryGrid">
+      <soap12:operation soapAction="http://tempuri.org/PickNOQueryGrid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitButton">
+      <soap12:operation soapAction="http://tempuri.org/SubmitButton" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyButton">
+      <soap12:operation soapAction="http://tempuri.org/ApplyButton" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInOutRule">
+      <soap12:operation soapAction="http://tempuri.org/GetInOutRule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PickedView">
+      <soap12:operation soapAction="http://tempuri.org/PickedView" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickNo">
+      <soap12:operation soapAction="http://tempuri.org/QueryPickNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKeyPartsInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetKeyPartsInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckInOutRule">
+      <soap12:operation soapAction="http://tempuri.org/CheckInOutRule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClosePickButton">
+      <soap12:operation soapAction="http://tempuri.org/ClosePickButton" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoicesDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetInvoicesDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PickDone">
+    <wsdl:port name="PickDoneSoap" binding="tns:PickDoneSoap">
+      <soap:address location="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/PickDone.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PickDoneSoap12" binding="tns:PickDoneSoap12">
+      <soap12:address location="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/PickDone.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

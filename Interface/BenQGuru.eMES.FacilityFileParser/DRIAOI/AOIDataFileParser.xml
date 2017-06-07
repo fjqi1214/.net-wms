@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Formats>
+    <Format Name="AOIData"
+        FileFormat = "HeaderData"
+        FileNameSeparator = ""
+        HeaderRowCount = "0"
+       	HeaderRecordSeparator = ";\n"
+       	HeaderColumnSeparator = ";"
+       	ContentRecordSeparator = "\n"
+       	ContentColumnSeparator = ";"
+       	IsContentMultiRecord = "1"
+       	ContentMultiRecordInterval = "1"
+      	SaveDataDirectly = "0"
+    >
+        <ObjectMap IsObjectInsert = "0"  ObjectType="BenQGuru.eMES.FacilityFileParser.AOIData">
+    		<Column
+    			AttributeName="ITEMCODE"
+    			ColumnName = "ITEMCODE"
+    			DataType = "string"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "0"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+    		<Column
+    			AttributeName="RCARD"
+    			ColumnName = "RCARD"
+    			DataType = "string"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "1"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+    		<Column
+    			AttributeName="RESOURCE"
+    			ColumnName = "RESOURCE"
+    			DataType = "string"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "2"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+    		<Column
+    			AttributeName="SHIP"
+    			ColumnName = "SHIP"
+    			DataType = "string"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "3"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>	
+    		<Column
+    			AttributeName="USER"
+    			ColumnName = "USER"
+    			DataType = "string"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "4"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+    		<Column
+    			AttributeName="MDATE"
+    			ColumnName = "MDATE"
+    			DataType = "int"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "6"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+    		<Column
+    			AttributeName="MTIME"
+    			ColumnName = "MTIME"
+    			DataType = "int"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "7"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+    		<Column
+    			AttributeName="ERRORCOUNT"
+    			ColumnName = "ERRORCOUNT"
+    			DataType = "int"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "14"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+			<Column
+    				AttributeName="ERRORCODES"
+    				ColumnName = "ERRORCODES"
+    				DataType = "string"
+    				DataSource = "Content"
+    				DataLine = "0"
+    				DataColumn = "15"
+    				DataStringFrom = "0"
+    				DataStringTo="999"
+    				Default = ""
+    			/>
+        </ObjectMap>
+    </Format>
+</Formats>

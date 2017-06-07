@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DataImportSchema>
+	<object Name="Model2Item" Sequene="1" FromTableName="siim" ToTableName="TBLMODEL2ITEM" Description="产品所属机种"
+		FactoryField="idep">
+		<FieldMapAttribute Fromfield="Iprod" ToField="ITEMCODE" Description="产品代码" />
+		<FieldMapAttribute Fromfield="imodl" ToField="MODELCODE" Description="所属机种" />
+		<FieldMapAttribute Fromfield="idep" ToField="" Description="所属工厂" />
+	</object>
+	<object Name="Item" Sequene="2" FromTableName="siim" ToTableName="TBLITEM" Description="产品"
+		FactoryField="idep">
+		<FieldMapAttribute Fromfield="Iprod" ToField="ITEMCODE" Description="产品代码" />
+		<FieldMapAttribute Fromfield="iname" ToField="ITEMNAME" Description="产品名称" />
+		<FieldMapAttribute Fromfield="ityp" ToField="ITEMTYPE" Description="产品类别" />
+		<FieldMapAttribute Fromfield="idesc" ToField="ITEMDESC" Description="产品描述" />
+		<FieldMapAttribute Fromfield="iumn" ToField="ITEMUOM" Description="计量单位" />
+		<FieldMapAttribute Fromfield="idep" ToField="" Description="所属工厂" />
+	</object>
+	<object Name="SBOM" Sequene="3" FromTableName="sbom" ToTableName="TBLSBOM" Description="标准BOM"
+		FactoryField="bdep">
+		<FieldMapAttribute Fromfield="bprod" ToField="ITEMCODE" Description="产品代码" />
+		<FieldMapAttribute Fromfield="bchld" ToField="SBITEMCODE" Description="物料代码" />
+		<FieldMapAttribute Fromfield="bdesc" ToField="SBITEMNAME" Description="物料名称" />
+		<FieldMapAttribute Fromfield="bitem" ToField="SBSITEMCODE" Description="首选料" />
+		<FieldMapAttribute Fromfield="bqreq" ToField="SBITEMQTY" Description="单位用量" />
+		<FieldMapAttribute Fromfield="bumn" ToField="SBITEMUOM" Description="计量单位" />
+		<FieldMapAttribute Fromfield="bpn" ToField="SBITEMLOCATION" Description="位号" />
+		<FieldMapAttribute Fromfield="bdeff" ToField="SBITEMEFFDATE" Description="生效日期" />
+		<FieldMapAttribute Fromfield="bdiss" ToField="SBITEMINVDATE" Description="失效日期" />
+		<FieldMapAttribute Fromfield="becn" ToField="SBITEMECN" Description="ECN" />
+		<FieldMapAttribute Fromfield="bfac" ToField="SBWH" Description="库别" />
+		<FieldMapAttribute Fromfield="bpars" ToField="SBPITEMCODE" Description="物料父阶料号" />
+		<FieldMapAttribute Fromfield="bdep" ToField="" Description="所属工厂" />
+	</object>
+	<object Name="MO" Sequene="4" FromTableName="sfso" ToTableName="TBLMO" Description="工单"
+		FactoryField="fdep">
+		<FieldMapAttribute Fromfield="fsord" ToField="MOCODE" Description="工单号码" />
+		<FieldMapAttribute Fromfield="fprod" ToField="ITEMCODE" Description="产品代码" />
+		<FieldMapAttribute Fromfield="fcom" ToField="MOTYPE" Description="工单类型" />
+		<FieldMapAttribute Fromfield="fqreq" ToField="MOPLANQTY" Description="计划生产数量" />
+		<FieldMapAttribute Fromfield="frdte" ToField="MOPLANSTARTDATE" Description="预计开工日期" />
+		<FieldMapAttribute Fromfield="fddte" ToField="MOPLANENDDATE" Description="预计完工日期" />
+		<FieldMapAttribute Fromfield="fcus" ToField="CUSCODE" Description="客户代码" />
+		<FieldMapAttribute Fromfield="fpo" ToField="CUSORDERNO" Description="客户单号" />
+		<FieldMapAttribute Fromfield="fmemo" ToField="MODESC" Description="备注" />
+		<FieldMapAttribute Fromfield="fdep" ToField="FACTORY" Description="所属工厂" />
+	</object>
+	<object Name="MOBOM" Sequene="5" FromTableName="sfma" ToTableName="TBLMOBOM" Description="工单物料"
+		FactoryField="fdep">
+		<FieldMapAttribute Fromfield="fsord" ToField="MOCODE" Description="工单号码" />
+		<FieldMapAttribute Fromfield="fchld" ToField="MOBITEMCODE" Description="物料代码" />
+		<FieldMapAttribute Fromfield="fdesc" ToField="MOBITEMNAME" Description="物料名称" />
+		<FieldMapAttribute Fromfield="fitem" ToField="MOBSITEMCODE" Description="首选料" />
+		<FieldMapAttribute Fromfield="fqreq" ToField="MOBITEMQTY" Description="单位用量" />
+		<FieldMapAttribute Fromfield="fumn" ToField="MOBOMITEMUOM" Description="计量单位" />
+		<FieldMapAttribute Fromfield="fdep" ToField="" Description="所属工厂" />
+	</object>
+	<object Name="ERPBOM" Sequene="6" FromTableName="lotformes" ToTableName="TBLERPBOM" Description="ERP物料"
+		FactoryField="dep">
+		<FieldMapAttribute Fromfield="itemno" ToField="BITEMCODE" Description="料号" />
+		<FieldMapAttribute Fromfield="qty" ToField="BQTY" Description="数量" />
+		<FieldMapAttribute Fromfield="lot" ToField="LOTNO" Description="批号" />
+		<FieldMapAttribute Fromfield="so" ToField="MOCODE" Description="工单" />
+		<FieldMapAttribute Fromfield="serialno" ToField="SEQUENCE" Description="序号" />
+		<FieldMapAttribute Fromfield="dep" ToField="" Description="所属工厂" />
+	</object>
+</DataImportSchema>

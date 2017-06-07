@@ -1,0 +1,710 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Formats>
+<Format Name="MO"
+	FileFormat = "HeaderData"
+	FileNameSeparator = ""
+	HeaderRowCount = "1"
+	HeaderRecordSeparator = ";\n"
+	HeaderColumnSeparator = ","
+	ContentRecordSeparator = "\n"
+	ContentColumnSeparator = ","
+	IsContentMultiRecord = "1"
+	ContentMultiRecordInterval = "1"
+	SaveDataDirectly = "0"
+>
+<ObjectMap IsObjectInsert = "0"  ObjectType="BenQGuru.eMES.Domain.MOModel.MO,BenQGuru.eMES.Domain">
+		<Column
+			AttributeName="MOCode"
+			ColumnName = "MOCode"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+
+
+		<Column
+			AttributeName="MOType"
+			ColumnName = "MOType"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "3"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="ItemCode"
+			ColumnName = "ItemCode"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "2"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="MOPlanQty"
+			ColumnName = "MOPlanQty"
+			DataType = "FLOAT"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "4"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="IDMergeRule"
+			ColumnName = "IDMERGERULE"
+			DataType = "FLOAT"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "1"
+		/>
+		
+		<Column
+			AttributeName="MOPlanStartDate"
+			ColumnName = "MOPlanStartDate"
+			DataType = "DATE"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "5"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0001-01-01"
+		/>
+		
+		<Column
+			AttributeName="MOPlanEndDate"
+			ColumnName = "MOPlanEndDate"
+			DataType = "DATE"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "6"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0001-01-02"
+		/>
+		
+		<Column
+			AttributeName="OrderNO"
+			ColumnName = "OrderNO"
+			DataType = "string"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "8"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+
+		<Column
+			AttributeName="CustomerOrderNO"
+			ColumnName = "CustomerOrderNO"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "8"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+
+		<Column
+			AttributeName="CustomerCode"
+			ColumnName = "CustomerCode"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "7"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+
+		<Column
+			AttributeName="CustomerName"
+			ColumnName = "CustomerName"
+			DataType = "string"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+
+		<Column
+			AttributeName="CustomerItemCode"
+			ColumnName = "CustomerItemCode"
+			DataType = "string"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="MOStatus"
+			ColumnName = "MOStatus"
+			DataType = "string"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "mostatus_initial"
+		/>
+		
+		<Column
+			AttributeName="MOVersion"
+			ColumnName = "MOVersion"
+			DataType = "string"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "1.0"
+		/>
+		
+		<Column
+			AttributeName="MOScrapQty"
+			ColumnName = "MOScrapQty"
+			DataType = "FLOAT"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0"
+		/>
+		
+		<Column
+			AttributeName="MOActualQty"
+			ColumnName = "MOActualQty"
+			DataType = "FLOAT"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0"
+		/>
+		
+		<Column
+			AttributeName="MOActualStartDate"
+			ColumnName = "MOActualStartDate"
+			DataType = "DATE"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0001-01-03"
+		/>
+		
+		<Column
+			AttributeName="MOActualEndDate"
+			ColumnName = "MOActualEndDate"
+			DataType = "DATE"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0001-01-04"
+		/>
+		
+		<Column
+			AttributeName="OrderSequence"
+			ColumnName = "OrderSequence"
+			DataType = "int"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0"
+		/>
+		
+		<Column
+			AttributeName="MODownloadDate"
+			ColumnName = "MODownloadDate"
+			DataType = "DATE"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "2004-01-01"
+		/>
+		
+		<Column
+			AttributeName="Factory"
+			ColumnName = "FACTORY"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "1"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="IsControlInput"
+			ColumnName = "ISCONINPUT"
+			DataType = "string"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0"
+		/>
+		
+		<Column
+			AttributeName="IsBOMPass"
+			ColumnName = "ISBOMPASS"
+			DataType = "string"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "9"
+		/>
+		
+		
+		<Column
+			AttributeName="MOMemo"
+			ColumnName = "MOMEMO"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "9"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="BOMVersion"
+			ColumnName = "BOMVersion"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "10"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		
+		
+		
+</ObjectMap>
+</Format>
+
+
+
+<Format Name="MOBOM"
+	FileFormat = "HeaderData"
+	FileNameSeparator = ""
+	HeaderRowCount = "1"
+	HeaderRecordSeparator = ";\n"
+	HeaderColumnSeparator = ","
+	ContentRecordSeparator = "\n"
+	ContentColumnSeparator = ","
+	IsContentMultiRecord = "1"
+	ContentMultiRecordInterval = "1"
+	SaveDataDirectly = "0"
+>
+<ObjectMap IsObjectInsert = "0"  ObjectType="BenQGuru.eMES.Domain.MOModel.MOBOM,BenQGuru.eMES.Domain">
+<Column
+			AttributeName="MOCode"
+			ColumnName = "MOCode"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+<Column
+			AttributeName="ItemCode"
+			ColumnName = "ItemCode"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "1"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+			<Column
+			AttributeName="MOBOMItemCode"
+			ColumnName = "MOBITEMCODE"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "2"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="MOBOMItemName"
+			ColumnName = "MOBITEMNAME"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "3"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		<Column
+			AttributeName="MOBOMItemQty"
+			ColumnName = "MOBITEMQTY"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "4"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		<Column
+			AttributeName="MOBOMItemUOM"
+			ColumnName = "MOBOMItemUOM"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "5"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		<Column
+			AttributeName="MOBOMException"
+			ColumnName = "MOBOMEXCEPTION"
+			DataType = "string"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+</ObjectMap>
+</Format>
+
+
+
+<Format Name="SBOM"
+	FileFormat = "HeaderData"
+	FileNameSeparator = ""
+	HeaderRowCount = "1"
+	HeaderRecordSeparator = ";\n"
+	HeaderColumnSeparator = ","
+	ContentRecordSeparator = "\n"
+	ContentColumnSeparator = ","
+	IsContentMultiRecord = "1"
+	ContentMultiRecordInterval = "1"
+	SaveDataDirectly = "0"
+>
+<ObjectMap IsObjectInsert = "0"  ObjectType="BenQGuru.eMES.Domain.MOModel.SBOM,BenQGuru.eMES.Domain">
+<Column
+			AttributeName="ItemCode"
+			ColumnName = "ITEMCODE"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+<Column
+			AttributeName="SBOMItemCode"
+			ColumnName = "SBITEMCODE"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "1"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+			<Column
+			AttributeName="SBOMItemName"
+			ColumnName = "SBITEMNAME"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "2"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="SBOMSourceItemCode"
+			ColumnName = "SBSITEMCODE"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "3"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		<Column
+			AttributeName="SBOMItemQty"
+			ColumnName = "SBITEMQTY"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "4"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		<Column
+			AttributeName="SBOMItemUOM"
+			ColumnName = "SBITEMUOM"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "5"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		<Column
+			AttributeName="SBOMItemLocation"
+			ColumnName = "SBITEMLOCATION"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "6"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		<Column
+			AttributeName="SBOMItemEffectiveDate"
+			ColumnName = "SBITEMEFFDATE"
+			DataType = "DATE"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "7"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0001-01-01"
+		/>
+		<Column
+			AttributeName="SBOMItemInvalidDate"
+			ColumnName = "SBITEMINVDATE"
+			DataType = "DATE"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "8"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0001-01-02"
+		/>
+		<Column
+			AttributeName="SBOMItemECN"
+			ColumnName = "SBITEMECN"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "9"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		<Column
+			AttributeName="SBOMItemStatus"
+			ColumnName = "SBITEMSTATUS"
+			DataType = "string"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0"
+		/>
+		<Column
+			AttributeName="SBOMItemEffectiveTime"
+			ColumnName = "SBITEMEFFTIME"
+			DataType = "string"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0"
+		/>
+		<Column
+			AttributeName="SBOMItemInvalidTime"
+			ColumnName = "SBITEMINVTIME"
+			DataType = "string"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "235959"
+		/>
+		<Column
+			AttributeName="SBOMItemControlType"
+			ColumnName = "SBITEMCONTYPE"
+			DataType = "string"
+			DataSource = "DefaultValue"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "item_control_nocontrol"
+		/>
+		
+</ObjectMap>
+</Format>
+
+<Format Name="INVSHIP"
+	FileFormat = "HeaderData"
+	FileNameSeparator = ""
+	HeaderRowCount = "1"
+	HeaderRecordSeparator = ";\n"
+	HeaderColumnSeparator = ","
+	ContentRecordSeparator = "\n"
+	ContentColumnSeparator = ","
+	IsContentMultiRecord = "1"
+	ContentMultiRecordInterval = "1"
+	SaveDataDirectly = "0"
+>
+<ObjectMap IsObjectInsert = "0"  ObjectType="BenQGuru.eMES.Domain.Material.InvShip,BenQGuru.eMES.Domain">
+<Column
+			AttributeName="ShipNo"
+			ColumnName = "SHIPNO"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+<Column
+			AttributeName="ShipType"
+			ColumnName = "SHIPTYPE"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "1"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+			<Column
+			AttributeName="PartnerCode"
+			ColumnName = "PARTNERCODE"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "2"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="PartnerDesc"
+			ColumnName = "PARTNERDESC"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "3"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		<Column
+			AttributeName="ShipDate"
+			ColumnName = "SHIPDATE"
+			DataType = "DATE"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "4"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0001-01-01"
+		/>
+		<Column
+			AttributeName="ModelCode"
+			ColumnName = "MODELCODE"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "5"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		<Column
+			AttributeName="ItemCode"
+			ColumnName = "ITEMCODE"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "6"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		<Column
+			AttributeName="PlanQty"
+			ColumnName = "PLANQTY"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "7"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		<Column
+			AttributeName="PrintDate"
+			ColumnName = "PRINTDATE"
+			DataType = "DATE"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "8"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0001-01-01"
+		/>	
+</ObjectMap>
+</Format>
+
+</Formats>

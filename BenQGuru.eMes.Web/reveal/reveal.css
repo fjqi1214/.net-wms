@@ -1,0 +1,152 @@
+/*	--------------------------------------------------
+	Reveal Modals
+	-------------------------------------------------- */
+
+.reveal-modal-bg
+{   
+    cursor: auto;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    background: black;
+    z-index: 100;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.reveal-modal
+{
+    cursor: text;
+    visibility: hidden;
+    top: 150px;
+    left: 50%;
+    margin-left: -300px;
+    width: 520px;
+    background: #eee url(modal-gloss.png) no-repeat -200px -80px;
+    position: absolute;
+    z-index: 101;
+    padding: 50px 40px 34px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+    -box-shadow: 0 0 10px rgba(0,0,0,.4);
+   
+}
+
+.reveal-modal.size1
+{
+    width: 100px;
+    margin-left: -90px;
+}
+
+.reveal-modal.size2
+{
+    width: 200px;
+    margin-left: -140px;
+}
+
+.reveal-modal.size3
+{
+    width: 300px;
+    margin-left: -190px;
+}
+
+.reveal-modal.size4
+{
+    width: 400px;
+    margin-left: -240px;
+}
+
+.reveal-modal.size5
+{
+    width: 500px;
+    margin-left: -290px;
+}
+
+.reveal-modal.size6
+{
+    width: 600px;
+    margin-left: -340px;
+}
+
+.reveal-modal.size7
+{
+    width: 700px;
+    margin-left: -390px;
+}
+
+.reveal-modal.size8
+{
+    width: 800px;
+    margin-left: -440px;
+}
+
+.close-reveal-modal
+{
+    font-size: 26px;
+    line-height:1;
+    position: absolute;
+    right: 2px;
+    color: Black;
+    text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+    font-weight: bold;
+    cursor: pointer;
+    height:35px;
+}
+
+.title-reveal-modal
+{
+    font-size: 22px;
+   
+    position: absolute;
+    top: 2px;
+    left: 8px;
+    color: Black;
+    text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+    font-weight: normal;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select:none;
+    height:35px;
+}
+
+.head-reveal-modal
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width:100%;
+    height:35px;
+    background-color:#AFD7ED;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+
+.reveal-modal h3 a
+{
+    color:Blue;
+}
+/*
+		
+	NOTES
+	
+	Close button entity is &#215;
+	
+	Example markup
+	
+	<div id="myModal" class="reveal-modal">
+		<h2>Awesome. I have it.</h2>
+		<p class="lead">Your couch.  I it's mine.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices aliquet placerat. Duis pulvinar orci et nisi euismod vitae tempus lorem consectetur. Duis at magna quis turpis mattis venenatis eget id diam. </p>
+		<a class="close-reveal-modal">&#215;</a>
+	</div>
+	
+	*/

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Formats>
+    <Format Name="MaterialStockOutContent"
+        FileFormat = "HeaderData"
+        FileNameSeparator = ""
+        HeaderRowCount = "0"
+       	HeaderRecordSeparator = ";\n"
+       	HeaderColumnSeparator = ","
+       	ContentRecordSeparator = "\n"
+       	ContentColumnSeparator = ","
+       	IsContentMultiRecord = "1"
+       	ContentMultiRecordInterval = "1"
+      	SaveDataDirectly = "0"
+    >
+        <ObjectMap IsObjectInsert = "0"  ObjectType="BenQGuru.eMES.Material.MaterialStockOutContent,BenQGuru.eMES.Material">
+    		<Column
+    			AttributeName="TicketNO"
+    			ColumnName = "TKTNO"
+    			DataType = "string"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "0"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+    		<Column
+    			AttributeName="ModelCode"
+    			ColumnName = "MODELCODE"
+    			DataType = "string"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "1"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+    		<Column
+    			AttributeName="Dealer"
+    			ColumnName = "DEALER"
+    			DataType = "string"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "2"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+    		<Column
+    			AttributeName="OutDate"
+    			ColumnName = "OUTDATE"
+    			DataType = "DATE"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "3"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>	
+    		<Column
+    			AttributeName="PlanateCode"
+    			ColumnName = "PLANATECODE"
+    			DataType = "string"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "4"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+		<Column
+    			AttributeName="PlanateCode"
+    			ColumnName = "PLANATECODE"
+    			DataType = "string"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "5"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+		<Column
+    			AttributeName="PlanateCode"
+    			ColumnName = "PLANATECODE"
+    			DataType = "string"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "6"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+		<Column
+    			AttributeName="PlanateCode"
+    			ColumnName = "PLANATECODE"
+    			DataType = "string"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "7"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+        </ObjectMap>
+    </Format>
+<Format Name="INVSHIP"
+
+         FileFormat = "HeaderData"
+
+         FileNameSeparator = ""
+
+         HeaderRowCount = "1"
+
+         HeaderRecordSeparator = ";\n"
+
+         HeaderColumnSeparator = ","
+
+         ContentRecordSeparator = "\n"
+
+         ContentColumnSeparator = ","
+
+         IsContentMultiRecord = "1"
+
+         ContentMultiRecordInterval = "1"
+
+         SaveDataDirectly = "0"
+
+> 
+
+<ObjectMap IsObjectInsert = "0"  ObjectType="BenQGuru.eMES.Domain.Material.InvShip,BenQGuru.eMES.Domain">
+
+<Column
+
+                            AttributeName="ShipNo"
+
+                            ColumnName = "SHIPNO"
+
+                            DataType = "string"
+
+                            DataSource = "Content"
+
+                            DataLine = "0"
+
+                            DataColumn = "0"
+
+                            DataStringFrom = "0"
+
+                            DataStringTo="99"
+
+                            Default = ""
+
+                   />
+
+<Column
+
+                            AttributeName="ShipSeq"
+
+                            ColumnName = "ShipSeq"
+
+                            DataType = "string"
+
+                            DataSource = "Content"
+
+                            DataLine = "0"
+
+                            DataColumn = "1"
+
+                            DataStringFrom = "0"
+
+                            DataStringTo="99"
+
+                            Default = ""
+
+                   />
+
+<Column
+
+                            AttributeName="ShipType"
+
+                            ColumnName = "SHIPTYPE"
+
+                            DataType = "string"
+
+                            DataSource = "Content"
+
+                            DataLine = "0"
+
+                            DataColumn = "2"
+
+                            DataStringFrom = "0"
+
+                            DataStringTo="99"
+
+                            Default = ""
+
+                   />
+
+                            <Column
+
+                            AttributeName="PartnerCode"
+
+                            ColumnName = "PARTNERCODE"
+
+                            DataType = "string"
+
+                            DataSource = "Content"
+
+                            DataLine = "0"
+
+                            DataColumn = "3"
+
+                            DataStringFrom = "0"
+
+                            DataStringTo="99"
+
+                            Default = ""
+
+                   />
+
+                   <Column
+
+                            AttributeName="PartnerDesc"
+
+                            ColumnName = "PARTNERDESC"
+
+                            DataType = "string"
+
+                            DataSource = "Content"
+
+                            DataLine = "0"
+
+                            DataColumn = "4"
+
+                            DataStringFrom = "0"
+
+                            DataStringTo="99"
+
+                            Default = ""
+
+                   />
+					<Column
+
+                            AttributeName="CustomerOrderNo"
+
+                            ColumnName = "CustomerOrderNo"
+
+                            DataType = "string"
+
+                            DataSource = "Content"
+
+                            DataLine = "0"
+
+                            DataColumn = "5"
+
+                            DataStringFrom = "0"
+
+                            DataStringTo="99"
+
+                            Default = ""
+
+                   />
+				   <Column
+
+                            AttributeName="ShipMethod"
+
+                            ColumnName = "ShipMethod"
+
+                            DataType = "string"
+
+                            DataSource = "Content"
+
+                            DataLine = "0"
+
+                            DataColumn = "6"
+
+                            DataStringFrom = "0"
+
+                            DataStringTo="99"
+
+                            Default = ""
+
+                   />
+                   <Column
+
+                            AttributeName="ShipDate"
+
+                            ColumnName = "SHIPDATE"
+
+                            DataType = "DATE"
+
+                            DataSource = "Content"
+
+                            DataLine = "0"
+
+                            DataColumn = "7"
+
+                            DataStringFrom = "0"
+
+                            DataStringTo="99"
+
+                            Default = "0001-01-01"
+
+                   />
+
+                    <Column
+
+                            AttributeName="ItemCode"
+
+                            ColumnName = "ITEMCODE"
+
+                            DataType = "string"
+
+                            DataSource = "Content"
+
+                            DataLine = "0"
+
+                            DataColumn = "8"
+
+                            DataStringFrom = "0"
+
+                            DataStringTo="99"
+
+                            Default = ""
+
+                   />
+
+                   <Column
+
+                            AttributeName="PlanQty"
+
+                            ColumnName = "PLANQTY"
+
+                            DataType = "string"
+
+                            DataSource = "Content"
+
+                            DataLine = "0"
+
+                            DataColumn = "9"
+
+                            DataStringFrom = "0"
+
+                            DataStringTo="99"
+
+                            Default = ""
+
+                   />
+
+                   <Column
+
+                            AttributeName="PrintDate"
+
+                            ColumnName = "PRINTDATE"
+
+                            DataType = "DATE"
+
+                            DataSource = "Content"
+
+                            DataLine = "0"
+
+                            DataColumn = "10"
+
+                            DataStringFrom = "0"
+
+                            DataStringTo="99"
+
+                            Default = "0001-01-01"
+
+                   />      
+
+</ObjectMap>
+
+</Format>
+
+</Formats>

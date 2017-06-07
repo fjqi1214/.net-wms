@@ -1,0 +1,3119 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Infragistics.Shared.v3.2</name>
+    </assembly>
+    <members>
+        <member name="T:Infragistics.Shared.AboutDialog">
+            <summary>
+            About box.
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.AboutDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.AboutDialog.#ctor(Infragistics.Shared.IUltraLicensedComponent)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="licensedComponent">class that implements IUltraLicensedComponent<see cref="T:Infragistics.Shared.IUltraLicensedComponent"/></param>
+        </member>
+        <member name="M:Infragistics.Shared.AboutDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.AboutDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.AboutDialogEditor">
+            <summary>
+            The propertry editor for the '(About)' property
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.AboutDialogEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Returns modal
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.AboutDialogEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Brings up the about dialog
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.Serialization.Binder">
+            <summary>
+            Controls class loading and mandates what class to load.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Binder.BindToType(System.String,System.String)">
+            <summary>
+            Controls the binding of a serialized object to a type
+            </summary>
+            <param name="assemblyName">Specifies the Assembly name of the serialized object</param>
+            <param name="typeName">Specifies the Type name of the serialized object.</param>
+            <returns>The type of the object the formatter creates a new instance of.</returns>
+        </member>
+        <member name="T:Infragistics.Shared.ColorsCollectionBase">
+            <summary>
+            Summary description for WebColorsCollection.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.ColorsCollectionBase.#ctor">
+            <summary>
+            Constructor, initializes a new instance of <b>ColorsCollectionBase</b>.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.ColorsCollectionBase.FillColors">
+            <summary>
+            Routine must be implemented by derived class to fill collection
+            with colors.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.ColorsCollectionBase.Add(System.Drawing.Color)">
+            <summary>
+            Adds a <b>color</b> to the list.
+            </summary>
+            <param name="color">The new color to add.<see cref="T:System.Drawing.Color"/></param>
+        </member>
+        <member name="M:Infragistics.Shared.ColorsCollectionBase.Insert(System.Int32,System.Drawing.Color)">
+            <summary>
+            Inserts a <b>color</b> into the list.
+            </summary>
+            <param name="index">The index to place the new color.</param>
+            <param name="color">The new color to add.<see cref="T:System.Drawing.Color"/></param>
+        </member>
+        <member name="M:Infragistics.Shared.ColorsCollectionBase.Remove(System.Drawing.Color)">
+            <summary>
+            Removes a <b>color</b> from the list.
+            </summary>
+            <param name="color">The color to remove.<see cref="T:System.Drawing.Color"/></param>
+        </member>
+        <member name="M:Infragistics.Shared.ColorsCollectionBase.Contains(System.Drawing.Color)">
+            <summary>
+            Determines if a color is in the collection.
+            </summary>
+            <param name="color">The color to check.</param>
+            <returns>True if the color is in the collection.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.ColorsCollectionBase.CopyTo(System.Drawing.Color[],System.Int32)">
+            <summary>
+            Copies the items into the array
+            </summary>
+            <param name="array">Target array</param>
+            <param name="index">Index where to begin copying</param>
+        </member>
+        <member name="M:Infragistics.Shared.ColorsCollectionBase.IndexOf(System.Drawing.Color)">
+            <summary>
+            Gets the index of the specified color.
+            </summary>
+            <param name="color">The color to check.</param>
+            <returns>The index of the color.</returns>
+        </member>
+        <member name="P:Infragistics.Shared.ColorsCollectionBase.Item(System.Int32)">
+            <summary>
+            Indexer
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.Serialization.CursorWrapper">
+            <summary>
+            Wrapper class for serializing a <see cref="T:System.Windows.Forms.Cursor"/> instance
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.Serialization.CursorWrapper.objectValue">
+            <summary>
+            Cursor object or enumeration indicating the type of cursor.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.CursorWrapper.#ctor(System.Windows.Forms.Cursor)">
+            <summary>
+            Initializes a new <b>CursorWrapper</b>
+            </summary>
+            <param name="cursor">Cursor to serialize</param>
+        </member>
+        <member name="P:Infragistics.Shared.Serialization.CursorWrapper.Cursor">
+            <summary>
+            Returns the <b>Cursor</b> object
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.CustomTypeDescriptorAdapter">
+            <summary>
+            CustomTypeDescriptorAdapter is an adapter class that implements ICustomTypeDescriptor.
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.CustomTypeDescriptorAdapter.component">
+            <summary>
+            Associated component.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.CustomTypeDescriptorAdapter.#ctor(System.Object)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="component"></param>
+        </member>
+        <member name="M:Infragistics.Shared.CustomTypeDescriptorAdapter.GetConverter">
+            <summary>
+            ICustomTypeDescriptor.GetConverter implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.CustomTypeDescriptorAdapter.GetEvents(System.Attribute[])">
+            <summary>
+            ICustomTypeDescriptor.GetEvents implementation.
+            </summary>
+            <param name="attributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.CustomTypeDescriptorAdapter.GetEvents">
+            <summary>
+            ICustomTypeDescriptor.GetEvents implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.CustomTypeDescriptorAdapter.GetComponentName">
+            <summary>
+            ICustomTypeDescriptor.GetComponentName implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.CustomTypeDescriptorAdapter.GetPropertyOwner(System.ComponentModel.PropertyDescriptor)">
+            <summary>
+            ICustomTypeDescriptor.GetPropertyOwner implementation.
+            </summary>
+            <param name="pd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.CustomTypeDescriptorAdapter.GetAttributes">
+            <summary>
+            ICustomTypeDescriptor.GetAttributes implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.CustomTypeDescriptorAdapter.GetProperties(System.Attribute[])">
+            <summary>
+            ICustomTypeDescriptor.GetProperties implementation.
+            </summary>
+            <param name="attributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.CustomTypeDescriptorAdapter.GetProperties">
+            <summary>
+            ICustomTypeDescriptor.GetProperties implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.CustomTypeDescriptorAdapter.GetEditor(System.Type)">
+            <summary>
+            ICustomTypeDescriptor.GetEditor implementation.
+            </summary>
+            <param name="editorBaseType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.CustomTypeDescriptorAdapter.GetDefaultProperty">
+            <summary>
+            ICustomTypeDescriptor.GetDefaultProperty implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.CustomTypeDescriptorAdapter.GetDefaultEvent">
+            <summary>
+            ICustomTypeDescriptor.GetDefaultEvent implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.CustomTypeDescriptorAdapter.GetClassName">
+            <summary>
+            ICustomTypeDescriptor.GetClassName implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Infragistics.Shared.DisposableObject">
+            <summary>
+               The base class Disposable maintains a boolean
+               flag that keeps track of whether or not the object has
+               been Disposed. It implemnets System.IDisposable and
+               calls a virtual 'OnDispose' method to let the derived
+               class know when the object has been Disposed.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObject.#ctor">
+            <summary>
+            Initializes a new <b>DisposableObject</b>
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObject.HasSamePublicKey(System.Type)">
+            <summary>
+            Checks if the test object is from an assembly that is
+            signed with the same public key as this assembly
+            </summary>
+            <returns>True if same</returns>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObject.GetPublicKeyToken(System.Type)">
+            <summary>
+            Returns the public key token of a type's assembly.
+            </summary>
+            <param name="type">The <see cref="T:System.Type"/> whose assembly is checked.</param>
+            <returns>The public key token value. Either "null" or a 16 byte string.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObject.GetPublicKeyToken(System.Reflection.Assembly)">
+            <summary>
+            Returns the public key token of an assembly.
+            </summary>
+            <param name="assemblyToCheck">The assembly to check.</param>
+            <returns>The public key token value. Either "null" or a 16 byte string.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObject.CloneSerializableObject(System.Runtime.Serialization.ISerializable,System.Runtime.Serialization.SerializationBinder)">
+            <summary>
+            Creates and returns a deep copy clone of the object
+            </summary>
+            <param name="source">The object to be cloned.</param>
+            <param name="binder">Used to control class loading and mandate what class to load.</param>
+            <returns>The cloned object</returns>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObject.Dispose">
+            <summary>
+            Called to Dispose the object
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObject.VerifyNotDisposed">
+            <summary>
+            Will throw an ObjectDisposedException exception
+            if the object has been disposed of.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObject.OnDispose">
+            <summary>
+            Called when an active object is Disposed to notify a
+            derived class when the object has been Disposed.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObject.ConvertValue(System.Object,System.Type)">
+            <summary>
+            Returns a value converted to the specified type using the InvariantCulture.
+            </summary>
+            <param name="value">Value to convert</param>
+            <param name="destinationType">Type that the value needs to be converted to.</param>
+            <returns>If the value can be converted to the specified type, the converted value will be returned. If the value is already of that type or cannot be converted to that type, the <paramref name="value"/> will be returned; otherwise null is returned.</returns>
+        </member>
+        <member name="P:Infragistics.Shared.DisposableObject.Disposed">
+            <summary>
+            Returns true if the object has already been disposed
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.DisposableObjectCollectionBase">
+            <summary>
+            Abstract base class for collections that contain objects.  If the object
+            implements the System.IDisposable interface, OnDispose is called on the 
+            object in DisposeCollectionItems.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.SubObjectBase">
+            <summary>
+               Classes that want to notify listeners when there state changes
+               (e.g. when a property value is changed) derive from the
+               SubObjectBase class.
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.SubObjectBase.TagSerializationName">
+            <summary>
+            Default name used to serialize the <see cref="P:Infragistics.Shared.SubObjectBase.Tag"/> property value
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.SubObjectBase.tagValue">
+            <summary>
+            The tag property can be used to logically attach another
+            object or value to this object. 
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectBase.OnSubObjectPropChanged(Infragistics.Shared.PropChangeInfo)">
+            <summary>
+            Called when another sub object that we are listening to notifies
+            us that one of its properties has changed.
+            </summary>
+            <remarks>
+            The default implementation does nothing. It should be overridden
+            in the derived classes 
+            </remarks>
+            <param name="propChange"><see cref="T:Infragistics.Shared.PropChangeInfo"/></param>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectBase.OnObjectPropChanged(Infragistics.Shared.PropChangeInfo)">
+            <summary>
+            Called when a property of this object or another sub object that we are listening to notifies
+            us that one of its properties has changed.
+            </summary>
+            <remarks>
+            The default implementation does nothing. It should be overridden
+            in the derived classes 
+            <seealso cref="M:Infragistics.Shared.SubObjectBase.OnSubObjectPropChanged(Infragistics.Shared.PropChangeInfo)"/>
+            </remarks>
+            <param name="propChange"><see cref="T:Infragistics.Shared.PropChangeInfo"/></param>		
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectBase.NotifyPropChange(System.Enum)">
+            <summary>
+            Notifies any listeners when the state of an object has changed
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectBase.NotifyPropChange(System.Enum,Infragistics.Shared.PropChangeInfo)">
+            <summary>
+            Notifies any listeners when the state of an object has changed
+            </summary>
+            <param name="propId">An ID that denotes the property.</param>
+            <param name="trigger">Optional. Used during a prop change notification to create a complete context chain of what triggered the change. </param>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectBase.NotifyPropChange(Infragistics.Shared.PropChangeInfo)">
+            <summary>
+            Notifies any listeners when the state of an object has changed. 
+            </summary>
+            <param name="trigger">Used during a prop change notification to create a complete context chain of what triggered the change.</param>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectBase.ShouldSerializeTag">
+            <summary>
+            Returns true if the tag value is a string or a primitive type.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectBase.ResetTag">
+            <summary>
+            Sets the tag value to null
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectBase.InitializeTag(System.Object)">
+            <summary>
+            Protected method for initializing the <see cref="P:Infragistics.Shared.SubObjectBase.Tag"/> property without generating a property change notification.
+            </summary>
+            <param name="tagValue"><see cref="T:System.Object"/> to initialize tag to. </param>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectBase.OnDispose">
+            Called when this object is Disposed of.
+             
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectBase.SerializeTag(System.Runtime.Serialization.SerializationInfo,System.String)">
+            <summary>
+            Serializes the <see cref="P:Infragistics.Shared.SubObjectBase.Tag"/> property's value into
+            the specified serialization info object.
+            </summary>
+            <param name="info">Serialization info instance into which the tag should be serialized.</param>
+            <param name="name">Name used to serialize the tag's value</param>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectBase.SerializeTag(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            Serializes the <see cref="P:Infragistics.Shared.SubObjectBase.Tag"/> property's value into
+            the specified serialization info object.
+            </summary>
+            <param name="info">Serialization info instance into which the tag should be serialized.</param>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectBase.DeserializeTag(System.Runtime.Serialization.SerializationEntry)">
+            <summary>
+            Deserializes the tag value from the specified entry
+            </summary>
+            <param name="entry">Serialization entry from which to obtain the new <see cref="P:Infragistics.Shared.SubObjectBase.Tag"/> value</param>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectBase.DeserializeTag(System.Runtime.Serialization.SerializationInfo,System.String)">
+            <summary>
+            Deserializes the value for the <see cref="P:Infragistics.Shared.SubObjectBase.Tag"/> property
+            </summary>
+            <param name="info">Serialization info object from which to obtain the value</param>
+            <param name="name"></param>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectBase.DeserializeTag(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            Deserializes the value for the <see cref="P:Infragistics.Shared.SubObjectBase.Tag"/> property
+            </summary>
+            <param name="info">Serialization info object from which to obtain the value</param>
+        </member>
+        <member name="E:Infragistics.Shared.SubObjectBase.SubObjectPropChanged">
+            <summary>
+            Fired when a property is changed on this object or any of
+            its sub objects
+            </summary>
+        </member>
+        <member name="E:Infragistics.Shared.SubObjectBase.SubObjectDisposed">
+            <summary>
+            Fired when this object is disposed
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.SubObjectBase.SubObjectPropChangeHandler">
+            <summary>
+            Returns the event handler that notifies OnSubObjectPropChanged
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.SubObjectBase.Tag">
+            <summary>
+            The tag property can be used to logically attach another
+            object or value to this object. 
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.SubObjectBase.NotifyId">
+            <summary>
+            Used to identify properties during a property change notification
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.SubObjectBase.NotifyId.Tag">
+            <summary>
+            The Tag property
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.SubObjectBase.NotifyId.Key">
+            <summary>
+            Key property
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObjectCollectionBase.#ctor">
+            <summary>
+            Constructor, initializes a new <b>DisposableObjectCollectionBase</b> class.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObjectCollectionBase.GetItem(System.Int32)">
+            <summary>
+            Virtual method that returns the object at the specified index
+            </summary>
+            <param name="index">index of the object to retrieve.</param>
+            <returns>The object at the index</returns>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObjectCollectionBase.DisposeCollectionItems">
+            <summary>
+            Calls dispose on each collection item
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObjectCollectionBase.CopyTo(System.Array,System.Int32)">
+            <summary>
+            Copies the items from the collection into the array.
+            </summary>
+            <param name="array">The array to receive the itemd</param>
+            <param name="index">The index to start with</param>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObjectCollectionBase.Contains(System.Object)">
+            <summary>
+            Returns true if the collection contains the object
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObjectCollectionBase.IndexOf(System.Object)">
+            <summary>
+            Returns the index of the object in the collection
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObjectCollectionBase.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            IEnumerable Interface Implementation
+            returns a type safe enumerator
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Infragistics.Shared.DisposableObjectCollectionBase.SyncRoot">
+            <summary>
+            Gets an object that can be used to synchronize access to the collection.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.DisposableObjectCollectionBase.IsSynchronized">
+            <summary>
+            Gets a value indicating whether access to the ArrayList is synchronized (thread-safe).
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.DisposableObjectCollectionBase.IsReadOnly">
+            <summary>
+            Returns true if the collection is read-only
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.DisposableObjectCollectionBase.InitialCapacity">
+            <summary>
+            Abstract property that specifies the initial capacity
+            of the collection
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.DisposableObjectCollectionBase.Count">
+            <summary>
+            Returns the number of items in the collection
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.DisposableObjectCollectionBase.List">
+            <summary>
+            The list that contains the item references 
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.DisposableObjectEnumeratorBase">
+            <summary>
+            A base class that implements the IEnumerator interface 
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObjectEnumeratorBase.#ctor(Infragistics.Shared.DisposableObjectCollectionBase)">
+            <summary>
+            Constructor 
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObjectEnumeratorBase.MoveNext">
+            <summary>
+            Implements the IEnumerator.MoveNext method 
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.DisposableObjectEnumeratorBase.Reset">
+            <summary>
+            Implements the IEnumerator.Reset method. Sets the position to
+            before the first item in the collection
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.DisposableObjectEnumeratorBase.System#Collections#IEnumerator#Current">
+            <summary>
+            Returns the current object being enumerated
+            </summary>
+        </member>
+        <member name="T:Infragistics.Win.DropDownListBox">
+            <summary>
+            Listbox used for displaying a dropdown from a UITypeEditor.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Win.DropDownListBox.#ctor(System.Object[],System.Object,System.Boolean)">
+            <summary>
+            Constructor, initializes a new instance of <b>DropDownListBox</b> class.
+            </summary>
+            <param name="items">Array of items used to populate the listbox.</param>
+            <param name="defaultItem">Item to select by default.</param>
+            <param name="sorted">True if the items should be sorted by default</param>
+        </member>
+        <member name="M:Infragistics.Win.DropDownListBox.#ctor(System.Object[],System.Object)">
+            <summary>
+            Constructor, initializes a new instance of <b>DropDownListBox</b> class.
+            </summary>
+            <param name="items">Array of items used to populate the listbox.</param>
+            <param name="defaultItem">Item to select by default.</param>
+        </member>
+        <member name="M:Infragistics.Win.DropDownListBox.IsInputKey(System.Windows.Forms.Keys)">
+            <summary>
+            Overriden. Used to indicate that the enter key is used by the control.
+            </summary>
+            <param name="keyData"><see cref="T:System.Windows.Forms.Keys"/></param>
+            <returns>True if the key should be passed to the control.</returns>
+        </member>
+        <member name="M:Infragistics.Win.DropDownListBox.OnClick(System.EventArgs)">
+            <summary>
+            Overriden. Used to intercept when the user selects an item as opposed to
+            when the event fires during population of the list.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/></param>
+        </member>
+        <member name="M:Infragistics.Win.DropDownListBox.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Overriden. Used to intercept when the user pressing the enter key.
+            </summary>
+            <param name="e"><see cref="T:System.Windows.Forms.KeyEventArgs"/></param>
+        </member>
+        <member name="P:Infragistics.Win.DropDownListBox.WasItemClicked">
+            <summary>
+            Indicates if an item was selected.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.EventHandlerDictionary">
+            <summary>
+            Class used to manage a list of delegates. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.EventHandlerDictionary.#ctor">
+            <summary>
+            Initializes a new <see cref="T:Infragistics.Shared.EventHandlerDictionary"/>
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.EventHandlerDictionary.#ctor(System.Int32)">
+            <summary>
+            Initializes a new <see cref="T:Infragistics.Shared.EventHandlerDictionary"/>
+            </summary>
+            <param name="initialSize">Approximate number of items that the list will contain</param>
+        </member>
+        <member name="M:Infragistics.Shared.EventHandlerDictionary.AddHandler(System.Object,System.Delegate)">
+            <summary>
+            Adds a delegate to the list
+            </summary>
+            <param name="key">The object that owns the event</param>
+            <param name="value">The delegate to add to the list</param>
+        </member>
+        <member name="M:Infragistics.Shared.EventHandlerDictionary.RemoveHandler(System.Object,System.Delegate)">
+            <summary>
+            Removes a delegate from the list
+            </summary>
+            <param name="key">Object that owns the event</param>
+            <param name="value">Delegate to remove</param>
+        </member>
+        <member name="M:Infragistics.Shared.EventHandlerDictionary.OnDispose">
+            <summary>
+            Invoked when the object is disposed.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.EventHandlerDictionary.Item(System.Object)">
+            <summary>
+            Returns the <see cref="T:System.Delegate"/> with the specified key.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.EventManagerBase">
+            <summary>
+            Abstract base class for managing a control's events. It maintains an
+            enabled flag for each event as well as a nested 'in progress' count.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.EventManagerBase.#ctor(System.Int32)">
+            <summary>
+            Constructor intitializes a new instance of the <b>EventManagerBase</b> class.
+            </summary>
+            <param name="eventCount">The total number of events</param>
+        </member>
+        <member name="M:Infragistics.Shared.EventManagerBase.InProgress(System.Int32)">
+            <summary>
+            Returns true if the event is in progress (in progress count > 0)
+            </summary>
+            <param name="eventIndex">index of the event to check.</param>
+            <returns>True if event in progress, false otherwise.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.EventManagerBase.IncrementInProgress(System.Int32)">
+            <summary>
+            Increments the in progress count
+            </summary>
+            <param name="eventIndex">index of the event to increment</param>
+        </member>
+        <member name="M:Infragistics.Shared.EventManagerBase.DecrementInProgress(System.Int32)">
+            <summary>
+            Decrements the in progress count
+            </summary>
+            <param name="eventIndex">index of the event to decrement</param>
+        </member>
+        <member name="M:Infragistics.Shared.EventManagerBase.IsEnabled(System.Int32)">
+            <summary>
+            Returns true if the event is enabled
+            </summary>
+            <param name="eventIndex">Index of the event to check.</param>
+            <returns>True if enabled, false otherwise.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.EventManagerBase.IsEnabled(System.Int32[])">
+            <summary>
+            Returns false if any event is disabled
+            </summary>
+            <param name="eventIndexes">multiple indices to check</param>
+            <returns>True if and only if all events are enabled, false otherwise.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.EventManagerBase.SetEnabled(System.Int32,System.Boolean)">
+            <summary>
+            Sets a specific event enabled or disabled.
+            </summary>
+            <param name="eventIndex">Index of the event to enable/disable</param>
+            <param name="enabled">True to enable the event, false to disable it.</param>
+        </member>
+        <member name="M:Infragistics.Shared.EventManagerBase.SetEnabled(System.Int32[],System.Boolean)">
+            <summary>
+            Sets an array of events enabled or disabled.
+            </summary>
+            <param name="eventIndexes">Indices of the events to change.</param>
+            <param name="enabled">True to enable the event, false to disable it.</param>
+        </member>
+        <member name="P:Infragistics.Shared.EventManagerBase.AllEventsEnabled">
+            <summary>
+            The get returns true if and only if all events are enabled. The set
+            makes all events enabled or disabled
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.ExpandableCollectionConverter">
+            <summary>
+            Type converter for providing an expandable collection
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.ExpandableCollectionConverter.GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Indicates that this object returns properties.
+            </summary>
+            <param name="context">ITypeDescriptorContext</param>
+            <returns>True</returns>
+        </member>
+        <member name="M:Infragistics.Shared.ExpandableCollectionConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])">
+            <summary>
+            Return the PropertyDescriptor for the object's properties.
+            </summary>
+            <param name="context">ITypeDescriptorContext</param>
+            <param name="value">Value whose properties should be returned</param>
+            <param name="attributes">Attributes used to limit the properties returned</param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.ExpandableCollectionConverter.GetItemName(System.Int32,System.Object,System.Int32)">
+            <summary>
+            Returns the string representation of the specified item
+            </summary>
+            <param name="index">Index of the item in the collection</param>
+            <param name="item">Item</param>
+            <param name="count">Total number of items in the collection</param>
+            <returns>A string representation of the object</returns>
+        </member>
+        <member name="T:Infragistics.Shared.CollectionItemPropertyDescriptor">
+            <summary>
+            PropertyDescriptor for an item in an expandable collection
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.CollectionItemPropertyDescriptor.CanResetValue(System.Object)">
+            <summary>
+            Indicates if the property can be reset.
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.CollectionItemPropertyDescriptor.GetValue(System.Object)">
+            <summary>
+            Returns the value for this property.
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.CollectionItemPropertyDescriptor.ResetValue(System.Object)">
+            <summary>
+            Called when the property is to be reset.
+            </summary>
+            <param name="component"></param>
+        </member>
+        <member name="M:Infragistics.Shared.CollectionItemPropertyDescriptor.SetValue(System.Object,System.Object)">
+            <summary>
+            Sets the value of the component to a new value.
+            </summary>
+            <param name="component"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Infragistics.Shared.CollectionItemPropertyDescriptor.ShouldSerializeValue(System.Object)">
+            <summary>
+            Indicates whether the property needs to be persisted.
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Infragistics.Shared.CollectionItemPropertyDescriptor.Category">
+            <summary>
+            Gets the name of the category to which the member belongs.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.CollectionItemPropertyDescriptor.ComponentType">
+            <summary>
+            The type of component the property is bound to.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.CollectionItemPropertyDescriptor.IsReadOnly">
+            <summary>
+            Indicates if the property is read-only.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.CollectionItemPropertyDescriptor.PropertyType">
+            <summary>
+            The type of the property.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.CollectionItemPropertyDescriptor.Index">
+            <summary>
+            Index of the item in the collection.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.ISelectableItem">
+            <summary>
+            ISelectableItem is implemented by any sub object that can
+            be selected and/or activated
+            (e.g. a cell, row, header etc.)
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.ISelectableItem.IsSelected">
+            <summary>
+            True if the item is currently selected (read-only).
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.ISelectableItem.IsSelectable">
+            <summary>
+            True if the item is selectable (read-only).
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.ISelectableItem.IsDraggable">
+            <summary>
+            True if the item is Draggable (read-only).
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.ISelectableItem.IsTabStop">
+            <summary>
+            True if this item is a tab stop
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.IUltraLicensedComponent">
+            <summary>
+            Interface implemented by Infragistics licensed componenents
+            and controls.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.IUltraLicensedComponent.License">
+            <summary>
+            Returns the component's license object (read-only) 
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.IKeyedSubObject">
+            <summary>
+            Interface used by sub objects that will be part of a keyed collection (where each item can be accessed either through a zero based index or a string key.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.IKeyedSubObject.OnRemovedFromCollection(Infragistics.Shared.KeyedSubObjectsCollectionBase)">
+            <summary>
+            Called when this object is being removed from the passed
+            in collection. 
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.IKeyedSubObject.OnAddedToCollection(Infragistics.Shared.KeyedSubObjectsCollectionBase)">
+            <summary>
+            Called when this object is being added to the passed
+            in collection. 
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.IKeyedSubObject.Key">
+            <summary>
+            The key to use to access this item in the collection
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.IKeyedSubObjectEx">
+            <summary>
+            Interface used by sub objects that cache an interned lowercase version of their key to optimize key comparisons.
+            </summary>
+            <seealso cref="T:Infragistics.Shared.IKeyedSubObject"/>
+        </member>
+        <member name="P:Infragistics.Shared.IKeyedSubObjectEx.KeyLowercaseInterned">
+            <summary>
+            Returns an interned lowercase version of the string (read-only).
+            </summary>
+            <remarks>
+            <p class="body">The returned string is used to optimize case insensitive comparisons.</p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.Shared.KeyedSubObjectBase">
+            <summary>
+            Abstract base class which implements IKeyedSubObject for sub objects
+            that will be part of a keyed collection (where each item can be accessed
+            either through a zero based index or a string key) 
+            </summary>
+            <seealso cref="T:Infragistics.Shared.SubObjectBase"/>
+            <seealso cref="T:Infragistics.Shared.IKeyedSubObjectEx"/>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectBase.#ctor">
+            <summary>
+            Constructor, initializes new instance of <b>KeyedSubObjectBase</b> class.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectBase.#ctor(System.String)">
+            <summary>
+            Constructor, initializes new instance of <b>KeyedSubObjectBase</b> class.
+            </summary>
+            <param name="key">Unique Key for the new item.</param>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectBase.ShouldSerializeKey">
+            <summary>
+            Returns true if the key needs to be serialized (not null )
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectBase.ResetKey">
+            <summary>
+            Sets the key back to null
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectBase.OnRemovedFromCollection(Infragistics.Shared.KeyedSubObjectsCollectionBase)">
+            <summary>
+            Called when this object is being removed from the passed
+            in collection. The default implementation nulls out the
+            primaryCollection if the passed in collection matches
+            </summary>
+            <param name="primaryCollection"><see cref="T:Infragistics.Shared.KeyedSubObjectsCollectionBase"/></param>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectBase.OnAddedToCollection(Infragistics.Shared.KeyedSubObjectsCollectionBase)">
+            <summary>
+            Called when this object is being added to the passed
+            in collection. The default implementation sets the internal
+            primaryCollection reference if it hasn't already been set
+            </summary>
+            <param name="primaryCollection"><see cref="T:Infragistics.Shared.KeyedSubObjectsCollectionBase"/></param>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectBase.Infragistics#Shared#IKeyedSubObject#OnAddedToCollection(Infragistics.Shared.KeyedSubObjectsCollectionBase)">
+            <summary>
+            Called when this object is being added to the passed
+            in collection.
+            </summary>
+            <param name="primaryCollection"><see cref="T:Infragistics.Shared.KeyedSubObjectsCollectionBase"/></param>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectBase.Infragistics#Shared#IKeyedSubObject#OnRemovedFromCollection(Infragistics.Shared.KeyedSubObjectsCollectionBase)">
+            <summary>
+            Called when this object is being removed to the passed
+            in collection.
+            </summary>
+            <param name="primaryCollection"><see cref="T:Infragistics.Shared.KeyedSubObjectsCollectionBase"/></param>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectBase.ResetInternedKey">
+            <summary>
+            Clears the stored interned copy of the key.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.KeyedSubObjectBase.Key">
+            <summary>
+            The Key of the item in its collection.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.KeyedSubObjectBase.PrimaryCollection">
+            <summary>
+            The primary collection that owns this object
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.KeyedSubObjectBase.Infragistics#Shared#IKeyedSubObjectEx#KeyLowercaseInterned">
+            <summary>
+            Returns a cached lowercase version of the string (read-only).
+            </summary>
+            <remarks>The returned string can be used to optimize case insensitive comparisons.</remarks>
+        </member>
+        <member name="P:Infragistics.Shared.KeyedSubObjectBase.KeyLowercaseInterned">
+            <summary>
+            Returns the interned lowercase key used during key comparisons.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.KeyedSubObjectsCollectionBase">
+            <summary>
+            Abstract base class for keyed collections 
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.SubObjectsCollectionBase">
+            <summary>
+            Abstract base class for collections withouit keys 
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectsCollectionBase.#ctor">
+            <summary>
+            Constructor, initializes a new instance of the <b>SubObjectsCollectionBase</b> class.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectsCollectionBase.CreateArray">
+            <summary>
+            Virtual method used by the All 'get' method to
+            create the array it returns.
+            </summary>
+            <returns>The newly created object array</returns>
+            <remarks>This is normally overridden in a derived class to allocate a type safe array.</remarks>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectsCollectionBase.InternalAdd(Infragistics.Shared.SubObjectBase)">
+            <summary>
+            Appends the object to the collection
+            </summary>
+            <param name="obj"><see cref="T:Infragistics.Shared.SubObjectBase"/> to add to the collection.</param>
+            <returns>Index of the added item.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectsCollectionBase.InternalInsert(System.Int32,Infragistics.Shared.SubObjectBase)">
+            <summary>
+            Appends the object to the collection
+            </summary>
+            <param name="index">Item insertion index.</param>
+            <param name="obj"><see cref="T:Infragistics.Shared.SubObjectBase"/> to insert into the collection.</param>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectsCollectionBase.InternalClear">
+            <summary>
+            Clears the collection
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectsCollectionBase.InternalRemove(Infragistics.Shared.SubObjectBase)">
+            <summary>
+            Removes an item from the collection
+            </summary>
+            <param name="value">Item to remove</param>
+        </member>
+        <member name="M:Infragistics.Shared.SubObjectsCollectionBase.InternalRemove(System.Int32)">
+            <summary>
+            Removes an item from the collection
+            </summary>
+            <param name="index">Index of the item to remove.</param>
+        </member>
+        <member name="P:Infragistics.Shared.SubObjectsCollectionBase.All">
+            <summary>
+            The collection as an array of objects
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.#ctor">
+            <summary>
+            Constructor, initializes a new instance of the <b>KeyedSubObjectsCollectionBase</b> class.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.IndexOf(System.String)">
+            <summary>
+            Returns the index of the item in the collection that has the
+            passed in key or -1 if no item is found.
+            </summary>
+            <param name="key">The key of the item whose index is to be returned.</param>
+            <returns>The index of the item in the collection that has the passed in key, or -1 if no item is found.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.GetItem(System.String)">
+            <summary>
+            Returns the object with the passed in key
+            </summary>
+            <param name="key">The key of the item whose index is to be returned.</param>
+            <returns>The index of the item in the collection that has the passed in key, or -1 if no item is found.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.Exists(System.String)">
+            <summary>
+            Returns true if an object with this key is already
+            in the collection. Note, if key is null or a zero
+            length string this method returns false
+            </summary>
+            <param name="key">Key of item to test for.</param>
+            <returns>True if item exists, false otherwise.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.ValidateKey(System.String)">
+            <summary>
+            Validates that the key is a valid key for this collection.
+            </summary>
+            <param name="key">The key to check</param>
+            <exception cref="T:System.ArgumentException">Key already exists.</exception>
+            <exception cref="T:System.ArgumentException">Key required.</exception>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.ValidateKey(System.String,Infragistics.Shared.IKeyedSubObject)">
+            <summary>
+            Validates that the key is a valid key for this collection.
+            </summary>
+            <param name="key">The key to check</param>
+            <param name="ignoreObject">Don't throw an exception if the key matches this item.</param>
+            <exception cref="T:System.ArgumentException">Key already exists.</exception>
+            <exception cref="T:System.ArgumentException">Key required.</exception>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.ValidateKeyDoesNotExist(System.String)">
+            <summary>
+            Validates that the key doesn't already exist.
+            </summary>
+            <param name="key">The key to check</param>
+            <exception cref="T:System.ArgumentException">Key already exists.</exception>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.ValidateKeyDoesNotExist(System.String,Infragistics.Shared.IKeyedSubObject)">
+            <summary>
+            Validates that the key doesn't already exist.
+            </summary>
+            <param name="key">The key to check</param>
+            <param name="ignoreObject">Don't throw an exception if the key matches this item.</param>
+            <exception cref="T:System.ArgumentException">Key already exists.</exception>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.CreateArray">
+            <summary>
+            Virtual method used by the All 'get' method to
+            create the array it returns.
+            </summary>
+            <returns>The newly created object array</returns>
+            <remarks>This is normally overridden in a derived class to allocate a type safe array.</remarks>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.CopyTo(Infragistics.Shared.IKeyedSubObject[],System.Int32)">
+            <summary>
+            Copies the items into the array
+            </summary>
+            <param name="array">Target array</param>
+            <param name="index">Index where to begin copying</param>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.Contains(Infragistics.Shared.IKeyedSubObject)">
+            <summary>
+            Returns true if the collection contains this item
+            </summary>
+            <param name="value">Item to check for.</param>
+            <returns>True if item exists, false if item does not exist.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.IndexOf(Infragistics.Shared.IKeyedSubObject)">
+            <summary>
+            Returns the index of the item in the collection
+            </summary>
+            <param name="value">Item to check for.</param>
+            <returns>The index of the item in the collection that has the passed in key, or -1 if no item is found.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.InternalAdd(Infragistics.Shared.IKeyedSubObject)">
+            <summary>
+            Appends the object to the collection
+            </summary>
+            <param name="obj">Item to Add.</param>
+            <returns>Index of the newly added item.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.InternalInsert(System.Int32,Infragistics.Shared.IKeyedSubObject)">
+            <summary>
+            Inserts an object into the collection
+            </summary>
+            <param name="index">The zero based index at which value should be inserted.</param>
+            <param name="value">Item to insert.</param>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.InternalClear">
+            <summary>
+            Clears the collection
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.InternalRemove(Infragistics.Shared.IKeyedSubObject)">
+            <summary>
+            Removes an item from the collection
+            </summary>
+            <param name="value">Item to remove.</param>
+        </member>
+        <member name="M:Infragistics.Shared.KeyedSubObjectsCollectionBase.InternalRemoveAt(System.Int32)">
+            <summary>
+            Removes an item from the collection
+            </summary>
+            <param name="index">Index of the item to remove.</param>
+        </member>
+        <member name="P:Infragistics.Shared.KeyedSubObjectsCollectionBase.AllowDuplicateKeys">
+            <summary>
+            Returns true if the collection allows 2 or more items to have the same key value.
+            </summary>
+            <remarks>
+            This does not apply to items whose keys are null or empty. There can always be multiple items with null or empty keys unless the <see cref="P:Infragistics.Shared.KeyedSubObjectsCollectionBase.AllowEmptyKeys"/> property returns false.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.Shared.KeyedSubObjectsCollectionBase.AllowEmptyKeys">
+            <summary>
+            Returns true if the collection allows items to be added that do not have key values.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.KeyedSubObjectsCollectionBase.All">
+            <summary>
+            The collection as an array of objects
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.KeyedSubObjectsCollectionBase.InternStrings">
+            <summary>
+            Indicates whether to use string internment during key comparisons involving
+            <see cref="T:Infragistics.Shared.IKeyedSubObjectEx"/> instances.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.Serialization.ObjectStreamer">
+            <summary>
+            Serializable class for serializing the properties of another object.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.ObjectStreamer.#ctor">
+            <summary>
+            Initializes a new <see cref="T:Infragistics.Shared.Serialization.ObjectStreamer"/>
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.ObjectStreamer.#ctor(System.Int32)">
+            <summary>
+            Initializes a new <see cref="T:Infragistics.Shared.Serialization.ObjectStreamer"/>
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.ObjectStreamer.#ctor(System.String)">
+            <summary>
+            Initializes a new <see cref="T:Infragistics.Shared.Serialization.ObjectStreamer"/> with the specified assembly name to use when serializing the object.
+            </summary>
+            <param name="assemblyName">Assembly name to use when serializing the object.</param>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.ObjectStreamer.#ctor(System.String,System.Int32)">
+            <summary>
+            Initializes a new <see cref="T:Infragistics.Shared.Serialization.ObjectStreamer"/> with the specified assembly name to use when serializing the object.
+            </summary>
+            <param name="assemblyName">Assembly name to use when serializing the object.</param>
+            <param name="initialCapacity">Initial capacity for the <see cref="P:Infragistics.Shared.Serialization.ObjectStreamer.Dictionary"/></param>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.ObjectStreamer.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor used during deserialization to initialize a new <see cref="T:Infragistics.Shared.Serialization.ObjectStreamer"/> object
+            with the serialized property values.
+            </summary>
+            <param name="info">SerializationInfo</param>
+            <param name="context">StreamingContext</param>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.ObjectStreamer.GetValue(System.Object)">
+            <summary>
+            Gets the Value of an item in the dictionary.		
+            </summary>
+            <param name="key">The key of the dictionary entry</param>
+            <returns>If the dictionary contains a value, it will be returned normally. If the dictionary contains a SerializationEntry, then it returns the SerializationEntry.Value.</returns>
+        </member>
+        <member name="P:Infragistics.Shared.Serialization.ObjectStreamer.Dictionary">
+            <summary>
+            Returns the dictionary containing the properties to serialize.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.Serialization.ObjectStreamer.AssemblyName">
+            <summary>
+            Returns the assembly name used to serialize/deserialize the object.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.Serialization.ObjectWrapper">
+            <summary>
+            Wrapper class for serializing the value of a property
+            whose type is object and whose value is a simple type.
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.Serialization.ObjectWrapper.objectValue">
+            <summary>
+            The serialized object value
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.ObjectWrapper.#ctor(System.Object)">
+            <summary>
+            Initializes a new <b>ObjectWrapper</b>
+            </summary>
+            <param name="value">Simple object type to serialize.</param>
+            <remarks>
+            A <see cref="T:System.NotSupportedException"/> is thrown if the value
+            is not a simple type such as string, DateTime, DBNull or
+            primitives (e.g. int, float, etc.).
+            </remarks>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.ObjectWrapper.ToString">
+            <summary>
+            Returns a string representation of the structure
+            </summary>
+            <returns>A string containing the class name, as well
+            as the wrapped object's type and to string.</returns>
+        </member>
+        <member name="P:Infragistics.Shared.Serialization.ObjectWrapper.Value">
+            <summary>
+            Returns the wrapped object
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.PrimitiveTypeUITypeEditor">
+            <summary>
+            The editor for a property of type <see cref="T:System.Object"/>.
+            </summary>
+            <remarks>
+            <p>Provides a dropdown list of primitive types (e.g. string, int, datetime etc.).</p>
+            <p>When a new type is selected, the editor will attempt to convert the existing property value to that type.</p>
+            <p>If the conversion fails the property will be set to a default value appropriate for the selected type.</p>
+            <p></p>
+            <p>The editor is specified as the <see cref="T:System.ComponentModel.EditorAttribute"/> for a property of type <see cref="T:System.Object"/>.</p>
+            <p>Normally the <see cref="T:Infragistics.Shared.PrimitiveTypeConverter"/> should be also specified as the corresponding <see cref="T:System.ComponentModel.TypeConverterAttribute"/> for the property.</p>
+            </remarks>
+            <seealso cref="T:Infragistics.Shared.PrimitiveTypeConverter"/>
+            <seealso cref="T:System.Drawing.Design.UITypeEditor"/>
+        </member>
+        <member name="M:Infragistics.Shared.PrimitiveTypeUITypeEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Used to edit the value and convert the value as needed.
+            </summary>
+            <param name="context">ITypeDescriptorContext</param>
+            <param name="provider">IServiceProvider</param>
+            <param name="value">Current value</param>
+            <returns>Edited value.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.PrimitiveTypeUITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Used to determine the type of UIEditor that will be displayed.
+            </summary>
+            <param name="context">ITypeDescriptorContext</param>
+            <returns>UITypeEditorEditStyle specifying the type of UIEditor.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.PrimitiveTypeUITypeEditor.GetPaintValueSupported(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Indicates if the a small representation of the value is rendered in the property grid.
+            </summary>
+            <param name="context">Context information about the property to render</param>
+            <returns>True to indicate that a value will be rendered</returns>
+        </member>
+        <member name="M:Infragistics.Shared.PrimitiveTypeUITypeEditor.PaintValue(System.Drawing.Design.PaintValueEventArgs)">
+            <summary>
+            Invoked when a small representation of the value should be rendered.
+            </summary>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="M:Infragistics.Shared.PrimitiveTypeUITypeEditor.InitializeListBox(System.Windows.Forms.ListBox)">
+            <summary>
+            Invoked when the listbox used to display the enum values is created.
+            </summary>
+            <param name="listbox"><see cref="T:System.Windows.Forms.ListBox"/></param>
+        </member>
+        <member name="M:Infragistics.Shared.PrimitiveTypeUITypeEditor.IsTypeSupported(System.Type)">
+            <summary>
+            Returns true if the type is supported and should be added to the drodpwn list.
+            </summary>
+            <param name="type">The type to check.</param>
+        </member>
+        <member name="M:Infragistics.Shared.PrimitiveTypeUITypeEditor.OnDrawItem(System.Object,System.Windows.Forms.DrawItemEventArgs)">
+            <summary>
+            Invoked when the item in the listbox should be rendered
+            </summary>
+            <param name="sender">Object invoking the event</param>
+            <param name="e">Draw item event arguments</param>
+        </member>
+        <member name="M:Infragistics.Shared.PrimitiveTypeUITypeEditor.PaintIndicator(Infragistics.Shared.PrimitiveTypeUITypeEditor.TypeListBoxEntry,System.Drawing.Rectangle,System.Drawing.Graphics)">
+            <summary>
+            Used to paint the representation of the enum value
+            </summary>
+            <param name="entry">Enumeration value to render</param>
+            <param name="rect">Location to render into</param>
+            <param name="g">Graphics object</param>
+        </member>
+        <member name="M:Infragistics.Shared.PrimitiveTypeUITypeEditor.TypeListBoxEntry.ToString">
+            <summary>
+            Returns the Name of the underlying type.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.PrimitiveTypeConverter">
+            <summary>
+            The type converter for properties that use the <see cref="T:Infragistics.Shared.PrimitiveTypeUITypeEditor"/>.
+            </summary>
+            <seealso cref="T:Infragistics.Shared.PrimitiveTypeUITypeEditor"/>
+            <seealso cref="T:System.ComponentModel.TypeConverter"/>
+        </member>
+        <member name="M:Infragistics.Shared.PrimitiveTypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Determines if the object can convert from the source type
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <param name="sourceType">A <see cref="T:System.Type"/> that represents the type you want to convert from.</param>
+            <returns><b>true</b> if this converter can perform the conversion; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.PrimitiveTypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Returns true if the object can convert to that type.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <param name="destinationType">A <see cref="T:System.Type"/> that represents the type you want to convert to.</param>
+            <returns><b>true</b> if this converter can perform the conversion; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.PrimitiveTypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Converts from the value.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context. </param>
+            <param name="culture">The <see cref="T:System.Globalization.CultureInfo"/> to use as the current culture.</param>
+            <param name="value">The <see cref="T:System.Object"/> to convert.</param>
+            <returns>An <see cref="T:System.Object"/> that represents the converted value.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.PrimitiveTypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            Converts the object to the requested type.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context. </param>
+            <param name="culture">A <see cref="T:System.Globalization.CultureInfo"/> object. If a null reference (Nothing in Visual Basic) is passed, the current culture is assumed.</param>
+            <param name="value">The <see cref="T:System.Object"/> to convert. </param>
+            <param name="destinationType">The <see cref="T:System.Type"/> to convert the value parameter to. </param>
+            <returns>An <see cref="T:System.Object"/> that represents the converted value.</returns>
+        </member>
+        <member name="T:Infragistics.Shared.ResourceCustomizer">
+            <summary>
+            Class used to provide the ability to customize resource strings.
+            </summary>
+            <remarks>
+            <p>There is an instance of this class exposed by the <see cref="P:Infragistics.Shared.Resources.Customizer"/> property of the <see cref="T:Infragistics.Shared.Resources"/> object exposed by each Infragistics.Win assembly.</p>
+            <p>It allows for customization/substitution of strings that would normally be loaded from resources.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.Shared.ResourceCustomizer.GetCustomizedString(System.String)">
+            <summary>
+            Gets the customized string identified by the specified string resource name.
+            </summary>
+            <param name="name">Name of the string resource that was customized.</param>
+            <returns>The customized string or nulll if the resoource wasn't customized.</returns>
+            <seealso cref="M:Infragistics.Shared.ResourceCustomizer.ResetAllCustomizedStrings"/>
+            <seealso cref="M:Infragistics.Shared.ResourceCustomizer.ResetCustomizedString(System.String)"/>
+            <seealso cref="M:Infragistics.Shared.ResourceCustomizer.SetCustomizedString(System.String,System.String)"/>
+        </member>
+        <member name="M:Infragistics.Shared.ResourceCustomizer.ResetAllCustomizedStrings">
+            <summary>
+            Clears all strings customized by calls to <see cref="M:Infragistics.Shared.ResourceCustomizer.SetCustomizedString(System.String,System.String)"/> method.
+            </summary>
+            <seealso cref="M:Infragistics.Shared.ResourceCustomizer.SetCustomizedString(System.String,System.String)"/>
+            <seealso cref="M:Infragistics.Shared.ResourceCustomizer.ResetCustomizedString(System.String)"/>
+        </member>
+        <member name="M:Infragistics.Shared.ResourceCustomizer.ResetCustomizedString(System.String)">
+            <summary>
+            Resets a customized string identified by the specified string resource name so that it will load from the resource file.
+            </summary>
+            <param name="name">Name of the string resource to customize.</param>
+            <seealso cref="M:Infragistics.Shared.ResourceCustomizer.SetCustomizedString(System.String,System.String)"/>
+        </member>
+        <member name="M:Infragistics.Shared.ResourceCustomizer.SetCustomizedString(System.String,System.String)">
+            <summary>
+            Sets a customized string identified by the specified string resource name.
+            </summary>
+            <param name="name">Name of the string resource to customize.</param>
+            <param name="customizedText">The customized string. If null this has the same effect as calling <see cref="M:Infragistics.Shared.ResourceCustomizer.ResetCustomizedString(System.String)"/></param>
+            <seealso cref="M:Infragistics.Shared.ResourceCustomizer.ResetAllCustomizedStrings"/>
+            <seealso cref="M:Infragistics.Shared.ResourceCustomizer.ResetCustomizedString(System.String)"/>
+        </member>
+        <member name="T:Infragistics.Shared.Resources">
+            <summary>
+            Exposes a <see cref="T:Infragistics.Shared.ResourceCustomizer"/> instance for this assembly. 
+            </summary>
+            <seealso cref="P:Infragistics.Shared.Resources.Customizer"/> 
+            <seealso cref="T:Infragistics.Shared.ResourceCustomizer"/> 
+        </member>
+        <member name="P:Infragistics.Shared.Resources.Customizer">
+            <summary>
+            Returns the <see cref="T:Infragistics.Shared.ResourceCustomizer"/> for this assembly.
+            </summary>
+            <seealso cref="T:Infragistics.Shared.ResourceCustomizer"/> 
+        </member>
+        <member name="T:Infragistics.Shared.ISparseArrayItem">
+            <summary>
+            This interface can be implemented on items to be contained in the sparse 
+            array to get a fast IndexOf operation.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.ISparseArrayItem.GetOwnerData(Infragistics.Shared.SparseArray)">
+            <summary>
+            Gets the owner data of the item.
+            </summary>
+            <param name="context">The sparse array context.</param>
+            <remarks>
+            <p class="body"><b>GetOwnerData</b> and <see cref="M:Infragistics.Shared.ISparseArrayItem.SetOwnerData(System.Object,Infragistics.Shared.SparseArray)"/> methods are used by the <see cref="T:Infragistics.Shared.SparseArray"/> implementation to maintain a transparent piece of data. It uses this data to provide efficient IndexOf operation.</p>
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.ISparseArrayItem.SetOwnerData(System.Object,Infragistics.Shared.SparseArray)">
+            <summary>
+            Sets the owner data of the item.
+            </summary>
+            <param name="ownerData"></param>
+            <param name="context">The sparse array context.</param>
+            <remarks>
+            <p class="body"><see cref="M:Infragistics.Shared.ISparseArrayItem.GetOwnerData(Infragistics.Shared.SparseArray)"/> and <b>SetOwnerData</b> methods are used by the <see cref="T:Infragistics.Shared.SparseArray"/> implementation to maintain a transparent piece of data. It uses this data to provide efficient IndexOf operation.</p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.Shared.ISparseArrayMultiItem">
+            <summary>
+            ISparseArrayMultiItem interface.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.ISparseArrayMultiItem.GetItemAtScrollIndex(System.Int32)">
+            <summary>
+            Returns a descendant item at the specified index. The returned item 
+            doesn't necessarily have to be an immediate child.
+            </summary>
+            <param name="scrollIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Infragistics.Shared.ISparseArrayMultiItem.ScrollCount">
+            <summary>
+            Gets the scroll count of this item. If the scroll count is 0 then item 
+            is considered hidden otherwise it's considered visible. Scroll count must 
+            be a non-negative number.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.ICreateItemCallback">
+            <summary>
+            ICreateItemCallback interface.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.ICreateItemCallback.CreateItem(Infragistics.Shared.SparseArray,System.Int32)">
+            <summary>
+            Returns a new item to be assigned to a location in the array. CreateItem should not 
+            set the new item at the location in the array. Array and relativeIndex are provided 
+            for information only. Also the implementation should not modify array in any way 
+            otherwise results will be undefined.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.SparseArray">
+            <summary>
+            SparseArray class.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.#ctor(System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="useOwnerData">If true then either all items should implement ISparseArrayItem interface or the derived class should override <see cref="M:Infragistics.Shared.SparseArray.GetOwnerData(System.Object)"/> and <see cref="M:Infragistics.Shared.SparseArray.SetOwnerData(System.Object,System.Object)"/> methods to maintain owner data for items.</param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.#ctor(System.Int32)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="factor"></param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.#ctor(System.Int32,System.Single)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="factor"></param>
+            <param name="growthFactor">Must be between 0f and 1f exclusive.</param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.#ctor(System.Int32,System.Single,System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="factor"></param>
+            <param name="growthFactor">Must be between 0f and 1f exclusive.</param>
+            <param name="useOwnerData">If true then all the items must implement ISparseArrayItem interface.</param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.#ctor(System.Boolean,System.Int32,System.Single)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="manageScrollCounts"></param>
+            <param name="factor"></param>
+            <param name="growthFactor"></param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.Expand(System.Int32)">
+            <summary>
+            Expands the array to the new count. New count must be greater than or equal to the 
+            current count. This has the same logical effect as adding new count - current count 
+            number of null items at the end of the array.
+            </summary>
+            <param name="newCount"></param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.Add(System.Object)">
+            <summary>
+            Adds the speicifed item at the end of the collection.
+            </summary>
+            <param name="item"></param>
+            <returns>The index at which the item was added.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.Insert(System.Int32,System.Object)">
+            <summary>
+            Inserts the specified item at the specified location in the array.
+            </summary>
+            <param name="index"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.AddRange(System.Collections.ICollection)">
+            <summary>
+            Adds items in the specified collection to the end of the collection.
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.InsertRange(System.Int32,System.Collections.ICollection)">
+            <summary>
+            Inserts items in the specified collection to the collection at the specified index.
+            </summary>
+            <param name="index"></param>
+            <param name="items"></param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.RemoveAt(System.Int32)">
+            <summary>
+            Removes an item at the specified index.
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.IndexOf(System.Object)">
+            <summary>
+            Retruns the index of the specified item.
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.RemoveRange(System.Int32,System.Int32)">
+            <summary>
+            Removes count number of items starting at the specified index in the array.
+            </summary>
+            <param name="index"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.Remove(System.Object)">
+            <summary>
+            Removes the specified item. If the item doesn't exist in the collection, it does nothing.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.Contains(System.Object)">
+            <summary>
+            Returns true if the specified item is contained in the collection.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.Clear">
+            <summary>
+            Removes all items from the array.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.CopyTo(System.Array,System.Int32)">
+            <summary>
+            Copies all the elements from this collection to the specified array starting at index.
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.ToArray">
+            <summary>
+            Returns a new array containing all the elements of this collection.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.ToArray(System.Type)">
+            <summary>
+            Returns a new array of specified type containing all the elements of this collection.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.GetItem(System.Int32)">
+            <summary>
+            Gets the item at the specified index. If the item at the specified index is null 
+            and createItemCallback parameter is non-null, it will call CreateItem on the 
+            callback to create it and set it on the array at the specified index.
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.GetItem(System.Int32,Infragistics.Shared.ICreateItemCallback)">
+            <summary>
+            Gets the item at the specified index. If the item at the specified index is null 
+            and createItemCallback parameter is non-null, it will call CreateItem on the 
+            callback to create it and set it on the array at the specified index.
+            </summary>
+            <param name="index"></param>
+            <param name="createItemCallback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.Reverse">
+            <summary>
+            Reverses the order of items in the collection.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.Reverse(System.Int32,System.Int32)">
+            <summary>
+            Reverses the order of items in the specified range.
+            </summary>
+            <param name="index"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.Sort">
+            <summary>
+            Sorts the array.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.Sort(System.Collections.IComparer)">
+            <summary>
+            Sorts the array.
+            </summary>
+            <param name="comparer"></param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.GetOwnerData(System.Object)">
+            <summary>
+            Returns the owner data of the item. Derived class can override <b>GetOwnerData</b> and <b>SetOwnerData</b> to support owner data without having to implement ISparseArrayItem interface on the items.
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.SetOwnerData(System.Object,System.Object)">
+            <summary>
+            Sets the owner data on item. Derived class can override <b>GetOwnerData</b> and <b>SetOwnerData</b> to support owner data without having to implement ISparseArrayItem interface on the items.
+            </summary>
+            <param name="item"></param>
+            <param name="ownerData"></param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.GetVisibleCount">
+            <summary>
+            Returns the visible count.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.GetScrollCount">
+            <summary>
+            Returns the scroll count.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.GetVisibleIndexOf(Infragistics.Shared.ISparseArrayMultiItem)">
+            <summary>
+            Returns the visible index associted with the specified item. Item must be contained 
+            within the array. If the item is hidden, that is it's ScrollCount is 0, the this
+            method returns -1.
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.GetScrollIndexOf(Infragistics.Shared.ISparseArrayMultiItem)">
+            <summary>
+            Gets the scroll index of the specified item.
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.GetItemAtVisibleIndexOffset(Infragistics.Shared.ISparseArrayMultiItem,System.Int32,Infragistics.Shared.ICreateItemCallback)">
+            <summary>
+            Returns offset'th visible item from startItem. StartItem can be hidden in which case
+            it will start from the next visible item. Offset can be 0. If the resulting visible
+            index is out of bounds, returns null.
+            </summary>
+            <param name="startItem"></param>
+            <param name="offset"></param>
+            <param name="createItemCallback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.GetItemAtVisibleIndex(System.Int32,Infragistics.Shared.ICreateItemCallback)">
+            <summary>
+            Returns the item at the specified visible index. This method returns null if the visible index is out of bounds.
+            </summary>
+            <param name="visibleIndex">Visible index at which to get the item.</param>
+            <param name="createItemCallback">Optional call back to create the item at the specified visible index if none exists at that visible index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.GetItemAtScrollIndex(System.Int32,Infragistics.Shared.ICreateItemCallback)">
+            <summary>
+            Returns the item at the specified scroll index. This method returns null if the scroll index is out of bounds.
+            </summary>
+            <param name="scrollIndex">Visible index at which to get the item.</param>
+            <param name="createItemCallback">Optional call back to create the item at the specified scroll index if none exists at that scroll index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.NotifyItemScrollCountChanged(Infragistics.Shared.ISparseArrayMultiItem)">
+            <summary>
+            Whenever a scroll count of an item contained within this collection is changed, 
+            the collection must be notified of the change. If not notified of such a change,
+            behavior of various scroll and visible index related methods will be undefined.
+            </summary>
+            <param name="item">Item whose scroll count changed.</param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.DirtyScrollCountInfo">
+            <summary>
+            Dirties scroll count info for the whole collection so next time it will be re-calculated.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.OnScrollCountChanged">
+            <summary>
+            Called by the sparse array whenever visible count or scroll count changes or is dirtied. Default implementation does nothing. This may get called multiple times for the same change as well as may get called even when the count doesn't change but is simply dirtied.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.GetEnumerator">
+            <summary>
+            Returns an instance of IEnumerator that can be used to enumerate through all the 
+            elements of this collection.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseArray.GetEnumerator(Infragistics.Shared.ICreateItemCallback)">
+            <summary>
+            Returns an instance of IEnumerator that can be used to enumerate through all the 
+            elements of this collection. New elements will be created to fill null slots via
+            createItemCallback parameter if it's non-null.
+            </summary>
+            <param name="createItemCallback"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Infragistics.Shared.SparseArray.Count">
+            <summary>
+            Retruns the number of items contained in the collection.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.SparseArray.Item(System.Int32)">
+            <summary>
+            Indexer.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.SparseArray.IsSynchronized">
+            <summary>
+            Indicates whether this collection is synchronized. Always returns false.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.SparseArray.SyncRoot">
+            <summary>
+            Returns an object that can be used to synchronize thread access.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.SparseArray.NonNullItems">
+            <summary>
+            Returns a new instance of enumerable that can be used to enumerate through only the non-null items in the collection.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.SparseCollectionBase">
+            <summary>
+            Abstract base class for collections that contain objects.  If the object
+            implements the System.IDisposable interface, OnDispose is called on the 
+            object in DisposeCollectionItems.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SparseCollectionBase.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SparseCollectionBase.GetItem(System.Int32)">
+            <summary>
+            Virtual method that returns the object at the specified index
+            </summary>
+            <param name="index">index of the object to retrieve.</param>
+            <returns>The object at the index</returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseCollectionBase.CopyTo(System.Array,System.Int32)">
+            <summary>
+            Copies the items from the collection into the array.
+            </summary>
+            <param name="array">The array to receive the itemd</param>
+            <param name="index">The index to start with</param>		
+        </member>
+        <member name="M:Infragistics.Shared.SparseCollectionBase.Contains(System.Object)">
+            <summary>
+            Returns true if the collection contains the object
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SparseCollectionBase.IndexOf(System.Object)">
+            <summary>
+            Returns the index of the object in the collection
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SparseCollectionBase.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            IEnumerable Interface Implementation
+            returns a type safe enumerator
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseCollectionBase.CreateArray">
+            <summary>
+            Virtual method used by the All 'get' method to
+            create the array it returns.
+            </summary>
+            <returns>The newly created object array</returns>
+            <remarks>This is normally overridden in a derived class to allocate a type safe array.</remarks>
+        </member>
+        <member name="M:Infragistics.Shared.SparseCollectionBase.InternalAdd(System.Object)">
+            <summary>
+            Appends the object to the collection
+            </summary>
+            <param name="obj">Item to add to the collection.</param>
+            <returns>Index of the added item.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.SparseCollectionBase.InternalInsert(System.Int32,System.Object)">
+            <summary>
+            Appends the object to the collection
+            </summary>
+            <param name="index">Item insertion index.</param>
+            <param name="obj">Item to insert into the collection.</param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseCollectionBase.InternalClear">
+            <summary>
+            Clears the collection.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SparseCollectionBase.InternalRemove(System.Object)">
+            <summary>
+            Removes an item from the collection
+            </summary>
+            <param name="item">Item to remove</param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseCollectionBase.InternalRemove(System.Int32)">
+            <summary>
+            Removes an item from the collection
+            </summary>
+            <param name="index">Index of the item to remove.</param>
+        </member>
+        <member name="M:Infragistics.Shared.SparseCollectionBase.InternalAddRange(System.Collections.ICollection)">
+            <summary>
+            Adds items in the specified collection to this collection.
+            </summary>
+            <param name="collection"></param>
+        </member>
+        <member name="P:Infragistics.Shared.SparseCollectionBase.SyncRoot">
+            <summary>
+            Gets an object that can be used to synchronize access to the collection.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.SparseCollectionBase.IsSynchronized">
+            <summary>
+            Gets a value indicating whether access to the ArrayList is synchronized (thread-safe).
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.SparseCollectionBase.IsReadOnly">
+            <summary>
+            Returns true if the collection is read-only
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.SparseCollectionBase.Count">
+            <summary>
+            Returns the number of items in the collection
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.SparseCollectionBase.All">
+            <summary>
+            The collection as an array of objects
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.LocalizedCategoryAttribute.GetLocalizedString(System.String)">
+            <summary>
+            Returns the localized category name
+            </summary>
+            <param name="value">Name of the category to retreive</param>
+            <returns>The localized string value</returns>
+        </member>
+        <member name="T:Infragistics.Shared.UltraPropertyPageAttribute">
+            <summary>
+            Attribute class used for specifying the custom property pages of aa UltraControl.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropertyPageAttribute.#ctor(System.String,System.Type)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="tabCaption">Caption for the tab containing the control.</param>
+            <param name="ultraPropControlType">Control type to create.</param>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropertyPageAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="tabCaption">Caption for the tab containing the control.</param>
+            <param name="ultraPropControlType">Strong name of the property page type.</param>
+        </member>
+        <member name="P:Infragistics.Shared.UltraPropertyPageAttribute.UltraPropertyControlType">
+            <summary>
+            Returns the object type.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraPropertyPageAttribute.TabCaption">
+            <summary>
+            Returns the tabcaption for the control.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.PropChangeInfo">
+            <summary>
+            <p>The PropChangeInfo structure contains the context information
+            for a state change. It is passed into the SubObjectPropChanged event.</p>
+            <p></p>
+            <p>It also allows us to chain relavent context information 
+               about a property change so the a listener can get information 
+               as granular as it wants to determine what it should do when
+               an object's state changes. </p>
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.PropChangeInfo.#ctor(System.Object,System.Enum,Infragistics.Shared.PropChangeInfo)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="source">The object whose state has changed</param>
+            <param name="propId">A code that can bbe used to identify the property that has changed</param>
+            <param name="trigger">If the change occurred in a sub object this is the PropChangeInfo from that notification</param>
+        </member>
+        <member name="M:Infragistics.Shared.PropChangeInfo.FindPropId(System.Enum)">
+            <summary>
+            Searches for a specific propId up the trigger chain.
+            </summary>
+            <param name="propId">The property to look for</param>
+        </member>
+        <member name="M:Infragistics.Shared.PropChangeInfo.FindSource(System.Type)">
+            <summary>
+            Searches for a specific source up the trigger chain.
+            </summary>
+            <param name="type">The type of the source object to look for</param>
+            <returns>Source object that matches the type passed in.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.PropChangeInfo.ToString">
+            <summary>
+            Returns a description of the property change including
+            the entire trigger chain
+            </summary>
+            <returns>Returns a description of the property change including the entire trigger chain</returns>
+        </member>
+        <member name="M:Infragistics.Shared.PropChangeInfo.FindTrigger(System.Object)">
+            <summary>
+            Searches for a specific PropChangeInfo up the trigger chain based on the specified source object. Passing
+            in null will return the root trigger element.
+            </summary>
+            <param name="source">Source object to locate.</param>
+            <returns>The propChangeinfo trigger associated with the source or null if the specified source
+            was not in the trigger chain.</returns>
+        </member>
+        <member name="P:Infragistics.Shared.PropChangeInfo.Trigger">
+            <summary>
+            The trigger property returns an interface if this change
+            was triggered by a change notification from another object.
+            Otherwise, it returns null. 
+            </summary>
+            	<remarks> 
+            	<p>There may be several of these state changes forming a chain.
+            	For example, if a Cell's Appearance's backcolor property
+            	changes, the Appearance object will fire an event notifying
+            	any of its listeners, in this case the Cell object, that a
+            	state change has occurred (passing null for the trigger
+            	and the propId relating to BackColor).</p>
+            <p></p>
+            	<p>When the Cell gets the state change notification it will
+            	do whatever it needs to do and will forward the Appearance's
+            	PropChangeInfo as the trigger and the propId idntifying the
+            	Appearance property to notify all of its listeners, 
+            	in this case perhaps the corresponding row.</p> 
+            <p></p>
+            	<p>Then the row will do the same (using the propId identifying 
+            	its Cell property). This process will continue until the main
+            	object is reached or there are no listeners.</p>
+            <p></p>
+            	<p>The advantage of this approach is that we have created
+            	efficient notification infrastructure that can supply 
+            	detailed context information (as granular as the 
+            	listener may want) with little overhead.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.Shared.PropChangeInfo.Source">
+            <summary>
+            The source is the object whose state has changed
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.PropChangeInfo.PropId">
+            <summary>
+            PropId is a code that can be used to identify the property
+            that has been changed.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.SubObjectPropChangeEventHandler">
+            <summary>
+            A delegate for property change notification events
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.SubObjectDisposedEventHandler">
+            <summary>
+            A delegate for dispose notification events
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.SystemColorsCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SystemColorsCollection.#ctor">
+            <summary>
+            Constructor, initializes a new instance of the <b>SystemColorsCollection</b> class.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.SystemColorsCollection.FillColors">
+            <summary>
+            Fills the collection with the system colors
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.Serialization.UltraCodeDomSerializer">
+            <summary>
+            Serializer for customizing the serialization of an object graph 
+            to/from a series of CodeDom statements.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.UltraCodeDomSerializer.Deserialize(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object)">
+            <summary>
+            Invoked when the object should deserialize itself.
+            </summary>
+            <param name="manager">Serialization manager</param>
+            <param name="codeObject">Code statements to deserialize from</param>
+            <returns>The deserialized CodeDom object</returns>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.UltraCodeDomSerializer.Serialize(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object)">
+            <summary>
+            Invoked when the object should serialize itself.
+            </summary>
+            <param name="manager">Serialization manager</param>
+            <param name="value">Object to serialize</param>
+            <returns>The serialized object information</returns>
+        </member>
+        <member name="P:Infragistics.Shared.Serialization.UltraCodeDomSerializer.BaseComponentType">
+            <summary>
+            The base type of object whose serializer should be used for the
+            serialization and deserialization.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.Serialization.ICodeDomSerializable">
+            <summary>
+            Interface used for receiving design time serialization and deserialization notifications
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.ICodeDomSerializable.AfterDeserialize(System.ComponentModel.Design.Serialization.IDesignerSerializationManager)">
+            <summary>
+            Invoked after the object has been deserialized from a series of code dom statements
+            </summary>
+            <param name="manager">Object that manages the design time serialization</param>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.ICodeDomSerializable.BeforeSerialize(Infragistics.Shared.Serialization.CodeDomSerializationInfo)">
+            <summary>
+            Invoked before an object is serialized to code dom statements.
+            </summary>
+            <param name="serializationInfo">Provides information about the serialization info. The <see cref="P:Infragistics.Shared.Serialization.CodeDomSerializationInfo.Handled"/> property can be set to true to prevent the base serializer from being used to create the object graph.</param>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.ICodeDomSerializable.AfterSerialize(Infragistics.Shared.Serialization.CodeDomSerializationInfo)">
+            <summary>
+            Invoked after an object is serialized to code dom statements
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.Serialization.ICodeDomSerializableEX">
+            <summary>
+            Interface used for receiving design time serialization and deserialization notifications including
+            notifications when the manager has completed the serialization process.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.ICodeDomSerializableEX.AfterDeserializationCompleted(System.ComponentModel.Design.Serialization.IDesignerSerializationManager)">
+            <summary>
+            Invoked when a notification is received from the designer serialization manager
+            that the deserialization has been completed.
+            </summary>
+            <param name="manager">Associated designer serialization manager</param>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.ICodeDomSerializableEX.AfterSerializationCompleted(System.ComponentModel.Design.Serialization.IDesignerSerializationManager)">
+            <summary>
+            Invoked when a notification is received from the designer serialization manager
+            that the serialization has been completed.
+            </summary>
+            <param name="manager">Associated designer serialization manager</param>
+        </member>
+        <member name="T:Infragistics.Shared.Serialization.CodeDomSerializationInfo">
+            <summary>
+            Provides information about the serialization of an object at design time
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.CodeDomSerializationInfo.#ctor(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.ComponentModel.Design.Serialization.CodeDomSerializer)">
+            <summary>
+            Initializes a new <b>CodeDomSerializationInfo</b>
+            </summary>
+            <param name="manager">Designer serialization manager</param>
+            <param name="serializer">Base code dom serializer class</param>
+        </member>
+        <member name="P:Infragistics.Shared.Serialization.CodeDomSerializationInfo.SerializationManager">
+            <summary>
+            Returns the designer serialization manager used to perform the serialization operation
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.Serialization.CodeDomSerializationInfo.Serializer">
+            <summary>
+            Returns the base code dom serializer used to serialize the object
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.Serialization.CodeDomSerializationInfo.Handled">
+            <summary>
+            Indicates if the base serializer was/should be invoked.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.Serialization.CodeDomSerializationInfo.CodeObject">
+            <summary>
+            Gets/sets the code object representing the code dom statements for the serialized object.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.UltraComponentDesigner">
+            <summary>
+            The base designer used for Infragistics components
+            </summary>
+            <seealso cref="T:System.ComponentModel.Design.ComponentDesigner"/>
+        </member>
+        <member name="M:Infragistics.Shared.UltraComponentDesigner.ShowAboutBox(System.Object,System.EventArgs)">
+            <summary>
+            Shows the about box
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraComponentDesigner.Verbs">
+            <summary>
+            Adds the about verb to the collection
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraComponentDesigner.DesignerChangeNotificationsEnabled">
+            <summary>
+            Setting the property to false will cause the component to not fire any designer change
+            notifications. If a designer change notification was suppressed after setting this 
+            property to false, then it will be fired when this property is set back to true again.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.IUltraComponent">
+            <summary>
+            IUltraComponent Interface
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.IUltraComponent.DesignerChangeNotificationsEnabled">
+            <summary>
+            Returns or set whether the component sends Design-time property change notifications
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.UltraLicense">
+            <summary>
+            The license object for Infragistics components and controls
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraLicense.Dispose">
+            <summary>
+            Disposes the object
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraLicense.ProductInfo">
+            <summary>
+            Returns the product info object
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraLicense.ComponentName">
+            <summary>
+            Returns the display name of the component (read-only)
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraLicense.LicenseKey">
+            <summary>
+            returns the license key (read-only)
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.UltraLicenseBaseAttribute">
+            <summary>
+            The abstract base class for our license attribues
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraLicenseBaseAttribute.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="componentName">The name of the component that will be displayed in the about dialog.</param>
+        </member>
+        <member name="M:Infragistics.Shared.UltraLicenseBaseAttribute.GetLicensedWithProducts">
+            <summary>
+            Returns an array of UltraProductInfoBase objects.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraLicenseBaseAttribute.ComponentName">
+            <summary>
+            Returns the display name of the component (read-only)
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.UltraLicenseProvider">
+            <summary>
+            Base class for licensing
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraLicenseProvider.GetLicense(System.ComponentModel.LicenseContext,System.Type,System.Object,System.Boolean)">
+            <summary>
+            Overriden to return a beta license object
+            </summary>
+            <returns>The BetaLicense object</returns>
+        </member>
+        <member name="T:Infragistics.Shared.UltraObjectPropertiesPage">
+            <summary>
+            Summary description for ObjectProperties control.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.UltraPropertyPageBase">
+            <summary>
+            Base class for all UltraControlBase wizards.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropertyPageBase.InitializeControl(System.Object)">
+            <summary>
+            Initializes the custom property control with the specified object.
+            </summary>
+            <param name="baseObject">Object used to initialize the property control.</param>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropertyPageBase.ApplyChanges">
+            <summary>
+            Method invoked when the apply button has been pressed.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropertyPageBase.Dirty">
+            <summary>
+            Invoked when the control is dirtied.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropertyPageBase.OnDirtyStateChanged(System.EventArgs)">
+            <summary>
+            Used to invoke the <see cref="F:Infragistics.Shared.UltraPropertyPageBase.DirtyStateChanged"/> event.
+            </summary>
+            <param name="e">Event args</param>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropertyPageBase.Clean">
+            <summary>
+            Invoked when the control is no longer dirty.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropertyPageBase.CancelChanges">
+            <summary>
+            Invoked when the changes should be reversed
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropertyPageBase.SaveState">
+            <summary>
+            Invoked before the dialog is closed so that state information may
+            be persisted.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraPropertyPageBase.IsDirty">
+            <summary>
+            Property to determine if the control is dirty.
+            </summary>
+        </member>
+        <member name="E:Infragistics.Shared.UltraPropertyPageBase.DirtyStateChanged">
+            <summary>
+            Event raised when the control's dirty state changes.
+            </summary>
+        </member>
+        <member name="E:Infragistics.Shared.UltraPropertyPageBase.StateDirtied">
+            <summary>
+            Event raised when the control is dirtied.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraObjectPropertiesPage.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraObjectPropertiesPage.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="obj">object to initialize the property page</param>
+        </member>
+        <member name="M:Infragistics.Shared.UltraObjectPropertiesPage.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraObjectPropertiesPage.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraObjectPropertiesPage.ApplyChanges">
+            <summary>
+            Method invoked when the apply button has been pressed.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraObjectPropertiesPage.InitializeControl(System.Object)">
+            <summary>
+            Initializes the custom property control with the specified object.
+            </summary>
+            <param name="baseObject">Object used to initialize the property control.</param>
+        </member>
+        <member name="M:Infragistics.Shared.UltraObjectPropertiesPage.SaveState">
+            <summary>
+            Invoked before the dialog is closed so that state information may
+            be persisted.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraObjectPropertiesPage.RefreshProperties">
+            <summary>
+            Refreshes the properties displayed in the property grid.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraObjectPropertiesPage.IncludeBaseObject">
+            <summary>
+            Determines whether the base object is displayed in the tree.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraObjectPropertiesPage.PropertyGridToolbarVisible">
+            <summary>
+            Determines if the PropertyGrid displays its toolbar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraObjectPropertiesPage.PropertyGridHelpVisible">
+            <summary>
+            Determines if the PropertyGrid displays help text for the selected property.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.LicenseStatus">
+            <summary>
+            An enumerator that describes the status of the license
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.LicenseStatus.Unchecked">
+            <summary>
+            The license verification logic hasn't run yet
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.LicenseStatus.UnableToLocateLicenseAssembly">
+            <summary>
+            The license file could not be located.
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.LicenseStatus.InsufficientSecurityPermissions">
+            <summary>
+            Unable to determine license status due to security permission restrictions.
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.LicenseStatus.RegKeyNotFound">
+            <summary>
+            Couldn't find the necessary registry keys
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.LicenseStatus.CDKeyInvalid">
+            <summary>
+            Foound an invalid CDkey
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.LicenseStatus.BetaExpired">
+            <summary>
+            The beta period has expired
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.LicenseStatus.BetaValid">
+            <summary>
+            The beta period has not expired
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.LicenseStatus.TrialExpired">
+            <summary>
+            The trial period has expired
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.LicenseStatus.ActivationGracePeriodExpired">
+            <summary>
+            The activation grace period has expired.
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.LicenseStatus.CDKeyValid">
+            <summary>
+            A valid CDKey was found
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.LicenseStatus.TrialValid">
+            <summary>
+            The trial period has not expired
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.LicenseStatus.ActivationGracePeriodValid">
+            <summary>
+            The activation grace period has not expired.
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.LicenseStatus.Licensed">
+            <summary>
+            The component is fully licensed
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.ProductType">
+            <summary>
+            An enumerator that describes the product type.
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.ProductType.WinFormsComponent">
+            <summary>
+            The product is a winforms component.
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.ProductType.WebFormsComponent">
+            <summary>
+            The product is a webforms component.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.UltraProductInfoBase">
+            <summary>
+            Abstract base class that holds product info.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraProductInfoBase.IsKeyValid(System.String)">
+            <summary>
+            Checks the validaity of the key
+            </summary>
+            <returns>True if the key is valid</returns>
+        </member>
+        <member name="P:Infragistics.Shared.UltraProductInfoBase.Expiration">
+            <summary>
+            Returns the expiration description.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraProductInfoBase.RequiresActivation">
+            <summary>
+            Returns the expiration date.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraProductInfoBase.ProductName">
+            <summary>
+            Returns the product name
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraProductInfoBase.Expired">
+            <summary>
+            Returns true if the license has expired (read-only)
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraProductInfoBase.Status">
+            <summary>
+            Returns the statuc of the license
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraProductInfoBase.Key">
+            <summary>
+            Returns the Key 
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraProductInfoBase.CompanyName">
+            <summary>
+            Returns the company name
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraProductInfoBase.UserName">
+            <summary>
+            Returns the user name
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraProductInfoBase.Type">
+            <summary>
+            Returns the product type
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.BetaProductInfo">
+            <summary>
+            ProductInfo used when a product is in beta.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.BetaProductInfo.#ctor(System.String,System.DateTime)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="productName">The product name to display in the about dialog</param>
+            <param name="expirationDate">The expiration date of the beta.</param>
+        </member>
+        <member name="M:Infragistics.Shared.BetaProductInfo.#ctor(System.String,System.DateTime,Infragistics.Shared.ProductType)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="productName"></param>
+            <param name="expirationDate"></param>
+            <param name="productType"></param>
+        </member>
+        <member name="M:Infragistics.Shared.BetaProductInfo.IsKeyValid(System.String)">
+            <summary>
+            Checks the validity of the key
+            </summary>
+            <returns>True if the key is valid</returns>
+        </member>
+        <member name="P:Infragistics.Shared.BetaProductInfo.Expiration">
+            <summary>
+            Returns the expiration description.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.BetaProductInfo.RequiresActivation">
+            <summary>
+            Returns the expiration date.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.BetaProductInfo.Status">
+            <summary>
+            Returns the statuc of the license
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.BetaProductInfo.Key">
+            <summary>
+            Returns the Key 
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.BetaProductInfo.CompanyName">
+            <summary>
+            Returns the company name
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.BetaProductInfo.UserName">
+            <summary>
+            Returns the user name
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.BetaProductInfo.Expired">
+            <summary>
+            Returns true if the license has expired (read-only)
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.UltraProductInfo">
+            <summary>
+            ProductInfo used when after a product has been released.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraProductInfo.#ctor(System.String,System.String,System.String,System.Guid,System.Boolean,System.Byte,System.Byte)">
+            <summary>
+            Contructor
+            </summary>
+            <param name="productName">The product name for the about dialog</param>
+            <param name="regKeyProductName">The reg key root product name</param>
+            <param name="codePrefix">must be 4 characters long</param>
+            <param name="id">the id</param>
+            <param name="requiresActivation">True if activation is required.</param>
+            <param name="majorVersion">Major version of the product.</param>
+            <param name="minorVersion">Minor version of the product.</param>
+        </member>
+        <member name="M:Infragistics.Shared.UltraProductInfo.#ctor(System.String,System.String,System.String,System.Guid,System.Boolean,Infragistics.Shared.ProductType,System.Byte,System.Byte)">
+            <summary>
+            Contructor
+            </summary>
+            <param name="productName">The product name for the about dialog</param>
+            <param name="regKeyProductName">The reg key root product name</param>
+            <param name="codePrefix">must be 4 characters long</param>
+            <param name="id">the id</param>
+            <param name="requiresActivation">True if activation is required.</param>
+            <param name="productType">The type of product</param>
+            <param name="majorVersion">Major version of the product.</param>
+            <param name="minorVersion">Minor version of the product.</param>
+        </member>
+        <member name="M:Infragistics.Shared.UltraProductInfo.IsKeyValid(System.String)">
+            <summary>
+            Checks the validity of the key
+            </summary>
+            <returns>True if the key is valid</returns>
+        </member>
+        <member name="M:Infragistics.Shared.UltraProductInfo.GetExpirationDate(System.Int32)">
+            <summary>
+            Returns the expiration date based on the number of usage days remaining.
+            </summary>
+            <param name="usageDaysRemaining">Number of usage days remaining.</param>
+            <returns>Expiration date for the product.</returns>
+        </member>
+        <member name="P:Infragistics.Shared.UltraProductInfo.Expiration">
+            <summary>
+            Returns the expiration description.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraProductInfo.RequiresActivation">
+            <summary>
+            Returns the expiration date.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraProductInfo.Status">
+            <summary>
+            Returns the statuc of the license
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraProductInfo.Key">
+            <summary>
+            Returns the Key 
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraProductInfo.CompanyName">
+            <summary>
+            Returns the company name
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraProductInfo.UserName">
+            <summary>
+            Returns the user name
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UltraProductInfo.Expired">
+            <summary>
+            Returns true if the license has expired (read-only)
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.UnlicensedProductInfo">
+            <summary>
+            ProductInfo used for non-licensed products.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UnlicensedProductInfo.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="productName">The product name to display in the about dialog</param>
+        </member>
+        <member name="M:Infragistics.Shared.UnlicensedProductInfo.#ctor(System.String,Infragistics.Shared.ProductType)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="productName">The product name to display in the about dialog</param>
+            <param name="productType">The type of product.</param>
+        </member>
+        <member name="M:Infragistics.Shared.UnlicensedProductInfo.IsKeyValid(System.String)">
+            <summary>
+            Checks the validity of the key
+            </summary>
+            <returns>True if the key is valid</returns>
+        </member>
+        <member name="P:Infragistics.Shared.UnlicensedProductInfo.Expiration">
+            <summary>
+            Returns the expiration.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UnlicensedProductInfo.RequiresActivation">
+            <summary>
+            Returns the expiration date.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UnlicensedProductInfo.Status">
+            <summary>
+            Returns the statuc of the license
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UnlicensedProductInfo.Key">
+            <summary>
+            Returns the Key 
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UnlicensedProductInfo.CompanyName">
+            <summary>
+            Returns the company name
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UnlicensedProductInfo.UserName">
+            <summary>
+            Returns the user name
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.UnlicensedProductInfo.Expired">
+            <summary>
+            Returns true if the license has expired (read-only)
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.UltraPropertyPageDialog">
+            <summary>
+            Summary description for UltraPropertyPageDialog .
+            </summary>
+        </member>
+        <member name="F:Infragistics.Shared.UltraPropertyPageDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropertyPageDialog.#ctor">
+            <summary>
+            Constructor, initializes a new instance of <b>UltraPropertyPageDialog</b>.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropertyPageDialog.#ctor(System.Object)">
+            <summary>
+            Constructor, initializes a new instance of <b>UltraPropertyPageDialog</b>.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropertyPageDialog.InitializeDialog(System.Object)">
+            <summary>
+            Initializes the custom property dialog with the specified object.
+            </summary>
+            <param name="obj">The object to be displayed in the property dialog.</param>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropertyPageDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing"><b>true</b> to release both managed and unmanaged resources; <b>false</b> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropertyPageDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropertyPageDialog.OnClosing(System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Invoked when the form is about to close
+            </summary>
+            <param name="e"><see cref="T:System.ComponentModel.CancelEventArgs"/></param>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropertyPageDialog.OnLoad(System.EventArgs)">
+            <summary>
+            Invoked when the form has been loaded.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/></param>
+        </member>
+        <member name="T:Infragistics.Shared.UltraPropPagePropertyGrid">
+            <summary>
+            A class derived from PropertyGrid that uses the supplied component's <b>Site</b> property to provide design time services. 
+            </summary>
+            <remarks>The services supplied by the component are required by some type editors.</remarks>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropPagePropertyGrid.#ctor">
+            <summary>
+            Constructor, initializes a new instance of the <b>UltraPropPagePropertyGrid</b> class.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropPagePropertyGrid.#ctor(System.ComponentModel.IComponent)">
+            <summary>
+            Contructor
+            </summary>
+            <param name="component">The component whose <b>Site</b> propety will be used to supply services.</param>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropPagePropertyGrid.Initialize(System.ComponentModel.IComponent)">
+            <summary>
+            Initializes the component. The property grid will use the component to supply services at design time. 
+            </summary>
+            <param name="component">The component whose <b>Site</b> propety will be used to supply services.</param>
+            <seealso cref="M:Infragistics.Shared.UltraPropPagePropertyGrid.GetService(System.Type)"/>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropPagePropertyGrid.GetService(System.Type)">
+            <summary>
+            Returns the requested service from the component's site.
+            </summary>
+            <seealso cref="M:Infragistics.Shared.UltraPropPagePropertyGrid.Initialize(System.ComponentModel.IComponent)"/>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropPagePropertyGrid.Dispose(System.Boolean)">
+            <summary>
+            Invoked when the property grid is disposed
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="T:Infragistics.Shared.UltraPropPagePropertyGridWithEventsTab">
+            <summary>
+            A Property Grid derived from UltraPropPagePropertyGrid that provides support for an events tab.
+            Objects briwsed with this property gri must support IComponent.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropPagePropertyGridWithEventsTab.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropPagePropertyGridWithEventsTab.#ctor(System.ComponentModel.Component)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropPagePropertyGridWithEventsTab.CreatePropertyTab(System.Type)">
+            <summary>
+            CreatePropertyTab method
+            </summary>
+            <param name="tabType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Shared.UltraPropPagePropertyGridWithEventsTab.OnSelectedObjectsChanged(System.EventArgs)">
+            <summary>
+            OnSelectedObjectsChanged method.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Infragistics.Shared.UltraPropPagePropertyGridWithEventsTab.ShowEventsTab">
+            <summary>
+            Returns/sets whether or not to show the events tab.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.Serialization.Utils">
+            <summary>
+            Utility class containing static helper functions
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.ConvertToString(System.Object,System.Boolean)">
+            <summary>
+            Converts a value to a string.
+            </summary>
+            <param name="value">Value to convert</param>
+            <param name="useCurrentCulture">If true, uses the current culture, otherwise, the invariant culture is used.</param>
+            <returns>The converted string.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.ConvertToString(System.Object,System.String,System.Boolean)">
+            <summary>
+            Converts a value to a string.
+            </summary>
+            <param name="value">Value to convert</param>
+            <param name="format">The format string.</param>
+            <param name="useCurrentCulture">If true, uses the current culture, otherwise, the invariant culture is used.</param>
+            <returns>The converted string.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.ConvertToString(System.Object,System.IFormatProvider)">
+            <summary>
+            Converts a value to a string.
+            </summary>
+            <param name="value">Value to convert</param>
+            <param name="formatProvider">The format provider to use for the conversion.</param>
+            <returns>The converted string.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.ConvertToString(System.Object,System.String,System.IFormatProvider)">
+            <summary>
+            Converts a value to a string.
+            </summary>
+            <param name="value">Value to convert</param>
+            <param name="format">The format string.</param>
+            <param name="formatProvider">The format provider to use for the conversion.</param>
+            <returns>The converted string.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.ConvertValue(System.Object,System.Type)">
+            <summary>
+            Returns a value converted to the specified type using the InvariantCulture.
+            </summary>
+            <param name="value">Value to convert</param>
+            <param name="destinationType">Type that the value needs to be converted to.</param>
+            <returns>If the value can be converted to the specified type, the converted value will be returned. If the value is already of that type or cannot be converted to that type, the <paramref name="value"/> will be returned; otherwise null is returned.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.ConvertValue(System.Object,System.Type,System.Boolean)">
+            <summary>
+            Returns a value converted to the specified type using the InvariantCulture.
+            </summary>
+            <param name="value">Value to convert</param>
+            <param name="destinationType">Type that the value needs to be converted to.</param>
+            <param name="useCurrentCulture">If true, uses the current culture, otherwise, the invariant culture is used.</param>
+            <returns>If the value can be converted to the specified type, the converted value will be returned. If the value is already of that type or cannot be converted to that type, the <paramref name="value"/> will be returned; otherwise null is returned.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.ConvertValue(System.Object,System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            Returns a value converted to the specified type using the InvariantCulture.
+            </summary>
+            <param name="value">Value to convert</param>
+            <param name="destinationType">Type that the value needs to be converted to.</param>
+            <param name="culture">The culture to use for the conversion. If null will use the curent culture.</param>
+            <returns>If the value can be converted to the specified type, the converted value will be returned. If the value is already of that type or cannot be converted to that type, the <paramref name="value"/> will be returned; otherwise null is returned.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.ConvertEnum(System.Object,System.Enum)">
+            <summary>
+            Used to convert an object value to an enum of the specified type.
+            </summary>
+            <param name="value">Object to convert</param>
+            <param name="defaultValue">Default value - the enum type is derived from the value and this value is when an invalid value is specified.</param>
+            <returns>The value converted to an enum of the same type as the default value or the default value itself is returned if the value is invalid for the specified enum type</returns>
+            <remarks>
+            The value is verified to be a defined enum value for the specified enum type so
+            this method should not be used where the enum type is a flagged enumeration
+            since the IsDefined method of Enum will return false when a combined bit
+            value is specified.
+            </remarks>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.IsSimpleType(System.Object)">
+            <summary>
+            Indicates if the object value is a simple type.
+            </summary>
+            <param name="value">Object to check</param>
+            <returns>True for non null values where the object type
+            is a string, Decimal, DateTime, DBNull or primitive type.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.IsSimpleType(System.Type)">
+            <summary>
+            Indicates if the object value is a simple type.
+            </summary>
+            <param name="type">The type to check.</param>
+            <returns>True where the object type is a string, Decimal, DateTime, DBNull or primitive type.</returns>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.IsSafelySerializable(System.Object)">
+            <summary>
+            Indicates if the object may be safely serializable.
+            </summary>
+            <param name="value">Object to check</param>
+            <returns>True if the value is a simple non-null type</returns>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.IsSafelySerializable(System.Type)">
+            <summary>
+            Indicates if the object may be safely serializable.
+            </summary>
+            <param name="type">The type to check.</param>
+            <returns>True if the value is a simple non-null type</returns>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.SerializeObjectProperty(System.Runtime.Serialization.SerializationInfo,System.String,System.Object)">
+            <summary>
+            Serializes the specified object into the SerializationInfo object
+            </summary>
+            <param name="info">Serialization info instance into which the value should be serialized.</param>
+            <param name="name">Name used to serialize the object value</param>
+            <param name="value">Value to serialize. Only objects that return true from <see cref="M:Infragistics.Shared.Serialization.Utils.IsSafelySerializable(System.Object)"/> will be serialized.</param>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.DeserializeObjectProperty(System.Runtime.Serialization.SerializationInfo,System.String)">
+            <summary>
+            Deserializes the specified object from the serialization info object
+            </summary>
+            <param name="info">Serialization info instance into which the value should be serialized.</param>
+            <param name="name">Name used to serialize the object value</param>
+            <returns>The deserialized object</returns>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.DeserializeObjectProperty(System.Runtime.Serialization.SerializationEntry)">
+            <summary>
+            Deserializes the specified object from a SerializationEntry.
+            </summary>
+            <param name="entry">Entry used to obtain the object to deserialize</param>
+            <returns>The deserialized object</returns>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.SerializeProperty(System.Runtime.Serialization.SerializationInfo,System.String,System.Object)">
+            <summary>
+            Serializes the specified property value into the SerializationInfo object
+            </summary>
+            <param name="info">Serialization info instance into which the value should be serialized.</param>
+            <param name="name">Name used to serialize the object value</param>
+            <param name="value">Value to serialize.</param>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.DeserializeProperty(System.Runtime.Serialization.SerializationEntry,System.Type,System.Object)">
+            <summary>
+            Deserializes the specified property from the SerializationEntry object.
+            </summary>
+            <param name="entry">Entry used to obtain the object to deserialize</param>
+            <param name="destinationType">Type that the value needs to be converted to.</param>
+            <param name="defaultValue">The default value will be returned if the de-serialization and type conversion fails.</param>
+            <returns>The deserialized object</returns>
+            <remarks>If the data can't be de-serialized into the <b>destinationType</b> then no error is throw and the <b>defaultValue</b> is returned.</remarks>
+        </member>
+        <member name="M:Infragistics.Shared.Serialization.Utils.DeserializeProperty(System.Runtime.Serialization.SerializationEntry,System.Type,System.Object,System.Boolean@)">
+            <summary>
+            Deserializes the specified property from the SerializationEntry object.
+            </summary>
+            <param name="entry">Entry used to obtain the object to deserialize</param>
+            <param name="destinationType">Type that the value needs to be converted to.</param>
+            <param name="defaultValue">The default value will be returned if the de-serialization and type conversion fails.</param>
+            <param name="succeeded">Will be set to <b>True</b> if the de-serialization succeeded.</param>
+            <returns>The deserialized object</returns>
+        </member>
+        <member name="T:Infragistics.Shared.WebColorsCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.WebColorsCollection.#ctor">
+            <summary>
+            Constructs a new instance of the <b>WebColorsCollection</b> class.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.WebColorsCollection.FillColors">
+            <summary>
+            Fills the collection with the web colors
+            </summary>
+        </member>
+        <member name="T:Infragistics.Shared.XPItemColor">
+            <summary>
+            Calculates the XP style color scheme from current user 
+            settings. The constructor checks the users screen to see if
+            it supports high color or not. It then calculates out ALL
+            of the calculated colors in one shot. Lastly it hooks up a listener
+            so that it can re-initialize the colors if the user changes the
+            color scheme or display depth(BPP). If the security permissions
+            on the machine do not permit us to check color depth, we default
+            to high color.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.XPItemColor.#cctor">
+            <summary>
+            Constructor, initializes a new instance of the <b>XPItemColor</b> class.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Shared.XPItemColor.ColorFromHLS(System.Single,System.Single,System.Single)">
+            <summary>
+            Creates a valid Color based on HLS values.
+            Similar to dotnet's ColorFromARGB
+            </summary>
+            <param name="hue">Hue</param>
+            <param name="luminance">Luminance</param>
+            <param name="saturation">Saturation</param>
+            <returns>Color based on HLS</returns>
+        </member>
+        <member name="P:Infragistics.Shared.XPItemColor.HighColor">
+            <summary>
+            Returns current color mode. 
+            True = High Color, 16bit or greater.
+            False = Low Color, Less than 16bit.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.XPItemColor.ToolBar">
+            <summary>
+            Returns XP style Toolbar color
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.XPItemColor.MenuBar">
+            <summary>
+            Returns XP style MenuBar color
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.XPItemColor.HighlightBorder">
+            <summary>
+            Returns XP style Highlight Border color
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.XPItemColor.HighlightMouseOver">
+            <summary>
+            Returns XP style Highlight MouseOver color
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.XPItemColor.HighlightMouseDown">
+            <summary>
+            Returns XP style Highlight MouseDown color
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.XPItemColor.MenuDroppedBorder">
+            <summary>
+            Returns XP style Menu Dropped Border color
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.XPItemColor.MenuIconArea">
+            <summary>
+            Returns XP style Menu Icon Area color
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.XPItemColor.MenuIconAreaExpanded">
+            <summary>
+            Returns XP style Menu Icon Area Expanded color
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.XPItemColor.MenuDroppedBackColor">
+            <summary>
+            Returns XP style Menu Dropped background color
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.XPItemColor.FloaterBorder">
+            <summary>
+            Returns XP style Floating Toolbar Border color
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.XPItemColor.FloaterCaption">
+            <summary>
+            Returns XP style Floating Toolbar Caption background color
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.XPItemColor.DisabledToolShadow">
+            <summary>
+            Returns XP style Disabled Tool color
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.XPItemColor.ToolSeparator">
+            <summary>
+            Returns XP style Tool Separator color
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.XPItemColor.HighlightStateToolPressed">
+            <summary>
+            Returns XP style Highlight state tool pressed color
+            </summary>
+        </member>
+        <member name="P:Infragistics.Shared.XPItemColor.RaisedPictureShadow">
+            <summary>
+            Returns XP style Floating Toolbar Border color
+            </summary>
+        </member>
+    </members>
+</doc>

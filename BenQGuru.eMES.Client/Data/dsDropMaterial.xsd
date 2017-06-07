@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsDropMaterial" targetNamespace="http://tempuri.org/dsDropMaterial.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/dsDropMaterial.xsd" xmlns:mstns="http://tempuri.org/dsDropMaterial.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="DropInno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Check" type="xs:boolean" />
+        <xs:element name="Index" type="xs:integer" msdata:ReadOnly="true" msdata:Caption="项次" />
+        <xs:element name="ItemCode" type="xs:string" msdata:ReadOnly="true" msdata:Caption="批次料" />
+        <xs:element name="PackedNo" type="xs:string" msdata:ReadOnly="false" msdata:Caption="批号" />
+        <xs:element name="ItemDesc" type="xs:integer" msdata:ReadOnly="true" msdata:Caption="下料数量" />
+        <xs:element name="NewBarcode" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+    <xs:key name="DropInnoKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath="." />
+      <xs:field xpath="mstns:Index" />
+    </xs:key>
+  </xs:element>
+</xs:schema>

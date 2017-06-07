@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	<item fieldcode="LINE01" mtbf="12.6"  totalmtbf="11.4" ngqty="21">
+		<datemtbf date="W0420" fieldcode="LINE01" ngqty="9" mtbf="10.0">
+			<mtbfdetail modelcode="MODEL1"  itemcode="ITEM1" sscode="LINE01" sn="SERILID001" ngdate="20060410"  begintime="8:35:20" endtime="6:50:12" mtime="22" />
+			<mtbfdetail modelcode="MODEL1"  itemcode="ITEM1" sscode="LINE01" sn="SERILID003" ngdate="20060410"  begintime="8:35:20" endtime="6:50:12" mtime="22" />
+			<mtbfdetail modelcode="MODEL1"  itemcode="ITEM1" sscode="LINE01" sn="SERILID004" ngdate="20060411"  begintime="8:40:33" endtime="6:34:03" mtime="21" />
+			<mtbfdetail modelcode="MODEL1"  itemcode="ITEM1" sscode="LINE01" sn="SERILID006" ngdate="20060411"  begintime="8:40:33" endtime="6:34:03" mtime="21" />
+			<mtbfdetail modelcode="MODEL1"  itemcode="ITEM1" sscode="LINE01" sn="SERILID008" ngdate="20060412"  begintime="11:20:33" endtime="15:30:00" mtime="4" />
+			<mtbfdetail modelcode="MODEL1"  itemcode="ITEM1" sscode="LINE01" sn="SERILID052" ngdate="20060412"  begintime="11:20:33" endtime="15:30:00" mtime="4" />
+			<mtbfdetail modelcode="MODEL1"  itemcode="ITEM1" sscode="LINE01" sn="SERILID012" ngdate="20060413"  begintime="10:31:01" endtime="12:40:00" mtime="2" />
+			<mtbfdetail modelcode="MODEL1"  itemcode="ITEM1" sscode="LINE01" sn="SERILID062" ngdate="20060414"  begintime="8:08:52" endtime="7:44:03" mtime="23" />
+			<mtbfdetail modelcode="MODEL1"  itemcode="ITEM1" sscode="LINE01" sn="SERILID063" ngdate="20060414"  begintime="8:08:52" endtime="7:44:03" mtime="23" />																								
+		</datemtbf>
+		<datemtbf date="W0421" fieldcode="LINE01" ngqty="12" mtbf="14.5"></datemtbf>		
+	</item>
+	<item fieldcode="LINE02" mtbf="10.4"  totalmtbf="11.4" ngqty="34"></item>
+	<item fieldcode="LINE03" mtbf="15.0"  totalmtbf="11.4" ngqty="3"></item>
+</data>

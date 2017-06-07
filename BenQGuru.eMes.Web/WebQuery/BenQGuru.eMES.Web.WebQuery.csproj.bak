@@ -1,0 +1,1952 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{55BA289D-2AD2-4373-9A86-C875B26FD140}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BenQGuru.eMES.Web.WebQuery</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BenQGuru.eMES.Web.WebQuery</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BenQGuru.eMES.BaseSetting">
+      <Name>BenQGuru.eMES.BaseSetting</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.BaseSetting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Common">
+      <Name>BenQGuru.eMES.Common</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.DataLink">
+      <Name>BenQGuru.eMES.DataLink</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.DataLink.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Domain">
+      <Name>BenQGuru.eMES.Domain</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Material">
+      <Name>BenQGuru.eMES.Material</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Material.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.MOModel">
+      <Name>BenQGuru.eMES.MOModel</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.MOModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.OQC">
+      <Name>BenQGuru.eMES.OQC</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.OQC.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.RealTimeReport">
+      <Name>BenQGuru.eMES.RealTimeReport</Name>
+      <HintPath>..\..\bin\BenQGuru.eMES.RealTimeReport.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Report">
+      <Name>BenQGuru.eMES.Report</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.SMT, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.SMT.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.SPCDataCenter, Version=1.0.2636.29529, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.SPCDataCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.TS">
+      <Name>BenQGuru.eMES.TS</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.TS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.Helper">
+      <Name>BenQGuru.eMES.Web.Helper</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Web.Helper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.SelectQuery, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="BenQGuru.eMES.WebQuery, Version=1.0.0.14, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.WebQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.WebUI.Helper">
+      <Name>BenQGuru.eMES.WebUI.Helper</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.WebUI.Helper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ControlLibrary">
+      <Name>ControlLibrary</Name>
+      <HintPath>..\..\Bin\ControlLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.Excel.v3.2">
+      <Name>Infragistics.Excel.v3.2</Name>
+      <HintPath>..\..\..\..\Program Files\Infragistics\NetAdvantage 2004 Volume 2\Windows Forms\Bin\Infragistics.Excel.v3.2.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.winassemblies.20042</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Infragistics.WebUI.Shared.v2.1">
+      <Name>Infragistics.WebUI.Shared.v2.1</Name>
+      <HintPath>..\..\..\..\Program Files\Infragistics\NetAdvantage 2004 Volume 2\ASP.NET\Bin\Infragistics.WebUI.Shared.v2.1.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.webassemblies.20042</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Infragistics.WebUI.UltraWebGrid.ExcelExport.v3.1">
+      <Name>Infragistics.WebUI.UltraWebGrid.ExcelExport.v3.1</Name>
+      <HintPath>..\..\..\..\Program Files\Infragistics\NetAdvantage 2004 Volume 2\ASP.NET\Bin\Infragistics.WebUI.UltraWebGrid.ExcelExport.v3.1.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.webassemblies.20042</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Infragistics.WebUI.UltraWebGrid.v3.1">
+      <Name>Infragistics.WebUI.UltraWebGrid.v3.1</Name>
+      <HintPath>..\..\..\..\Program Files\Infragistics\NetAdvantage 2004 Volume 2\ASP.NET\Bin\Infragistics.WebUI.UltraWebGrid.v3.1.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.webassemblies.20042</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Infragistics.WebUI.UltraWebNavigator.v3.2">
+      <Name>Infragistics.WebUI.UltraWebNavigator.v3.2</Name>
+      <HintPath>..\..\..\..\Program Files\Infragistics\NetAdvantage 2004 Volume 2\ASP.NET\Bin\Infragistics.WebUI.UltraWebNavigator.v3.2.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.webassemblies.20042</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardPOP.aspx.cs">
+      <DependentUpon>DashboardPOP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashboardPOP.aspx.designer.cs">
+      <DependentUpon>DashboardPOP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataPreparationHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DimensionChange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExportTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FacadeFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FArmorPlateQP.aspx.cs">
+      <DependentUpon>FArmorPlateQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FArmorPlateQP.aspx.designer.cs">
+      <DependentUpon>FArmorPlateQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FBIDayReport.aspx.cs">
+      <DependentUpon>FBIDayReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FBIDayReport.aspx.designer.cs">
+      <DependentUpon>FBIDayReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FBIReport.aspx.cs">
+      <DependentUpon>FBIReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FBIReport.aspx.designer.cs">
+      <DependentUpon>FBIReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FComponentLoadingTrackingQP.aspx.cs">
+      <DependentUpon>FComponentLoadingTrackingQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FComponentLoadingTrackingQP.aspx.designer.cs">
+      <DependentUpon>FComponentLoadingTrackingQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FConfigEx.aspx.cs">
+      <DependentUpon>FConfigEx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FConfigEx.aspx.designer.cs">
+      <DependentUpon>FConfigEx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FECNDetailsQP.aspx.cs">
+      <DependentUpon>FECNDetailsQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FECNDetailsQP.aspx.designer.cs">
+      <DependentUpon>FECNDetailsQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FECNQP.aspx.cs">
+      <DependentUpon>FECNQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FECNQP.aspx.designer.cs">
+      <DependentUpon>FECNQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FERPInvInterfaceQuery.aspx.cs">
+      <DependentUpon>FERPInvInterfaceQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FERPInvInterfaceQuery.aspx.designer.cs">
+      <DependentUpon>FERPInvInterfaceQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FFactoryWeekCheck.aspx.cs">
+      <DependentUpon>FFactoryWeekCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FFactoryWeekCheck.aspx.designer.cs">
+      <DependentUpon>FFactoryWeekCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FFirstQP.aspx.cs">
+      <DependentUpon>FFirstQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FFirstQP.aspx.designer.cs">
+      <DependentUpon>FFirstQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FFTDetailQuery.aspx.cs">
+      <DependentUpon>FFTDetailQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FFTDetailQuery.aspx.designer.cs">
+      <DependentUpon>FFTDetailQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FFTQuery.aspx.cs">
+      <DependentUpon>FFTQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FFTQuery.aspx.designer.cs">
+      <DependentUpon>FFTQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FHistroyQuantitySummaryQP.aspx.cs">
+      <DependentUpon>FHistroyQuantitySummaryQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FHistroyQuantitySummaryQP.aspx.designer.cs">
+      <DependentUpon>FHistroyQuantitySummaryQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FHistroyYieldPercentSummaryQP.aspx.cs">
+      <DependentUpon>FHistroyYieldPercentSummaryQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FHistroyYieldPercentSummaryQP.aspx.designer.cs">
+      <DependentUpon>FHistroyYieldPercentSummaryQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FIDMergeQP.aspx.cs">
+      <DependentUpon>FIDMergeQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FIDMergeQP.aspx.designer.cs">
+      <DependentUpon>FIDMergeQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FINNOInfoQP.aspx.cs">
+      <DependentUpon>FINNOInfoQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FINNOInfoQP.aspx.designer.cs">
+      <DependentUpon>FINNOInfoQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FIntegratedComponentDownQP.aspx.cs">
+      <DependentUpon>FIntegratedComponentDownQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FIntegratedComponentDownQP.aspx.designer.cs">
+      <DependentUpon>FIntegratedComponentDownQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FIntegratedComponentLoadingQP.aspx.cs">
+      <DependentUpon>FIntegratedComponentLoadingQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FIntegratedComponentLoadingQP.aspx.designer.cs">
+      <DependentUpon>FIntegratedComponentLoadingQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FIntegratedDetailsQP.aspx.cs">
+      <DependentUpon>FIntegratedDetailsQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FIntegratedDetailsQP.aspx.designer.cs">
+      <DependentUpon>FIntegratedDetailsQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FInvRCardQP.aspx.cs">
+      <DependentUpon>FInvRCardQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FInvRCardQP.aspx.designer.cs">
+      <DependentUpon>FInvRCardQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItemTracingQP.aspx.cs">
+      <DependentUpon>FItemTracingQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItemTracingQP.aspx.designer.cs">
+      <DependentUpon>FItemTracingQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FITMODetailQP.aspx.cs">
+      <DependentUpon>FITMODetailQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FITMODetailQP.aspx.designer.cs">
+      <DependentUpon>FITMODetailQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FITMOInfoQP.aspx.cs">
+      <DependentUpon>FITMOInfoQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FITMOInfoQP.aspx.designer.cs">
+      <DependentUpon>FITMOInfoQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FITOPResult.aspx.cs">
+      <DependentUpon>FITOPResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FITOPResult.aspx.designer.cs">
+      <DependentUpon>FITOPResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FITOPResultBurnInQP.aspx.cs">
+      <DependentUpon>FITOPResultBurnInQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FITOPResultBurnInQP.aspx.designer.cs">
+      <DependentUpon>FITOPResultBurnInQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FITOPResultComploadingQP.aspx.cs">
+      <DependentUpon>FITOPResultComploadingQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FITOPResultComploadingQP.aspx.designer.cs">
+      <DependentUpon>FITOPResultComploadingQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FITOPResultFQCQP.aspx.cs">
+      <DependentUpon>FITOPResultFQCQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FITOPResultFQCQP.aspx.designer.cs">
+      <DependentUpon>FITOPResultFQCQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FITOPResultPackingQP.aspx.cs">
+      <DependentUpon>FITOPResultPackingQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FITOPResultPackingQP.aspx.designer.cs">
+      <DependentUpon>FITOPResultPackingQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FITOPResultSNQP.aspx.cs">
+      <DependentUpon>FITOPResultSNQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FITOPResultSNQP.aspx.designer.cs">
+      <DependentUpon>FITOPResultSNQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FITOPResultTestingQP.aspx.cs">
+      <DependentUpon>FITOPResultTestingQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FITOPResultTestingQP.aspx.designer.cs">
+      <DependentUpon>FITOPResultTestingQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FITOPResultTSQP.aspx.cs">
+      <DependentUpon>FITOPResultTSQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FITOPResultTSQP.aspx.designer.cs">
+      <DependentUpon>FITOPResultTSQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FITProductionProcessQP.aspx.cs">
+      <DependentUpon>FITProductionProcessQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FITProductionProcessQP.aspx.designer.cs">
+      <DependentUpon>FITProductionProcessQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FITShelfDetailQP.aspx.cs">
+      <DependentUpon>FITShelfDetailQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FITShelfDetailQP.aspx.designer.cs">
+      <DependentUpon>FITShelfDetailQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FITShelfQP.aspx.cs">
+      <DependentUpon>FITShelfQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FITShelfQP.aspx.designer.cs">
+      <DependentUpon>FITShelfQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FKeypartsComponentDownQP.aspx.cs">
+      <DependentUpon>FKeypartsComponentDownQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FKeypartsComponentDownQP.aspx.designer.cs">
+      <DependentUpon>FKeypartsComponentDownQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FKeypartsComponentLoadingQP.aspx.cs">
+      <DependentUpon>FKeypartsComponentLoadingQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FKeypartsComponentLoadingQP.aspx.designer.cs">
+      <DependentUpon>FKeypartsComponentLoadingQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FKeypartsDetailsQP.aspx.cs">
+      <DependentUpon>FKeypartsDetailsQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FKeypartsDetailsQP.aspx.designer.cs">
+      <DependentUpon>FKeypartsDetailsQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FKeypartsInfoQP.aspx.cs">
+      <DependentUpon>FKeypartsInfoQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FKeypartsInfoQP.aspx.designer.cs">
+      <DependentUpon>FKeypartsInfoQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMultiMOMemo.aspx.cs">
+      <DependentUpon>FMultiMOMemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMultiMOMemo.aspx.designer.cs">
+      <DependentUpon>FMultiMOMemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOffMOQP.aspx.cs">
+      <DependentUpon>FOffMOQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOffMOQP.aspx.designer.cs">
+      <DependentUpon>FOffMOQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOnWipDistributingQP.aspx.cs">
+      <DependentUpon>FOnWipDistributingQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOnWipDistributingQP.aspx.designer.cs">
+      <DependentUpon>FOnWipDistributingQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOnWipQP.aspx.cs">
+      <DependentUpon>FOnWipQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOnWipQP.aspx.designer.cs">
+      <DependentUpon>FOnWipQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOnWipResourceQP.aspx.cs">
+      <DependentUpon>FOnWipResourceQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOnWipResourceQP.aspx.designer.cs">
+      <DependentUpon>FOnWipResourceQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCCardCheckList.aspx.cs">
+      <DependentUpon>FOQCCardCheckList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOQCCardCheckList.aspx.designer.cs">
+      <DependentUpon>FOQCCardCheckList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCFirstHandingYieldDetailQP.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOQCFirstHandingYieldDetailQP.aspx.designer.cs">
+      <DependentUpon>FOQCFirstHandingYieldDetailQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCFirstHandingYieldQP.aspx.cs">
+      <DependentUpon>FOQCFirstHandingYieldQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOQCFirstHandingYieldQP.aspx.designer.cs">
+      <DependentUpon>FOQCFirstHandingYieldQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCFuncValueDataQP.aspx.cs">
+      <DependentUpon>FOQCFuncValueDataQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOQCFuncValueDataQP.aspx.designer.cs">
+      <DependentUpon>FOQCFuncValueDataQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCFuncValueQP.aspx.cs">
+      <DependentUpon>FOQCFuncValueQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOQCFuncValueQP.aspx.designer.cs">
+      <DependentUpon>FOQCFuncValueQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCLotDetailsListInfoQP.aspx.cs">
+      <DependentUpon>FOQCLotDetailsListInfoQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOQCLotDetailsListInfoQP.aspx.designer.cs">
+      <DependentUpon>FOQCLotDetailsListInfoQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCLotDetailsQP.aspx.cs">
+      <DependentUpon>FOQCLotDetailsQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOQCLotDetailsQP.aspx.designer.cs">
+      <DependentUpon>FOQCLotDetailsQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCLotSampleQP.aspx.cs">
+      <DependentUpon>FOQCLotSampleQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOQCLotSampleQP.aspx.designer.cs">
+      <DependentUpon>FOQCLotSampleQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCLRR.aspx.cs">
+      <DependentUpon>FOQCLRR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOQCLRR.aspx.designer.cs">
+      <DependentUpon>FOQCLRR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCSampleNGDetailQP.aspx.cs">
+      <DependentUpon>FOQCSampleNGDetailQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOQCSampleNGDetailQP.aspx.designer.cs">
+      <DependentUpon>FOQCSampleNGDetailQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCSDR.aspx.cs">
+      <DependentUpon>FOQCSDR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOQCSDR.aspx.designer.cs">
+      <DependentUpon>FOQCSDR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCTestDataQP.aspx.cs">
+      <DependentUpon>FOQCTestDataQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOQCTestDataQP.aspx.designer.cs">
+      <DependentUpon>FOQCTestDataQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOutMainQP.aspx.cs">
+      <DependentUpon>FOutMainQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOutMainQP.aspx.designer.cs">
+      <DependentUpon>FOutMainQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOutMaterialQP.aspx.cs">
+      <DependentUpon>FOutMaterialQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOutMaterialQP.aspx.designer.cs">
+      <DependentUpon>FOutMaterialQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOutWIPQP.aspx.cs">
+      <DependentUpon>FOutWIPQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOutWIPQP.aspx.designer.cs">
+      <DependentUpon>FOutWIPQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FPackingDetailsQP.aspx.cs">
+      <DependentUpon>FPackingDetailsQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FPackingDetailsQP.aspx.designer.cs">
+      <DependentUpon>FPackingDetailsQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FPackingQP.aspx.cs">
+      <DependentUpon>FPackingQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FPackingQP.aspx.designer.cs">
+      <DependentUpon>FPackingQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FPTQuery.aspx.cs">
+      <DependentUpon>FPTQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FPTQuery.aspx.designer.cs">
+      <DependentUpon>FPTQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRealTimeDefectQP.aspx.cs">
+      <DependentUpon>FRealTimeDefectQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRealTimeDefectQP.aspx.designer.cs">
+      <DependentUpon>FRealTimeDefectQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRealTimeInputOutputQTY.aspx.cs">
+      <DependentUpon>FRealTimeInputOutputQTY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRealTimeInputOutputQTY.aspx.designer.cs">
+      <DependentUpon>FRealTimeInputOutputQTY.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRealTimeQuantityDetails.aspx.cs">
+      <DependentUpon>FRealTimeQuantityDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRealTimeQuantityDetails.aspx.designer.cs">
+      <DependentUpon>FRealTimeQuantityDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRealTimeQuantitySummaryQP.aspx.cs">
+      <DependentUpon>FRealTimeQuantitySummaryQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRealTimeQuantitySummaryQP.aspx.designer.cs">
+      <DependentUpon>FRealTimeQuantitySummaryQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRealTimeResECQP.aspx.cs">
+      <DependentUpon>FRealTimeResECQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRealTimeResECQP.aspx.designer.cs">
+      <DependentUpon>FRealTimeResECQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRealTimeShiftInputDetails.aspx.cs">
+      <DependentUpon>FRealTimeShiftInputDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRealTimeShiftInputDetails.aspx.designer.cs">
+      <DependentUpon>FRealTimeShiftInputDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRealTimeShiftOutputDetails.aspx.cs">
+      <DependentUpon>FRealTimeShiftOutputDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRealTimeShiftOutputDetails.aspx.designer.cs">
+      <DependentUpon>FRealTimeShiftOutputDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRealTimeYieldPercentQP.aspx.cs">
+      <DependentUpon>FRealTimeYieldPercentQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRealTimeYieldPercentQP.aspx.designer.cs">
+      <DependentUpon>FRealTimeYieldPercentQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReportCenterDayProduct.aspx.cs">
+      <DependentUpon>FReportCenterDayProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReportCenterDayProduct.aspx.designer.cs">
+      <DependentUpon>FReportCenterDayProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReportCenterLRR.aspx.cs">
+      <DependentUpon>FReportCenterLRR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReportCenterLRR.aspx.designer.cs">
+      <DependentUpon>FReportCenterLRR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReportCenterMocode.aspx.cs">
+      <DependentUpon>FReportCenterMocode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReportCenterMocode.aspx.designer.cs">
+      <DependentUpon>FReportCenterMocode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReportCenterMonthMocode.aspx.cs">
+      <DependentUpon>FReportCenterMonthMocode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReportCenterMonthMocode.aspx.designer.cs">
+      <DependentUpon>FReportCenterMonthMocode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReportCenterMonthPercent.aspx.cs">
+      <DependentUpon>FReportCenterMonthPercent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReportCenterMonthPercent.aspx.designer.cs">
+      <DependentUpon>FReportCenterMonthPercent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReportCenterMonthProduct.aspx.cs">
+      <DependentUpon>FReportCenterMonthProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReportCenterMonthProduct.aspx.designer.cs">
+      <DependentUpon>FReportCenterMonthProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReportCenterResCode.aspx.cs">
+      <DependentUpon>FReportCenterResCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReportCenterResCode.aspx.designer.cs">
+      <DependentUpon>FReportCenterResCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReportCenterWeekMocode.aspx.cs">
+      <DependentUpon>FReportCenterWeekMocode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReportCenterWeekMocode.aspx.designer.cs">
+      <DependentUpon>FReportCenterWeekMocode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReportCenterWeekPercent.aspx.cs">
+      <DependentUpon>FReportCenterWeekPercent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReportCenterWeekPercent.aspx.designer.cs">
+      <DependentUpon>FReportCenterWeekPercent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReportCenterWeekProduct.aspx.cs">
+      <DependentUpon>FReportCenterWeekProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReportCenterWeekProduct.aspx.designer.cs">
+      <DependentUpon>FReportCenterWeekProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReportFactoryWeekCheck.aspx.cs">
+      <DependentUpon>FReportFactoryWeekCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReportFactoryWeekCheck.aspx.designer.cs">
+      <DependentUpon>FReportFactoryWeekCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FResourceSP.aspx.cs">
+      <DependentUpon>FResourceSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FResourceSP.aspx.designer.cs">
+      <DependentUpon>FResourceSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRMAClosedRateQP.aspx.cs">
+      <DependentUpon>FRMAClosedRateQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRMAClosedRateQP.aspx.designer.cs">
+      <DependentUpon>FRMAClosedRateQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRMACustomerQP.aspx.cs">
+      <DependentUpon>FRMACustomerQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRMACustomerQP.aspx.designer.cs">
+      <DependentUpon>FRMACustomerQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRMADefectQP.aspx.cs">
+      <DependentUpon>FRMADefectQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRMADefectQP.aspx.designer.cs">
+      <DependentUpon>FRMADefectQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRMAFactoryCountQP.aspx.cs">
+      <DependentUpon>FRMAFactoryCountQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRMAFactoryCountQP.aspx.designer.cs">
+      <DependentUpon>FRMAFactoryCountQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRMAFactoryQTYQP.aspx.cs">
+      <DependentUpon>FRMAFactoryQTYQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRMAFactoryQTYQP.aspx.designer.cs">
+      <DependentUpon>FRMAFactoryQTYQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRMAItemIssueQP.aspx.cs">
+      <DependentUpon>FRMAItemIssueQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRMAItemIssueQP.aspx.designer.cs">
+      <DependentUpon>FRMAItemIssueQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRMATSChangedItemQP.aspx.cs">
+      <DependentUpon>FRMATSChangedItemQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRMATSChangedItemQP.aspx.designer.cs">
+      <DependentUpon>FRMATSChangedItemQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRMATSInfoListQP.aspx.cs">
+      <DependentUpon>FRMATSInfoListQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRMATSInfoListQP.aspx.designer.cs">
+      <DependentUpon>FRMATSInfoListQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRMATSInfoQP.aspx.cs">
+      <DependentUpon>FRMATSInfoQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRMATSInfoQP.aspx.designer.cs">
+      <DependentUpon>FRMATSInfoQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRMATSRecordDetailsQP.aspx.cs">
+      <DependentUpon>FRMATSRecordDetailsQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRMATSRecordDetailsQP.aspx.designer.cs">
+      <DependentUpon>FRMATSRecordDetailsQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRMATSRecordQP.aspx.cs">
+      <DependentUpon>FRMATSRecordQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRMATSRecordQP.aspx.designer.cs">
+      <DependentUpon>FRMATSRecordQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSMTComponentLoadingQP.aspx.cs">
+      <DependentUpon>FSMTComponentLoadingQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSMTComponentLoadingQP.aspx.designer.cs">
+      <DependentUpon>FSMTComponentLoadingQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSMTNGListQP.aspx.cs">
+      <DependentUpon>FSMTNGListQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSMTNGListQP.aspx.designer.cs">
+      <DependentUpon>FSMTNGListQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSMTNGQP.aspx.cs">
+      <DependentUpon>FSMTNGQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSMTNGQP.aspx.designer.cs">
+      <DependentUpon>FSMTNGQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSNNGListQP.aspx.cs">
+      <DependentUpon>FSNNGListQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSNNGListQP.aspx.designer.cs">
+      <DependentUpon>FSNNGListQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSNNGQP.aspx.cs">
+      <DependentUpon>FSNNGQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSNNGQP.aspx.designer.cs">
+      <DependentUpon>FSNNGQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSoftwareVersonQP.aspx.cs">
+      <DependentUpon>FSoftwareVersonQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSoftwareVersonQP.aspx.designer.cs">
+      <DependentUpon>FSoftwareVersonQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSolderPasteQP.aspx.cs">
+      <DependentUpon>FSolderPasteQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSolderPasteQP.aspx.designer.cs">
+      <DependentUpon>FSolderPasteQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSPCItemSP.aspx.cs">
+      <DependentUpon>FSPCItemSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSPCItemSP.aspx.designer.cs">
+      <DependentUpon>FSPCItemSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSPCQP.aspx.cs">
+      <DependentUpon>FSPCQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSPCQP.aspx.designer.cs">
+      <DependentUpon>FSPCQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FStockAgeQuery.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FStockAgeQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FStockAgeQuery.aspx.designer.cs">
+      <DependentUpon>FStockAgeQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FStockContrastQP.aspx.cs">
+      <DependentUpon>FStockContrastQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FStockContrastQP.aspx.designer.cs">
+      <DependentUpon>FStockContrastQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FStockInDetailQP.aspx.cs">
+      <DependentUpon>FStockInDetailQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FStockInDetailQP.aspx.designer.cs">
+      <DependentUpon>FStockInDetailQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FStockOutDetailQP.aspx.cs">
+      <DependentUpon>FStockOutDetailQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FStockOutDetailQP.aspx.designer.cs">
+      <DependentUpon>FStockOutDetailQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTimeQuantitySummaryQP.aspx.cs">
+      <DependentUpon>FTimeQuantitySummaryQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTimeQuantitySummaryQP.aspx.designer.cs">
+      <DependentUpon>FTimeQuantitySummaryQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTimeQuantitySumQP.aspx.cs">
+      <DependentUpon>FTimeQuantitySumQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTimeQuantitySumQP.aspx.designer.cs">
+      <DependentUpon>FTimeQuantitySumQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTryItemQP.aspx.cs">
+      <DependentUpon>FTryItemQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTryItemQP.aspx.designer.cs">
+      <DependentUpon>FTryItemQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTryNoDetailsQP.aspx.cs">
+      <DependentUpon>FTryNoDetailsQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTryNoDetailsQP.aspx.designer.cs">
+      <DependentUpon>FTryNoDetailsQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTryNoQP.aspx.cs">
+      <DependentUpon>FTryNoQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTryNoQP.aspx.designer.cs">
+      <DependentUpon>FTryNoQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTSChangedItemQP.aspx.cs">
+      <DependentUpon>FTSChangedItemQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTSChangedItemQP.aspx.designer.cs">
+      <DependentUpon>FTSChangedItemQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTSChangedItemSMTQP.aspx.cs">
+      <DependentUpon>FTSChangedItemSMTQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTSChangedItemSMTQP.aspx.designer.cs">
+      <DependentUpon>FTSChangedItemSMTQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTSECodeQP.aspx.cs">
+      <DependentUpon>FTSECodeQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTSECodeQP.aspx.designer.cs">
+      <DependentUpon>FTSECodeQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTSInfoListQP.aspx.cs">
+      <DependentUpon>FTSInfoListQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTSInfoListQP.aspx.designer.cs">
+      <DependentUpon>FTSInfoListQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTSInfoQP.aspx.cs">
+      <DependentUpon>FTSInfoQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTSInfoQP.aspx.designer.cs">
+      <DependentUpon>FTSInfoQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTSLocECodeQP.aspx.cs">
+      <DependentUpon>FTSLocECodeQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTSLocECodeQP.aspx.designer.cs">
+      <DependentUpon>FTSLocECodeQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTSPerformanceListQP.aspx.cs">
+      <DependentUpon>FTSPerformanceListQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTSPerformanceListQP.aspx.designer.cs">
+      <DependentUpon>FTSPerformanceListQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTSPerformanceQP.aspx.cs">
+      <DependentUpon>FTSPerformanceQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTSPerformanceQP.aspx.designer.cs">
+      <DependentUpon>FTSPerformanceQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTSRecordDetailSP.aspx.cs">
+      <DependentUpon>FTSRecordDetailSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTSRecordDetailSP.aspx.designer.cs">
+      <DependentUpon>FTSRecordDetailSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTSRecordDetailsQP.aspx.cs">
+      <DependentUpon>FTSRecordDetailsQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTSRecordDetailsQP.aspx.designer.cs">
+      <DependentUpon>FTSRecordDetailsQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTSRecordQP.aspx.cs">
+      <DependentUpon>FTSRecordQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTSRecordQP.aspx.designer.cs">
+      <DependentUpon>FTSRecordQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTSRecordQP_New.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FTSRecordQP_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTSRecordQP_New.aspx.designer.cs">
+      <DependentUpon>FTSRecordQP_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTSRecordQueryMP.aspx.cs">
+      <DependentUpon>FTSRecordQueryMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTSRecordQueryMP.aspx.designer.cs">
+      <DependentUpon>FTSRecordQueryMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetSPCData.aspx.cs">
+      <DependentUpon>GetSPCData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetSPCData.aspx.designer.cs">
+      <DependentUpon>GetSPCData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCenter.aspx.cs">
+      <DependentUpon>ReportCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCenter.aspx.designer.cs">
+      <DependentUpon>ReportCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCenterDayYield.aspx.cs">
+      <DependentUpon>ReportCenterDayYield.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCenterDayYield.aspx.designer.cs">
+      <DependentUpon>ReportCenterDayYield.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCenterLine.aspx.cs">
+      <DependentUpon>ReportCenterLine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCenterLine.aspx.designer.cs">
+      <DependentUpon>ReportCenterLine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCenterLong.aspx.cs">
+      <DependentUpon>ReportCenterLong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCenterLong.aspx.designer.cs">
+      <DependentUpon>ReportCenterLong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCenterMonthQuantity.aspx.cs">
+      <DependentUpon>ReportCenterMonthQuantity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCenterMonthQuantity.aspx.designer.cs">
+      <DependentUpon>ReportCenterMonthQuantity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCenterMonthYield.aspx.cs">
+      <DependentUpon>ReportCenterMonthYield.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCenterMonthYield.aspx.designer.cs">
+      <DependentUpon>ReportCenterMonthYield.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCenterTPT.aspx.cs">
+      <DependentUpon>ReportCenterTPT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCenterTPT.aspx.designer.cs">
+      <DependentUpon>ReportCenterTPT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCenterViewConfigEP.aspx.cs">
+      <DependentUpon>ReportCenterViewConfigEP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCenterViewConfigEP.aspx.designer.cs">
+      <DependentUpon>ReportCenterViewConfigEP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCenterWeekQuantity.aspx.cs">
+      <DependentUpon>ReportCenterWeekQuantity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCenterWeekQuantity.aspx.designer.cs">
+      <DependentUpon>ReportCenterWeekQuantity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCenterWeekYield.aspx.cs">
+      <DependentUpon>ReportCenterWeekYield.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCenterWeekYield.aspx.designer.cs">
+      <DependentUpon>ReportCenterWeekYield.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCenterYield.aspx.cs">
+      <DependentUpon>ReportCenterYield.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCenterYield.aspx.designer.cs">
+      <DependentUpon>ReportCenterYield.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemParameterListBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TSStateListBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebQueryHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="Dashboard.aspx" />
+    <Content Include="DashboardPOP.aspx" />
+    <Content Include="FArmorPlateQP.aspx" />
+    <Content Include="FBIDayReport.aspx" />
+    <Content Include="FBIReport.aspx" />
+    <Content Include="FComponentLoadingTrackingQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FConfigEx.aspx" />
+    <Content Include="FECNDetailsQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FECNQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FERPInvInterfaceQuery.aspx" />
+    <Content Include="FFactoryWeekCheck.aspx" />
+    <Content Include="FFirstQP.aspx" />
+    <Content Include="FFTDetailQuery.aspx" />
+    <Content Include="FFTQuery.aspx" />
+    <Content Include="FHistroyQuantitySummaryQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FHistroyYieldPercentSummaryQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FIDMergeQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FINNOInfoQP.aspx" />
+    <Content Include="FIntegratedComponentDownQP.aspx" />
+    <Content Include="FIntegratedComponentLoadingQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FIntegratedDetailsQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FInvRCardQP.aspx" />
+    <Content Include="FItemTracingQP.aspx" />
+    <Content Include="FITMODetailQP.aspx" />
+    <Content Include="FITMOInfoQP.aspx" />
+    <Content Include="FITOPResult.aspx" />
+    <Content Include="FITOPResultBurnInQP.aspx" />
+    <Content Include="FITOPResultComploadingQP.aspx" />
+    <Content Include="FITOPResultFQCQP.aspx" />
+    <Content Include="FITOPResultPackingQP.aspx" />
+    <Content Include="FITOPResultSNQP.aspx" />
+    <Content Include="FITOPResultTestingQP.aspx" />
+    <Content Include="FITOPResultTSQP.aspx" />
+    <Content Include="FITProductionProcessQP.aspx" />
+    <Content Include="FITShelfDetailQP.aspx" />
+    <Content Include="FITShelfQP.aspx" />
+    <Content Include="FKeypartsComponentDownQP.aspx" />
+    <Content Include="FKeypartsComponentLoadingQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FKeypartsDetailsQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FKeypartsInfoQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FMultiMOMemo.aspx" />
+    <Content Include="FOffMOQP.aspx" />
+    <Content Include="FOnWipDistributingQP.aspx" />
+    <Content Include="FOnWipQP.aspx" />
+    <Content Include="FOnWipResourceQP.aspx" />
+    <Content Include="FOQCCardCheckList.aspx" />
+    <Content Include="FOQCFirstHandingYieldDetailQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FOQCFirstHandingYieldQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FOQCFuncValueDataQP.aspx" />
+    <Content Include="FOQCFuncValueQP.aspx" />
+    <Content Include="FOQCLotDetailsListInfoQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FOQCLotDetailsQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FOQCLotSampleQP.aspx" />
+    <Content Include="FOQCLRR.aspx" />
+    <Content Include="FOQCSampleNGDetailQP.aspx" />
+    <Content Include="FOQCSDR.aspx" />
+    <Content Include="FOQCTestDataQP.aspx" />
+    <Content Include="FOutMainQP.aspx" />
+    <Content Include="FOutMaterialQP.aspx" />
+    <Content Include="FOutWIPQP.aspx" />
+    <Content Include="FPackingDetailsQP.aspx" />
+    <Content Include="FPackingQP.aspx" />
+    <Content Include="FPTQuery.aspx" />
+    <Content Include="FRealTimeDefectQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FRealTimeInputOutputQTY.aspx" />
+    <Content Include="FRealTimeQuantityDetails.asp" />
+    <Content Include="FRealTimeQuantityDetails.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FRealTimeQuantitySummaryQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FRealTimeResECQP.aspx" />
+    <Content Include="FRealTimeShiftInputDetails.aspx" />
+    <Content Include="FRealTimeShiftOutputDetails.aspx" />
+    <Content Include="FRealTimeYieldPercentQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FReportCenterDayProduct.aspx" />
+    <Content Include="FReportCenterLRR.aspx" />
+    <Content Include="FReportCenterMocode.aspx" />
+    <Content Include="FReportCenterMonthMocode.aspx" />
+    <Content Include="FReportCenterMonthPercent.aspx" />
+    <Content Include="FReportCenterMonthProduct.aspx" />
+    <Content Include="FReportCenterResCode.aspx" />
+    <Content Include="FReportCenterWeekMocode.aspx" />
+    <Content Include="FReportCenterWeekPercent.aspx" />
+    <Content Include="FReportCenterWeekProduct.aspx" />
+    <Content Include="FReportFactoryWeekCheck.aspx" />
+    <Content Include="FResourceSP.aspx" />
+    <Content Include="FRMAClosedRateQP.aspx" />
+    <Content Include="FRMACustomerQP.aspx" />
+    <Content Include="FRMADefectQP.aspx" />
+    <Content Include="FRMAFactoryCountQP.aspx" />
+    <Content Include="FRMAFactoryQTYQP.aspx" />
+    <Content Include="FRMAItemIssueQP.aspx" />
+    <Content Include="FRMATSChangedItemQP.aspx" />
+    <Content Include="FRMATSInfoListQP.aspx" />
+    <Content Include="FRMATSInfoQP.aspx" />
+    <Content Include="FRMATSRecordDetailsQP.aspx" />
+    <Content Include="FRMATSRecordQP.aspx" />
+    <Content Include="FSMTComponentLoadingQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FSMTNGListQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FSMTNGQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FSNNGListQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FSNNGQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FSoftwareVersonQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FSolderPasteQP.aspx" />
+    <Content Include="FSPCItemSP.aspx" />
+    <Content Include="FSPCQP.aspx" />
+    <Content Include="FStockAgeQuery.aspx" />
+    <Content Include="FStockContrastQP.aspx" />
+    <Content Include="FStockInDetailQP.aspx" />
+    <Content Include="FStockOutDetailQP.aspx" />
+    <Content Include="FTimeQuantitySummaryQP.aspx" />
+    <Content Include="FTimeQuantitySumQP.aspx" />
+    <Content Include="FTryItemQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FTryNoDetailsQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FTryNoQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FTSChangedItemQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FTSChangedItemSMTQP.aspx" />
+    <Content Include="FTSECodeQP.aspx" />
+    <Content Include="FTSInfoListQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FTSInfoQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FTSLocECodeQP.aspx" />
+    <Content Include="FTSPerformanceListQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FTSPerformanceQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FTSRecordDetailSP.aspx" />
+    <Content Include="FTSRecordDetailsQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FTSRecordQP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FTSRecordQP_New.aspx" />
+    <Content Include="FTSRecordQueryMP.aspx" />
+    <Content Include="GetSPCData.aspx" />
+    <Content Include="ReportCenter.aspx" />
+    <Content Include="ReportCenterDayYield.aspx" />
+    <Content Include="ReportCenterLine.aspx" />
+    <Content Include="ReportCenterLong.aspx" />
+    <Content Include="ReportCenterMonthQuantity.aspx" />
+    <Content Include="ReportCenterMonthYield.aspx" />
+    <Content Include="ReportCenterTPT.aspx" />
+    <Content Include="ReportCenterViewConfigEP.aspx" />
+    <Content Include="ReportCenterWeekQuantity.aspx" />
+    <Content Include="ReportCenterWeekYield.aspx" />
+    <Content Include="ReportCenterYield.aspx" />
+    <EmbeddedResource Include="Dashboard.aspx.resx">
+      <DependentUpon>Dashboard.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardPOP.aspx.resx">
+      <DependentUpon>DashboardPOP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FArmorPlateQP.aspx.resx">
+      <DependentUpon>FArmorPlateQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBIDayReport.aspx.resx">
+      <DependentUpon>FBIDayReport.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBIReport.aspx.resx">
+      <DependentUpon>FBIReport.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FComponentLoadingTrackingQP.aspx.resx">
+      <DependentUpon>FComponentLoadingTrackingQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FConfigEx.aspx.resx">
+      <DependentUpon>FConfigEx.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FECNDetailsQP.aspx.resx">
+      <DependentUpon>FECNDetailsQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FECNQP.aspx.resx">
+      <DependentUpon>FECNQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FERPInvInterfaceQuery.aspx.resx">
+      <DependentUpon>FERPInvInterfaceQuery.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFactoryWeekCheck.aspx.resx">
+      <DependentUpon>FFactoryWeekCheck.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFirstQP.aspx.resx">
+      <DependentUpon>FFirstQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFTDetailQuery.aspx.resx">
+      <DependentUpon>FFTDetailQuery.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFTQuery.aspx.resx">
+      <DependentUpon>FFTQuery.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FHistroyQuantitySummaryQP.aspx.resx">
+      <DependentUpon>FHistroyQuantitySummaryQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FHistroyYieldPercentSummaryQP.aspx.resx">
+      <DependentUpon>FHistroyYieldPercentSummaryQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FIDMergeQP.aspx.resx">
+      <DependentUpon>FIDMergeQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FINNOInfoQP.aspx.resx">
+      <DependentUpon>FINNOInfoQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FIntegratedComponentDownQP.aspx.resx">
+      <DependentUpon>FIntegratedComponentDownQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FIntegratedComponentLoadingQP.aspx.resx">
+      <DependentUpon>FIntegratedComponentLoadingQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FIntegratedDetailsQP.aspx.resx">
+      <DependentUpon>FIntegratedDetailsQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItemTracingQP.aspx.resx">
+      <DependentUpon>FItemTracingQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FITMODetailQP.aspx.resx">
+      <DependentUpon>FITMODetailQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FITMOInfoQP.aspx.resx">
+      <DependentUpon>FITMOInfoQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FITOPResult.aspx.resx">
+      <DependentUpon>FITOPResult.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FITOPResultBurnInQP.aspx.resx">
+      <DependentUpon>FITOPResultBurnInQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FITOPResultComploadingQP.aspx.resx">
+      <DependentUpon>FITOPResultComploadingQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FITOPResultFQCQP.aspx.resx">
+      <DependentUpon>FITOPResultFQCQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FITOPResultPackingQP.aspx.resx">
+      <DependentUpon>FITOPResultPackingQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FITOPResultSNQP.aspx.resx">
+      <DependentUpon>FITOPResultSNQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FITOPResultTestingQP.aspx.resx">
+      <DependentUpon>FITOPResultTestingQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FITOPResultTSQP.aspx.resx">
+      <DependentUpon>FITOPResultTSQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FITProductionProcessQP.aspx.resx">
+      <DependentUpon>FITProductionProcessQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FITShelfDetailQP.aspx.resx">
+      <DependentUpon>FITShelfDetailQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FITShelfQP.aspx.resx">
+      <DependentUpon>FITShelfQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FKeypartsComponentDownQP.aspx.resx">
+      <DependentUpon>FKeypartsComponentDownQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FKeypartsComponentLoadingQP.aspx.resx">
+      <DependentUpon>FKeypartsComponentLoadingQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FKeypartsDetailsQP.aspx.resx">
+      <DependentUpon>FKeypartsDetailsQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FKeypartsInfoQP.aspx.resx">
+      <DependentUpon>FKeypartsInfoQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMultiMOMemo.aspx.resx">
+      <DependentUpon>FMultiMOMemo.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOffMOQP.aspx.resx">
+      <DependentUpon>FOffMOQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOnWipDistributingQP.aspx.resx">
+      <DependentUpon>FOnWipDistributingQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOnWipQP.aspx.resx">
+      <DependentUpon>FOnWipQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOnWipResourceQP.aspx.resx">
+      <DependentUpon>FOnWipResourceQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCCardCheckList.aspx.resx">
+      <DependentUpon>FOQCCardCheckList.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCFirstHandingYieldDetailQP.aspx.resx">
+      <DependentUpon>FOQCFirstHandingYieldDetailQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCFirstHandingYieldQP.aspx.resx">
+      <DependentUpon>FOQCFirstHandingYieldQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCFuncValueDataQP.aspx.resx">
+      <DependentUpon>FOQCFuncValueDataQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCFuncValueQP.aspx.resx">
+      <DependentUpon>FOQCFuncValueQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCLotDetailsListInfoQP.aspx.resx">
+      <DependentUpon>FOQCLotDetailsListInfoQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCLotDetailsQP.aspx.resx">
+      <DependentUpon>FOQCLotDetailsQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCLotSampleQP.aspx.resx">
+      <DependentUpon>FOQCLotSampleQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCLRR.aspx.resx">
+      <DependentUpon>FOQCLRR.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCSampleNGDetailQP.aspx.resx">
+      <DependentUpon>FOQCSampleNGDetailQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCSDR.aspx.resx">
+      <DependentUpon>FOQCSDR.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCTestDataQP.aspx.resx">
+      <DependentUpon>FOQCTestDataQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOutMainQP.aspx.resx">
+      <DependentUpon>FOutMainQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOutMaterialQP.aspx.resx">
+      <DependentUpon>FOutMaterialQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOutWIPQP.aspx.resx">
+      <DependentUpon>FOutWIPQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPackingDetailsQP.aspx.resx">
+      <DependentUpon>FPackingDetailsQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPackingQP.aspx.resx">
+      <DependentUpon>FPackingQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPTQuery.aspx.resx">
+      <DependentUpon>FPTQuery.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRealTimeDefectQP.aspx.resx">
+      <DependentUpon>FRealTimeDefectQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRealTimeQuantityDetails.aspx.resx">
+      <DependentUpon>FRealTimeQuantityDetails.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRealTimeQuantitySummaryQP.aspx.resx">
+      <DependentUpon>FRealTimeQuantitySummaryQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRealTimeResECQP.aspx.resx">
+      <DependentUpon>FRealTimeResECQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRealTimeYieldPercentQP.aspx.resx">
+      <DependentUpon>FRealTimeYieldPercentQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReportCenterDayProduct.aspx.resx">
+      <DependentUpon>FReportCenterDayProduct.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReportCenterLRR.aspx.resx">
+      <DependentUpon>FReportCenterLRR.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReportCenterMocode.aspx.resx">
+      <DependentUpon>FReportCenterMocode.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReportCenterMonthMocode.aspx.resx">
+      <DependentUpon>FReportCenterMonthMocode.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReportCenterMonthPercent.aspx.resx">
+      <DependentUpon>FReportCenterMonthPercent.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReportCenterMonthProduct.aspx.resx">
+      <DependentUpon>FReportCenterMonthProduct.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReportCenterResCode.aspx.resx">
+      <DependentUpon>FReportCenterResCode.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReportCenterWeekMocode.aspx.resx">
+      <DependentUpon>FReportCenterWeekMocode.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReportCenterWeekPercent.aspx.resx">
+      <DependentUpon>FReportCenterWeekPercent.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReportCenterWeekProduct.aspx.resx">
+      <DependentUpon>FReportCenterWeekProduct.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReportFactoryWeekCheck.aspx.resx">
+      <DependentUpon>FReportFactoryWeekCheck.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FResourceSP.aspx.resx">
+      <DependentUpon>FResourceSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMAClosedRateQP.aspx.resx">
+      <DependentUpon>FRMAClosedRateQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMACustomerQP.aspx.resx">
+      <DependentUpon>FRMACustomerQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMADefectQP.aspx.resx">
+      <DependentUpon>FRMADefectQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMAFactoryCountQP.aspx.resx">
+      <DependentUpon>FRMAFactoryCountQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMAFactoryQTYQP.aspx.resx">
+      <DependentUpon>FRMAFactoryQTYQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMAItemIssueQP.aspx.resx">
+      <DependentUpon>FRMAItemIssueQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMATSInfoQP.aspx.resx">
+      <DependentUpon>FRMATSInfoQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMATSRecordQP.aspx.resx">
+      <DependentUpon>FRMATSRecordQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTComponentLoadingQP.aspx.resx">
+      <DependentUpon>FSMTComponentLoadingQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTNGListQP.aspx.resx">
+      <DependentUpon>FSMTNGListQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTNGQP.aspx.resx">
+      <DependentUpon>FSMTNGQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSNNGListQP.aspx.resx">
+      <DependentUpon>FSNNGListQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSNNGQP.aspx.resx">
+      <DependentUpon>FSNNGQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSoftwareVersonQP.aspx.resx">
+      <DependentUpon>FSoftwareVersonQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSolderPasteQP.aspx.resx">
+      <DependentUpon>FSolderPasteQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSPCItemSP.aspx.resx">
+      <DependentUpon>FSPCItemSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSPCQP.aspx.resx">
+      <DependentUpon>FSPCQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FStockContrastQP.aspx.resx">
+      <DependentUpon>FStockContrastQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FStockInDetailQP.aspx.resx">
+      <DependentUpon>FStockInDetailQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FStockOutDetailQP.aspx.resx">
+      <DependentUpon>FStockOutDetailQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTimeQuantitySummaryQP.aspx.resx">
+      <DependentUpon>FTimeQuantitySummaryQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTimeQuantitySumQP.aspx.resx">
+      <DependentUpon>FTimeQuantitySumQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTryItemQP.aspx.resx">
+      <DependentUpon>FTryItemQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTryNoDetailsQP.aspx.resx">
+      <DependentUpon>FTryNoDetailsQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTryNoQP.aspx.resx">
+      <DependentUpon>FTryNoQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSChangedItemQP.aspx.resx">
+      <DependentUpon>FTSChangedItemQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSChangedItemSMTQP.aspx.resx">
+      <DependentUpon>FTSChangedItemSMTQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSECodeQP.aspx.resx">
+      <DependentUpon>FTSECodeQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSInfoListQP.aspx.resx">
+      <DependentUpon>FTSInfoListQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSInfoQP.aspx.resx">
+      <DependentUpon>FTSInfoQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSLocECodeQP.aspx.resx">
+      <DependentUpon>FTSLocECodeQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSPerformanceListQP.aspx.resx">
+      <DependentUpon>FTSPerformanceListQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSPerformanceQP.aspx.resx">
+      <DependentUpon>FTSPerformanceQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSRecordDetailSP.aspx.resx">
+      <DependentUpon>FTSRecordDetailSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSRecordDetailsQP.aspx.resx">
+      <DependentUpon>FTSRecordDetailsQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSRecordQP.aspx.resx">
+      <DependentUpon>FTSRecordQP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSRecordQueryMP.aspx.resx">
+      <DependentUpon>FTSRecordQueryMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetSPCData.aspx.resx">
+      <DependentUpon>GetSPCData.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="ReportCenter.aspx.resx">
+      <DependentUpon>ReportCenter.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCenterDayYield.aspx.resx">
+      <DependentUpon>ReportCenterDayYield.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCenterLine.aspx.resx">
+      <DependentUpon>ReportCenterLine.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCenterLong.aspx.resx">
+      <DependentUpon>ReportCenterLong.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCenterMonthQuantity.aspx.resx">
+      <DependentUpon>ReportCenterMonthQuantity.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCenterMonthYield.aspx.resx">
+      <DependentUpon>ReportCenterMonthYield.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCenterTPT.aspx.resx">
+      <DependentUpon>ReportCenterTPT.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCenterViewConfigEP.aspx.resx">
+      <DependentUpon>ReportCenterViewConfigEP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCenterWeekQuantity.aspx.resx">
+      <DependentUpon>ReportCenterWeekQuantity.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCenterWeekYield.aspx.resx">
+      <DependentUpon>ReportCenterWeekYield.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCenterYield.aspx.resx">
+      <DependentUpon>ReportCenterYield.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1887</DevelopmentServerPort>
+          <DevelopmentServerVPath>/WebQuery/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/hisense_roger/FLoginNew.aspx</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

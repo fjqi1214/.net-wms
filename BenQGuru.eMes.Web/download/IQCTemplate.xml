@@ -1,0 +1,793 @@
+﻿<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>mes</Author>
+  <LastAuthor>mes</LastAuthor>
+  <Created>2008-12-18T03:40:42Z</Created>
+  <Company>hisense</Company>
+  <Version>12.00</Version>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>9675</WindowHeight>
+  <WindowWidth>15480</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>120</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="m50234240">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="m50234260">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="m50234280">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Bold="1"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m50234300">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Top" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="m50234320">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m50234340">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior/>
+  </Style>
+  <Style ss:ID="m50234360">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m50234380">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m50234400">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m50234036">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="m50234056">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m50234076">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m50234096">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m50234116">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="m50234136">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m50234156">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m50234176">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m50233588">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s62">
+   <Alignment ss:Vertical="Bottom" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Vertical="Bottom" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s64">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s66">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s67">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s68">
+   <Alignment ss:Vertical="Bottom" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s69">
+   <Alignment ss:Vertical="Bottom" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Bold="1"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s70">
+   <Alignment ss:Vertical="Bottom" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s72">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s74">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s77">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom" ss:ShrinkToFit="1"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s79">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s81">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s84">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s86">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:ShrinkToFit="1"/>
+   <Borders/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s87">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s89">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s91">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s93">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s94">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s97">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s98">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s99">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s100">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s101">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s103">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Bold="1"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s104">
+   <Alignment ss:Vertical="Bottom" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s105">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s107">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12" ss:Bold="1"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s108">
+   <Alignment ss:Vertical="Bottom" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s109">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center" ss:ShrinkToFit="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Names>
+   <NamedRange ss:Name="Print_Area" ss:RefersTo="=Sheet1!R1C1:R20C13"/>
+  </Names>
+  <Table ss:ExpandedColumnCount="13" ss:ExpandedRowCount="20" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Column ss:AutoFitWidth="0" ss:Width="28.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="45.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="65.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="48.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="99"/>
+   <Column ss:AutoFitWidth="0" ss:Width="99.75"/>
+   <Column ss:Hidden="1" ss:AutoFitWidth="0" ss:Width="54.75"/>
+   <Column ss:Hidden="1" ss:AutoFitWidth="0"/>
+   <Column ss:AutoFitWidth="0" ss:Width="56.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="57.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="66.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="39"/>
+   <Column ss:AutoFitWidth="0" ss:Width="29.25"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s62"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s63"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s64"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s63"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s64"><Data ss:Type="String">XXXX</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s63"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s67"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">$$IQCHeadAttribute$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s69"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">$$ShipToStock$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeAcross="1" ss:StyleID="s72"><Data ss:Type="String">序号:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="s74"><Data ss:Type="String">$$IQCNo$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s66"><Data ss:Type="String">$$ROHS$$物料验收及检验结果通知单</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">送货单号</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s79"><Data ss:Type="String">$$ASN$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeAcross="1" ss:StyleID="s81"><Data ss:Type="String">打印时间:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="s84"><Data ss:Type="String">$$PrintDate$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s86"><Data ss:Type="String">$$PrintTime$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s87"><Data ss:Type="String">状态</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s89"><Data ss:Type="String">$$IQCStatus$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeAcross="1" ss:StyleID="s91"><Data ss:Type="String">供应商代码:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="String">$$VendorCode$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s94"><Data ss:Type="String">供应商:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="8" ss:StyleID="m50233588"><Data ss:Type="String">$$VendorName$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s99"><Data ss:Type="String">ASN行</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">物料代码</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s64"><Data ss:Type="String">物料描述：</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">排程日期</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">排程数量</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">单位</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">送货数量</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">采购订单</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">订单行</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">类型</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" detailLineNo="0">
+    <Cell ss:StyleID="s101"><Data ss:Type="String">$$IQCLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$MaterialCode$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s97"><Data ss:Type="String">$$MaterialDesc$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$PlanDate$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s103"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$Unit$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$ReceiveQty$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderNo$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">$$IQCDetailAttribute$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" detailLineNo="1">
+    <Cell ss:StyleID="s101"><Data ss:Type="String">$$IQCLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$MaterialCode$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s97"><Data ss:Type="String">$$MaterialDesc$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$PlanDate$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s103"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$Unit$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$ReceiveQty$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderNo$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">$$IQCDetailAttribute$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" detailLineNo="2">
+    <Cell ss:StyleID="s101"><Data ss:Type="String">$$IQCLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$MaterialCode$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s97"><Data ss:Type="String">$$MaterialDesc$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$PlanDate$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s103"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$Unit$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$ReceiveQty$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderNo$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">$$IQCDetailAttribute$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" detailLineNo="3">
+    <Cell ss:StyleID="s101"><Data ss:Type="String">$$IQCLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$MaterialCode$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s97"><Data ss:Type="String">$$MaterialDesc$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$PlanDate$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s103"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$Unit$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$ReceiveQty$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderNo$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">$$IQCDetailAttribute$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" detailLineNo="4">
+    <Cell ss:StyleID="s101"><Data ss:Type="String">$$IQCLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$MaterialCode$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s97"><Data ss:Type="String">$$MaterialDesc$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$PlanDate$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s103"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$Unit$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$ReceiveQty$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderNo$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">$$IQCDetailAttribute$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" detailLineNo="5">
+    <Cell ss:StyleID="s101"><Data ss:Type="String">$$IQCLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$MaterialCode$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s97"><Data ss:Type="String">$$MaterialDesc$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$PlanDate$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s103"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$Unit$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$ReceiveQty$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderNo$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">$$IQCDetailAttribute$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" detailLineNo="6">
+    <Cell ss:StyleID="s101"><Data ss:Type="String">$$IQCLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$MaterialCode$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s97"><Data ss:Type="String">$$MaterialDesc$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$PlanDate$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s103"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$Unit$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$ReceiveQty$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderNo$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">$$IQCDetailAttribute$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" detailLineNo="7">
+    <Cell ss:StyleID="s101"><Data ss:Type="String">$$IQCLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$MaterialCode$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s97"><Data ss:Type="String">$$MaterialDesc$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$PlanDate$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s103"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$Unit$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$ReceiveQty$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderNo$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">$$IQCDetailAttribute$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" detailLineNo="8">
+    <Cell ss:StyleID="s101"><Data ss:Type="String">$$IQCLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$MaterialCode$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s97"><Data ss:Type="String">$$MaterialDesc$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$PlanDate$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s103"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$Unit$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$ReceiveQty$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderNo$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">$$OrderLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">$$IQCDetailAttribute$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" detailLineNo="9">
+    <Cell ss:StyleID="s105"><Data ss:Type="String">$$IQCLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="String">$$MaterialCode$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="s98"><Data ss:Type="String">$$MaterialDesc$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="String">$$PlanDate$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s107"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="String">$$Unit$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="String">$$ReceiveQty$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="String">$$OrderNo$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="String">$$OrderLine$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">$$IQCDetailAttribute$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeAcross="1" ss:StyleID="m50234036"><Data ss:Type="String">送检员:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="m50234056"><Data ss:Type="String">$$AppUserName$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="String">送检时间:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="m50234076"><Data ss:Type="String">$$AppDateTime$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="String">保管员:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m50234096"><Data ss:Type="String">$$InventoryUserName$$</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeAcross="1" ss:StyleID="m50234116"><Data ss:Type="String">检验批号:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="m50234136"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="String">检验时间:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="m50234156"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="String">生产日期:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m50234176"><NamedCell ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeAcross="1" ss:StyleID="m50234240"><Data ss:Type="String">检验依据:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="m50234260"><Data ss:Type="String">指导书</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="String">检验形式:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="7" ss:StyleID="m50234280"><Data ss:Type="String">抽检</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeAcross="1" ss:StyleID="m50234300"><Data ss:Type="String">检验结果:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="10" ss:StyleID="m50234320"><NamedCell
+      ss:Name="Print_Area"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:MergeAcross="1" ss:StyleID="m50234340"><Data ss:Type="String">签收时间:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="m50234360"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="String">负责人:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="m50234380"><NamedCell ss:Name="Print_Area"/></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="String">检验员:</Data><NamedCell
+      ss:Name="Print_Area"/></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m50234400"><NamedCell ss:Name="Print_Area"/></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Footer x:Margin="0.43"/>
+    <PageMargins x:Bottom="0.56000000000000005" x:Left="0.5" x:Right="0.3"
+     x:Top="0.85"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <ShowPageBreakZoom/>
+   <PageBreakZoom>115</PageBreakZoom>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>1</ActiveRow>
+     <ActiveCol>4</ActiveCol>
+     <RangeSelection>R2C5:R2C8</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Formats>
+  <Format Name="OutDataMO_Piece"
+		FileFormat = "HeaderData"
+		FileNameSeparator = ""
+		HeaderRowCount = "1"
+		HeaderRecordSeparator = ";\n"
+		HeaderColumnSeparator = ","
+		ContentRecordSeparator = "\n"
+		ContentColumnSeparator = ","
+		IsContentMultiRecord = "1"
+		ContentMultiRecordInterval = "1"
+		SaveDataDirectly = "0"
+	>
+    <ObjectMap IsObjectInsert = "0"  ObjectType="BenQGuru.eMES.Domain.MOModel.MOForExport,BenQGuru.eMES.Domain"
+			KeyFields="MOCode"
+			TableName="tblmo"
+		>
+
+      <Column
+        AttributeName="MOCode"
+        ColumnName = "MOCODE"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "0"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "工单代码"
+				/>
+
+      <Column
+        AttributeName="MOPlanQty1"
+        ColumnName = "MOPLANQTY"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "1"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "计划数量"
+				/>
+
+      <Column
+        AttributeName="MOMemo1"
+        ColumnName = "MOMEMO"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "2"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "工单别"
+				/>
+
+      <Column
+        AttributeName="BOMVersion1"
+        ColumnName = "MOBOM"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "3"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "工单BOM"
+				/>
+
+      <Column
+        AttributeName="MOPlanStartDate1"
+        ColumnName = "MOPLANSTARTDATE"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "4"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "计划开工日期"
+				/>
+
+      <Column
+       AttributeName="MOPlanStartTime"
+       ColumnName = "MOPLANSTARTTIME"
+       DataType = "string"
+       DataSource = "Content"
+       DataLine = "0"
+       DataColumn = "5"
+       DataStringFrom = "0"
+       DataStringTo="99"
+       Default = ""
+       Caption = "计划开工时间"
+				/>
+
+      <Column
+        AttributeName="MOPlanEndDate1"
+        ColumnName = "MOPLANENDDATE"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "6"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "计划完工日期"
+				/>
+
+      <Column
+        AttributeName="MOPlanEndTime"
+        ColumnName = "MOPLANENDTIME"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "7"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "计划完工时间"
+				/>
+
+      <Column
+        AttributeName="MOPlanLine"
+        ColumnName = "MOPLANLINE"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "8"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "计划生产产线"
+				/>
+
+      <Column
+        AttributeName="CustomerCode"
+        ColumnName = "CUSCODE"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "9"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "客户代码"
+				/>
+
+      <Column
+        AttributeName="CustomerName"
+        ColumnName = "CUSNAME"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "10"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "客户名称"
+				/>
+
+      <Column
+       AttributeName="CustomerOrderNO1"
+       ColumnName = "CUSORDERNO"
+       DataType = "string"
+       DataSource = "Content"
+       DataLine = "0"
+       DataColumn = "11"
+       DataStringFrom = "0"
+       DataStringTo="99"
+       Default = ""
+       Caption = "客户订单号"
+				/>
+
+      <Column
+        AttributeName="CustomerItemCode"
+        ColumnName = "CUSITEMCODE"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "12"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "客户料号"
+				/>
+
+      <Column
+        AttributeName="OrderNO"
+        ColumnName = "ORDERNO"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "13"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "订单号"
+				/>
+
+      <Column
+        AttributeName="OrderSequence1"
+        ColumnName = "ORDERSEQ"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "14"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "订单项次"
+				/>
+
+      <Column
+        AttributeName="EAttribute1"
+        ColumnName = "EATTRIBUTE1"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "15"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "预留栏位1"
+				/>
+
+      <Column
+        AttributeName="EAttribute4"
+        ColumnName = "EATTRIBUTE4"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "16"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "预留栏位4"
+				/>
+
+      <Column
+        AttributeName="EAttribute5"
+        ColumnName = "EATTRIBUTE5"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "17"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "预留栏位5"
+				/>
+				
+      <Column
+        AttributeName="EAttribute6"
+        ColumnName = "EATTRIBUTE6"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "18"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "预留栏位6"
+				/>				
+
+    </ObjectMap>
+
+  </Format>
+</Formats>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Formats>
+  <Format Name="OutDataMO_Piece"
+		FileFormat = "HeaderData"
+		FileNameSeparator = ""
+		HeaderRowCount = "1"
+		HeaderRecordSeparator = ";\n"
+		HeaderColumnSeparator = ","
+		ContentRecordSeparator = "\n"
+		ContentColumnSeparator = ","
+		IsContentMultiRecord = "1"
+		ContentMultiRecordInterval = "1"
+		SaveDataDirectly = "0"
+	>
+    <ObjectMap IsObjectInsert = "0"  ObjectType="BenQGuru.eMES.Domain.Material.ExpMaterialReqStd,BenQGuru.eMES.Domain"
+			KeyFields="ITEMCODE"
+			TableName="TBLMaterialReqStd"
+		>
+
+      <Column
+        AttributeName="ITEMCODE"
+        ColumnName = "ITEMCODE"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "0"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "物料代码"
+				/>
+
+      <Column
+        AttributeName="OrganizationID"
+        ColumnName = "ORGID"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "1"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "组织"
+				/>
+
+      <Column
+        AttributeName="RequestQTY"
+        ColumnName = "REQUESTQTY"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "2"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "物料数量"
+				/>
+
+      <Column
+        AttributeName="MaintainUser"
+        ColumnName = "MUSER"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "3"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "维护用户"
+				/>
+
+      <Column
+        AttributeName="MaintainDate"
+        ColumnName = "MDATE"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "4"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "维护日期"
+				/>
+
+      <Column
+       AttributeName="MaintainTime"
+       ColumnName = "MTIME"
+       DataType = "string"
+       DataSource = "Content"
+       DataLine = "0"
+       DataColumn = "5"
+       DataStringFrom = "0"
+       DataStringTo="99"
+       Default = ""
+       Caption = "维护时间"
+				/>
+
+      <Column
+      AttributeName="EAttribute1"
+      ColumnName = "EATTRIBUTE1"
+      DataType = "string"
+      DataSource = "Content"
+      DataLine = "0"
+      DataColumn = "6"
+      DataStringFrom = "0"
+      DataStringTo="99"
+      Default = ""
+      Caption = "保留字段1"
+				/>
+
+    
+
+    </ObjectMap>
+
+  </Format>
+</Formats>
+

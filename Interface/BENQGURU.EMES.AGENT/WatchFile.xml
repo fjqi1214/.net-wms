@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<ConfigData>
+	<WatchFile>
+		<!-- 参数说明：Module:表示功能模块; RunStatus :表示当前功能是否使用(true表示使用，false表示不使用) ;DirectoryPath:表示监控的目录；Interval:表示agent监控目录的时间间隔（毫秒）;FileEncoding:表示被处理的文件的编码格式;SMTLoadItem:是否需要SMT上料 -->
+		<WatchFileInfo Module="AOI" RunStatus="false"  DirectoryPath="C:\agenttest"  Interval="1000" FileEncoding="BIG5" SMTLoadItem="true"></WatchFileInfo>
+		<WatchFileInfo Module="ICT" RunStatus="true" AllowGoToMO="true"  DirectoryPath="C:\agenttest"  Interval="1000" FileEncoding="BIG5"></WatchFileInfo>
+		<WatchFileInfo Module="PIDAOI" RunStatus="false"  DirectoryPath="C:\agenttest"  Interval="1000" FileEncoding="BIG5"></WatchFileInfo>
+	</WatchFile>
+</ConfigData>

@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35AB4323-945C-4426-B63C-3A60245ACF75}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BenQGuru.eMES.BaseDataModel</RootNamespace>
+    <AssemblyName>BenQGuru.eMES.BaseDataModel</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/BenQGuru.eMES.BaseDataModel/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.MSCommLib, Version=1.1.0.0, Culture=neutral" />
+    <Reference Include="AxInterop.SHDocVw, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\AxInterop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.BaseSetting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="BenQGuru.eMES.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\BenQGuru.eMES.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Domain, Version=1.0.4.13, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="BenQGuru.eMES.Material, Version=1.0.4.13, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.MOModel, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="BenQGuru.eMES.Web.Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\BenQGuru.eMES.Web.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.SHDocVw, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Interop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.VBIDE, Version=5.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Interop.VBIDE.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.Vsa" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UserControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\UserControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationService.cs" />
+    <Compile Include="ConfigObject.cs" />
+    <Compile Include="FAutoTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAutoTemplate.Designer.cs">
+      <DependentUpon>FAutoTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FImpFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FImpFormBase.Designer.cs">
+      <DependentUpon>FImpFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FImpLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FImpLine.Designer.cs">
+      <DependentUpon>FImpLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FImpOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FImpOP.Designer.cs">
+      <DependentUpon>FImpOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FImpItemRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FImpItemRoute.Designer.cs">
+      <DependentUpon>FImpItemRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSetting.Designer.cs">
+      <DependentUpon>FSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportDataEngine.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FAutoTemplate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FAutoTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FImpFormBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FImpFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FImpLine.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FImpLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="template\DefaultItem2Route.xls" />
+    <None Include="template\Department.xls" />
+    <None Include="template\Duty.xls" />
+    <None Include="template\ErrorCause.xls" />
+    <None Include="template\ErrorCauseGroup.xls" />
+    <None Include="template\ErrorCode.xls" />
+    <None Include="template\ErrorCodeGroup.xls" />
+    <None Include="template\ErrorCodeGroupReworkRoute.xls" />
+    <None Include="template\Factory.xls" />
+    <None Include="template\HoursCounting.xls" />
+    <None Include="template\IPQASampleRange.xls" />
+    <None Include="template\Item.xls" />
+    <None Include="template\Item2Label.xls" />
+    <None Include="template\Item2OQCCheckList.xls" />
+    <None Include="template\Item2PKRule.xls" />
+    <None Include="template\Item2Route.xls" />
+    <None Include="template\ItemPanelInfo.xls" />
+    <None Include="template\ItemRoute2OP.xls" />
+    <None Include="template\ItemRoute2OPtionalOP.xls" />
+    <None Include="template\Label.xls" />
+    <None Include="template\LASTTAG.xls" />
+    <None Include="template\Line.xls" />
+    <None Include="template\Model.xls" />
+    <None Include="template\Model2ErrorCauseGroup.xls" />
+    <None Include="template\Model2ErrorCodeGroup.xls" />
+    <None Include="template\Model2Solution.xls" />
+    <None Include="template\OPBOM.xls" />
+    <None Include="template\OPCheckItem.xls" />
+    <None Include="template\Operation.xls" />
+    <None Include="template\OQCCheckList.xls" />
+    <None Include="template\OQCLotSampleRange.xls" />
+    <None Include="template\PKRule.rar" />
+    <None Include="template\PKRule.xls" />
+    <None Include="template\PKRuleStep.xls" />
+    <None Include="template\PKRuleStepCheck.xls" />
+    <None Include="template\Resource.xls" />
+    <None Include="template\Route.xls" />
+    <None Include="template\Route2Operation.xls" />
+    <None Include="template\SBOM.xls" />
+    <None Include="template\ScrapCause.xls" />
+    <None Include="template\Segment.xls" />
+    <None Include="template\Shift.xls" />
+    <None Include="template\ShiftType.xls" />
+    <None Include="template\ShipToStock.xls" />
+    <None Include="template\Solution.xls" />
+    <None Include="template\StandardCheckItem.xls" />
+    <None Include="template\Template.zip" />
+    <None Include="template\TimePeriod.xls" />
+    <None Include="template\User.xls" />
+    <None Include="template\UserGroup.xls" />
+    <None Include="template\UserGroup2User.xls" />
+    <None Include="template\WorkCenter.xls" />
+    <None Include="template\WorkCenter2LineOP.xls" />
+    <None Include="template\产品关联包装规则.xls" />
+    <None Include="template\包装规则.xls" />
+    <None Include="template\标签模板资料.xls" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BaseDataMapping.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>Copy "$(ProjectDir)BaseDataMapping.xml" "$(OutDir)BaseDataMapping.xml" /y
+IF NOT EXIST "$(OutDir)template" Mkdir "$(OutDir)template"
+Copy "$(ProjectDir)template\*.*" "$(OutDir)template\" /y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

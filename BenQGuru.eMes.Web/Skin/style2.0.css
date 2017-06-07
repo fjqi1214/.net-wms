@@ -1,0 +1,417 @@
+﻿/*
+		-----------------Normal Window---------------------
+               Contact us before editing this style         
+		       EXT_KarenYou:6951  EXT_MotoneHu:6939 
+		                  Jun.2005 v3.0　　　　　                
+		--------------------------------------------------- 
+*/
+
+/*＝＝＝＝＝＝＝＝＝＝＝基本标签定义（默认样式）＝＝＝＝＝＝＝＝＝＝＝*/
+
+/*　常规定义　*/
+Body {
+	background-color: #ededed;
+	font-family: "Microsoft Sans Serif", "宋体";
+	font-size: 12px;
+	margin: 0px;
+	color: #000000;
+	}
+	
+/*	textmode = singleline <asp:textbox></asp:textbox> */
+	.textbox
+	{
+		border-right: 1px solid;
+		border-top: 1px solid;
+		border-left: 1px solid;
+		border-bottom: 1px solid;
+	
+		font-size:12px;
+		border-color:#ababab;
+		border-width:1px;
+		border-style:solid;
+		background-color:white;
+		height:20px;
+	}
+	
+	table.query
+	{
+		BORDER-RIGHT: #d7d8d9 1px solid; 
+		BORDER-TOP: #d7d8d9 1px solid; 
+		BORDER-LEFT: #d7d8d9 1px solid; 
+		WIDTH: 100%; 
+		BORDER-BOTTOM: #d7d8d9 1px solid; 
+		HEIGHT: 100%; 
+		/*BACKGROUND-COLOR: #ebebeb;*/
+		BACKGROUND-COLOR:#d7d8d9;
+	}
+	
+	input.gridExportButton
+	{
+		border:0px;
+		height :16px;
+		width :16px;
+		background-color: transparent;
+		cursor:hand;
+		background-image: url(./image/gridexport.gif); 
+	}
+	
+	input.submitImgButton
+	{
+		font-size:12px;
+		border:0px;
+		height :24px;
+		width :87px;
+	    background-color: transparent;
+		cursor:hand;
+	}
+	
+	.textbox.require
+	{		
+		border-right: 1px solid;
+		border-top: 1px solid;
+		border-left: 1px solid;
+		border-bottom: 1px solid;
+	
+		font-size:12px;
+		border-color:#ababab;
+		border-width:1px;
+		border-style:solid;
+		background-color:#fffcf0;
+		height:20px;
+	}
+	
+/*　表格定义　*/	
+Table {
+	padding: 0px;
+	font-family: "Microsoft Sans Serif", "宋体";
+	font-size: 12px;
+	}
+Td, Th {
+	font-family: "Microsoft Sans Serif", "宋体";
+	}
+Td.border {
+    border: 1px solid #999999;
+	}
+Td.Bgwhite_border {
+	background-color:#FFFFFF;
+	border: 1px solid #999999;
+	width: 200px;
+	}
+Td.width8 {
+    width: 8px;
+	}
+Td.width2l {
+    width: 41px;
+	}
+Td.width3l {
+    width: 53px;
+	}
+Td.width4l {
+    width: 65px;
+	}
+Td.width5l {
+    width: 77px;
+	}
+Td.width6l {
+    width: 89px;
+	}
+
+/*　输入定义　*/
+Input,Select {
+	font:"Microsoft Sans Serif", "宋体";
+	font-size:12px;
+	}
+Input.border {
+    border: 1px solid #999999;
+	}
+/*  几个推荐尺寸的input/select宽度 */
+.widthchk  {
+    width:20px;
+	}
+.width40px {
+	border: 1px solid #999999;
+    width:40px
+	}
+.width80px {
+	border: 1px solid #999999;
+    width:80px
+	}
+.width100px {
+	border: 1px solid #999999;
+    width:100px
+	}
+.width130px {
+	border: 1px solid #999999;
+    width:130px
+	}
+.width200px {
+	border: 1px solid #999999;
+    width:200px
+	}
+
+/*  链接定义 */
+A{
+	color: #000000;
+	}
+A:hover{
+	COLOR: #3333CC;
+	}
+
+/*  ＝＝＝＝＝＝＝＝＝＝区块定义＝＝＝＝＝＝＝＝＝＝＝  */
+	
+/*　+++++头部文件定义+++++　*/
+.Header {
+	font-family: Arial, Helvetica, sans-serif, "黑体";
+	font-size: 24px;
+	color: #FFFFFF;
+	font-weight: bold;
+	}
+.Header_bborder {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #990000;
+	}
+.Header_Navi {
+	color:#192490;
+	text-align: right;
+	height: 24px;
+	}
+.Header_Navi a{
+	text-decoration:none;
+	color: #192490;
+	}
+.Header_Navi a:hover{
+    text-decoration:none;
+	color: #3333CC;
+	}
+.Navi {
+	height:23;
+	background-image:url(image/navi_bg.gif);
+	background-repeat: repeat-x;
+	text-align: left;
+	}
+.Navi_Date {
+	color: #017FCB;
+	width: 165px;
+	}
+.Title1{
+	font-size:24px;
+	font-weight:bold;
+	font-family: "Microsoft Sans Serif", "宋体";
+	}
+.Title2{
+	font-size:12px;
+	font-weight:bold;
+	font-family: "Microsoft Sans Serif", "宋体";
+	}
+.Title3{
+	font-size:12px;
+	font-weight:bold;
+	font-family: "Microsoft Sans Serif", "宋体";
+	}
+
+.ModuleMenu {
+    background-color:#E5E5E5;
+	}
+.ModuleMenu_txt {
+	font-weight:bold;
+	}
+.ModuleMenu_bg {
+	background-image:url(image/bg_menu.gif);
+	height: 24px;
+	border: 1px solid #999999;
+	}
+/*  +++++  Main操作区  +++++  */
+.Main_Bg {
+	background-color:#ededed;
+	padding: 10px;
+	}
+.Blank_Bg {
+    background-color:#E5e5e5
+	}
+.PageNavi {
+	background-color:B8C2D4;
+	text-decoration: none;
+	height: 18px;
+	text-align: left;
+	text-indent: 9pt;
+	}
+/*present operate area*/
+.PageNavi_Selcol {
+    color: #55589D
+	}
+
+/*  ++++++查询面板++++++  */
+.pane {
+	border: 1px solid #999999;
+	padding-top: 4px;
+	padding-right: 10px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+	background-color: #Ededf0;
+	}
+/*　+++++Grid区定义+++++　*/
+/* 基本外观 */
+.Grid {
+	background-color: #999999;
+	}
+	
+/* 标题行 */
+.Grid_Title {
+	font-weight:bold;
+	text-align: center;
+	color: #FFFFFF;
+	background-image: url(image/bg_col.gif);
+	height: 20px;
+	background-repeat: repeat;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #FFFFFF;
+	}
+/* 数据行 */
+.Grid_Listbg {
+	background-color:#EDEDED;
+	height:20px;
+	text-align: center;
+	}
+.Grid_Listbg_Even{
+	background-color:#c0cbdf;
+	height:20px;
+	text-align: center;
+	}
+.Grid_Listbg_Sel {
+    background-color:#fff4ad
+	}
+/* 边框定义 */
+.Border_gray {
+    border: 1px solid #999999;
+	}
+.Border_black {
+    border: 1px solid #000000;
+	}
+
+/*　+++++分类Grid区定义（父层同一般Grid区，这里定义的是子层Grid）+++++　*/
+/* 背景加边框 */
+.SortGrid {
+	margin: 1px;
+	}
+/* 标题行 */
+.SortGridTitle {
+	font-weight:bold;
+	background-color: #cecece;
+	padding:2px;
+	}
+.SortGridTitle Td {
+   	border-right: 1px solid #ffffff;
+	}
+.SortGrid Td {
+	height:18px;
+	}
+	
+/*　+++++树型控件区定义+++++　*/
+/* 背景加边框 */
+.Tree {
+	background-color:#FFFFFF;
+	border: 1px solid #999999;
+	width: 200px;
+	margin: 10px;
+	}/*
+.Tree Td {
+    padding: 4px;
+	}*/
+.Tree A{
+	TEXT-DECORATION: none;
+	color: #000000;
+	}
+.Tree A:hover{
+	COLOR: #d7d8d9;
+	text-decoration: none;
+	background-color:#000080;
+	}
+.Tree_colsel{
+    background-color:#000080;
+	color:#FFFFFF
+	}
+
+/*　+++++脚部文件定义+++++　*/
+.Footer {
+	font-family: "Microsoft Sans Serif", "宋体";
+	background-color:#F2F2F2;
+	height: 17px;
+	text-align: right;
+	}
+	
+/*  +++++++按钮悬停+++++++++*/
+.bt2out {
+	background-image: url(image/Button2_out.gif);
+	height: 19px;
+	width: 41px;
+	border: 0px;
+	padding-top: 3px;
+}
+.bt2over {
+	background-image: url(image/Button2_over.gif);
+	height: 19px;
+	width: 41px;
+	border: 0px;
+	padding-top: 3px;
+}
+.bt3out {
+	background-image: url(image/Button3_out.gif);
+	height: 19px;
+	width: 53px;
+	border: 0px;
+	padding-top: 3px;
+}
+.bt3over {
+	background-image: url(image/Button3_over.gif);
+	height: 19px;
+	width: 53px;
+	border: 0px;
+	padding-top: 3px;
+}
+.bt4out {
+	background-image: url(image/Button4_out.gif);
+	height: 19px;
+	width: 65px;
+	border: 0px;
+	padding-top: 3px;
+}
+.bt4over {
+	background-image: url(image/Button4_over.gif);
+	height: 19px;
+	width: 65px;
+	border: 0px;
+	padding-top: 3px;
+}
+.bt5out {
+	background-image: url(image/button5_out.gif);
+	height: 19px;
+	width: 77px;
+	border: 0px;
+	padding-top: 3px;
+}
+.bt5over {
+	background-image: url(image/button5_over.gif);
+	height: 19px;
+	width: 77px;
+	border: 0px;
+	padding-top: 3px;
+}
+.bt6out {
+	background-image: url(image/button6_out.gif);
+	height: 19px;
+	width: 89px;
+	border: 0px;
+	padding-top: 3px;
+}
+.bt6over {
+	background-image: url(image/button6_over.gif);
+	height: 19px;
+	width: 89px;
+	border: 0px;
+	padding-top: 3px;
+}
+span {
+	cursor: hand;
+}

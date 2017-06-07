@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetAsnStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAsnStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAsnStatusResult" type="tns:AsnSimple" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AsnSimple">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RejectCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="RejectReason" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GiveReason" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDataGrid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ASNNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="istrail" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGridResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataGridResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGridDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ASNNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGridDocResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataGridDocResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryASNNO">
+        <s:complexType />
+      </s:element>
+      <s:element name="QueryASNNOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryASNNOResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="resultType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryResultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryResultResult" type="tns:ArrayOfComBoxValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfComBoxValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ComBoxValue" nillable="true" type="tns:ComBoxValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ComBoxValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetEmergency">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmergencyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmergencyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckASNReceiveStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckASNReceiveStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckASNReceiveStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryASNDetailSN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryASNDetailSNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryASNDetailSNResult" type="tns:ArrayOfStNoLine" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStNoLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StNoLine" nillable="true" type="tns:StNoLine" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StNoLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StLine" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QuerySN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stline" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QuerySNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QuerySNResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BindCarton2STLine">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Stline" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Stno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BindCarton2STLineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BindCarton2STLineResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelCartonno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stlines" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelCartonnoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelCartonnoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bytes" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="asn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateASN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rejectQty" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="rejectResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateASNResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ReceiveDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="stno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rejectResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiveDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GiveinDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="stno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="giveinResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GiveinDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GiveinDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RejectDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="stno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rejectResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rejectCount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RejectDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RejectDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetASN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetASNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetASNResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ASNReject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ASNRejectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ASNRejectResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fileNames" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDocResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAsnStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAsnStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetAsnStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAsnStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGridSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataGrid" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGridSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataGridResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGridDocSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataGridDoc" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGridDocSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataGridDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryASNNOSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryASNNO" />
+  </wsdl:message>
+  <wsdl:message name="QueryASNNOSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryASNNOResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryResultSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryResult" />
+  </wsdl:message>
+  <wsdl:message name="QueryResultSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmergencySoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmergency" />
+  </wsdl:message>
+  <wsdl:message name="GetEmergencySoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmergencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckASNReceiveStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckASNReceiveStatus" />
+  </wsdl:message>
+  <wsdl:message name="CheckASNReceiveStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckASNReceiveStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryASNDetailSNSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryASNDetailSN" />
+  </wsdl:message>
+  <wsdl:message name="QueryASNDetailSNSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryASNDetailSNResponse" />
+  </wsdl:message>
+  <wsdl:message name="QuerySNSoapIn">
+    <wsdl:part name="parameters" element="tns:QuerySN" />
+  </wsdl:message>
+  <wsdl:message name="QuerySNSoapOut">
+    <wsdl:part name="parameters" element="tns:QuerySNResponse" />
+  </wsdl:message>
+  <wsdl:message name="BindCarton2STLineSoapIn">
+    <wsdl:part name="parameters" element="tns:BindCarton2STLine" />
+  </wsdl:message>
+  <wsdl:message name="BindCarton2STLineSoapOut">
+    <wsdl:part name="parameters" element="tns:BindCarton2STLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelCartonnoSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelCartonno" />
+  </wsdl:message>
+  <wsdl:message name="CancelCartonnoSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelCartonnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadFile" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateASNSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateASN" />
+  </wsdl:message>
+  <wsdl:message name="UpdateASNSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateASNResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceiveDetail" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiveDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GiveinDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GiveinDetail" />
+  </wsdl:message>
+  <wsdl:message name="GiveinDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GiveinDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="RejectDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:RejectDetail" />
+  </wsdl:message>
+  <wsdl:message name="RejectDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:RejectDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetASNSoapIn">
+    <wsdl:part name="parameters" element="tns:GetASN" />
+  </wsdl:message>
+  <wsdl:message name="GetASNSoapOut">
+    <wsdl:part name="parameters" element="tns:GetASNResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASNRejectSoapIn">
+    <wsdl:part name="parameters" element="tns:ASNReject" />
+  </wsdl:message>
+  <wsdl:message name="ASNRejectSoapOut">
+    <wsdl:part name="parameters" element="tns:ASNRejectResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDocSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDoc" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDocSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDocResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ASNReceiveServiceSoap">
+    <wsdl:operation name="GetAsnStatus">
+      <wsdl:input message="tns:GetAsnStatusSoapIn" />
+      <wsdl:output message="tns:GetAsnStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid">
+      <wsdl:input message="tns:GetDataGridSoapIn" />
+      <wsdl:output message="tns:GetDataGridSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGridDoc">
+      <wsdl:input message="tns:GetDataGridDocSoapIn" />
+      <wsdl:output message="tns:GetDataGridDocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryASNNO">
+      <wsdl:input message="tns:QueryASNNOSoapIn" />
+      <wsdl:output message="tns:QueryASNNOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryResult">
+      <wsdl:input message="tns:QueryResultSoapIn" />
+      <wsdl:output message="tns:QueryResultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmergency">
+      <wsdl:input message="tns:GetEmergencySoapIn" />
+      <wsdl:output message="tns:GetEmergencySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckASNReceiveStatus">
+      <wsdl:input message="tns:CheckASNReceiveStatusSoapIn" />
+      <wsdl:output message="tns:CheckASNReceiveStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryASNDetailSN">
+      <wsdl:input message="tns:QueryASNDetailSNSoapIn" />
+      <wsdl:output message="tns:QueryASNDetailSNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QuerySN">
+      <wsdl:input message="tns:QuerySNSoapIn" />
+      <wsdl:output message="tns:QuerySNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindCarton2STLine">
+      <wsdl:input message="tns:BindCarton2STLineSoapIn" />
+      <wsdl:output message="tns:BindCarton2STLineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelCartonno">
+      <wsdl:input message="tns:CancelCartonnoSoapIn" />
+      <wsdl:output message="tns:CancelCartonnoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <wsdl:input message="tns:UploadFileSoapIn" />
+      <wsdl:output message="tns:UploadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateASN">
+      <wsdl:input message="tns:UpdateASNSoapIn" />
+      <wsdl:output message="tns:UpdateASNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveDetail">
+      <wsdl:input message="tns:ReceiveDetailSoapIn" />
+      <wsdl:output message="tns:ReceiveDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GiveinDetail">
+      <wsdl:input message="tns:GiveinDetailSoapIn" />
+      <wsdl:output message="tns:GiveinDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RejectDetail">
+      <wsdl:input message="tns:RejectDetailSoapIn" />
+      <wsdl:output message="tns:RejectDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetASN">
+      <wsdl:input message="tns:GetASNSoapIn" />
+      <wsdl:output message="tns:GetASNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ASNReject">
+      <wsdl:input message="tns:ASNRejectSoapIn" />
+      <wsdl:output message="tns:ASNRejectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDoc">
+      <wsdl:input message="tns:DeleteDocSoapIn" />
+      <wsdl:output message="tns:DeleteDocSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ASNReceiveServiceSoap" type="tns:ASNReceiveServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAsnStatus">
+      <soap:operation soapAction="http://tempuri.org/GetAsnStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid">
+      <soap:operation soapAction="http://tempuri.org/GetDataGrid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGridDoc">
+      <soap:operation soapAction="http://tempuri.org/GetDataGridDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryASNNO">
+      <soap:operation soapAction="http://tempuri.org/QueryASNNO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryResult">
+      <soap:operation soapAction="http://tempuri.org/QueryResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmergency">
+      <soap:operation soapAction="http://tempuri.org/GetEmergency" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckASNReceiveStatus">
+      <soap:operation soapAction="http://tempuri.org/CheckASNReceiveStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryASNDetailSN">
+      <soap:operation soapAction="http://tempuri.org/QueryASNDetailSN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySN">
+      <soap:operation soapAction="http://tempuri.org/QuerySN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindCarton2STLine">
+      <soap:operation soapAction="http://tempuri.org/BindCarton2STLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelCartonno">
+      <soap:operation soapAction="http://tempuri.org/CancelCartonno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap:operation soapAction="http://tempuri.org/UploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateASN">
+      <soap:operation soapAction="http://tempuri.org/UpdateASN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveDetail">
+      <soap:operation soapAction="http://tempuri.org/ReceiveDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GiveinDetail">
+      <soap:operation soapAction="http://tempuri.org/GiveinDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RejectDetail">
+      <soap:operation soapAction="http://tempuri.org/RejectDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetASN">
+      <soap:operation soapAction="http://tempuri.org/GetASN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ASNReject">
+      <soap:operation soapAction="http://tempuri.org/ASNReject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDoc">
+      <soap:operation soapAction="http://tempuri.org/DeleteDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ASNReceiveServiceSoap12" type="tns:ASNReceiveServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAsnStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetAsnStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid">
+      <soap12:operation soapAction="http://tempuri.org/GetDataGrid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGridDoc">
+      <soap12:operation soapAction="http://tempuri.org/GetDataGridDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryASNNO">
+      <soap12:operation soapAction="http://tempuri.org/QueryASNNO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryResult">
+      <soap12:operation soapAction="http://tempuri.org/QueryResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmergency">
+      <soap12:operation soapAction="http://tempuri.org/GetEmergency" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckASNReceiveStatus">
+      <soap12:operation soapAction="http://tempuri.org/CheckASNReceiveStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryASNDetailSN">
+      <soap12:operation soapAction="http://tempuri.org/QueryASNDetailSN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySN">
+      <soap12:operation soapAction="http://tempuri.org/QuerySN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindCarton2STLine">
+      <soap12:operation soapAction="http://tempuri.org/BindCarton2STLine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelCartonno">
+      <soap12:operation soapAction="http://tempuri.org/CancelCartonno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap12:operation soapAction="http://tempuri.org/UploadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateASN">
+      <soap12:operation soapAction="http://tempuri.org/UpdateASN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveDetail">
+      <soap12:operation soapAction="http://tempuri.org/ReceiveDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GiveinDetail">
+      <soap12:operation soapAction="http://tempuri.org/GiveinDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RejectDetail">
+      <soap12:operation soapAction="http://tempuri.org/RejectDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetASN">
+      <soap12:operation soapAction="http://tempuri.org/GetASN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ASNReject">
+      <soap12:operation soapAction="http://tempuri.org/ASNReject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDoc">
+      <soap12:operation soapAction="http://tempuri.org/DeleteDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ASNReceiveService">
+    <wsdl:port name="ASNReceiveServiceSoap" binding="tns:ASNReceiveServiceSoap">
+      <soap:address location="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/ASNReceiveService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ASNReceiveServiceSoap12" binding="tns:ASNReceiveServiceSoap12">
+      <soap12:address location="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/ASNReceiveService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

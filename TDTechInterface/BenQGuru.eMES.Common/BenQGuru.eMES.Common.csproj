@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D19B51ED-12B7-4130-B8FF-1E5D5918A449}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BenQGuru.eMES.Common</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BenQGuru.eMES.Common</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/BenQGuru.eMES.Common/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\Bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>3</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.0.30714, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.OracleClient">
+      <Name>System.Data.OracleClient</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap">
+      <Name>System.Runtime.Serialization.Formatters.Soap</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.XML">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Config\ConfigSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Config\ConfigSectionHandle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Config\DomainConfiguratorAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainDataProvider\DomainDataProviderManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainDataProvider\SQLDomainDataProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\BlobTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\Condition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\DomainObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\DomainObjectManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\DomainObjectUtility.cs" />
+    <Compile Include="Domain\FieldDisplayAttribute.cs" />
+    <Compile Include="Domain\FieldMapAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\FieldRelationMapAtrribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\IDomainDataProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\KeyTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\TableMapAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MesEnviroment.cs" />
+    <Compile Include="Helper\Encryption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helper\SystemInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MutiLanguage\ILanguage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MutiLanguage\Language.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersistBroker\AbstractSQLPersistBroker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersistBroker\dblog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersistBroker\IPersistBroker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersistBroker\ODBCPersistBroker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersistBroker\ODPPersistBroker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersistBroker\OLEDBPersistBroker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersistBroker\PersistBrokerManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersistBroker\PersistBrokerPool.cs" />
+    <Compile Include="PersistBroker\PersistBrokerProxy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersistBroker\SqlPersistBroker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="log4net.dll.log4net">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

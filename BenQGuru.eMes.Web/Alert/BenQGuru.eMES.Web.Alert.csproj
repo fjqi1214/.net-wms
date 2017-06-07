@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ResGenToolArchitecture>Managed32Bit</ResGenToolArchitecture>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98BDAFBE-2391-4412-B1A1-DCD6603293C3}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BenQGuru.eMES.Web.Alert</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BenQGuru.eMES.Web.Alert</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BenQGuru.eMES.Alert, Version=1.0.3399.24727, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.Alert.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.BaseSetting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.BaseSetting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Common">
+      <Name>BenQGuru.eMES.Common</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Domain">
+      <Name>BenQGuru.eMES.Domain</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.MOModel, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.MOModel.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.Helper">
+      <Name>BenQGuru.eMES.Web.Helper</Name>
+      <HintPath>..\..\bin\BenQGuru.eMES.Web.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.SelectQuery, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.Web.SelectQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.WebUI.Helper">
+      <Name>BenQGuru.eMES.WebUI.Helper</Name>
+      <HintPath>..\..\bin\BenQGuru.eMES.WebUI.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlLibrary">
+      <Name>ControlLibrary</Name>
+      <HintPath>..\..\bin\ControlLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics3.Documents.Excel.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics3.Documents.Excel.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.Web.v11.2, Version=11.2.20112.1019, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Infragistics35.Web.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.Shared.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics35.WebUI.Shared.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebGrid.ExcelExport.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics35.WebUI.UltraWebGrid.ExcelExport.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebGrid.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics35.WebUI.UltraWebGrid.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlertUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FAlertBillAP.aspx.cs">
+      <DependentUpon>FAlertBillAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAlertBillAP.aspx.designer.cs">
+      <DependentUpon>FAlertBillAP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertBillEP.aspx.cs">
+      <DependentUpon>FAlertBillEP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAlertBillEP.aspx.designer.cs">
+      <DependentUpon>FAlertBillEP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertBillMP.aspx.cs">
+      <DependentUpon>FAlertBillMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAlertBillMP.aspx.designer.cs">
+      <DependentUpon>FAlertBillMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertDirectPassMP.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FAlertDirectPassMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertDirectPassMP.aspx.designer.cs">
+      <DependentUpon>FAlertDirectPassMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertEP.aspx.cs">
+      <DependentUpon>FAlertEP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAlertEP.aspx.designer.cs">
+      <DependentUpon>FAlertEP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertErrorCodeMP.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FAlertErrorCodeMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertErrorCodeMP.aspx.designer.cs">
+      <DependentUpon>FAlertErrorCodeMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertErrorMP.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FAlertErrorMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertErrorMP.aspx.designer.cs">
+      <DependentUpon>FAlertErrorMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertItemMP.aspx.cs">
+      <DependentUpon>FAlertItemMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAlertItemMP.aspx.designer.cs">
+      <DependentUpon>FAlertItemMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertLinePauseMP.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FAlertLinePauseMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertLinePauseMP.aspx.designer.cs">
+      <DependentUpon>FAlertLinePauseMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertMailSettingMP.aspx.cs">
+      <DependentUpon>FAlertMailSettingMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAlertMailSettingMP.aspx.designer.cs">
+      <DependentUpon>FAlertMailSettingMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertMP.aspx.cs">
+      <DependentUpon>FAlertMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAlertMP.aspx.designer.cs">
+      <DependentUpon>FAlertMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FalertNoticeDeal.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FalertNoticeDeal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FalertNoticeDeal.aspx.designer.cs">
+      <DependentUpon>FalertNoticeDeal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertNoticeMP.aspx.cs">
+      <DependentUpon>FAlertNoticeMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAlertNoticeMP.aspx.designer.cs">
+      <DependentUpon>FAlertNoticeMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertOQCNGMP.aspx.cs">
+      <DependentUpon>FAlertOQCNGMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAlertOQCNGMP.aspx.designer.cs">
+      <DependentUpon>FAlertOQCNGMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertSampleMP.aspx.cs">
+      <DependentUpon>FAlertSampleMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAlertSampleMP.aspx.designer.cs">
+      <DependentUpon>FAlertSampleMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertSampleSP.aspx.cs">
+      <DependentUpon>FAlertSampleSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAlertSampleSP.aspx.designer.cs">
+      <DependentUpon>FAlertSampleSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FHandleLogQP.aspx.cs">
+      <DependentUpon>FHandleLogQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FHandleLogQP.aspx.designer.cs">
+      <DependentUpon>FHandleLogQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FManualAlertEP.aspx.cs">
+      <DependentUpon>FManualAlertEP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FManualAlertEP.aspx.designer.cs">
+      <DependentUpon>FManualAlertEP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FManualAlertMP.aspx.cs">
+      <DependentUpon>FManualAlertMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FManualAlertMP.aspx.designer.cs">
+      <DependentUpon>FManualAlertMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FNotifierQP.aspx.cs">
+      <DependentUpon>FNotifierQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FNotifierQP.aspx.designer.cs">
+      <DependentUpon>FNotifierQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertASNReceiveMP.aspx.cs">
+      <DependentUpon>FAlertASNReceiveMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAlertASNReceiveMP.aspx.designer.cs">
+      <DependentUpon>FAlertASNReceiveMP.aspx</DependentUpon>
+    </Compile>
+    <Content Include="FAlertBillAP.aspx" />
+    <Content Include="FAlertBillEP.aspx" />
+    <Content Include="FAlertBillMP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FAlertDirectPassMP.aspx" />
+    <Content Include="FAlertEP.aspx" />
+    <Content Include="FAlertErrorCodeMP.aspx" />
+    <Content Include="FAlertErrorMP.aspx" />
+    <Content Include="FAlertItemMP.aspx" />
+    <Content Include="FAlertLinePauseMP.aspx" />
+    <Content Include="FAlertMailSettingMP.aspx" />
+    <Content Include="FAlertMP.aspx" />
+    <Content Include="FalertNoticeDeal.aspx" />
+    <Content Include="FAlertNoticeMP.aspx" />
+    <Content Include="FAlertOQCNGMP.aspx" />
+    <Content Include="FAlertSampleMP.aspx" />
+    <Content Include="FAlertSampleSP.aspx" />
+    <Content Include="FHandleLogQP.aspx" />
+    <Content Include="FManualAlertEP.aspx" />
+    <Content Include="FManualAlertMP.aspx" />
+    <Content Include="FNotifierQP.aspx" />
+    <Content Include="FAlertASNReceiveMP.aspx" />
+    <EmbeddedResource Include="FAlertBillAP.aspx.resx">
+      <DependentUpon>FAlertBillAP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAlertBillEP.aspx.resx">
+      <DependentUpon>FAlertBillEP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAlertBillMP.aspx.resx">
+      <DependentUpon>FAlertBillMP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAlertEP.aspx.resx">
+      <DependentUpon>FAlertEP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAlertMP.aspx.resx">
+      <DependentUpon>FAlertMP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAlertSampleMP.aspx.resx">
+      <DependentUpon>FAlertSampleMP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAlertSampleSP.aspx.resx">
+      <DependentUpon>FAlertSampleSP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FHandleLogQP.aspx.resx">
+      <DependentUpon>FHandleLogQP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FManualAlertEP.aspx.resx">
+      <DependentUpon>FManualAlertEP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FManualAlertMP.aspx.resx">
+      <DependentUpon>FManualAlertMP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNotifierQP.aspx.resx">
+      <DependentUpon>FNotifierQP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2837</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

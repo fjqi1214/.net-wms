@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+  <Test>
+    <ID>CS_Test_MO001</ID>
+    <Memo>
+    </Memo>
+  </Test>
+  <Params>
+    <p0>110035</p0>
+    <p1>120035</p1>
+  </Params>
+  <testCases>
+    <testCase id="testCase02" action="GOMO">
+      <code>PC01{p0}</code>
+      <resource>RES-AI</resource>
+      <user>admin</user>
+      <mo>MO-050519-02</mo>
+      <debug>
+      </debug>
+      <funList>Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineGetIDInfo IN;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineGetIDInfo OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineAction IN;Debug;BenQGuru.eMES.DataCollect.DataCollectGoToMOCollect IN;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineCollect IN;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineCollect OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectGoToMOCollect OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineAction OUT;</funList>
+      <performance>500</performance>
+      <Memo>
+      </Memo>
+    </testCase>
+    <testCase id="testCase03" action="GOOD">
+      <code>PC01{p0}</code>
+      <resource>RES-AI</resource>
+      <user>admin</user>
+      <debug>
+      </debug>
+      <funList>Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineGetIDInfo IN;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineGetIDInfo OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineAction IN;Debug;BenQGuru.eMES.DataCollect.DataCollectGoodCollect IN;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineFillSimulationInfo IN;Debug;BenQGuru.eMES.DataCollect.DataCollectGoodCheckID IN;Debug;BenQGuru.eMES.DataCollect.DataCollectFacadeCheckID IN;Debug;BenQGuru.eMES.DataCollect.DataCollectFacadeCheckID IN;Debug;BenQGuru.eMES.DataCollect.DataCollectFacadeCheckID OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectFacadeCheckID OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectGoodCheckID OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineFillSimulationInfo OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineCollect IN;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineCollect OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectGoodCollect OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineAction OUT;</funList>
+      <performance>800</performance>
+      <Memo>
+      </Memo>
+    </testCase>
+    <testCase id="testCase04" action="ECN">
+      <code>PC01{p0}</code>
+      <resource>RES-AI</resource>
+      <user>admin</user>
+      <data>ecn01</data>
+      <debug>
+      </debug>
+      <funList>Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineGetIDInfo IN;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineGetIDInfo OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineAction IN;Debug;BenQGuru.eMES.DataCollect.DataCollectECNTRYCollect IN;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineFillSimulationInfo IN;Debug;BenQGuru.eMES.DataCollect.DataCollectECNTRYCheckID IN;Debug;BenQGuru.eMES.DataCollect.DataCollectFacadeCheckID IN;Debug;BenQGuru.eMES.DataCollect.DataCollectFacadeCheckID IN;Debug;BenQGuru.eMES.DataCollect.DataCollectFacadeCheckID OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectFacadeCheckID OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectECNTRYCheckID OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineFillSimulationInfo OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineCollect IN;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineCollect OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectECNTRYCollect OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineAction OUT;</funList>
+      <performance>800</performance>
+      <Memo>
+      </Memo>
+    </testCase>
+    <testCase id="testCase05" action="TRY">
+      <code>PC01{p0}</code>
+      <resource>RES-AI</resource>
+      <user>admin</user>
+      <data>TRY01</data>
+      <debug>
+      </debug>
+      <funList>Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineGetIDInfo IN;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineGetIDInfo OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineAction IN;Debug;BenQGuru.eMES.DataCollect.DataCollectECNTRYCollect IN;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineFillSimulationInfo IN;Debug;BenQGuru.eMES.DataCollect.DataCollectECNTRYCheckID IN;Debug;BenQGuru.eMES.DataCollect.DataCollectFacadeCheckID IN;Debug;BenQGuru.eMES.DataCollect.DataCollectFacadeCheckID IN;Debug;BenQGuru.eMES.DataCollect.DataCollectFacadeCheckID OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectFacadeCheckID OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectECNTRYCheckID OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineFillSimulationInfo OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineCollect IN;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineCollect OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectECNTRYCollect OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineAction OUT;</funList>
+      <performance>800</performance>
+      <Memo>
+      </Memo>
+    </testCase>
+    <testCase id="testCase06" action="SPLIT">
+      <code>PC01{p0}</code>
+      <resource>RES-AI</resource>
+      <user>admin</user>
+      <data>PC01{p0}1;PC01{p0}2;PC01{p0}3</data>
+      <debug>
+      </debug>
+      <funList>Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineGetIDInfo IN;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineGetIDInfo OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineAction IN;Debug;BenQGuru.eMES.DataCollect.DataCollectECNTRYCollect IN;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineFillSimulationInfo IN;Debug;BenQGuru.eMES.DataCollect.DataCollectECNTRYCheckID IN;Debug;BenQGuru.eMES.DataCollect.DataCollectFacadeCheckID IN;Debug;BenQGuru.eMES.DataCollect.DataCollectFacadeCheckID IN;Debug;BenQGuru.eMES.DataCollect.DataCollectFacadeCheckID OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectFacadeCheckID OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectECNTRYCheckID OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineFillSimulationInfo OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineCollect IN;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineCollect OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectECNTRYCollect OUT;Debug;BenQGuru.eMES.DataCollect.DataCollectOnLineAction OUT;</funList>
+      <performance>800</performance>
+      <Memo>
+      </Memo>
+    </testCase>
+  </testCases>
+</doc>

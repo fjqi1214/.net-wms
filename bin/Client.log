@@ -1,0 +1,9 @@
+2013-06-21 10:26:59	$Error_Add_Check	BenQGuru.eMES.Common	   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, String message, Exception innerException) 位置 E:\New Work\MES\Based MES\Source6.4.2\BenQGuru.eMES.Common\Log.cs:行号 248
+   在 BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, Exception innerException) 位置 E:\New Work\MES\Based MES\Source6.4.2\BenQGuru.eMES.Common\Log.cs:行号 228
+   在 BenQGuru.eMES.Web.Helper.FacadeHelper.AddDomainObject(DomainObject obj, ICheck[] checkList) 位置 E:\New Work\MES\Based MES\Source6.4.2\BenQGuru.eMES.Web.Helper\FacadeHelper.cs:行号 270
+   在 BenQGuru.eMES.Web.Helper.FacadeHelper.AddDomainObject(DomainObject obj) 位置 E:\New Work\MES\Based MES\Source6.4.2\BenQGuru.eMES.Web.Helper\FacadeHelper.cs:行号 223
+   在 BenQGuru.eMES.SMT.SMTFacade.AddReelCheckedLog(ReelCheckedLog reelCheckedLog) 位置 E:\New Work\MES\Based MES\Source6.4.2\BenQGuru.eMES.SMT\SMTFacade.cs:行号 4308
+   在 BenQGuru.eMES.SMT.SMTFacade.UpdateReelToMO(Reel reel, Boolean isnew) 位置 E:\New Work\MES\Based MES\Source6.4.2\BenQGuru.eMES.SMT\SMTFacade.cs:行号 4237
+   在 BenQGuru.eMES.Client.FSMTReelPrepare.btnAdd_Click(Object sender, EventArgs e) 位置 E:\New Work\MES\Based MES\Source6.4.2\BenQGuru.eMES.Client\FSMTReelPrepare.cs:行号 1142
+2013-06-21 04:39:34	输入字符串的格式不正确。	mscorlib
+2013-06-21 04:39:54	输入字符串的格式不正确。	mscorlib

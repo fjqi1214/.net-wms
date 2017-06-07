@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<matchtype>
+ <BoolType>
+	<added key="1" value="是"></added>
+	<added key="0" value="否"></added>
+ </BoolType>
+ <BoolType2>
+	<added key="Y" value="是"></added>
+	<added key="N" value="否"></added>
+ </BoolType2>
+ <ItemType>
+	<added key="itemtype_semimanufacture" value="半成品"></added>
+	<added key="itemtype_finishedproduct" value="成品料"></added>
+ </ItemType>
+ <ItemControl>
+	<added key="item_control_nocontrol" value="NOControl"></added>
+	<added key="item_control_keyparts" value="Keyparts"></added>
+	<added key="item_control_lot" value="Lot"></added>
+ </ItemControl>
+</matchtype>

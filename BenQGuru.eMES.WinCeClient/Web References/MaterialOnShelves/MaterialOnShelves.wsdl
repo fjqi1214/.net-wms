@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActOnShelvesQTY">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CartonNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActOnShelvesQTYResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActOnShelvesQTYResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlanOnShelvesQTY">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CartonNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlanOnShelvesQTYResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlanOnShelvesQTYResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCUSMcode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CartonNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCUSMcodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCUSMcodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGrid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LocationNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGridResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataGridResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataTable">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataTableResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Retrieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnShelves">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="locationNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnShelvesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OnShelvesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActOnShelvesQTYSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActOnShelvesQTY" />
+  </wsdl:message>
+  <wsdl:message name="GetActOnShelvesQTYSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActOnShelvesQTYResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlanOnShelvesQTYSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlanOnShelvesQTY" />
+  </wsdl:message>
+  <wsdl:message name="GetPlanOnShelvesQTYSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlanOnShelvesQTYResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCUSMcodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCUSMcode" />
+  </wsdl:message>
+  <wsdl:message name="GetCUSMcodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCUSMcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGridSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataGrid" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGridSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataGridResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataTableSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetDataTableSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:Retrieve" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnShelvesSoapIn">
+    <wsdl:part name="parameters" element="tns:OnShelves" />
+  </wsdl:message>
+  <wsdl:message name="OnShelvesSoapOut">
+    <wsdl:part name="parameters" element="tns:OnShelvesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MaterialOnShelvesSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActOnShelvesQTY">
+      <wsdl:input message="tns:GetActOnShelvesQTYSoapIn" />
+      <wsdl:output message="tns:GetActOnShelvesQTYSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanOnShelvesQTY">
+      <wsdl:input message="tns:GetPlanOnShelvesQTYSoapIn" />
+      <wsdl:output message="tns:GetPlanOnShelvesQTYSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCUSMcode">
+      <wsdl:input message="tns:GetCUSMcodeSoapIn" />
+      <wsdl:output message="tns:GetCUSMcodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid">
+      <wsdl:input message="tns:GetDataGridSoapIn" />
+      <wsdl:output message="tns:GetDataGridSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <wsdl:input message="tns:GetDataTableSoapIn" />
+      <wsdl:output message="tns:GetDataTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Retrieve">
+      <wsdl:input message="tns:RetrieveSoapIn" />
+      <wsdl:output message="tns:RetrieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OnShelves">
+      <wsdl:input message="tns:OnShelvesSoapIn" />
+      <wsdl:output message="tns:OnShelvesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MaterialOnShelvesSoap" type="tns:MaterialOnShelvesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActOnShelvesQTY">
+      <soap:operation soapAction="http://tempuri.org/GetActOnShelvesQTY" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanOnShelvesQTY">
+      <soap:operation soapAction="http://tempuri.org/GetPlanOnShelvesQTY" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCUSMcode">
+      <soap:operation soapAction="http://tempuri.org/GetCUSMcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid">
+      <soap:operation soapAction="http://tempuri.org/GetDataGrid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <soap:operation soapAction="http://tempuri.org/GetDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Retrieve">
+      <soap:operation soapAction="http://tempuri.org/Retrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnShelves">
+      <soap:operation soapAction="http://tempuri.org/OnShelves" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MaterialOnShelvesSoap12" type="tns:MaterialOnShelvesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActOnShelvesQTY">
+      <soap12:operation soapAction="http://tempuri.org/GetActOnShelvesQTY" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanOnShelvesQTY">
+      <soap12:operation soapAction="http://tempuri.org/GetPlanOnShelvesQTY" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCUSMcode">
+      <soap12:operation soapAction="http://tempuri.org/GetCUSMcode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid">
+      <soap12:operation soapAction="http://tempuri.org/GetDataGrid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <soap12:operation soapAction="http://tempuri.org/GetDataTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Retrieve">
+      <soap12:operation soapAction="http://tempuri.org/Retrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnShelves">
+      <soap12:operation soapAction="http://tempuri.org/OnShelves" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MaterialOnShelves">
+    <wsdl:port name="MaterialOnShelvesSoap" binding="tns:MaterialOnShelvesSoap">
+      <soap:address location="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/MaterialOnShelves.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MaterialOnShelvesSoap12" binding="tns:MaterialOnShelvesSoap12">
+      <soap12:address location="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/MaterialOnShelves.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

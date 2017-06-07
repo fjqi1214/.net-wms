@@ -1,0 +1,16 @@
+[Esc]H070[Esc]V015[Esc]L0202[Esc]XMSIEMENS
+[Esc]H320[Esc]V015[Esc]L0101[Esc]MSiemens Medical Solutions USA, Inc.
+[Esc]H320[Esc]V040[Esc]L0101[Esc]MMountain View, CA 94043
+[Esc]H100[Esc]V100[Esc]D102050*1P10436239*
+[Esc]H100[Esc]V160[Esc]L0202[Esc]U(1P)Model No.
+[Esc]H330[Esc]V160[Esc]L0202[Esc]U10436239
+[Esc]H100[Esc]V220[Esc]D102050*S[$SN]*
+[Esc]H100[Esc]V280[Esc]L0202[Esc]U(S)Serial No.
+[Esc]H330[Esc]V280[Esc]L0202[Esc]U[$SN]
+[Esc]H100[Esc]V335[Esc]D102050*2P05*
+[Esc]H100[Esc]V395[Esc]L0202[Esc]U(2P)Rev.
+[Esc]H230[Esc]V395[Esc]L0202[Esc]U06
+[Esc]H450[Esc]V335[Esc]D102050*Q1*
+[Esc]H450[Esc]V395[Esc]L0202[Esc]U(Q)QTY:
+[Esc]H580[Esc]V395[Esc]L0202[Esc]U1
+[Esc]H720[Esc]V515[Esc]L0202[Esc]U[$CartonNo]

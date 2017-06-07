@@ -1,0 +1,163 @@
+.ig_IGControl
+{
+	background-color:White;
+	font-size:xx-small;
+	font-family: verdana;
+	color:Black;
+}
+
+
+.ig_IGItem
+{
+	background-color:White;
+	font-size:10px;
+	font-family: verdana;
+	padding-left:1px;
+}
+
+
+.ig_IGButton
+{
+	cursor:pointer;;
+}
+
+
+.ig_IGButtonHover
+{
+}
+
+
+.ig_IGButtonPressed
+{
+}
+
+
+.ig_IGButtonDisabled
+{
+}
+
+
+.ig_IGHover
+{
+}
+
+
+.ig_IGSelected
+{
+}
+
+
+.ig_IGDisabled
+{
+}
+
+
+.ig_IGHeader
+{
+}
+
+
+.ig_IGFooter
+{
+}
+
+
+.ig_IGEditWithButtons
+{
+}
+
+
+.ig_IGEdit
+{
+}
+
+
+.ig_IGEditInContainer
+{
+}
+
+
+.ig_IGAlt
+{
+	border-top:solid 1px #E3EFFF;
+	border-right:solid 0px #FFFFFF;
+	border-bottom:solid 1px #E3EFFF;
+	border-left:solid 0px #FFFFFF;
+}
+
+
+.ig_IGDropDown
+{
+}
+
+
+.ig_IGEditSelected
+{
+}
+/*
+.ig_IGAjaxIndicatorBlock
+{
+	background-color:#909090;
+	filter: alpha(opacity : 30);
+	opacity: 0.3;
+}
+*/
+
+.ig_IGAjaxIndicator
+{
+}
+
+.ms-WPBody .ig_IGControl TD
+{
+	border-bottom:none;
+	background-color:transparent;
+	font-size:xx-small;
+}
+.ms-WPBody .ig_IGControl TD
+{
+	background-color:inherit;
+	font:inherit;
+}
+.ms-WPBody .ig_IGControl TABLE
+{
+	font-size:xx-small;
+	border-collapse:separate;
+}
+.ms-WPBody .ig_IGControl TABLE
+{
+	font:inherit;
+}
+.ms-WPBody .igdw_IGControl TD
+{
+	background-color:white;
+}
+.ms-WPBody .igmc_IGControl TD
+{
+	border:none;
+	background-color:transparent;
+	font-size:xx-small;
+}
+.ms-WPBody .igmc_IGControl TD
+{
+	border:inherit;
+	background-color:inherit;
+	font:inherit;
+}
+.ms-WPBody .igmc_IGControl TABLE
+{
+	font-size:xx-small;
+}
+.ms-WPBody .igmc_IGControl TABLE
+{
+	font:inherit;
+}
+.ms-WPBody .igte_IGEditWithButtons TD
+{
+	border-bottom:none;
+	background-color:transparent;
+	font-size:1px;
+}
+.ms-WPBody .igte_IGEditWithButtons TABLE
+{
+	font-size:1px;
+}

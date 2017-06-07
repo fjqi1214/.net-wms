@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A7971137-3710-4FC7-A0F0-7F2F544022A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BenQGuru.eMES.ClientWatchPanel</RootNamespace>
+    <AssemblyName>BenQGuru.eMES.FacChart</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/BenQGuru.eMES.FacChart/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BenQGuru.eMES.BaseSetting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Domain, Version=1.0.4.13, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.WatchPanel, Version=1.0.3446.36385, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.WebQuery, Version=1.0.0.14, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Shared.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Infragistics2.Shared.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinChart.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Infragistics2.Win.UltraWinChart.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinDataSource.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Infragistics2.Win.UltraWinDataSource.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Infragistics2.Win.UltraWinGrid.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Infragistics2.Win.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TeeChart, Version=3.5.3330.21116, Culture=neutral, PublicKeyToken=9c8126276c77bdb7, processorArchitecture=MSIL" />
+    <Reference Include="UserControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FacConfigMessage.cs" />
+    <Compile Include="CustomEvent.cs" />
+    <Compile Include="FSelectBigLines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSelectBigLines.Designer.cs">
+      <DependentUpon>FSelectBigLines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSelectConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSelectConfig.Designer.cs">
+      <DependentUpon>FSelectConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCongifDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCongifDetail.Designer.cs">
+      <DependentUpon>FCongifDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFacMessageEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFacMessageEdit.Designer.cs">
+      <DependentUpon>FFacMessageEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFacWatchPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFacWatchPanel.Designer.cs">
+      <DependentUpon>FFacWatchPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FSelectBigLines.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FSelectBigLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSelectConfig.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FSelectConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCongifDetail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FCongifDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFacMessageEdit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FFacMessageEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFacWatchPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FFacWatchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ExceptionMessageControl.resx">
+      <DependentUpon>ExceptionMessageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FacMessageControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FacMessageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FacProductMessageControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FacProductMessageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HearMessageControl.resx">
+      <DependentUpon>HearMessageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\NormalMessageControl.resx">
+      <DependentUpon>NormalMessageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SSCodeProductMessageControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SSCodeProductMessageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TChartControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TChartControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UserControls\ExceptionMessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ExceptionMessageControl.Designer.cs">
+      <DependentUpon>ExceptionMessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FacMessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\FacMessageControl.Designer.cs">
+      <DependentUpon>FacMessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FacProductMessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\FacProductMessageControl.Designer.cs">
+      <DependentUpon>FacProductMessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HearMessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HearMessageControl.Designer.cs">
+      <DependentUpon>HearMessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NormalMessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\NormalMessageControl.Designer.cs">
+      <DependentUpon>NormalMessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SSCodeProductMessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SSCodeProductMessageControl.Designer.cs">
+      <DependentUpon>SSCodeProductMessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TChartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TChartControl.Designer.cs">
+      <DependentUpon>TChartControl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bold.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\center.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italic.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\justify.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\underlne.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2801,00%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2844,16%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2848,25%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2846,41%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2846,00%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2845,00%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2845,25%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2844,25%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2846,18%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2837,25%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="WatchConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

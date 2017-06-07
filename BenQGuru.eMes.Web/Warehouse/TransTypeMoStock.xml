@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<TransTypeList>
+
+	<!--
+	单据交易后，根据交易类型，对MoStock的相应栏位做运算
+	ReceiptQty	发放数
+	IssueQty	耗用数
+	ScrapQty	报废数
+	ReturnQty	退料数
+	GainLose	送离线维修数量
+	-->
+	<!-- 发料单 -->
+	<TransType
+		TransTypeCode = "541" 
+		MoStockAttribute = "ReceiptQty"
+		Operation = "add"
+	/>
+
+	<!-- 领料单 -->
+	<TransType
+		TransTypeCode = "261" 
+		MoStockAttribute = "IssueQty"
+		Operation = "add"
+	/>
+
+	<!-- 报废单 -->
+	<TransType
+		TransTypeCode = "551" 
+		MoStockAttribute = "ScrapQty"
+		Operation = "add"
+	/>
+
+	<!-- 退料单 -->
+	<TransType
+		TransTypeCode = "262" 
+		MoStockAttribute = "ReturnQty"
+		Operation = "add"
+	/>
+	
+	<!-- 送离线维修数量 (单据类型为退料单，目标仓库为0025) -->
+	<TransType
+		TransTypeCode = "262"
+		ToWarehouse = "0025"
+		MoStockAttribute = "GainLose"
+		Operation = "add"
+	/>
+
+	<!-- 特定单据代码 -->
+	<TransTypeMapping>
+		<!-- 调整单 -->
+		<AdjustTrans Code="202" HideTicketNo="Yes" />
+		<!-- 拆解料 -->
+		<TSSplitItem Code="796" HideTicketNo="Yes" />
+		<!-- 期初 -->
+		<WarehouseInit Code="100" HideTicketNo="Yes" />
+		<!-- 发料单 -->
+		<SendItem Code="541" />
+		<!-- 退料单 -->
+		<ReturnItem Code="262" HideTicketNo="Yes" />
+	</TransTypeMapping>
+	
+	<!-- 单据前缀 -->
+	<TransTypePrefix>
+		<!-- 领料单 -->
+		<TransType Code="261">L</TransType>
+		<!-- 发料单 -->
+		<TransType Code="541">F</TransType>
+		<!-- 退料单 -->
+		<TransType Code="262">T</TransType>
+		<!-- 移库单 -->
+		<TransType Code="311">Y</TransType>
+		<!-- 报废单 -->
+		<TransType Code="551">B</TransType>
+		<!-- 入库单 -->
+		<TransType Code="801">R</TransType>
+		<!-- 出库单 -->
+		<TransType Code="802">C</TransType>
+		<!-- 调整单 -->
+		<TransType Code="202">A</TransType>
+		<!-- 拆解料 -->
+		<TransType Code="796">S</TransType>
+		<!-- 期初 -->
+		<TransType Code="100">I</TransType>
+	</TransTypePrefix>
+	
+	<!-- 单据前缀 -->
+	<TransTypeName>
+		<!-- 发料单 -->
+		<TransType Code="541" Name="发料单" />
+		<!-- 退料单 -->
+		<TransType Code="262" Name="退料单" />
+		<!-- 移库单 -->
+		<TransType Code="311" Name="移库单" />
+		<!-- 报废单 -->
+		<TransType Code="551" Name="报废单" />
+		<!-- 入库单 -->
+		<TransType Code="801" Name="入库单" />		
+	</TransTypeName>
+	
+</TransTypeList>

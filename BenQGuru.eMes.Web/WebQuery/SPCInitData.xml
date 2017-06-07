@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 不允许空格，颜色格式：FFFFFF，即16进制格式 -->
+<SPC_INIT>
+<BackColor><![CDATA[B7B7B7]]></BackColor> <!-- 背景色 -->
+<ChartBackColor><![CDATA[000000]]></ChartBackColor> <!-- 曲线图内的背景色 -->
+<LineColorUSL><![CDATA[855050]]></LineColorUSL> <!-- USL线颜色 -->
+<LineColorUCL><![CDATA[506A85]]></LineColorUCL> <!-- UCL线颜色 -->
+<LineColorLSL><![CDATA[855050]]></LineColorLSL> <!-- LSL线颜色 -->
+<LineColorLCL><![CDATA[506A85]]></LineColorLCL> <!-- LCL线颜色 -->
+<LineColorSC><![CDATA[009900]]></LineColorSC> <!-- SC线颜色 -->
+<LineColorCL><![CDATA[009900]]></LineColorCL> <!-- CL线颜色 -->
+<LineColorYGrid><![CDATA[545454]]></LineColorYGrid> <!-- 纵线网格线颜色 -->
+<LineColorClick><![CDATA[CC0000]]></LineColorClick> <!-- 选择点纵线颜色 -->
+<XChartLineColor><![CDATA[9E9E00]]></XChartLineColor> <!-- X Chart线条颜色 -->
+<XChartPointColor><![CDATA[FFFF99]]></XChartPointColor> <!-- X Chart点颜色 -->
+<XChartUSLPointColor><![CDATA[FF0000]]></XChartUSLPointColor> <!-- X Chart超过USL的点颜色 -->
+<XChartUCLPointColor><![CDATA[99BEFF]]></XChartUCLPointColor> <!-- X Chart超过UCL的点颜色 -->
+<RChartLineColor><![CDATA[FF00DA]]></RChartLineColor> <!-- R Chart线条颜色 -->
+<RChartPointColor><![CDATA[FFFF99]]></RChartPointColor> <!-- R Chart点颜色 -->
+<RChartUSLPointColor><![CDATA[FF0000]]></RChartUSLPointColor> <!-- R Chart超过USL的点颜色 -->
+<RChartUCLPointColor><![CDATA[99BEFF]]></RChartUCLPointColor> <!-- R Chart超过UCL的点颜色 -->
+<FontColorDefault><![CDATA[000000]]></FontColorDefault> <!-- 默认文字颜色 -->
+<FontColorInfo><![CDATA[333366]]></FontColorInfo> <!-- 信息区文字颜色 -->
+<FontColorTime><![CDATA[B7B7B7]]></FontColorTime> <!-- 时间文字颜色 -->
+<ScrollChange><![CDATA[10]]></ScrollChange> <!-- 滚动条滚动大小 -->
+<GroupLineAlt><![CDATA[10]]></GroupLineAlt> <!-- 纵线间隔组数 -->
+<HistogramLineColorUSL><![CDATA[FF0000]]></HistogramLineColorUSL> <!-- USL线颜色 -->
+<HistogramLineColorLSL><![CDATA[FF0000]]></HistogramLineColorLSL> <!-- LSL线颜色 -->
+<HistogramLineColorSC><![CDATA[FF0000]]></HistogramLineColorSC> <!-- SC线颜色 -->
+<HistogramLineColorLCL><![CDATA[00FFFF]]></HistogramLineColorLCL> <!-- LCL线颜色 -->
+<HistogramLineColorUCL><![CDATA[00FFFF]]></HistogramLineColorUCL> <!-- UCL线颜色 -->
+<HistogramLineColorCL><![CDATA[00FFFF]]></HistogramLineColorCL> <!-- CL线颜色 -->
+<HistogramChartForeColor><![CDATA[000080]]></HistogramChartForeColor> <!-- 直方图颜色 -->
+<HistogramActivateChartForeColor><![CDATA[0000FF]]></HistogramActivateChartForeColor> <!-- 当前直方图块颜色 -->
+<HistogramChartLineColor><![CDATA[000000]]></HistogramChartLineColor> <!-- 直方图间隔线颜色 -->
+<HistogramFontColorX><![CDATA[000000]]></HistogramFontColorX> <!-- X轴文字颜色 -->
+<HistogramLineColorHorizontal><![CDATA[C0C0C0]]></HistogramLineColorHorizontal> <!-- 纵轴水平线的颜色 -->
+</SPC_INIT>

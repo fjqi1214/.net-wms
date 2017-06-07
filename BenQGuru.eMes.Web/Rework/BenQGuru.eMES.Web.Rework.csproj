@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ResGenToolArchitecture>Managed32Bit</ResGenToolArchitecture>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C42F5F2-9B2A-40A6-A1D5-2794E4BDB426}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BenQGuru.eMES.Web.Rework</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BenQGuru.eMES.Web.Rework</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BenQGuru.eMES.BaseSetting">
+      <Name>BenQGuru.eMES.BaseSetting</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.BaseSetting.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Common">
+      <Name>BenQGuru.eMES.Common</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Domain">
+      <Name>BenQGuru.eMES.Domain</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.MailUtility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.MailUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.MOModel, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.MOModel.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Rework">
+      <Name>BenQGuru.eMES.Rework</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Rework.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.Helper">
+      <Name>BenQGuru.eMES.Web.Helper</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Web.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.SelectQuery, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.WebUI.Helper">
+      <Name>BenQGuru.eMES.WebUI.Helper</Name>
+      <HintPath>..\..\bin\BenQGuru.eMES.WebUI.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlLibrary">
+      <Name>ControlLibrary</Name>
+      <HintPath>..\..\Bin\ControlLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.Web.v11.2, Version=11.2.20112.1019, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Infragistics35.Web.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.Shared.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics35.WebUI.Shared.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebGrid.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics35.WebUI.UltraWebGrid.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FRejectConfirmMP.aspx.cs">
+      <DependentUpon>FRejectConfirmMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRejectConfirmMP.aspx.designer.cs">
+      <DependentUpon>FRejectConfirmMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReworkApproveMP.aspx.cs">
+      <DependentUpon>FReworkApproveMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReworkApproveMP.aspx.designer.cs">
+      <DependentUpon>FReworkApproveMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReworkApproveResultMP.aspx.cs">
+      <DependentUpon>FReworkApproveResultMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReworkApproveResultMP.aspx.designer.cs">
+      <DependentUpon>FReworkApproveResultMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReworkApproverMP.aspx.cs">
+      <DependentUpon>FReworkApproverMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReworkApproverMP.aspx.designer.cs">
+      <DependentUpon>FReworkApproverMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReworkCauseMP.aspx.cs">
+      <DependentUpon>FReworkCauseMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReworkCauseMP.aspx.designer.cs">
+      <DependentUpon>FReworkCauseMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReworkRangeAP.aspx.cs">
+      <DependentUpon>FReworkRangeAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReworkRangeAP.aspx.designer.cs">
+      <DependentUpon>FReworkRangeAP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReworkRangeSP.aspx.cs">
+      <DependentUpon>FReworkRangeSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReworkRangeSP.aspx.designer.cs">
+      <DependentUpon>FReworkRangeSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReworkRangeSP_New.aspx.cs">
+      <DependentUpon>FReworkRangeSP_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReworkRangeSP_New.aspx.designer.cs">
+      <DependentUpon>FReworkRangeSP_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReworkRouteSP.aspx.cs">
+      <DependentUpon>FReworkRouteSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReworkRouteSP.aspx.designer.cs">
+      <DependentUpon>FReworkRouteSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReworkSheet2CauseAP.aspx.cs">
+      <DependentUpon>FReworkSheet2CauseAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReworkSheet2CauseAP.aspx.designer.cs">
+      <DependentUpon>FReworkSheet2CauseAP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReworkSheet2CauseSP.aspx.cs">
+      <DependentUpon>FReworkSheet2CauseSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReworkSheet2CauseSP.aspx.designer.cs">
+      <DependentUpon>FReworkSheet2CauseSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReworkSheetEP.aspx.cs">
+      <DependentUpon>FReworkSheetEP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReworkSheetEP.aspx.designer.cs">
+      <DependentUpon>FReworkSheetEP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReworkSheetMP.aspx.cs">
+      <DependentUpon>FReworkSheetMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReworkSheetMP.aspx.designer.cs">
+      <DependentUpon>FReworkSheetMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReworkSourceMP.aspx.cs">
+      <DependentUpon>FReworkSourceMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReworkSourceMP.aspx.designer.cs">
+      <DependentUpon>FReworkSourceMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MailHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReworkFacadeFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SystemParameterListBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="FRejectConfirmMP.aspx" />
+    <Content Include="FReworkApproveMP.aspx" />
+    <Content Include="FReworkApproveResultMP.aspx" />
+    <Content Include="FReworkApproverMP.aspx" />
+    <Content Include="FReworkCauseMP.aspx" />
+    <Content Include="FReworkRangeAP.aspx" />
+    <Content Include="FReworkRangeSP.aspx" />
+    <Content Include="FReworkRangeSP_New.aspx" />
+    <Content Include="FReworkRouteSP.aspx" />
+    <Content Include="FReworkSheet2CauseAP.aspx" />
+    <Content Include="FReworkSheet2CauseSP.aspx" />
+    <Content Include="FReworkSheetEP.aspx" />
+    <Content Include="FReworkSheetMP.aspx" />
+    <Content Include="FReworkSourceMP.aspx" />
+    <EmbeddedResource Include="FRejectConfirmMP.aspx.resx">
+      <DependentUpon>FRejectConfirmMP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReworkApproveMP.aspx.resx">
+      <DependentUpon>FReworkApproveMP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReworkApproveResultMP.aspx.resx">
+      <DependentUpon>FReworkApproveResultMP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReworkApproverMP.aspx.resx">
+      <DependentUpon>FReworkApproverMP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReworkCauseMP.aspx.resx">
+      <DependentUpon>FReworkCauseMP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReworkRangeAP.aspx.resx">
+      <DependentUpon>FReworkRangeAP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReworkRangeSP.aspx.resx">
+      <DependentUpon>FReworkRangeSP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReworkRouteSP.aspx.resx">
+      <DependentUpon>FReworkRouteSP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReworkSheet2CauseAP.aspx.resx">
+      <DependentUpon>FReworkSheet2CauseAP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReworkSheet2CauseSP.aspx.resx">
+      <DependentUpon>FReworkSheet2CauseSP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReworkSheetEP.aspx.resx">
+      <DependentUpon>FReworkSheetEP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReworkSheetMP.aspx.resx">
+      <DependentUpon>FReworkSheetMP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReworkSourceMP.aspx.resx">
+      <DependentUpon>FReworkSourceMP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2321</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

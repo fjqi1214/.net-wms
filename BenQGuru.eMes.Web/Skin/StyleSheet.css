@@ -1,0 +1,533 @@
+body
+{
+	font-size: 12px;
+	font-family: Verdana;
+}
+
+table
+{
+	font-size: 12px;
+	border-style: none;
+}
+
+label
+{
+	font-size: 12px;
+}
+
+a
+{
+	color: #2f2f2f;
+}
+
+a:link
+{
+	color: #2f2f2f;
+}
+
+a:visited
+{
+	color: #2f2f2f;
+}
+
+a:active
+{
+	color: #2f2f2f;
+}
+
+a:hover
+{
+	color: #2f2f2f;
+}
+
+/*	<asp:button></asp:button> */
+.button
+{
+	font-size: 12px;
+	border: 0px; /*height :26px; 		width :94px;*/
+	height: 24px;
+	width: 87px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.imgbutton
+{
+	font-size: 12px;
+	border: 0px; /*height :26px; 		width :94px;*/
+	height: 16px;
+	width: 16px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+/*	<asp:button></asp:button> */
+.smallbutton
+{
+	font-size: 12px;
+	border: 0px; /*height :26px; 		width :94px;*/
+	height: 24px;
+	width: 24px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+/*	normal lable <asp:lable></asp:label> */
+.label
+{
+	font-size: 12px;
+}
+
+/* bold	normal lable <asp:lable></asp:label> */
+.blabel
+{
+	font-weight: bold;
+	font-size: 12px;
+}
+
+/*	topic lable <asp:lable></asp:label> */
+.labeltopic
+{
+	font-weight: bold;
+	font-size: 12px;
+}
+
+/*	textmode = singleline <asp:textbox></asp:textbox> */
+.textbox
+{
+	border-right: 1px solid;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+	font-size: 12px;
+	border-color: #ababab;
+	border-width: 1px;
+	border-style: solid;
+	background-color: white;
+	height: 20px;
+}
+
+/*	textmode = multiline <asp:textbox></asp:textbox> */
+.textarea
+{
+	font-size: 12px;
+	border-color: #d7d8d9;
+	border-width: 1px;
+	background-color: white;
+}
+
+/*	<asp:listbox></asp:listbox> */
+.listbox
+{
+	color: black;
+	font-size: 12px;
+	border-style: solid;
+	border-width: 1;
+}
+
+/*	<asp:dropdownlist></asp:dropdownlist> */
+.dropdownlist
+{
+	color: black;
+	font-size: 12px;
+	border-style: solid;
+	border-color: #ababab;
+	border-width: 1;
+	background-color: #ffffff;
+}
+
+.table
+{
+	border-right: #ababab 1px solid;
+	border-top: #ababab 1px solid;
+	border-left: #ababab 1px solid;
+	border-bottom: #ababab 1px solid;
+}
+
+.tablefield
+{
+	border-right: #ababab 1px solid;
+	border-top: #ababab 1px solid;
+	border-left: #ababab 1px solid;
+	border-bottom: #ababab 1px solid;
+	background-color: #ebebeb;
+}
+
+/* for query condition table */
+.tablewithbackcolor
+{
+	border-right: #ababab 1px solid;
+	border-top: #ababab 1px solid;
+	border-left: #ababab 1px solid;
+	border-bottom: #ababab 1px solid;
+	background-color: #ebebeb;
+	width: 100%;
+	height: 100%;
+}
+
+.radiobuttonlist
+{
+	font-size: 12px;
+	height: 20px;
+}
+
+.listbartable
+{
+	font-size: 13px;
+	color: deeppink;
+	padding-right: 5px;
+	padding-left: 4px;
+	padding-top: 5px; /*width: expression(158 * screen.height /768);	*/
+}
+
+/* for labeled link buttons */
+.currentlabel
+{
+	background-color: lightskyblue;
+}
+
+td.fieldNameLeft
+{
+	padding-right: 4px;
+	text-align: right;
+	padding-left: 16px;
+}
+
+td.fieldLeft
+{
+	text-align: left;
+	padding-left: 4px;
+}
+
+td.title
+{
+	padding-right: 4px;
+	text-align: center;
+	padding-left: 4px;
+	font-weight: bold;
+}
+
+td.fieldName
+{
+	padding-right: 4px;
+	text-align: right;
+}
+
+td.fieldValue
+{
+	padding-right: 40px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	text-align: left;
+}
+
+td.fieldGrid
+{
+	padding-top: 4px;
+}
+
+td.toolBar
+{
+	padding-right: 20px;
+}
+
+td.tree
+{
+	border-right: #ababab 1px solid;
+	border-top: #ababab 1px solid;
+	border-left: #ababab 1px solid;
+	border-bottom: #ababab 1px solid;
+	background-color: #EAF2FB;
+	vertical-align: top;
+	width: 250px;
+}
+
+tr.normal
+{
+	font-size: 12px;
+	height: 30px;
+}
+
+tr.toolBar
+{
+	padding-bottom: 8px;
+	padding-top: 8px;
+	height: 20px;
+	text-align: center;
+}
+
+tr.moduleTitle
+{
+	font-weight: bold;
+	font-size: 12px;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	height: 20px;
+}
+
+table.main
+{
+	border-right: #ababab 1px solid;
+	border-top: #ababab 1px solid;
+	border-left: #ababab 1px solid;
+	width: 100%;
+	border-bottom: #ababab 1px solid;
+	height: 100%;
+	background-color: #d7d8d9;
+}
+
+table.query
+{
+	border-right: #BCCADE 1px solid;
+	border-top: #BCCADE 1px solid;
+	border-left: #BCCADE 1px solid;
+	width: 100%;
+	border-bottom: #BCCADE 1px solid;
+	height: 100%;
+	background-color: #EAF2FB;
+}
+
+table.edit
+{
+	border-right: #BCCADE 1px solid;
+	border-top: #BCCADE 1px solid;
+	border-left: #BCCADE 1px solid;
+	width: 100%;
+	border-bottom: #BCCADE 1px solid;
+	height: 100%;
+	background-color: #EAF2FB;
+}
+
+table.toolBar
+{
+	width: 100px;
+	height: 100%;
+}
+
+table.error
+{
+	background-position: center center;
+	background-image: url(./image/error.gif);
+	vertical-align: super;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
+
+input.submitImgButton
+{
+	font-size: 12px;
+	border: 0px;
+	height: 24px;
+	width: 87px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+input.submitImgButtonSmallerFont
+{
+	font-size: 11px;
+	border: 0px;
+	height: 24px;
+	width: 87px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+input.submitImgButtonLong
+{
+	font-size: 12px;
+	border: 0px;
+	height: 24px;
+	width: 100px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+input.gridExportButton
+{
+	border: 0px;
+	height: 16px;
+	width: 16px;
+	background-color: transparent;
+	cursor: pointer;
+	background-image: url(./image/gridexport.gif);
+}
+
+input.deleteButton
+{
+	border: 0px;
+	height: 16px;
+	width: 16px;
+	background-color: transparent;
+	cursor: pointer;
+	background-image: url(./image/delete.gif);
+}
+
+.require
+{
+	border-right: 1px solid;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+	font-size: 12px;
+	border-color: #ababab;
+	border-width: 1px;
+	border-style: solid;
+	background-color: #fffcf0;
+	height: 20px;
+}
+
+.label.systemName
+{
+	font-weight: 600;
+	font-size: 20px;
+	color: #FFFFFF;
+	font-family: ºÚÌå;
+	white-space: normal;
+}
+
+.label.welcome
+{
+	font-weight: 500;
+	font-size: 12px;
+	color: #FFFFFF;
+	white-space: nowrap;
+}
+
+table.logo
+{
+	background-image: url(./image/topbanner1.gif);
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+}
+
+td.menu
+{
+	height: 18px;
+	background-color: #ebebeb;
+}
+
+td.smallImgButton
+{
+	width: 25px;
+}
+
+input.filebutton
+{
+	border-right: 1px solid;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+	font-size: 12px;
+	border-color: #ababab;
+	height: 20px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.textbox.forfile
+{
+	border-right: 0px solid;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+	font-size: 12px;
+	border-color: #ababab;
+	background-color: #fffcf0;
+	height: 20px;
+}
+
+.ig_AjaxIndicatorBlock
+{
+	background: #909090;
+	filter: alpha(opacity:50);
+	opacity: 0.5;
+}
+.Right
+{
+	text-align: right;
+}
+
+.Center
+{
+	text-align: center;
+}
+
+.Left
+{
+	text-align: left;
+}
+
+.tdLink
+{
+	background-image: url("image/detail16.gif");
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+	text-align: center;
+}
+
+.tdEdit
+{
+	background-image: url("image/edit16.gif");
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+	text-align: center;
+}
+.tdDownLoad
+{
+	background-image: url("../skin/image/Print.gif");
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+	text-align: center;
+}
+
+.tdDocument
+{
+	background-image: url("skin/image");
+	cursor: pointer;
+	text-align: center;
+}
+
+.LinkFontBlue
+{
+	color: Blue;
+	text-decoration: underline;
+}
+
+.ForeColorRed
+{
+	color: Red;
+}
+
+.CellBackColor
+{
+	background-color: #fffdf1;
+}
+
+.LinkColorBlue
+{
+	color: Blue;
+}
+
+.MsgYellow
+{
+	color: #ffd700;
+}
+
+.ValueColor
+{
+	color: #FFFCF0;
+}
+
+
+.TextAlignRight
+{
+	text-align: right;
+}
+

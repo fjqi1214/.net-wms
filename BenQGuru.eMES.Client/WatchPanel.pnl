@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <resource rescode='RES1' fpygoal='100'></resource>
+    <resource rescode='RES2' fpygoal='200'></resource>
+    <resource rescode='RES3' fpygoal='300'></resource>
+</config>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WatchConfig>
+  <FacWatchConfig Attribute="Fac">
+  </FacWatchConfig>
+  <LineWatchConfig Attribute="Line">
+    <LineTypeConfig ConfigName="TimerConfig">
+      <timerExceptionInterval>10000</timerExceptionInterval>
+      <timerThreeAreaInterval>10000</timerThreeAreaInterval>
+      <CuerrtDay>
+      </CuerrtDay>
+    </LineTypeConfig>
+  </LineWatchConfig>
+</WatchConfig>

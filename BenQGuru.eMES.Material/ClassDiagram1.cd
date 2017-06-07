@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BenQGuru.eMES.Material.CastDownHelper" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAABAAAAAAAhIAQBgAAAQAAAAAAAAAACAAAA=</HashCode>
+      <FileName>CastDownHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.StockFileParser" Collapsed="true">
+    <Position X="14" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAQAACAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataFileParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.DeliveryFacade" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAgEAAgAABiAARAAIISEDgABIAADACAAggBAAACoQ=</HashCode>
+      <FileName>DeliveryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.EquipmentFacade" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AmhAgZEBWAQABEXZAJQIEBxlIEACaJYhA1FkJMKCEAE=</HashCode>
+      <FileName>EquipmentFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.InventoryFacade" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/f//+7//T/9/////797/93/5/3//+///3/f//n+/H/8=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.SumItemsQTYDTO" Collapsed="true">
+    <Position X="8.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.AsnHead" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.SumItemsQTY" Collapsed="true">
+    <Position X="7" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAIAAAAAAAAAAAAAAgAIAAAAAJAAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.InInvType" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAQAADAAAhAAAAAAAAIAAEAAAAAAAAAAAAgAgA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.Status" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.ASNHeadStatus" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAQAAAAACAAAAAAAAAAAAAAQAAABAAAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.ASNLineStatus" Collapsed="true">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAASAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.InvDocType" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAEIAAAAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.InvRCardForQuery" Collapsed="true">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.SwitchType" Collapsed="true">
+    <Position X="10.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.CollectType" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.ReceiveInnerType" Collapsed="true">
+    <Position X="15.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.RCardStatus" Collapsed="true">
+    <Position X="14" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.ReceiveStatus" Collapsed="true">
+    <Position X="17.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.ShipStatus" Collapsed="true">
+    <Position X="7" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.RCardExistException" Collapsed="true">
+    <Position X="12.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.NoAllowDeleteException" Collapsed="true">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.NoAllowAddException" Collapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.NoAllowException" Collapsed="true">
+    <Position X="15.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.NoDelShippedRCardException" Collapsed="true">
+    <Position X="17.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.GreaterException" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.SimulateResult" Collapsed="true">
+    <Position X="8.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEBAAAAAAAAAAAAAAAAAEAAAFgAAAAAAQAAAEA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.UIShipRCard" Collapsed="true">
+    <Position X="12.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAEgAAAAAAAAAAAAIAAAAAAAACAAAQ=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.MaterialFacade" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>1kDQgZWQQtE4LSI7CQgMAURCTTUQgk7AgExkABAugAA=</HashCode>
+      <FileName>MaterialFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.MaterialStockFacade" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAFAFAMSIAACAAIAAAAIEChEBAABEAqABAQgAAAhAAE=</HashCode>
+      <FileName>MaterialStockFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.PauseFacade" Collapsed="true">
+    <Position X="14" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABrACANAgAAAABAQEIgiAABBAgACCAAMQASgAEAiAAA=</HashCode>
+      <FileName>PauseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.MaterialStockOutContent" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAQAAQAAAEAAgAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>QueryDomainObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.StockOutContentComparer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>QueryDomainObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.OnWIPItem2" Collapsed="true">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAgAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>QueryDomainObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.WarehouseFacade" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>////v/f////v/+/////7////+//f9//e/1/9//////c=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.UserGroup2User" Collapsed="true">
+    <Position X="14" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.StorageDetailValidity" Collapsed="true">
+    <Position X="17.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBAIGAAAIABBgAAwIBACgCDAAAAAQAEIIQAAAAAACAE=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.MailOQCEc" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.MailIQCEc" Collapsed="true">
+    <Position X="19.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAgAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.AlertMailSetting" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAAAQAAAAAAAAAAAAAAAABAFAAAAAAIQAAAAAAQAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.CheckSummary" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAQAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.OutStorageSummary" Collapsed="true">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAEAAQAAAIAAAAEAAAAAAYAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.OrderLines" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAgABACAAAAAAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.OutStorageDetail" Collapsed="true">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAQAAAAQQAFIgAAAAQAAATAAAAUBABAgAAACJgAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.IQCSUMMARY" Collapsed="true">
+    <Position X="17.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAACAAAQEAACAAEAAAAAAAEAAQAACAAAAhAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.DateWithTimeRange" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.WeightVolume" Collapsed="true">
+    <Position X="19.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAABAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.InstorageSummary" Collapsed="true">
+    <Position X="19.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAQACAAAAAAAAAAAAAAAAAABAAAAAAAAIAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.ProductOutstorageRecord" Collapsed="true">
+    <Position X="8.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAABAAggABAAADAAAAoAAAACAIAABAAAAAEIACQA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.ProductInstorageRecord" Collapsed="true">
+    <Position X="7" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEACAAAAAAgBBAAAAAAAAIgAEAAAIAAAAAAAAAAABAE=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.PickAlterRecord" Collapsed="true">
+    <Position X="15.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIABAAAAAABAAAAAABAABAAAAAAgABACIAAAIAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.AsnIssueCancelRecord" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DIAIABAAAgQgBAAAABABAAAAEAAAAAAAACIAAAAABAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.InStorageDetailRecord" Collapsed="true">
+    <Position X="17.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BaAIABAAAgRgBIAAAAAJAAAAUAAAAAAAAAIAEABABAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.IQCDetailRecord" Collapsed="true">
+    <Position X="15.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BMAKABQAAkwABAAkQAIAAAAAEAIABKAAQCABICCAhAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.DateWithTimeComper" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.DateWithTime" Collapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAQA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.StorageInOperationRecord" Collapsed="true">
+    <Position X="19.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAABAgAEEgBAAAAwAAAAAAABAAAAAEABBA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.PickPak" Collapsed="true">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAgAAAAAUAAAAAAAAAAAACAAAAAAAAAgAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.StorLocTransDN" Collapsed="true">
+    <Position X="5.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.QTYN" Collapsed="true">
+    <Position X="10.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAABAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.InvoicesDetailDN" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.AsnDetailCountCollection" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAQIAAAAAAAAAAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.PickDetailDN" Collapsed="true">
+    <Position X="17.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.StockCheckDetailDo" Collapsed="true">
+    <Position X="10.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AFAIAAAAAQAAAAAAAAAAAAgAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.StockCheckDetailOp" Collapsed="true">
+    <Position X="12.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ANBIAAAAAQAAAAAAAAEAAAwAoAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.InvoicesDetailEx1" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAAAIAAAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.Do" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAABAAQAQgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.InvoicesDetailEx" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.PickInfo1" Collapsed="true">
+    <Position X="19.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EFAIAABAAQhABIAMAUAAAwAAAACAYkCJAAEhAGJAhAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.OQCNew" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAQAAAAAIAEAAAAAAAAAAIAAAIAABAEAAgAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.SendCaseDetails" Collapsed="true">
+    <Position X="19.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAQgAAAAIAUgAAAAAAAAAIEAAAAAAAAAAgDA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.InnoObject" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAACAABAAAQAECIEACIAEoAAAAAgAAAAAEAAAgAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.WarehouseTicketDetail2" Collapsed="true">
+    <Position X="17.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.WarehouseCountDetail" Collapsed="true">
+    <Position X="15.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAIAAAAgAAAAAAEAAAAAAQAEBAAEgAAAAAAAIEAAA=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.SendMail" Collapsed="true">
+    <Position X="5.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAQAAAAAAAAAARAAAGAAAAAAACAAAAAAAAI=</HashCode>
+      <FileName>WarehouseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Material.WarehouseFacede2" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAIAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>WarehouseFacede2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Package.PackageFacade" Collapsed="true">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cWxDAZARhlAECBoMkVgfgAhiRIJcEAAAhRAqKDQ1pZg=</HashCode>
+      <FileName>PackageFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="BenQGuru.eMES.Material.StockStatus" Collapsed="true">
+    <Position X="5.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MaterialStockFacade.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="BenQGuru.eMES.Material.CollectionType" Collapsed="true">
+    <Position X="5.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIAAEAAAAA=</HashCode>
+      <FileName>InventoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

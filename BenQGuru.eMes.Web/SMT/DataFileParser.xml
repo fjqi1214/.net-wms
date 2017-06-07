@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Formats>
+	<Format Name="SMTFeederMaterial"
+		FileFormat = "HeaderData"
+		FileNameSeparator = ""
+		HeaderRowCount = "1"
+		HeaderRecordSeparator = ";\n"
+		HeaderColumnSeparator = ","
+		ContentRecordSeparator = "\n"
+		ContentColumnSeparator = ","
+		IsContentMultiRecord = "1"
+		ContentMultiRecordInterval = "1"
+		SaveDataDirectly = "0"
+	>
+		<ObjectMap IsObjectInsert = "0"  ObjectType="BenQGuru.eMES.Domain.SMT.SMTFeederMaterial,BenQGuru.eMES.Domain">
+			
+				<Column
+					AttributeName="ProductCode"
+					ColumnName = "PRODUCTCODE"
+					DataType = "string"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "0"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = ""
+				/>
+					
+				<Column
+					AttributeName="StepSequenceCode"
+					ColumnName = "SSCode"
+					DataType = "string"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "1"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = ""
+				/>
+					
+				<Column
+					AttributeName="MachineCode"
+					ColumnName = "MACHINECODE"
+					DataType = "string"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "2"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = ""
+				/>
+				
+				<Column
+					AttributeName="MachineStationCode"
+					ColumnName = "MACHINESTATIONCODE"
+					DataType = "string"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "3"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = ""
+				/>
+				
+				<Column
+					AttributeName="SourceMaterialCode"
+					ColumnName = "SOURCEMATERIALCODE"
+					DataType = "string"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "4"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = ""
+				/>
+				
+				<Column
+					AttributeName="MaterialCode"
+					ColumnName = "MATERIALCODE"
+					DataType = "string"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "5"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = ""
+				/>
+				
+				<Column
+					AttributeName="FeederSpecCode"
+					ColumnName = "FEEDERSPECCODE"
+					DataType = "string"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "6"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = ""
+				/>
+				
+				<Column
+					AttributeName="Qty"
+					ColumnName = "QTY"
+					DataType = "decimal"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "7"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = "0"
+				/>
+				
+				<Column
+					AttributeName="TableGroup"
+					ColumnName = "TBLGRP"
+					DataType = "string"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "8"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = "A"
+				/>
+
+		</ObjectMap>
+
+	</Format>
+
+	<Format Name="SMTMachineDiscard"
+		FileFormat = "HeaderData"
+		FileNameSeparator = ""
+		HeaderRowCount = "1"
+		HeaderRecordSeparator = ";\n"
+		HeaderColumnSeparator = ","
+		ContentRecordSeparator = "\n"
+		ContentColumnSeparator = ","
+		IsContentMultiRecord = "1"
+		ContentMultiRecordInterval = "1"
+		SaveDataDirectly = "0"
+	>
+		<ObjectMap IsObjectInsert = "0"  ObjectType="BenQGuru.eMES.Domain.SMT.SMTMachineDiscard,BenQGuru.eMES.Domain">
+			
+				<Column
+					AttributeName="MOCode"
+					ColumnName = "MOCODE"
+					DataType = "string"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "0"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = ""
+				/>
+					
+				<Column
+					AttributeName="StepSequenceCode"
+					ColumnName = "SSCode"
+					DataType = "string"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "1"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = ""
+				/>
+					
+				<Column
+					AttributeName="MaterialCode"
+					ColumnName = "MATERIALCODE"
+					DataType = "string"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "2"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = ""
+				/>
+				
+				<Column
+					AttributeName="MachineStationCode"
+					ColumnName = "MACHINESTATIONCDOE"
+					DataType = "string"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "3"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = ""
+				/>
+				
+				<Column
+					AttributeName="PickupCount"
+					ColumnName = "PickupCount"
+					DataType = "decimal"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "4"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = ""
+				/>
+				
+				<Column
+					AttributeName="RejectParts"
+					ColumnName = "RejectParts"
+					DataType = "decimal"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "5"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = ""
+				/>
+				
+				<Column
+					AttributeName="NoPickup"
+					ColumnName = "NoPickup"
+					DataType = "decimal"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "6"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = ""
+				/>
+				
+				<Column
+					AttributeName="ErrorParts"
+					ColumnName = "ErrorParts"
+					DataType = "decimal"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "7"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = "0"
+				/>
+				
+				<Column
+					AttributeName="DislodgedParts"
+					ColumnName = "DislodgedParts"
+					DataType = "decimal"
+					DataSource = "Content"
+					DataLine = "0"
+					DataColumn = "8"
+					DataStringFrom = "0"
+					DataStringTo="99"
+					Default = "0"
+				/>
+
+		</ObjectMap>
+
+	</Format>
+
+
+</Formats>

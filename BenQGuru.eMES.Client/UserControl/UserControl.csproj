@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1DB71322-0693-4538-AD24-F483DDDFADD0}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>UserControl</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UserControl</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/UserControl/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BenQGuru.eMES.Common">
+      <Name>BenQGuru.eMES.Common</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Domain">
+      <Name>BenQGuru.eMES.Domain</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.Domain.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.TS">
+      <Name>BenQGuru.eMES.TS</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.TS.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.TSModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="BenQGuru.eMES.Web.Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Shared.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Infragistics2.Shared.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Infragistics2.Win.Misc.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Infragistics2.Win.UltraWinEditors.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Infragistics2.Win.UltraWinGrid.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Infragistics2.Win.UltraWinToolbars.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Infragistics2.Win.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileLog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IUIAlign.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IWatchPanel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Message.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MutiLanguages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PagerToolbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCBanner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCoolToolBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDatetTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCErrorCodeSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCErrorCodeSelect2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCErrorCodeSelectNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCErrorCodeSelectNew.designer.cs">
+      <DependentUpon>UCErrorCodeSelectNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCLabelCombox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLabelEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCWatchPanelCenter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCWatchPanelContent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCWatchPanelHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCWatchPanelLeft.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIStyleBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkingErrorAddedEvent.cs" />
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="PagerToolbar.resx">
+      <DependentUpon>PagerToolbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCBanner.resx">
+      <DependentUpon>UCBanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCButton.resx">
+      <DependentUpon>UCButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCCoolToolBar.resx">
+      <DependentUpon>UCCoolToolBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCDatetTime.resx">
+      <DependentUpon>UCDatetTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCErrorCodeSelect.resx">
+      <DependentUpon>UCErrorCodeSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCErrorCodeSelect2.resx">
+      <DependentUpon>UCErrorCodeSelect2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCErrorCodeSelectNew.resx">
+      <DependentUpon>UCErrorCodeSelectNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCLabelCombox.resx">
+      <DependentUpon>UCLabelCombox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCLabelEdit.resx">
+      <DependentUpon>UCLabelEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCMessage.resx">
+      <DependentUpon>UCMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCWatchPanelCenter.resx">
+      <DependentUpon>UCWatchPanelCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCWatchPanelContent.resx">
+      <DependentUpon>UCWatchPanelContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCWatchPanelHeader.resx">
+      <DependentUpon>UCWatchPanelHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCWatchPanelLeft.resx">
+      <DependentUpon>UCWatchPanelLeft.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

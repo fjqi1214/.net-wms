@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="ev1xj3ddao5k9s_v">
+    <property name="$name" value="Core" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.BaseDCTDriver">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="csharp:e_field:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.BaseDCTDriver.FINERROR" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="csharp:e_method:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.IsAlive()" />
+      <reference referencedUin="csharp:e_property:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.DBConnection" />
+      <reference referencedUin="csharp:e_property:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.Type" />
+      <reference referencedUin="csharp:event:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.OnSendData" />
+      <reference referencedUin="csharp:event:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.OnError" />
+      <reference referencedUin="csharp:event:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.AfterLogin" />
+      <reference referencedUin="csharp:e_method:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.SendMessage(System.String)" />
+      <reference referencedUin="csharp:e_method:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.Open()" />
+      <reference referencedUin="csharp:e_method:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.Close()" />
+      <reference referencedUin="csharp:l_ast:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.OnError" />
+      <reference referencedUin="csharp:l_ast:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.AfterLogin" />
+      <reference referencedUin="csharp:l_ast:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.Type" />
+      <reference referencedUin="csharp:l_ast:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.OnSendData" />
+      <reference referencedUin="csharp:e_property:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.ClientPort" />
+      <reference referencedUin="csharp:e_property:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.ClientAddress" />
+      <reference referencedUin="csharp:e_property:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.ClientID" />
+      <reference referencedUin="csharp:e_property:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.ClientDesc" />
+      <reference referencedUin="csharp:e_property:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.Authorized" />
+      <reference referencedUin="csharp:e_property:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.LoginedUser" />
+      <reference referencedUin="csharp:e_property:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.LoginedPassword" />
+      <reference referencedUin="csharp:e_property:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient.ResourceCode" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.EventCommandHandler">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.DCTType">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.ActionStatus">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.BaseActionStack">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.BaseDCTAction">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTActionList">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.FlowDirect">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.CommandEventArgs">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.DCTCommand">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTDriver">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.DCTCommandList">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IMessageParse">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMTLoadFeeder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mocode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationTable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReelNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FeederCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rescode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="stationTableGroupActive" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMTLoadFeederResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SMTLoadFeederResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSMTFeederMatrialTableGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MoCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rescode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="machineCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSMTFeederMatrialTableGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSMTFeederMatrialTableGroupResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetActiveStationTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="moCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rescode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="machineCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActiveStationTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActiveStationTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMTExchanges">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mocode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationTable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldReelNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReelNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldFeederCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FeederCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rescode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="stationTableGroupActive" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMTExchangesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SMTExchangesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMTChangeReal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mocode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationTable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldReelNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReelNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rescode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="stationTableGroupActive" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMTChangeRealResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SMTChangeRealResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMTContinue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mocode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationTable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldReelNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReelNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rescode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMTContinueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SMTContinueResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMTReturn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mocode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationTable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReelNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FeederCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rescode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="stationTableGroupActive" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMTReturnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SMTReturnResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMTCheck">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mocode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationTable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReelNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rescode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMTCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SMTCheckResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="SMTLoadFeederSoapIn">
+    <wsdl:part name="parameters" element="tns:SMTLoadFeeder" />
+  </wsdl:message>
+  <wsdl:message name="SMTLoadFeederSoapOut">
+    <wsdl:part name="parameters" element="tns:SMTLoadFeederResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSMTFeederMatrialTableGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSMTFeederMatrialTableGroup" />
+  </wsdl:message>
+  <wsdl:message name="GetSMTFeederMatrialTableGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSMTFeederMatrialTableGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveStationTableSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActiveStationTable" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveStationTableSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActiveStationTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="SMTExchangesSoapIn">
+    <wsdl:part name="parameters" element="tns:SMTExchanges" />
+  </wsdl:message>
+  <wsdl:message name="SMTExchangesSoapOut">
+    <wsdl:part name="parameters" element="tns:SMTExchangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SMTChangeRealSoapIn">
+    <wsdl:part name="parameters" element="tns:SMTChangeReal" />
+  </wsdl:message>
+  <wsdl:message name="SMTChangeRealSoapOut">
+    <wsdl:part name="parameters" element="tns:SMTChangeRealResponse" />
+  </wsdl:message>
+  <wsdl:message name="SMTContinueSoapIn">
+    <wsdl:part name="parameters" element="tns:SMTContinue" />
+  </wsdl:message>
+  <wsdl:message name="SMTContinueSoapOut">
+    <wsdl:part name="parameters" element="tns:SMTContinueResponse" />
+  </wsdl:message>
+  <wsdl:message name="SMTReturnSoapIn">
+    <wsdl:part name="parameters" element="tns:SMTReturn" />
+  </wsdl:message>
+  <wsdl:message name="SMTReturnSoapOut">
+    <wsdl:part name="parameters" element="tns:SMTReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="SMTCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:SMTCheck" />
+  </wsdl:message>
+  <wsdl:message name="SMTCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:SMTCheckResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SMTLoadServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMTLoadFeeder">
+      <wsdl:input message="tns:SMTLoadFeederSoapIn" />
+      <wsdl:output message="tns:SMTLoadFeederSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSMTFeederMatrialTableGroup">
+      <wsdl:input message="tns:GetSMTFeederMatrialTableGroupSoapIn" />
+      <wsdl:output message="tns:GetSMTFeederMatrialTableGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveStationTable">
+      <wsdl:input message="tns:GetActiveStationTableSoapIn" />
+      <wsdl:output message="tns:GetActiveStationTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMTExchanges">
+      <wsdl:input message="tns:SMTExchangesSoapIn" />
+      <wsdl:output message="tns:SMTExchangesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMTChangeReal">
+      <wsdl:input message="tns:SMTChangeRealSoapIn" />
+      <wsdl:output message="tns:SMTChangeRealSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMTContinue">
+      <wsdl:input message="tns:SMTContinueSoapIn" />
+      <wsdl:output message="tns:SMTContinueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMTReturn">
+      <wsdl:input message="tns:SMTReturnSoapIn" />
+      <wsdl:output message="tns:SMTReturnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMTCheck">
+      <wsdl:input message="tns:SMTCheckSoapIn" />
+      <wsdl:output message="tns:SMTCheckSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SMTLoadServiceSoap" type="tns:SMTLoadServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMTLoadFeeder">
+      <soap:operation soapAction="http://tempuri.org/SMTLoadFeeder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSMTFeederMatrialTableGroup">
+      <soap:operation soapAction="http://tempuri.org/GetSMTFeederMatrialTableGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveStationTable">
+      <soap:operation soapAction="http://tempuri.org/GetActiveStationTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMTExchanges">
+      <soap:operation soapAction="http://tempuri.org/SMTExchanges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMTChangeReal">
+      <soap:operation soapAction="http://tempuri.org/SMTChangeReal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMTContinue">
+      <soap:operation soapAction="http://tempuri.org/SMTContinue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMTReturn">
+      <soap:operation soapAction="http://tempuri.org/SMTReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMTCheck">
+      <soap:operation soapAction="http://tempuri.org/SMTCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMTLoadServiceSoap12" type="tns:SMTLoadServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMTLoadFeeder">
+      <soap12:operation soapAction="http://tempuri.org/SMTLoadFeeder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSMTFeederMatrialTableGroup">
+      <soap12:operation soapAction="http://tempuri.org/GetSMTFeederMatrialTableGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveStationTable">
+      <soap12:operation soapAction="http://tempuri.org/GetActiveStationTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMTExchanges">
+      <soap12:operation soapAction="http://tempuri.org/SMTExchanges" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMTChangeReal">
+      <soap12:operation soapAction="http://tempuri.org/SMTChangeReal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMTContinue">
+      <soap12:operation soapAction="http://tempuri.org/SMTContinue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMTReturn">
+      <soap12:operation soapAction="http://tempuri.org/SMTReturn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMTCheck">
+      <soap12:operation soapAction="http://tempuri.org/SMTCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SMTLoadService">
+    <wsdl:port name="SMTLoadServiceSoap" binding="tns:SMTLoadServiceSoap">
+      <soap:address location="http://localhost/LongCheer/BenQGuru.eMES.Web.WebService/SMTLoadService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMTLoadServiceSoap12" binding="tns:SMTLoadServiceSoap12">
+      <soap12:address location="http://localhost/LongCheer/BenQGuru.eMES.Web.WebService/SMTLoadService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

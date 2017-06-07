@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <!--	
+	<datatype name="ITEM" text="产品">
+		<field>
+			<add key="ITEMCODE" value="产品代码" Match="false" AllowNull="false"></add>
+			<add key="ITEMNAME" value="产品名称" Match="false" AllowNull="false"></add>
+			<add key="ITEMTYPE" value="产品类别" Match="true" AllowNull="false" MatchType="ItemType"></add>
+			<add key="ITEMUOM" value="计量单位" Match="false" AllowNull="false"></add>
+			<add key="ITEMCONFIG" value="配置码" Match="false" AllowNull="true"></add>
+			<add key="ITEMDESC" value="产品描述" Match="false" AllowNull="false"></add>
+			<add key="MODELCODE" value="所属产品别" Match="false" AllowNull="false"></add>
+			<add key="ITEMBURNINQTY" value="装车数量" Match="false" AllowNull="false"></add>
+			<add key="ElectricCurrentMinValue" value="最小电流值" Match="false" AllowNull="false"></add>
+			<add key="ElectricCurrentMaxValue" value="最大电流值" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+	<datatype name="ItemLocation" text="产品位号数">
+		<field>
+			<add key="ITEMCODE" value="产品代码" Match="false" AllowNull="false"></add>
+			<add key="AB" value="板面" Match="false" AllowNull="false"></add>
+			<add key="Qty" value="位号数" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+	<datatype name="Item2Route" text="产品生产途程">
+		<field>
+			<add key="ITEMCODE" value="产品代码" Match="false" AllowNull="false"></add>
+			<add key="ROUTECODE" value="途程代码" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+	<datatype name="OPBOM" text="产品工序BOM">
+		<field>
+			<add key="ITEMCODE" value="产品代码" Match="false" AllowNull="false"></add>
+			<add key="OBCODE" value="途程代码" Match="false" AllowNull="false"></add>
+			<add key="OPCODE" value="工序代码" Match="false" AllowNull="false"></add>
+			<add key="OBITEMCODE" value="子阶料料号" Match="false" AllowNull="false"></add>
+			<add key="OBITEMNAME" value="子阶料名称" Match="false" AllowNull="false"></add>
+			<add key="OBSITEMCODE" value="首选料" Match="false" AllowNull="false"></add>
+			<add key="OBITEMQTY" value="单机用量" Match="false" AllowNull="false"></add>
+			<add key="OBITEMUOM" value="计量单位" Match="false" AllowNull="false"></add>
+			<add key="OBITEMEFFDATE" value="生效日期" Match="false" AllowNull="false"></add>
+			<add key="OBITEMINVDATE" value="失效日期" Match="false" AllowNull="false"></add>
+			<add key="OBITEMECN" value="ECN号码" Match="false" AllowNull="false"></add>
+			<add key="OBITEMCONTYPE" value="管控类型" Match="true" MatchType="ItemControl" AllowNull="false"></add>
+			<add key="ActionType" value="是否拆解" Match="true" MatchType="BoolType" AllowNull="false"></add>
+		</field>
+	</datatype>
+
+	<datatype name="Item2SPCTest" text="SPC产品测试项">
+		<field>
+			<add key="ITEMCODE" value="产品代码" Match="false" AllowNull="false"></add>
+			<add key="TESTNAME" value="测试项" Match="false" AllowNull="false"></add>
+			<add key="SEQ" value="序号" Match="false"></add>
+			<add key="UPONLY" value="单边上限规则" Match="true" AllowNull="false" MatchType="BoolType2"></add>
+			<add key="USL" value="USL" Match="false"></add>
+			<add key="LOWONLY" value="单边下限规则" Match="true" AllowNull="false" MatchType="BoolType2"></add>
+			<add key="LSL" value="LSL" Match="false"></add>
+			<add key="AUTOCL" value="自动生成UCL/LCL" Match="true" AllowNull="false" MatchType="BoolType2"></add>
+			<add key="UCL" value="UCL" Match="false" AllowNull="false"></add>
+			<add key="LCL" value="LCL" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+	<datatype name="Item2SPCTable" text="SPC产品采集表">
+		<field>
+			<add key="ITEMCODE" value="产品代码" Match="false" AllowNull="false"></add>
+			<add key="SPCTBLNAME" value="表名" Match="false" AllowNull="false"></add>
+			<add key="STARTDATE" value="开始日期" Match="false" AllowNull="false"></add>
+			<add key="ENDDATE" value="结束日期" Match="false" AllowNull="false"></add>
+			<add key="SPCDESC" value="备注" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+
+	<datatype name="MODEL" text="产品别">
+		<field>
+			<add key="MODELCODE" value="产品别代码" Match="false" AllowNull="false"></add>
+			<add key="MODELDESC" value="产品别描述" Match="false" AllowNull="false"></add>
+			<add key="ISINV" value="是否可入库" Match="true" MatchType="BoolType" AllowNull="false"></add>
+		</field>
+	</datatype>
+	<datatype name="BARCODERULE" text="二维条码">
+		<field>
+			<add key="MODELCODE" value="产品别代码" Match="false" AllowNull="false"></add>
+			<add key="AMODELCODE" value="缩略编码" Match="false" AllowNull="false"></add>
+			<add key="ADESC" value="含义" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+	<datatype name="Model2ErrorCodeGroup" text="产品别不良代码组">
+		<field>
+			<add key="MODELCODE" value="产品别代码" Match="false" AllowNull="false"></add>
+			<add key="ECGCODE" value="不良代码组" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+	<datatype name="Model2ErrorCause" text="产品别不良原因">
+		<field>
+			<add key="MODELCODE" value="产品别代码" Match="false" AllowNull="false"></add>
+			<add key="ECSCODE" value="不良原因" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+	<datatype name="Model2Solution" text="产品别不良解决方案">
+		<field>
+			<add key="MODELCODE" value="产品别代码" Match="false" AllowNull="false"></add>
+			<add key="SOLCODE" value="解决方案代码" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+  -->
+	<datatype name="ErrorCodeA" text="不良代码">
+		<field>
+			<add key="ECODE" value="不良代码" Match="false" AllowNull="false"></add>
+			<add key="ECDESC" value="不良描述" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+	<datatype name="ErrorCodeGroupA" text="不良代码组">
+		<field>
+			<add key="ECGCODE" value="不良代码组" Match="false" AllowNull="false"></add>
+			<add key="ECGDESC" value="不良代码组描述" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+	<datatype name="ErrorCause" text="不良原因">
+		<field>
+			<add key="ECSCODE" value="不良原因" Match="false" AllowNull="false"></add>
+			<add key="ECSDESC" value="不良原因描述" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+	<!--
+  <datatype name="Duty" text="不良责任别">
+		<field>
+			<add key="DUTYCODE" value="责任别代码" Match="false" AllowNull="false"></add>
+			<add key="DUTYDESC" value="责任别描述" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+	<datatype name="Solution" text="不良解决方案">
+		<field>
+			<add key="SOLCODE" value="解决方案代码" Match="false" AllowNull="false"></add>
+			<add key="SOLDESC" value="解决方案描述" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+	<datatype name="OQCCheckList" text="FQC检验项目">
+		<field>
+			<add key="CKITEMCODE" value="检验项目代码" Match="false" AllowNull="false"></add>
+			<add key="CKITEMDESC" value="检验项目描述" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+	<datatype name="User" text="系统用户">
+		<field>
+			<add key="USERCODE" value="用户代码" Match="false" AllowNull="false"></add>
+			<add key="USERNAME" value="用户名" Match="false" AllowNull="false"></add>
+			<add key="USERDEPART" value="部门" Match="false" AllowNull="false"></add>
+			<add key="USERTEL" value="电话" Match="false" AllowNull="false"></add>
+			<add key="USEREMAIL" value="电子信箱" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+	<datatype name="CusItemCodeCheckList" text="客户料号对照表">
+		<field>
+			<add key="ITEMCODE" value="产品代码" Match="false" AllowNull="false"></add>
+			<add key="MODELCODE" value="产品别代码" Match="false" AllowNull="false"></add>
+			<add key="CUSCODE" value="客户代码" Match="false" AllowNull="false"></add>
+			<add key="CUSMODELCODE" value="客户机种" Match="false" AllowNull="false"></add>
+			<add key="CUSITEMCODE" value="客户料号" Match="false" AllowNull="false"></add>
+			<add key="CHARCODE" value="特性" Match="false" AllowNull="true"></add>
+		</field>
+	</datatype>
+	<datatype name="UserGroup2User" text="用户组用户关联">
+		<field>
+			<add key="USERCODE" value="用户代码" Match="false" AllowNull="false"></add>
+			<add key="USERGROUPCODE" value="用户组代码" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+
+	<datatype name="RMADetail" text="RMA详细信息">
+		<field>
+			<add key="RMABILLCODE" value="RMA单号" Match="false" AllowNull="false"></add>
+			<add key="MODELCODE" value="产品别代码" Match="false" AllowNull="false"></add>
+			<add key="ITEMCODE" value="产品代码" Match="false" AllowNull="false"></add>			
+			<add key="SERVERCODE" value="服务单号" Match="false" AllowNull="true"></add>
+			<add key="RCARD" value="产品序列号" Match="false" AllowNull="false"></add>
+			<add key="HANDELCODE" value="RMA单处理方式" Match="false" AllowNull="false"></add>			
+			<add key="COMPISSUE" value="客户投诉现象" Match="false" AllowNull="true"></add>
+			<add key="CUSTOMCODE" value="客户代码" Match="false" AllowNull="true"></add>
+			<add key="COMFROM" value="来源" Match="false" AllowNull="true"></add>
+			<add key="MAINTENANCE" value="保修期(月)" Match="false" AllowNull="false"></add>
+			<add key="WHRECEIVEDATE" value="仓库收货日期" Match="false" AllowNull="true"></add>
+			<add key="SUBCOMPANY" value="分公司" Match="false" AllowNull="true"></add>
+			<add key="REMOCODE" value="返工工单" Match="false" AllowNull="true"></add>
+			<add key="ERRORCODE" value="不良代码" Match="false" AllowNull="true"></add>
+			<add key="ISINSHELFLIFE" value="是否在保内" Match="false"  AllowNull="false"></add>
+			<add key="RMAMEMO" value="RMA备注" Match="false" AllowNull="true"></add>			
+		</field>
+	</datatype>
+  -->
+	
+</data>

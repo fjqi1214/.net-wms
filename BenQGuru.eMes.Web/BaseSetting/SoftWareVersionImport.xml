@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Formats>
+  <Format Name="OutDataSoftWareVersion_Piece"
+		FileFormat = "HeaderData"
+		FileNameSeparator = ""
+		HeaderRowCount = "1"
+		HeaderRecordSeparator = ";\n"
+		HeaderColumnSeparator = ","
+		ContentRecordSeparator = "\n"
+		ContentColumnSeparator = ","
+		IsContentMultiRecord = "1"
+		ContentMultiRecordInterval = "1"
+		SaveDataDirectly = "0"
+	>
+    <ObjectMap IsObjectInsert = "0"  ObjectType="BenQGuru.eMES.Domain.MOModel.SoftWareVersionForImport,BenQGuru.eMES.Domain"
+			KeyFields="VersionCode"
+			TableName="tblsoftver"
+		>
+
+      <Column
+        AttributeName="VersionCode"
+        ColumnName = "VERSIONCODE"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "0"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "软件版本"
+				/>
+
+      <Column
+        AttributeName="EffectiveDate"
+        ColumnName = "EFFECTIVEDATE"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "1"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "生效日期"
+				/>
+
+      <Column
+        AttributeName="InvalidDate"
+        ColumnName = "INVALIDDATE"
+        DataType = "string"
+        DataSource = "Content"
+        DataLine = "0"
+        DataColumn = "2"
+        DataStringFrom = "0"
+        DataStringTo="99"
+        Default = ""
+        Caption = "失效日期"
+				/>
+
+      
+    </ObjectMap>
+
+  </Format>
+</Formats>

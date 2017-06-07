@@ -1,0 +1,46 @@
+--新增保管员列
+alter table TBLINVReceiptDetail add INVUSER VARCHAR2(100);
+
+--增加EQPSTATUS缺少的三种状态
+insert into TBLSYSPARAM (PARAMCODE, PARAMGROUPCODE, PARAMALIAS, PARAMDESC, PARAMVALUE, MUSER, MDATE, MTIME, ISACTIVE, ISSYS, EATTRIBUTE1, PARENTPARAM)
+values ('MOVE', 'EQPSTATUS', 'MOVE', '移动', '', 'ADMIN', 20110308, 212714, '0', '0', '1', '');
+insert into TBLSYSPARAM (PARAMCODE, PARAMGROUPCODE, PARAMALIAS, PARAMDESC, PARAMVALUE, MUSER, MDATE, MTIME, ISACTIVE, ISSYS, EATTRIBUTE1, PARENTPARAM)
+values ('CALLIN', 'EQPSTATUS', 'CALLIN', '调进', '', 'ADMIN', 20110308, 212714, '0', '0', '1', '');
+insert into TBLSYSPARAM (PARAMCODE, PARAMGROUPCODE, PARAMALIAS, PARAMDESC, PARAMVALUE, MUSER, MDATE, MTIME, ISACTIVE, ISSYS, EATTRIBUTE1, PARENTPARAM)
+values ('CALLOUT', 'EQPSTATUS', 'CALLOUT', '调出', '', 'ADMIN', 20110308, 212714, '0', '0', '1', '');
+
+--TBLEQPUSEINFO设备使用情况维护TableLayout要求为NUMBER(6)将数据库里的8改为6
+-- modify columns 
+alter table TBLEQPUSEINFO modify RUNURATION NUMBER(6);
+alter table TBLEQPUSEINFO modify STOPDURATION NUMBER(6);
+
+--TBLEQPOEE表中OPCODE改为RESCODE
+truncate table TBLEQPOEE;
+alter table TBLEQPOEE drop column OPCODE;
+alter table TBLEQPOEE add RESCODE VARCHAR2(40) not null;
+
+--创建工单首检记录表及主键
+-- Create table
+create table TBLFIRSTCHECKBYMO
+(
+  MOCODE      VARCHAR2(40) not null,
+  CHECKDATE   NUMBER(8) not null,
+  CHECKRESULT VARCHAR2(40) not null,
+  MEMO        VARCHAR2(2000),
+  MUSER       VARCHAR2(40) not null,
+  MDATE       NUMBER(8) not null,
+  MTIME       NUMBER(6) not null
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLFIRSTCHECKBYMO
+  add primary key (MOCODE, CHECKDATE);
+
+--菜单和模块新增工单首检结果维护
+insert into tblmenu (MENUCODE, MDLCODE, PMENUCODE, MENUDESC, MENUSEQ, MENUTYPE, MUSER, MDATE, MTIME, EATTRIBUTE1, VISIBILITY)
+values ('FIRSTCHECKBYMO', 'FIRSTCHECKBYMO', 'MOMANAGEMENT', '工单首检结果维护', 31, 'B/S', 'ADMIN', 20110826, 135156, '', '0');
+insert into Tblmdl (MDLCODE, PMDLCODE, MDLVER, MDLTYPE, MDLSTATUS, MDLDESC, MDLSEQ, MDLHFNAME, MUSER, MDATE, MTIME, ISSYS, ISACTIVE, FORMURL, EATTRIBUTE1, ISRESTRAIN)
+values ('FIRSTCHECKBYMO', 'MO', '', 'B/S', 'Alpha', '工单首检结果维护', 31, '', 'ADMIN', 20110826, 134839, '1', '1', 'MOMODEL/FFirstCheckByMOMP.ASPX', '', '0');
+
+--序号转换查询修改菜单位置(20110829)
+update tblmenu set pmenucode='TM_TRACKING_MANAGEMENT' where menucode='CS_QUERY_IDTRANSFER';
+update tblmdl set pmdlcode='TM_TRACKING_MANAGEMENT' where mdlcode='CSQ_IDTRANSFER';

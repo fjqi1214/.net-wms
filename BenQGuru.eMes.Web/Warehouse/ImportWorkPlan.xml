@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <datatype name="WORKPLAN" text="生产计划">
+    <field>
+      <add key="BIGSSCODE" value="大线代码" Match="false" AllowNull="false"></add>
+      <add key="PLANDATE" value="计划生产日期" Match="false" AllowNull="false"></add>
+      <add key="PLANSEQ" value="产品类别" Match="true" AllowNull="false" ></add>
+      <add key="MOCODE" value="工单代码" Match="false" AllowNull="false"></add>
+      <add key="MOSEQ" value="工单项次" Match="false" AllowNull="true"></add>
+      <add key="PLANQTY" value="计划生产量" Match="false" AllowNull="false"></add>
+      <add key="PLANSTARTTIME" value="预计开始时间" Match="false" AllowNull="false"></add>
+    
+    </field>
+  </datatype>
+</data>

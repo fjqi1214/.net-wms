@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F485B5C6-B92C-42A0-8388-A0FBF4B4E43D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BenQGuru.eMES.DrawFlow</RootNamespace>
+    <AssemblyName>BenQGuru.eMES.DrawFlow</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\DefineArrowButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DownArrowButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EndButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlowButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlowButtonCollection.cs" />
+    <Compile Include="Controls\FlowSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FunctionButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FunctionButtonCollection.cs" />
+    <Compile Include="Controls\JumpArrowButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LeftArrowButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PointCollection.cs" />
+    <Compile Include="Controls\ProcessButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ProcessSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\RectangleCollection.cs" />
+    <Compile Include="Controls\RightArrowButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RightDownArrowButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SelectProcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\StartButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\StraightArrowButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\StraightArrowButton.Designer.cs" />
+    <Compile Include="Controls\UpArrowButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\UpDownArrowButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\AnimatedGifEncoder.cs" />
+    <Compile Include="Data\DataUtility.cs" />
+    <Compile Include="Data\DrawUtility.cs" />
+    <Compile Include="Data\FormUtility.cs" />
+    <Compile Include="Data\GifDecoder.cs" />
+    <Compile Include="Data\IArrowInfo.cs" />
+    <Compile Include="Data\IProcessInfo.cs" />
+    <Compile Include="Data\LZWEncoder.cs" />
+    <Compile Include="Data\NeuQuant.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pic\Jpg\ArrowBack0.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pic\Jpg\ArrowBack1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pic\Jpg\ArrowBack2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pic\Jpg\ArrowBack3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\FlowButton.resx">
+      <DependentUpon>FlowButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FlowSettingForm.resx">
+      <DependentUpon>FlowSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProcessSettingForm.resx">
+      <DependentUpon>ProcessSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SelectProcessForm.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pic\Gif\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

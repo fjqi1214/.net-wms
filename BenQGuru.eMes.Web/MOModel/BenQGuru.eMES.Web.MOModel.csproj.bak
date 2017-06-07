@@ -1,0 +1,1045 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3BF8CDB5-D08D-4FDD-8BBB-966D1B3F30C5}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BenQGuru.eMES.Web.MOModel</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BenQGuru.eMES.Web.MOModel</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BenQGuru.eMES.BaseSetting">
+      <Name>BenQGuru.eMES.BaseSetting</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.BaseSetting.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Common">
+      <Name>BenQGuru.eMES.Common</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.DataCollect, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.DataCollect.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Domain">
+      <Name>BenQGuru.eMES.Domain</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Material">
+      <Name>BenQGuru.eMES.Material</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.MOModel, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.MOModel.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.OQC">
+      <Name>BenQGuru.eMES.OQC</Name>
+      <HintPath>..\..\bin\BenQGuru.eMES.OQC.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.SAPDataTransfer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BenQGuru.eMES.SAPDataTransfer\bin\BenQGuru.eMES.SAPDataTransfer.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.SAPDataTransferInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BenQGuru.eMES.SAPDataTransfer\bin\BenQGuru.eMES.SAPDataTransferInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.TSModel">
+      <Name>BenQGuru.eMES.TSModel</Name>
+      <HintPath>..\..\bin\BenQGuru.eMES.TSModel.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.Web.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.SelectQuery, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="BenQGuru.eMES.WebUI.Helper">
+      <Name>BenQGuru.eMES.WebUI.Helper</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.WebUI.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlLibrary">
+      <Name>ControlLibrary</Name>
+      <HintPath>..\..\Bin\ControlLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics.WebUI.Shared.v2.1">
+      <Name>Infragistics.WebUI.Shared.v2.1</Name>
+      <HintPath>..\..\..\Program Files\Infragistics\NetAdvantage 2004 Volume 2\ASP.NET\Bin\Infragistics.WebUI.Shared.v2.1.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.webassemblies.20042</AssemblyFolderKey>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics.WebUI.UltraWebGrid.v3.1">
+      <Name>Infragistics.WebUI.UltraWebGrid.v3.1</Name>
+      <HintPath>..\..\..\Program Files\Infragistics\NetAdvantage 2004 Volume 2\ASP.NET\Bin\Infragistics.WebUI.UltraWebGrid.v3.1.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.webassemblies.20042</AssemblyFolderKey>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics.WebUI.UltraWebNavigator.v3.2">
+      <Name>Infragistics.WebUI.UltraWebNavigator.v3.2</Name>
+      <HintPath>..\..\..\Program Files\Infragistics\NetAdvantage 2004 Volume 2\ASP.NET\Bin\Infragistics.WebUI.UltraWebNavigator.v3.2.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.webassemblies.20042</AssemblyFolderKey>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics.WebUI.UltraWebTab.v3">
+      <Name>Infragistics.WebUI.UltraWebTab.v3</Name>
+      <HintPath>..\..\..\..\Program Files\Infragistics\NetAdvantage 2004 Volume 2\ASP.NET\Bin\Infragistics.WebUI.UltraWebTab.v3.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.webassemblies.20042</AssemblyFolderKey>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net">
+      <Name>log4net</Name>
+      <HintPath>..\..\Bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UserControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\UserControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FItem2SNCheck.ashx.cs">
+      <DependentUpon>FItem2SNCheck.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FItem2SNCheckMP.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FItem2SNCheckMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItem2SNCheckMP.aspx.designer.cs">
+      <DependentUpon>FItem2SNCheckMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMaterialMP.aspx.cs">
+      <DependentUpon>FMaterialMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMaterialMP.aspx.designer.cs">
+      <DependentUpon>FMaterialMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FacadeFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FBarcodeRuleMP.aspx.cs">
+      <DependentUpon>FBarcodeRuleMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FBarcodeRuleMP.aspx.designer.cs">
+      <DependentUpon>FBarcodeRuleMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FBOMDownloadMP.aspx.cs">
+      <DependentUpon>FBOMDownloadMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FBOMDownloadMP.aspx.designer.cs">
+      <DependentUpon>FBOMDownloadMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FBOMItemMP.aspx.cs">
+      <DependentUpon>FBOMItemMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FBOMItemMP.aspx.designer.cs">
+      <DependentUpon>FBOMItemMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FBOMP.aspx.cs">
+      <DependentUpon>FBOMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FBOMP.aspx.designer.cs">
+      <DependentUpon>FBOMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FBurnInOutVolumn.aspx.cs">
+      <DependentUpon>FBurnInOutVolumn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FBurnInOutVolumn.aspx.designer.cs">
+      <DependentUpon>FBurnInOutVolumn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FConfigTree.aspx.cs">
+      <DependentUpon>FConfigTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FConfigTree.aspx.designer.cs">
+      <DependentUpon>FConfigTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FCusItemCodeCheckListMP.aspx.cs">
+      <DependentUpon>FCusItemCodeCheckListMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FCusItemCodeCheckListMP.aspx.designer.cs">
+      <DependentUpon>FCusItemCodeCheckListMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FDefaultItemRouteSP.aspx.cs">
+      <DependentUpon>FDefaultItemRouteSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FDefaultItemRouteSP.aspx.designer.cs">
+      <DependentUpon>FDefaultItemRouteSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FErrorSymptomMP.aspx.cs">
+      <DependentUpon>FErrorSymptomMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FErrorSymptomMP.aspx.designer.cs">
+      <DependentUpon>FErrorSymptomMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItem2CartonCFG.aspx.cs">
+      <DependentUpon>FItem2CartonCFG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItem2CartonCFG.aspx.designer.cs">
+      <DependentUpon>FItem2CartonCFG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItem2Config.aspx.cs">
+      <DependentUpon>FItem2Config.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItem2Config.aspx.designer.cs">
+      <DependentUpon>FItem2Config.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItem2ConfigMP.aspx.cs">
+      <DependentUpon>FItem2ConfigMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItem2ConfigMP.aspx.designer.cs">
+      <DependentUpon>FItem2ConfigMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItem2DimentionMP.aspx.cs">
+      <DependentUpon>FItem2DimentionMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItem2DimentionMP.aspx.designer.cs">
+      <DependentUpon>FItem2DimentionMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItem2SPCItemSpecMP.aspx.cs">
+      <DependentUpon>FItem2SPCItemSpecMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItem2SPCItemSpecMP.aspx.designer.cs">
+      <DependentUpon>FItem2SPCItemSpecMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItem2SpcMP.aspx.cs">
+      <DependentUpon>FItem2SpcMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItem2SpcMP.aspx.designer.cs">
+      <DependentUpon>FItem2SpcMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItem2SPCObjectMP.aspx.cs">
+      <DependentUpon>FItem2SPCObjectMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItem2SPCObjectMP.aspx.designer.cs">
+      <DependentUpon>FItem2SPCObjectMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItem2SPCTblMP.aspx.cs">
+      <DependentUpon>FItem2SPCTblMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItem2SPCTblMP.aspx.designer.cs">
+      <DependentUpon>FItem2SPCTblMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItem2SPCTestMP.aspx.cs">
+      <DependentUpon>FItem2SPCTestMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItem2SPCTestMP.aspx.designer.cs">
+      <DependentUpon>FItem2SPCTestMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItemLocationMP.aspx.cs">
+      <DependentUpon>FItemLocationMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItemLocationMP.aspx.designer.cs">
+      <DependentUpon>FItemLocationMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItemMP.aspx.cs">
+      <DependentUpon>FItemMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItemMP.aspx.designer.cs">
+      <DependentUpon>FItemMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItemOpCauseGroupAP.aspx.cs">
+      <DependentUpon>FItemOpCauseGroupAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItemOpCauseGroupAP.aspx.designer.cs">
+      <DependentUpon>FItemOpCauseGroupAP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItemRouteMP.aspx.cs">
+      <DependentUpon>FItemRouteMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItemRouteMP.aspx.designer.cs">
+      <DependentUpon>FItemRouteMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItemRouteOperationEP.aspx.cs">
+      <DependentUpon>FItemRouteOperationEP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItemRouteOperationEP.aspx.designer.cs">
+      <DependentUpon>FItemRouteOperationEP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItemRouteOperationListMP.aspx.cs">
+      <DependentUpon>FItemRouteOperationListMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItemRouteOperationListMP.aspx.designer.cs">
+      <DependentUpon>FItemRouteOperationListMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItemRouteSP.aspx.cs">
+      <DependentUpon>FItemRouteSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItemRouteSP.aspx.designer.cs">
+      <DependentUpon>FItemRouteSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMO2RouteSP.aspx.cs">
+      <DependentUpon>FMO2RouteSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMO2RouteSP.aspx.designer.cs">
+      <DependentUpon>FMO2RouteSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMO2SAPLogQP.aspx.cs">
+      <DependentUpon>FMO2SAPLogQP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMO2SAPLogQP.aspx.designer.cs">
+      <DependentUpon>FMO2SAPLogQP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMOBOMCompare.aspx.cs">
+      <DependentUpon>FMOBOMCompare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMOBOMCompare.aspx.designer.cs">
+      <DependentUpon>FMOBOMCompare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMOBOMMP.aspx.cs">
+      <DependentUpon>FMOBOMMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMOBOMMP.aspx.designer.cs">
+      <DependentUpon>FMOBOMMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMOConfirmMP.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FMOConfirmMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMOConfirmMP.aspx.designer.cs">
+      <DependentUpon>FMOConfirmMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FModel2ErrorSymptomAP.aspx.cs">
+      <DependentUpon>FModel2ErrorSymptomAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FModel2ErrorSymptomAP.aspx.designer.cs">
+      <DependentUpon>FModel2ErrorSymptomAP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FModel2ErrorSymptomSP.aspx.cs">
+      <DependentUpon>FModel2ErrorSymptomSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FModel2ErrorSymptomSP.aspx.designer.cs">
+      <DependentUpon>FModel2ErrorSymptomSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FModelItemEP.aspx.cs">
+      <DependentUpon>FModelItemEP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FModelItemEP.aspx.designer.cs">
+      <DependentUpon>FModelItemEP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FModelItemSP.aspx.cs">
+      <DependentUpon>FModelItemSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FModelItemSP.aspx.designer.cs">
+      <DependentUpon>FModelItemSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FModelMP.aspx.cs">
+      <DependentUpon>FModelMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FModelMP.aspx.designer.cs">
+      <DependentUpon>FModelMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FModelRouteEP.aspx.cs">
+      <DependentUpon>FModelRouteEP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FModelRouteEP.aspx.designer.cs">
+      <DependentUpon>FModelRouteEP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FModelRouteOperationEP.aspx.cs">
+      <DependentUpon>FModelRouteOperationEP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FModelRouteOperationEP.aspx.designer.cs">
+      <DependentUpon>FModelRouteOperationEP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FModelRouteOperationSP.aspx.cs">
+      <DependentUpon>FModelRouteOperationSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FModelRouteOperationSP.aspx.designer.cs">
+      <DependentUpon>FModelRouteOperationSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FModelRouteSP.aspx.cs">
+      <DependentUpon>FModelRouteSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FModelRouteSP.aspx.designer.cs">
+      <DependentUpon>FModelRouteSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMODownload.aspx.cs">
+      <DependentUpon>FMODownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMODownload.aspx.designer.cs">
+      <DependentUpon>FMODownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMOEP.aspx.cs">
+      <DependentUpon>FMOEP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMOEP.aspx.designer.cs">
+      <DependentUpon>FMOEP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMOMP.aspx.cs">
+      <DependentUpon>FMOMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMOMP.aspx.designer.cs">
+      <DependentUpon>FMOMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMOOutDataImport.aspx.cs">
+      <DependentUpon>FMOOutDataImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMOOutDataImport.aspx.designer.cs">
+      <DependentUpon>FMOOutDataImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMORCardRangeMP.aspx.cs">
+      <DependentUpon>FMORCardRangeMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMORCardRangeMP.aspx.designer.cs">
+      <DependentUpon>FMORCardRangeMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMOStorgeConfirmMP.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FMOStorgeConfirmMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMOStorgeConfirmMP.aspx.designer.cs">
+      <DependentUpon>FMOStorgeConfirmMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMOTailMP.aspx.cs">
+      <DependentUpon>FMOTailMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMOTailMP.aspx.designer.cs">
+      <DependentUpon>FMOTailMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMOViewFieldEP.aspx.cs">
+      <DependentUpon>FMOViewFieldEP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMOViewFieldEP.aspx.designer.cs">
+      <DependentUpon>FMOViewFieldEP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOPBOMItemControlMP.aspx.cs">
+      <DependentUpon>FOPBOMItemControlMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOPBOMItemControlMP.aspx.designer.cs">
+      <DependentUpon>FOPBOMItemControlMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOPBOMMP.aspx.cs">
+      <DependentUpon>FOPBOMMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOPBOMMP.aspx.designer.cs">
+      <DependentUpon>FOPBOMMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOPBOMOperationComponetLoadingMP.aspx.cs">
+      <DependentUpon>FOPBOMOperationComponetLoadingMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOPBOMOperationComponetLoadingMP.aspx.designer.cs">
+      <DependentUpon>FOPBOMOperationComponetLoadingMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOPBOMOperationItemSP.aspx.cs">
+      <DependentUpon>FOPBOMOperationItemSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOPBOMOperationItemSP.aspx.designer.cs">
+      <DependentUpon>FOPBOMOperationItemSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOPBOMOperationListMP.aspx.cs">
+      <DependentUpon>FOPBOMOperationListMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOPBOMOperationListMP.aspx.designer.cs">
+      <DependentUpon>FOPBOMOperationListMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOrderDetailMP.aspx.cs">
+      <DependentUpon>FOrderDetailMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOrderDetailMP.aspx.designer.cs">
+      <DependentUpon>FOrderDetailMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOrderMP.aspx.cs">
+      <DependentUpon>FOrderMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOrderMP.aspx.designer.cs">
+      <DependentUpon>FOrderMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOutDataImport.aspx.cs">
+      <DependentUpon>FOutDataImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOutDataImport.aspx.designer.cs">
+      <DependentUpon>FOutDataImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRCard2RMABillList.aspx.cs">
+      <DependentUpon>FRCard2RMABillList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRCard2RMABillList.aspx.designer.cs">
+      <DependentUpon>FRCard2RMABillList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRCard2RMABillMP.aspx.cs">
+      <DependentUpon>FRCard2RMABillMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRCard2RMABillMP.aspx.designer.cs">
+      <DependentUpon>FRCard2RMABillMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRcardListOfTry.aspx.cs">
+      <DependentUpon>FRcardListOfTry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRcardListOfTry.aspx.designer.cs">
+      <DependentUpon>FRcardListOfTry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRes2MOMP.aspx.cs">
+      <DependentUpon>FRes2MOMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRes2MOMP.aspx.designer.cs">
+      <DependentUpon>FRes2MOMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRMABillEP.aspx.cs">
+      <DependentUpon>FRMABillEP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRMABillEP.aspx.designer.cs">
+      <DependentUpon>FRMABillEP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRMABillMP.aspx.cs">
+      <DependentUpon>FRMABillMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRMABillMP.aspx.designer.cs">
+      <DependentUpon>FRMABillMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRMACodeRuleMP.aspx.cs">
+      <DependentUpon>FRMACodeRuleMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRMACodeRuleMP.aspx.designer.cs">
+      <DependentUpon>FRMACodeRuleMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FShelfMP.aspx.cs">
+      <DependentUpon>FShelfMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FShelfMP.aspx.designer.cs">
+      <DependentUpon>FShelfMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSPCTestItemMP.aspx.cs">
+      <DependentUpon>FSPCTestItemMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSPCTestItemMP.aspx.designer.cs">
+      <DependentUpon>FSPCTestItemMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSPCTestItemStoreSP.aspx.cs">
+      <DependentUpon>FSPCTestItemStoreSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSPCTestItemStoreSP.aspx.designer.cs">
+      <DependentUpon>FSPCTestItemStoreSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTryMP.aspx.cs">
+      <DependentUpon>FTryMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTryMP.aspx.designer.cs">
+      <DependentUpon>FTryMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemFacadeFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OperationListFactory.cs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MOModelPublic.cs" />
+    <Compile Include="SystemParameterListBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="ConfirmDialog.htm" />
+    <Content Include="FItem2SNCheckMP.aspx" />
+    <Content Include="FMaterialMP.aspx" />
+    <Content Include="DataFileParserOutSourcing.xml" />
+    <Content Include="FBarcodeRuleMP.aspx" />
+    <Content Include="FBOMDownloadMP.aspx" />
+    <Content Include="FBOMItemMP.aspx" />
+    <Content Include="FBOMP.aspx" />
+    <Content Include="FBurnInOutVolumn.aspx" />
+    <Content Include="FConfigTree.aspx" />
+    <Content Include="FCusItemCodeCheckListMP.aspx" />
+    <Content Include="FDefaultItemRouteSP.aspx" />
+    <Content Include="FErrorSymptomMP.aspx" />
+    <Content Include="FItem2CartonCFG.aspx" />
+    <Content Include="FItem2Config.aspx" />
+    <Content Include="FItem2ConfigMP.aspx" />
+    <Content Include="FItem2DimentionMP.aspx" />
+    <Content Include="FItem2SPCItemSpecMP.aspx" />
+    <Content Include="FItem2SpcMP.aspx" />
+    <Content Include="FItem2SPCObjectMP.aspx" />
+    <Content Include="FItem2SPCTblMP.aspx" />
+    <Content Include="FItem2SPCTestMP.aspx" />
+    <Content Include="FItemLocationMP.aspx" />
+    <Content Include="FItemMP.aspx" />
+    <Content Include="FItemOpCauseGroupAP.aspx" />
+    <Content Include="FItemRouteMP.aspx" />
+    <Content Include="FItemRouteOperationEP.aspx" />
+    <Content Include="FItemRouteOperationListMP.aspx" />
+    <Content Include="FItemRouteSP.aspx" />
+    <Content Include="FMO2RouteSP.aspx" />
+    <Content Include="FMOBOMCompare.aspx" />
+    <Content Include="FMOBOMMP.aspx" />
+    <Content Include="FMOConfirmMP.aspx" />
+    <Content Include="FModel2ErrorSymptomAP.aspx" />
+    <Content Include="FModel2ErrorSymptomSP.aspx" />
+    <Content Include="FModelItemEP.aspx" />
+    <Content Include="FModelItemSP.aspx" />
+    <Content Include="FModelMP.aspx" />
+    <Content Include="FModelRouteEP.aspx" />
+    <Content Include="FModelRouteOperationEP.aspx" />
+    <Content Include="FModelRouteOperationSP.aspx" />
+    <Content Include="FModelRouteSP.aspx" />
+    <Content Include="FMODownload.aspx" />
+    <Content Include="FMOEP.aspx" />
+    <Content Include="FMOMP.aspx" />
+    <Content Include="FMORCardRangeMP.aspx" />
+    <Content Include="FMOViewFieldEP.aspx" />
+    <Content Include="FOPBOMItemControlMP.aspx" />
+    <Content Include="FOPBOMMP.aspx" />
+    <Content Include="FOPBOMOperationComponetLoadingMP.aspx" />
+    <Content Include="FOPBOMOperationItemSP.aspx" />
+    <Content Include="FOPBOMOperationListMP.aspx" />
+    <Content Include="FOrderDetailMP.aspx" />
+    <Content Include="FOrderMP.aspx" />
+    <Content Include="FOutDataImport.aspx" />
+    <Content Include="FRCard2RMABillList.aspx" />
+    <Content Include="FRCard2RMABillMP.aspx" />
+    <Content Include="FRes2MOMP.aspx" />
+    <Content Include="FRMABillEP.aspx" />
+    <Content Include="FRMABillMP.aspx" />
+    <Content Include="FRMACodeRuleMP.aspx" />
+    <Content Include="FShelfMP.aspx" />
+    <Content Include="FSPCTestItemMP.aspx" />
+    <Content Include="FSPCTestItemStoreSP.aspx" />
+    <EmbeddedResource Include="FMaterialMP.aspx.resx">
+      <DependentUpon>FMaterialMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBarcodeRuleMP.aspx.resx">
+      <DependentUpon>FBarcodeRuleMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBOMDownloadMP.aspx.resx">
+      <DependentUpon>FBOMDownloadMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBOMItemMP.aspx.resx">
+      <DependentUpon>FBOMItemMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBOMP.aspx.resx">
+      <DependentUpon>FBOMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBurnInOutVolumn.aspx.resx">
+      <DependentUpon>FBurnInOutVolumn.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FConfigTree.aspx.resx">
+      <DependentUpon>FConfigTree.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCusItemCodeCheckListMP.aspx.resx">
+      <DependentUpon>FCusItemCodeCheckListMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDefaultItemRouteSP.aspx.resx">
+      <DependentUpon>FDefaultItemRouteSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FErrorSymptomMP.aspx.resx">
+      <DependentUpon>FErrorSymptomMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItem2CartonCFG.aspx.resx">
+      <DependentUpon>FItem2CartonCFG.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItem2Config.aspx.resx">
+      <DependentUpon>FItem2Config.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItem2ConfigMP.aspx.resx">
+      <DependentUpon>FItem2ConfigMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItem2DimentionMP.aspx.resx">
+      <DependentUpon>FItem2DimentionMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItem2SPCItemSpecMP.aspx.resx">
+      <DependentUpon>FItem2SPCItemSpecMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItem2SpcMP.aspx.resx">
+      <DependentUpon>FItem2SpcMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItem2SPCObjectMP.aspx.resx">
+      <DependentUpon>FItem2SPCObjectMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItem2SPCTblMP.aspx.resx">
+      <DependentUpon>FItem2SPCTblMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItem2SPCTestMP.aspx.resx">
+      <DependentUpon>FItem2SPCTestMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItemLocationMP.aspx.resx">
+      <DependentUpon>FItemLocationMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItemMP.aspx.resx">
+      <DependentUpon>FItemMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItemOpCauseGroupAP.aspx.resx">
+      <DependentUpon>FItemOpCauseGroupAP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItemRouteMP.aspx.resx">
+      <DependentUpon>FItemRouteMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItemRouteOperationEP.aspx.resx">
+      <DependentUpon>FItemRouteOperationEP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItemRouteOperationListMP.aspx.resx">
+      <DependentUpon>FItemRouteOperationListMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItemRouteSP.aspx.resx">
+      <DependentUpon>FItemRouteSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMO2RouteSP.aspx.resx">
+      <DependentUpon>FMO2RouteSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMOBOMCompare.aspx.resx">
+      <DependentUpon>FMOBOMCompare.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMOBOMMP.aspx.resx">
+      <DependentUpon>FMOBOMMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModel2ErrorSymptomAP.aspx.resx">
+      <DependentUpon>FModel2ErrorSymptomAP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModel2ErrorSymptomSP.aspx.resx">
+      <DependentUpon>FModel2ErrorSymptomSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModelItemEP.aspx.resx">
+      <DependentUpon>FModelItemEP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModelItemSP.aspx.resx">
+      <DependentUpon>FModelItemSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModelMP.aspx.resx">
+      <DependentUpon>FModelMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModelRouteEP.aspx.resx">
+      <DependentUpon>FModelRouteEP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModelRouteOperationEP.aspx.resx">
+      <DependentUpon>FModelRouteOperationEP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModelRouteOperationSP.aspx.resx">
+      <DependentUpon>FModelRouteOperationSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModelRouteSP.aspx.resx">
+      <DependentUpon>FModelRouteSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMODownload.aspx.resx">
+      <DependentUpon>FMODownload.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMOEP.aspx.resx">
+      <DependentUpon>FMOEP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMOMP.aspx.resx">
+      <DependentUpon>FMOMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMORCardRangeMP.aspx.resx">
+      <DependentUpon>FMORCardRangeMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMOViewFieldEP.aspx.resx">
+      <DependentUpon>FMOViewFieldEP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOPBOMItemControlMP.aspx.resx">
+      <DependentUpon>FOPBOMItemControlMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOPBOMMP.aspx.resx">
+      <DependentUpon>FOPBOMMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOPBOMOperationComponetLoadingMP.aspx.resx">
+      <DependentUpon>FOPBOMOperationComponetLoadingMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOPBOMOperationItemSP.aspx.resx">
+      <DependentUpon>FOPBOMOperationItemSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOPBOMOperationListMP.aspx.resx">
+      <DependentUpon>FOPBOMOperationListMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOrderDetailMP.aspx.resx">
+      <DependentUpon>FOrderDetailMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOrderMP.aspx.resx">
+      <DependentUpon>FOrderMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOutDataImport.aspx.resx">
+      <DependentUpon>FOutDataImport.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRCard2RMABillList.aspx.resx">
+      <DependentUpon>FRCard2RMABillList.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRCard2RMABillMP.aspx.resx">
+      <DependentUpon>FRCard2RMABillMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRes2MOMP.aspx.resx">
+      <DependentUpon>FRes2MOMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMABillEP.aspx.resx">
+      <DependentUpon>FRMABillEP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMABillMP.aspx.resx">
+      <DependentUpon>FRMABillMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMACodeRuleMP.aspx.resx">
+      <DependentUpon>FRMACodeRuleMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FShelfMP.aspx.resx">
+      <DependentUpon>FShelfMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSPCTestItemMP.aspx.resx">
+      <DependentUpon>FSPCTestItemMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSPCTestItemStoreSP.aspx.resx">
+      <DependentUpon>FSPCTestItemStoreSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataFileParser.xml" />
+    <Content Include="ExportMO.xml" />
+    <Content Include="FItem2SNCheck.ashx" />
+    <Content Include="FMO2SAPLogQP.aspx" />
+    <Content Include="FMOOutDataImport.aspx" />
+    <Content Include="FMOStorgeConfirmMP.aspx" />
+    <Content Include="FMOTailMP.aspx" />
+    <Content Include="FRcardListOfTry.aspx" />
+    <Content Include="FTryMP.aspx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl></IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl></IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

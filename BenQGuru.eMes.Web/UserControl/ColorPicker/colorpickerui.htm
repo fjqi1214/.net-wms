@@ -1,0 +1,190 @@
+﻿<html>
+<head>
+    <title>SelectColor</title>
+    <meta http-equiv="Content-Type" content="text/html;   charset=windows-1251">
+    <style>   
+  BODY     
+  {   
+  BORDER-RIGHT:   buttonshadow   1px   solid;   
+  BORDER-TOP:   buttonhighlight   1px   solid;     
+  BACKGROUND:   buttonface;     
+  MARGIN:   2px   5px   5px;   
+  BORDER-LEFT:   buttonhighlight   1px   solid;     
+  BORDER-BOTTOM:   buttonshadow   1px   solid;   
+  overflow-y   :   auto;   
+  }   
+  .ColorPicker   TD     
+  {   
+  FONT-SIZE:   1px;   
+  CURSOR:   hand;     
+  HEIGHT:   22px;   
+  }   
+    
+  </style>
+
+  <script type="text/javascript">   
+  <!--   
+  var   columnCount   =   15;   
+  var   colorList   =   new Array('DarkOliveGreen', 'DarkGreen', 'DarkSlateGray', 'SlateGray', 'DarkBlue', 'MidnightBlue', 
+						'Indigo', 'DarkMagenta', 'Brown', 'DarkRed', 'Sienna', 'SaddleBrown', 'DarkGoldenrod', 'Beige', 
+						'HoneyDew', 'DimGray', 'OliveDrab', 'ForestGreen', 'DarkCyan', 'LightSlateGray', 'MediumBlue', 
+						'DarkSlateBlue', 'DarkViolet', 'MediumVioletRed', 'IndianRed', 'Firebrick', 'Chocolate', 'Peru', 
+						'Goldenrod', 'LightGoldenrodYellow', 'MintCream', 'DarkGray', 'YellowGreen', 'SeaGreen', 'CadetBlue',
+						'SteelBlue', 'RoyalBlue', 'BlueViolet', 'DarkOrchid', 'DeepPink', 'RosyBrown', 'Crimson', 'DarkOrange',
+						'BurlyWood', 'DarkKhaki', 'LightYellow', 'Azure', 'LightGrey', 'LawnGreen', 'MediumSeaGreen', 'LightSeaGreen',
+						'DeepSkyBlue', 'DodgerBlue', 'SlateBlue', 'MediumOrchid', 'PaleVioletRed', 'Salmon', 'OrangeRed', 
+						'SandyBrown', 'Tan', 'Gold', 'Ivory', 'GhostWhite', 'Gainsboro', 'Chartreuse', 'LimeGreen', 
+						'MediumAquamarine', 'DarkTurquoise', 'CornflowerBlue', 'MediumSlateBlue', 'Orchid', 'HotPink',
+						'LightCoral', 'Tomato', 'Orange', 'Bisque', 'Khaki', 'Cornsilk', 'Linen', 'WhiteSmoke', 
+						'GreenYellow', 'DarkSeaGreen', 'Turquoise', 'MediumTurquoise', 'SkyBlue', 'MediumPurple', 'Violet', 
+						'LightPink', 'DarkSalmon', 'Coral', 'NavajoWhite', 'BlanchedAlmond', 'PaleGoldenrod', 'Oldlace', 
+						'Seashell', 'GhostWhite', 'PaleGreen', 'SpringGreen', 'Aquamarine', 'PowderBlue', 'LightSkyBlue', 
+						'LightSteelBlue', 'Plum', 'Pink', 'LightSalmon', 'Wheat', 'Moccasin', 'AntiqueWhite', 'LemonChiffon', 
+						'FloralWhite', 'Snow', 'AliceBlue', 'LightGreen', 'MediumSpringGreen', 'PaleTurquoise', 'LightCyan',
+						'LightBlue', 'Lavender', 'Thistle', 'MistyRose', 'Peachpuff', 'PapayaWhip');   
+    
+  var basicClrs = new Array('Green', 'Lime', 'Teal', 'Aqua', 'Navy', 'Blue', 'Purple', 'Fuchsia', 'Maroon', 'Red', 'Olive',
+						'Yellow', 'White', 'Silver', 'Gray', 'Black');
+
+  function   onOver()   {   
+      var   item   =   window.event.srcElement;   
+        
+      if   (item.tagName!="TD")   return;   
+      if   (item.width!=20)   
+      {   
+          var   colorName   =   item.style.backgroundColor;   
+          try
+          {
+            colorName=item.colorName;
+          }
+          catch (e){ }
+          var   item=item.parentElement.parentElement.parentElement.parentElement.parentElement;   
+      }   
+      else   
+      {   
+          var   table=item.getElementsByTagName("TABLE");   
+          var   colorName=table[0].rows[0].cells[0].style.backgroundColor;   
+          try
+          {
+            colorName=table[0].rows[0].cells[0].colorName;
+          }
+          catch (e){ }
+      }   
+      item.style.backgroundColor="#AEC6E8";   
+      item.style.borderColor   =   "black";   
+        
+      if   (colorName   !=   "" && colorName != undefined)   {   
+        
+          colorBox.style.backgroundColor   =   colorName;   
+          colorBoxName.innerHTML   =   colorName;   
+      }   
+  }   
+    
+  function   onOut()   {   
+      var   item   =   window.event.fromElement;   
+      var   colorName   =   item.style.backgroundColor;   
+        
+      if   (item.tagName!="TD")   return;   
+      if   (item.width!=20)   
+      {   
+        var   item=item.parentElement.parentElement.parentElement.parentElement.parentElement;   
+      }   
+      item.style.backgroundColor="buttonface";   
+      item.style.borderColor   =   "buttonface";   
+  }   
+    
+  function   onClick()   
+  {   
+      var   item   =   window.event.srcElement;   
+        
+      if   (item.tagName!="TD")   return;   
+      if   (item.width!=20)   
+      {   
+          var   colorName   =   item.style.backgroundColor;   
+          colorName=item.colorName;
+      }   
+      else   
+      {   
+          var   table=item.getElementsByTagName("TABLE");   
+          var   colorName=table[0].rows[0].cells[0].style.backgroundColor;   
+          colorName=table[0].rows[0].cells[0].colorName;
+      }   
+        
+      window.returnValue=colorName;
+      window.close();
+  }   
+    
+  function   writeRow(ar)   {   
+      var   str   =   "";   
+        
+      for   (var   i=0;   i<ar.length;   )   {   
+          str   +=   "<tr>"   
+          for   (var   j=0;   j<=columnCount   &&   i<ar.length;   j++)   {   
+              str   +=   "<td   width=20   style='border:1px   solid;border-color:buttonface;'><div   style='margin-left:4px'   ><table   cellspacing=0   cellpadding=0   ><tr><td style='background-color:" + ar[i] + ";border:1px outset " + ar[i] + ";width:11px;height:13px;' colorName='" + ar[i] + "'>";
+              str   +=   "&nbsp;</td><tr></table></div></td>\n";   
+              i++;   
+          }   
+          str   +=   "</tr>\n";   
+      }   
+      return   str;   
+  }   
+
+  function writeBasicColorRow(ar)
+  {
+    var str = "";
+    for (var i = 0; i < ar.length; i++)
+    {
+      str += "<td   width=20   style='border:1px   solid;border-color:buttonface;'><div   style='margin-left:4px'   ><table   cellspacing=0   cellpadding=0   ><tr><td style='background-color:" + ar[i] + ";border:1px outset " + ar[i] + ";width:11px;height:13px;' colorName='" + ar[i] + "'>";
+      str += "&nbsp;</td><tr></table></div></td>\n";   
+    }
+    return str;
+  }
+  
+    
+  //-->   
+  </script>
+
+</head>
+<body>
+    <table onmouseover="onOver()" onclick="onClick()" onmouseout="onOut()" cellspacing="0"
+        cellpadding="0" class="ColorPicker" border="0">
+        <tbody>
+            <tr><td></td></tr>
+            <tr>
+                <td style="font-size: 11px; cursor: default; font-family: verdana,   helvetica; height: 10px"
+                    colspan="15">
+                    <nobr>
+                        <b>&nbsp;Basic Color</b>:</nobr></td>
+            </tr>
+
+            <script>document.write(writeBasicColorRow(basicClrs));</script>
+
+            <tr><td></td></tr>
+
+            <tr>
+                <td style="font-size: 11px; cursor: default; font-family: verdana,   helvetica; height: 10px"
+                    colspan="15">
+                    <nobr>
+                        <b>&nbsp;Font Color</b>:</nobr></td>
+            </tr>
+
+            <script>document.write(writeRow(colorList));</script>
+
+        </tbody>
+    </table>
+    <hr>
+    <table>
+        <tbody>
+            <tr>
+                <td id="colorBox" style="border-right: window   1px   inset; border-top: window   1px   inset;
+                    font-size: 2px; border-left: window   1px   inset; width: 50px; cursor: default;
+                    border-bottom: window   1px   inset; height: 25px">
+                    &nbsp;</td>
+                <td id="colorBoxName" style="border-right: 0px; border-top: 0px; font-size: 12px;
+                    border-left: 0px; cursor: default; border-bottom: 0px; font-family: verdana,   helvetica">
+                    ColorName</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,762 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{251E9DB9-BBC0-4481-AF82-496EAEA86617}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BenQGuru.eMES.WinCeClient</RootNamespace>
+    <AssemblyName>BenQGuru.eMES.WinCeClient</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>BenQGuru.eMES.WinCeClient</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>App16.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WindowsCE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationService.cs" />
+    <Compile Include="CeHelper.cs" />
+    <Compile Include="Enum.cs" />
+    <Compile Include="FASNRECEIVEMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FASNRECEIVEMP.Designer.cs">
+      <DependentUpon>FASNRECEIVEMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FInOutView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FInOutView.Designer.cs">
+      <DependentUpon>FInOutView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FIQCCommand.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FIQCCommand.Designer.cs">
+      <DependentUpon>FIQCCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLocStorTransDetailMP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FLocStorTransDetailMP.Designer.cs">
+      <DependentUpon>FLocStorTransDetailMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLocStorTransMP.aspx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FLocStorTransMP.aspx.Designer.cs">
+      <DependentUpon>FLocStorTransMP.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFormTest.Designer.cs">
+      <DependentUpon>FFormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMaterialOnShelves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMaterialOnShelves.Designer.cs">
+      <DependentUpon>FMaterialOnShelves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMaterOnShelves.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FMaterOnShelves.Designer.cs">
+      <DependentUpon>FMaterOnShelves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMenuTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMenuTest.Designer.cs">
+      <DependentUpon>FMenuTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPickedView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FPickedView.Designer.cs">
+      <DependentUpon>FPickedView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPicture.Designer.cs">
+      <DependentUpon>FPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FReceiveASNMP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FReceiveASNMP.Designer.cs">
+      <DependentUpon>FReceiveASNMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSAPInvoices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSAPInvoices.Designer.cs">
+      <DependentUpon>FSAPInvoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSMTChangeReal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSMTChangeReal.designer.cs">
+      <DependentUpon>FSMTChangeReal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSMTCheck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSMTCheck.designer.cs">
+      <DependentUpon>FSMTCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSMTContinue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSMTContinue.designer.cs">
+      <DependentUpon>FSMTContinue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSMTExchanges.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSMTExchanges.designer.cs">
+      <DependentUpon>FSMTExchanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSMTLoad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSMTLoad.designer.cs">
+      <DependentUpon>FSMTLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSMTReturn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FSMTReturn.designer.cs">
+      <DependentUpon>FSMTReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FStockCheck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FStockCheck.Designer.cs">
+      <DependentUpon>FStockCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FUploadPicture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FUploadPicture.Designer.cs">
+      <DependentUpon>FUploadPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPickDone.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FPickDone.Designer.cs">
+      <DependentUpon>FPickDone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FASNRECEIVEMP.resx">
+      <DependentUpon>FASNRECEIVEMP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInOutView.resx">
+      <DependentUpon>FInOutView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FIQCCommand.resx">
+      <DependentUpon>FIQCCommand.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLocStorTransDetailMP.resx">
+      <DependentUpon>FLocStorTransDetailMP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLocStorTransMP.aspx.resx">
+      <DependentUpon>FLocStorTransMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFormTest.resx">
+      <DependentUpon>FFormTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMaterialOnShelves.resx">
+      <DependentUpon>FMaterialOnShelves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMaterOnShelves.resx">
+      <DependentUpon>FMaterOnShelves.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMenuTest.resx">
+      <DependentUpon>FMenuTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPickedView.resx">
+      <DependentUpon>FPickedView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPicture.resx">
+      <DependentUpon>FPicture.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReceiveASNMP.resx">
+      <DependentUpon>FReceiveASNMP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSAPInvoices.resx">
+      <DependentUpon>FSAPInvoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTChangeReal.resx">
+      <DependentUpon>FSMTChangeReal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTCheck.resx">
+      <DependentUpon>FSMTCheck.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTContinue.resx">
+      <DependentUpon>FSMTContinue.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTExchanges.resx">
+      <DependentUpon>FSMTExchanges.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTLoad.resx">
+      <DependentUpon>FSMTLoad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTReturn.resx">
+      <DependentUpon>FSMTReturn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FStockCheck.resx">
+      <DependentUpon>FStockCheck.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUploadPicture.resx">
+      <DependentUpon>FUploadPicture.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPickDone.resx">
+      <DependentUpon>FPickDone.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcFormTest.resx">
+      <DependentUpon>UcFormTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPackagingOperations.resx">
+      <DependentUpon>FPackagingOperations.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPickMaterial.resx">
+      <DependentUpon>FPickMaterial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPackingDetail.resx">
+      <DependentUpon>FPackingDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGFPackagingOperations.resx">
+      <DependentUpon>FGFPackagingOperations.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGFPickMaterial.resx">
+      <DependentUpon>FGFPickMaterial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGFPackingDetail.resx">
+      <DependentUpon>FGFPackingDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FStorLocTransOperations.resx">
+      <DependentUpon>FStorLocTransOperations.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FIQCCheckResultMP.resx">
+      <DependentUpon>FIQCCheckResultMP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FIQCNGRecord.resx">
+      <DependentUpon>FIQCNGRecord.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FIQCExceptionPicUpload.resx">
+      <DependentUpon>FIQCExceptionPicUpload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FIQCExceptionPic.resx">
+      <DependentUpon>FIQCExceptionPic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FIQCNGRecordForm.resx">
+      <DependentUpon>FIQCNGRecordForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPackingDetailForm.resx">
+      <DependentUpon>FPackingDetailForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGFPackingDetailForm.resx">
+      <DependentUpon>FGFPackingDetailForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UcFormTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcFormTest.Designer.cs">
+      <DependentUpon>UcFormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcPlaySoundTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UcPlaySoundTextBox.Designer.cs">
+      <DependentUpon>UcPlaySoundTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ASNReceiveService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\IQCCommand\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\LocStorTrans\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MaterialOnShelves\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\OpenService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PackagingOperationsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PickDone\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SMTLoadService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\StockCheck\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\TestService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebServiceFacade.cs" />
+    <Compile Include="FPackagingOperations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FPackagingOperations.Designer.cs">
+      <DependentUpon>FPackagingOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPickMaterial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FPickMaterial.Designer.cs">
+      <DependentUpon>FPickMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPackingDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FPackingDetail.Designer.cs">
+      <DependentUpon>FPackingDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FGFPackagingOperations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FGFPackagingOperations.Designer.cs">
+      <DependentUpon>FGFPackagingOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FGFPickMaterial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FGFPickMaterial.Designer.cs">
+      <DependentUpon>FGFPickMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FGFPackingDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FGFPackingDetail.Designer.cs">
+      <DependentUpon>FGFPackingDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FStorLocTransOperations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FStorLocTransOperations.Designer.cs">
+      <DependentUpon>FStorLocTransOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FIQCCheckResultMP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FIQCCheckResultMP.Designer.cs">
+      <DependentUpon>FIQCCheckResultMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FIQCNGRecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FIQCNGRecord.Designer.cs">
+      <DependentUpon>FIQCNGRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FIQCExceptionPicUpload.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FIQCExceptionPicUpload.Designer.cs">
+      <DependentUpon>FIQCExceptionPicUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FIQCExceptionPic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FIQCExceptionPic.Designer.cs">
+      <DependentUpon>FIQCExceptionPic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FIQCNGRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FIQCNGRecordForm.Designer.cs">
+      <DependentUpon>FIQCNGRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPackingDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPackingDetailForm.Designer.cs">
+      <DependentUpon>FPackingDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FGFPackingDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGFPackingDetailForm.Designer.cs">
+      <DependentUpon>FGFPackingDetailForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/ASNReceiveService.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\ASNReceiveService\</RelPath>
+      <UpdateFromURL>http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/ASNReceiveService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/IQCCommand.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\IQCCommand\</RelPath>
+      <UpdateFromURL>http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/IQCCommand.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/PackagingOperationsService.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\PackagingOperationsService\</RelPath>
+      <UpdateFromURL>http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/PackagingOperationsService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/PickDone.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\PickDone\</RelPath>
+      <UpdateFromURL>http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/PickDone.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/StockCheck.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\StockCheck\</RelPath>
+      <UpdateFromURL>http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/StockCheck.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/TDTech/BenQGuru.eMES.Web.WebService/LocStorTrans.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\LocStorTrans\</RelPath>
+      <UpdateFromURL>http://localhost/TDTech/BenQGuru.eMES.Web.WebService/LocStorTrans.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/TDTECH/BenQGuru.eMES.Web.WebService/OpenService.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\OpenService\</RelPath>
+      <UpdateFromURL>http://localhost/TDTECH/BenQGuru.eMES.Web.WebService/OpenService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/HCG/BenQGuru.eMES.Web.WebService/TestService.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\TestService\</RelPath>
+      <UpdateFromURL>http://localhost/HCG/BenQGuru.eMES.Web.WebService/TestService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/TDTECH/SMTLoadService.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\SMTLoadService\</RelPath>
+      <UpdateFromURL>http://localhost/TDTECH/SMTLoadService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/TDTECH/BenQGuru.eMES.Web.WebService/MaterialOnShelves.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\MaterialOnShelves\</RelPath>
+      <UpdateFromURL>http://localhost/TDTECH/BenQGuru.eMES.Web.WebService/MaterialOnShelves.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\OpenService\OpenService.wsdl" />
+    <None Include="Web References\TestService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BenQGuru.eMES.WinCeClient.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Web References\OpenService\OpenService.disco" />
+    <None Include="Web References\OpenService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\TestService\TestService.wsdl" />
+    <None Include="Web References\TestService\User1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\TestService\TestService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login_banner_emes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="App16.ico" />
+    <Content Include="Resources\Login_CopyRight.Image.jpg" />
+    <None Include="Web References\PackagingOperationsService\PackagingOperationsService.disco" />
+    <None Include="Web References\PackagingOperationsService\PackagingOperationsService.wsdl" />
+    <None Include="Web References\PackagingOperationsService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PickDone\PickDone.disco" />
+    <None Include="Web References\IQCCommand\IQCCommand.disco" />
+    <None Include="Web References\IQCCommand\IQCCommand.wsdl" />
+    <None Include="Web References\IQCCommand\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PickDone\PickDone.wsdl" />
+    <None Include="Web References\PickDone\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\StockCheck\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\StockCheck\StockCheck.disco" />
+    <None Include="Web References\ASNReceiveService\ASNReceiveService.disco" />
+    <None Include="Web References\ASNReceiveService\ASNReceiveService.wsdl" />
+    <None Include="Web References\ASNReceiveService\AsnSimple.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ASNReceiveService\ComBoxValue.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ASNReceiveService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ASNReceiveService\StNoLine.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LocStorTrans\LocStorTrans.disco" />
+    <None Include="Web References\LocStorTrans\LocStorTrans.wsdl" />
+    <None Include="Web References\LocStorTrans\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MaterialOnShelves\MaterialOnShelves.disco" />
+    <None Include="Web References\MaterialOnShelves\MaterialOnShelves.wsdl" />
+    <None Include="Web References\MaterialOnShelves\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SMTLoadService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SMTLoadService\SMTLoadService.disco" />
+    <None Include="Web References\SMTLoadService\SMTLoadService.wsdl" />
+    <None Include="Web References\StockCheck\StockCheck.wsdl" />
+    <None Include="Web References\StockCheck\StockCheckDetail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

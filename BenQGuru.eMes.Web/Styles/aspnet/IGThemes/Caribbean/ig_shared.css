@@ -1,0 +1,158 @@
+.ig_CaribbeanControl
+{
+	background-color:White;
+	font-size:xx-small;
+	font-family: verdana;
+	color:Black;
+}
+
+
+.ig_CaribbeanItem
+{
+	background-color:White;
+	font-size:10px;
+	font-family: verdana;
+	padding-left:1px;
+}
+
+
+.ig_CaribbeanButton
+{
+	cursor:pointer;;
+}
+
+
+.ig_CaribbeanButtonHover
+{
+}
+
+
+.ig_CaribbeanButtonPressed
+{
+}
+
+
+.ig_CaribbeanButtonDisabled
+{
+}
+
+
+.ig_CaribbeanHover
+{
+}
+
+
+.ig_CaribbeanSelected
+{
+}
+
+
+.ig_CaribbeanDisabled
+{
+}
+
+
+.ig_CaribbeanHeader
+{
+}
+
+
+.ig_CaribbeanFooter
+{
+}
+
+
+.ig_CaribbeanEditWithButtons
+{
+}
+
+
+.ig_CaribbeanEdit
+{
+}
+
+
+.ig_CaribbeanEditInContainer
+{
+}
+
+
+.ig_CaribbeanAlt
+{
+	border-top:solid 1px #E3EFFF;
+	border-right:solid 0px #FFFFFF;
+	border-bottom:solid 1px #E3EFFF;
+	border-left:solid 0px #FFFFFF;
+}
+
+
+.ig_CaribbeanDropDown
+{
+}
+
+
+.ig_CaribbeanEditSelected
+{
+}
+
+
+Body
+{
+}
+
+
+.ms-WPBody .igte_CaribbeanEditWithButtons TD
+{
+	background-color:Transparent;
+	font-size:1px;
+	border-bottom-style:none;
+}
+
+
+.ms-WPBody .igte_CaribbeanEditWithButtons TABLE
+{
+	font-size:1px;
+}
+
+
+.ms-wpbody .ig_CaribbeanControl td
+{
+	background-color: inherit;
+	font-style:inherit;
+	font-size:xx-small;
+	border-bottom-style:none;
+}
+
+
+.ms-wpbody .ig_CaribbeanControl table
+{
+	font-style:inherit;
+	font-size:xx-small;
+	border-collapse:Separate;
+}
+
+
+.ms-WPBody .igmc_CaribbeanControl TABLE
+{
+	font-style:inherit;
+	font-size:xx-small;
+}
+
+
+.ms-WPBody .igmc_CaribbeanControl TD
+{
+	background-color: inherit;
+	font-style:inherit;
+	font-size:xx-small;
+	border-style:inherit;
+}
+
+
+.ms-WPBody .igdw_CaribbeanControl TD
+{
+	background-color:White;
+}
+
+.ie7_DisplayInlineFix { display: inline-block; }
+.ie7_DisplayInlineFix { display: inline; }
+

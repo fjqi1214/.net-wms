@@ -1,0 +1,289 @@
+CREATE OR REPLACE FUNCTION GetSourceCard(p_RuningCard IN VARCHAR2,
+                                         p_MOCode     IN VARCHAR2)
+  RETURN VARCHAR2 AS
+  v_MOCode VARCHAR2(40);
+  v_SourceCard VARCHAR2(40);
+
+BEGIN
+
+  BEGIN
+    v_MOCode := NVL(p_MOCode, ' ');
+  
+    IF v_MOCode <> ' ' THEN
+      SELECT scard
+      INTO v_SourceCard
+      FROM (SELECT NVL(scard, ' ') AS scard
+            FROM tblonwipcardtrans
+            WHERE rcard = p_RuningCard
+            AND mocode = v_MOCode
+            ORDER BY mdate DESC, mtime DESC)
+      WHERE rownum <= 1;
+    ELSE
+      SELECT scard
+      INTO v_SourceCard
+      FROM (SELECT NVL(scard, ' ') AS scard
+            FROM tblonwipcardtrans
+            WHERE rcard = p_RuningCard
+            ORDER BY mdate DESC, mtime DESC)
+      WHERE rownum <= 1;
+    END IF;
+  EXCEPTION
+    WHEN OTHERS THEN
+      v_SourceCard := ' ';
+  END;
+
+  IF (v_SourceCard <> ' ') THEN
+    RETURN v_SourceCard;
+  ELSE
+    RETURN p_RuningCard;
+  END IF;
+
+END GetSourceCard;
+
+ 
+ 
+ //add table  2010-10-29
+ 
+ CREATE TABLE TBLCARTON2RCARD						
+	(
+	CARTONNO    VARCHAR2 (40) NOT NULL,
+	RCARD   VARCHAR2 (40) NOT NULL,
+	EATTRIBUTE1   VARCHAR2 (40),
+	MOCODE    VARCHAR2 (40) NOT NULL,
+	MUSER       VARCHAR2 (40) NOT NULL,
+	MDATE       NUMBER (8) NOT NULL,
+	MTIME       NUMBER (6) NOT NULL
+	);
+	alter table TBLCARTON2RCARD
+  add constraint PK_TBLCARTON2RCARD primary key (CARTONNO,RCARD);
+//
+
+
+--增加途程检查C/S页面
+INSERT INTO tblmdl
+(MDLCODE,PMDLCODE,MDLVER,MDLTYPE,MDLSTATUS,MDLDESC,MDLSEQ,MDLHFNAME,MUSER,MDATE,MTIME,ISSYS,ISACTIVE,FORMURL,EATTRIBUTE1,ISRESTRAIN)
+VALUES
+('CHECKROUTE','CS_DATACOLLECT','1.0','C/S','Alpha','途程检查',105,NULL,'ADMIN',20101101,142907,'1','1','BenQGuru.eMES.Client.FCheckRoute',NULL,'0')
+/
+INSERT INTO tblmenu
+(MENUCODE,MDLCODE,PMENUCODE,MENUDESC,MENUSEQ,MENUTYPE,MUSER,MDATE,MTIME,EATTRIBUTE1,VISIBILITY)
+VALUES
+('CS_CHECKROUTE','CHECKROUTE','CS_DATACOLLECT','途程检查',105,'C/S','ADMIN',20101101,143030,NULL,'0')
+/ 
+
+
+--增加锡膏类型系统参数
+//
+insert into tblsysparamgroup (PARAMGROUPCODE, PARAMGROUPTYPE, PARAMGROUPDESC, MUSER, MDATE, MTIME, ISSYS, EATTRIBUTE1)
+values ('SMT_SOLDER_TYPE', 'SMT_SOLDER_TYPE', '锡膏类型', 'ADMIN', 20101103, 155926, '0', '');
+
+/
+insert into tblsysparam (PARAMCODE, PARAMGROUPCODE, PARAMALIAS, PARAMDESC, PARAMVALUE, MUSER, MDATE, MTIME, ISACTIVE, ISSYS, EATTRIBUTE1, PARENTPARAM)
+values ('SOLDERPASTETYPE_TINANTIMONY', 'SMT_SOLDER_TYPE', 'SolderPasteType_TinAntimony', '锡锑', '', 'ADMIN', 20101103, 152633, '0', '0', '3', '');
+
+insert into tblsysparam (PARAMCODE, PARAMGROUPCODE, PARAMALIAS, PARAMDESC, PARAMVALUE, MUSER, MDATE, MTIME, ISACTIVE, ISSYS, EATTRIBUTE1, PARENTPARAM)
+values ('SOLDERPASTETYPE_HIGHTEMPERATURE', 'SMT_SOLDER_TYPE', 'SolderPasteType_HighTemperature', '高温', '', 'ADMIN', 20101103, 152654, '0', '0', '4', '');
+
+insert into tblsysparam (PARAMCODE, PARAMGROUPCODE, PARAMALIAS, PARAMDESC, PARAMVALUE, MUSER, MDATE, MTIME, ISACTIVE, ISSYS, EATTRIBUTE1, PARENTPARAM)
+values ('SOLDERPASTETYPE_PBFREE', 'SMT_SOLDER_TYPE', 'SolderPasteType_PbFree', '无铅', '', 'ADMIN', 20101103, 152404, '0', '0', '1', '');
+
+insert into tblsysparam (PARAMCODE, PARAMGROUPCODE, PARAMALIAS, PARAMDESC, PARAMVALUE, MUSER, MDATE, MTIME, ISACTIVE, ISSYS, EATTRIBUTE1, PARENTPARAM)
+values ('SOLDERPASTETYPE_PB', 'SMT_SOLDER_TYPE', 'SolderPasteType_Pb', '有铅', '', 'ADMIN', 20101103, 152438, '0', '0', '2', '');
+
+//
+
+
+
+--CS 采集包装页面更新
+// 
+update tblmdl set formurl ='BenQGuru.eMES.Client.FCollectionCarton_BV'  where mdlcode='CARTON_PACK'
+// 
+
+--TBLFEEDER增加栏位
+//
+ALTER TABLE TBLFEEDER ADD  MAXMDAY	NUMBER(22)   DEFAULT 0 NOT NULL ;
+ALTER TABLE TBLFEEDER ADD  ALTERMDAY	NUMBER(22)   DEFAULT 0 NOT NULL ; 
+ALTER TABLE TBLFEEDER ADD MAINTAINDATE	NUMBER(22)   DEFAULT 0 NULL;
+ALTER TABLE TBLFEEDER ADD MAINTAINTIME	NUMBER(22)   DEFAULT 0 NULL;
+ALTER TABLE TBLFEEDER ADD MAINTAINUSER	VARCHAR2(40) NULL;
+//
+
+--TBLITEM增加栏位
+//
+ALTER TABLE TBLITEM ADD  PCBACOUNT	NUMBER(22)	DEFAULT '1'  NOT NULL ;
+//
+
+
+--add table 
+// 
+CREATE TABLE TBLLOT2CARTONLOG
+	(
+	SERIAL     NUMBER (38) NOT NULL,
+	OQCLOT   VARCHAR2 (40) NOT NULL,
+	CARTONNO      VARCHAR2 (40) NOT NULL,
+	MOCODE      VARCHAR2 (40) NOT NULL,
+	ITEMCODE      VARCHAR2 (40) NOT NULL,
+	ADDUSER   VARCHAR2 (40),
+	ADDDATE   NUMBER (8),
+	ADDTIME   NUMBER (6),
+	REMOVEUSER VARCHAR2 (40),
+	REMOVDATE  NUMBER (8),
+	REMOVTIME  NUMBER (6)
+	);
+alter table TBLLOT2CARTONLOG
+  add constraint PK_TBLLOT2CARTONLOG primary key (serial);
+
+CREATE SEQUENCE TBLLOT2CARTONLOG_id_s
+  INCREMENT BY 1
+  START WITH 1
+  MINVALUE 1
+  MAXVALUE 999999999999999999999999999
+  NOCYCLE
+  NOORDER
+  CACHE 20
+
+ 
+CREATE OR REPLACE TRIGGER TBLLOT2CARTONLOG_BRI1
+  BEFORE INSERT ON TBLLOT2CARTONLOG
+  REFERENCING NEW AS NEW OLD AS OLD
+  FOR EACH ROW
+
+BEGIN
+  SELECT TBLLOT2CARTONLOG_id_s.NEXTVAL INTO :NEW.serial FROM DUAL;
+END;
+
+//
+//
+
+CREATE TABLE TBLLOT2CARTON
+	(
+	SERIAL     NUMBER (38) NOT NULL,
+	OQCLOT   VARCHAR2 (40) NOT NULL,
+	CARTONNO      VARCHAR2 (40) NOT NULL,
+	MOCODE      VARCHAR2 (40) NOT NULL,
+	ITEMCODE      VARCHAR2 (40) NOT NULL,
+	ADDUSER   VARCHAR2 (40),
+	ADDDATE   NUMBER (8),
+	ADDTIME   NUMBER (6)
+	);
+  alter table TBLLOT2CARTON
+  add constraint PK_TBLLOT2CARTON primary key (serial);
+	
+CREATE SEQUENCE TBLLOT2CARTON_id_s
+  INCREMENT BY 1
+  START WITH 1
+  MINVALUE 1
+  MAXVALUE 999999999999999999999999999
+  NOCYCLE
+  NOORDER
+  CACHE 20
+
+CREATE OR REPLACE TRIGGER TBLLOT2CARTON_BRI1
+  BEFORE INSERT ON TBLLOT2CARTON
+  REFERENCING NEW AS NEW OLD AS OLD
+  FOR EACH ROW
+BEGIN
+  SELECT TBLLOT2CARTON_id_s.NEXTVAL INTO :NEW.serial FROM DUAL;
+END;
+
+//
+
+
+--增加OQC送检批维护
+//
+insert into tblmdl (MDLCODE, PMDLCODE, MDLVER, MDLTYPE, MDLSTATUS, MDLDESC, MDLSEQ, MDLHFNAME, MUSER, MDATE, MTIME, ISSYS, ISACTIVE, FORMURL, EATTRIBUTE1, ISRESTRAIN)
+values ('OQCLOTQA', 'CS_FQC', '', 'C/S', 'Alpha', 'OQC送检批维护', 2, '', 'ADMIN', 20101104, 141550, '1', '1', 'BenQGuru.eMES.Client.FOQCLotQA', '', '0');
+
+
+insert into tblmenu (MENUCODE, MDLCODE, PMENUCODE, MENUDESC, MENUSEQ, MENUTYPE, MUSER, MDATE, MTIME, EATTRIBUTE1, VISIBILITY)
+values ('OQCLOTQA', 'OQCLOTQA', 'CS_FQC', 'OQC送检批维护', 2, 'C/S', 'ADMIN', 20101104, 141707, '', '0');
+
+//
+
+
+--TBlARMORPLATECONTROL增加栏位
+ALTER TABLE TBlARMORPLATECONTROL ADD  UNITPRINT	NUMBER(22)	DEFAULT '1' 
+
+//
+
+--修改TBLSTACK2RCARD表结构 
+DROP TABLE TBLSTACK2RCARD
+/
+
+CREATE TABLE TBLSTACK2RCARD
+    (STORAGECODE                   VARCHAR2(40) NOT NULL,
+    STACKCODE                      VARCHAR2(40) NOT NULL,
+    OQCLOT                         VARCHAR2(40),
+    CARTONCODE                     VARCHAR2(100) NOT NULL,   
+    SERIALNO                       VARCHAR2(40) NOT NULL,    
+    ITEMCODE                       VARCHAR2(40) NOT NULL,
+    BUSINESSREASON                 VARCHAR2(40) NOT NULL,
+    COMPANY                        VARCHAR2(100) NOT NULL,
+    ITEMGRADE                      VARCHAR2(40) NOT NULL,
+    INUSER                         VARCHAR2(40) NOT NULL,
+    INDATE                         NUMBER(22) NOT NULL,
+    INTIME                         NUMBER(22) NOT NULL,
+    MUSER                          VARCHAR2(40) NOT NULL,
+    MDATE                          NUMBER(22) NOT NULL,
+    MTIME                          NUMBER(22) NOT NULL,
+    TRANSINSERIAL                  NUMBER(22) NOT NULL)  
+/
+
+CREATE INDEX index_tblstacktorcard_indate ON tblstack2rcard
+  (
+    indate                          ASC
+  )  
+  /
+
+CREATE INDEX index_tblstacktorcard_stkstg ON tblstack2rcard
+  (
+    stackcode                       ASC,
+    storagecode                     ASC
+  )  
+/
+
+CREATE INDEX index_tblstacktorcard_itemcode ON tblstack2rcard
+  (
+    itemcode                        ASC
+  ) 
+/
+
+ALTER TABLE TBLSTACK2RCARD add  primary key (CARTONCODE,SERIALNO)
+/
+
+
+CREATE INDEX index_invintransaction_stkstr ON tblinvintransaction
+  (
+    stackcode                       ASC,
+    storagecode                     ASC
+  )  
+/
+
+CREATE INDEX index_invintransaction_carcard ON tblinvintransaction
+  (
+    cartoncode                ASC,
+    rcard                     ASC
+  )  
+/
+
+CREATE TABLE TBLINVINTRANSSUM
+    (MDATE                   NUMBER(22) NOT NULL,
+    STACKCODE                      VARCHAR2(40) NOT NULL,
+    STORAGECODE                    VARCHAR2(40) NOT NULL,      
+    ITEMCODE                       VARCHAR2(40),    
+    ITEMGRADE                      VARCHAR2(40) NOT NULL,
+    INQTY                         NUMBER(22) NOT NULL)  
+/
+
+---增加成品库系统参数维护 
+INSERT INTO tblsysparamgroup
+(PARAMGROUPCODE,PARAMGROUPTYPE,PARAMGROUPDESC,MUSER,MDATE,MTIME,ISSYS,EATTRIBUTE1)
+VALUES
+('AUTOSTORAGE','autostorage','成品库','ADMIN',20101110,144536,'0',NULL)
+/
+INSERT INTO tblsysparam
+(PARAMCODE,PARAMGROUPCODE,PARAMALIAS,PARAMDESC,PARAMVALUE,MUSER,MDATE,MTIME,ISACTIVE,ISSYS,EATTRIBUTE1,PARENTPARAM)
+VALUES
+('STORAGE','AUTOSTORAGE','成品库','成品库',NULL,'ADMIN',20101110,144707,'0','0','1',NULL)
+/
+

@@ -1,0 +1,8 @@
+[Esc]V015[Esc]H015[Esc]F001-001[Esc]BQ2003,2[$rcard1]
+[Esc]V015[Esc]H095[Esc]L0102[Esc]XS[$itemdesc1]
+[Esc]V050[Esc]H095[Esc]L0102[Esc]XS[$rcard14to10]
+[Esc]V050[Esc]H265[Esc]L0102[Esc]XS[$rcard110to14]
+[Esc]V015[Esc]H650[Esc]F001-001[Esc]BQ2003,2[$rcard2]
+[Esc]V015[Esc]H730[Esc]L0102[Esc]XS[$itemdesc2]
+[Esc]V050[Esc]H730[Esc]L0102[Esc]XS[$rcard24to10]
+[Esc]V050[Esc]H900[Esc]L0102[Esc]XS[$rcard210to14]

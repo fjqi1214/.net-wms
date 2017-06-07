@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{725DF9DD-8B87-4FB4-8F24-FD44F85359CC}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Action3.0</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BenQGuru.eMES.Common.DCT.Action</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/Action3.0/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BenQGuru.eMES.BaseSetting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Common">
+      <Name>BenQGuru.eMES.Common</Name>
+      <HintPath>..\..\..\bin\BenQGuru.eMES.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.DataCollect, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Domain">
+      <Name>BenQGuru.eMES.Domain</Name>
+      <HintPath>..\..\..\bin\BenQGuru.eMES.Domain.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Material">
+      <Name>BenQGuru.eMES.Material</Name>
+      <HintPath>..\..\..\bin\BenQGuru.eMES.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.MOModel">
+      <Name>BenQGuru.eMES.MOModel</Name>
+      <HintPath>..\..\..\bin\BenQGuru.eMES.MOModel.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.OQC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Performance, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Security">
+      <Name>BenQGuru.eMES.Security</Name>
+      <HintPath>..\..\..\bin\BenQGuru.eMES.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.SMT">
+      <Name>BenQGuru.eMES.SMT</Name>
+      <HintPath>..\..\..\bin\BenQGuru.eMES.SMT.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.TS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="BenQGuru.eMES.TSModel">
+      <Name>BenQGuru.eMES.TSModel</Name>
+      <HintPath>..\..\..\bin\BenQGuru.eMES.TSModel.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.Helper">
+      <Name>BenQGuru.eMES.Web.Helper</Name>
+      <HintPath>..\..\..\bin\BenQGuru.eMES.Web.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.OQC, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DCTCore, Version=1.0.3162.18219, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="UserControl">
+      <Name>UserControl</Name>
+      <HintPath>..\..\..\bin\UserControl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionHelper.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CollectAutoNG\ActionAutoNG.cs" />
+    <Compile Include="CollectBatchWithKeyParts\ActionBatchWithKeypaerts.cs" />
+    <Compile Include="CollectGood\ActionCollectGood.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CollectIDMerge\ActionCollectIDMerge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CollectINNO\ActionCollectINNO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CollectKeyparts\ActionCollectKeyparts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CollectMACALL\ActionCollectMACALL.cs" />
+    <Compile Include="CollectMACID\ActionCollectMACID.cs" />
+    <Compile Include="CollectMix\ActionCollectMix.cs" />
+    <Compile Include="CollectSMTNG\ActionCollectSMTNG.cs" />
+    <Compile Include="CollectNG\ActionCollectNG.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CollectOutlineGood\ActionCollectOutlineGood.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CollectOutlineNG\ActionCollectOutlineNG.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CompareAppAndProductCode\ActionCompareAppAndProductCode.cs" />
+    <Compile Include="CompareAppendix\ActionCompareApp.cs" />
+    <Compile Include="CompareProductCode\ActionCompareProductCode.cs" />
+    <Compile Include="FGPacking\ActionFGPacking.cs" />
+    <Compile Include="GotoMO\ActionGotoMO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Login\ActionLogin.cs" />
+    <Compile Include="Normal\ActionIdle.cs" />
+    <Compile Include="Login\ActionPassword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Login\ActionResource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Login\ActionUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NextOP\ActionNextOP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Normal\ActionFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Normal\ActionRCard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OffPostByUser\ActionOffPostByUser.cs.cs" />
+    <Compile Include="OnPostByUser\ActionOnPostByUser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

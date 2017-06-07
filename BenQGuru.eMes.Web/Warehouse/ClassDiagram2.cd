@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.Common" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FASNForBuyerAndLogisticMP" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>qARKygUFinMFsGlgzgOoEIpCmvwOmYwpAMtQqr5FcTI=</HashCode>
+      <FileName>FASNForBuyerAndLogisticMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FASNForVendorMP" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQKwgQFgjMFMGlAygOoEIoCmogMGIwpAMlQqpJFURI=</HashCode>
+      <FileName>FASNForVendorMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FAsnIssueCancelRecord" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQACAAFAhAAACAAFACgQAACAPACAIUAIBAAAwZEAQI=</HashCode>
+      <FileName>FAsnIssueCancelRecord.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FASNReceiveMP" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kIzoS4xADGQQAAxAxoSgQFejGdUAMARJAIBRMgrFBRg=</HashCode>
+      <FileName>FASNReceiveMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FCartonDataImpMP" Collapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwMAAAFIgAKUGoEAQ6CQEAGAIAOEARJCQSQBgJFBVo=</HashCode>
+      <FileName>FCartonDataImpMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FCreateCommandDemand" Collapsed="true">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQInCgRCgIAAihADAOkAAAKA+gIQIQgIAQQIzpFARo=</HashCode>
+      <FileName>FCreateCommandDemand.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FCreatePickCommand" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gDYKkBABChM0gGlAbAOiEKILEqgI2IQgJAwVIf5FAQ4=</HashCode>
+      <FileName>FCreatePickCommand.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FExecuteASNDetailMP" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQACABBAgIAACBABAGgAIACCsgAAAQAAAAAIipFARI=</HashCode>
+      <FileName>FExecuteASNDetailMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FExecuteASNDetailSN" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAACAABAAAAACAABAEkQAACAsACAAQAAAAAAktFARY=</HashCode>
+      <FileName>FExecuteASNDetailSN.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FExecuteASNMP" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQKQEBBogMgpG1AdgOgIYAiCogIMERAQAAAIK5FAQI=</HashCode>
+      <FileName>FExecuteASNMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FExpiredValidityMaterialRecord" Collapsed="true">
+    <Position X="17.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQACAABAgAAACAAFACgQAACAPAAAISAIAAAA0ZUAQo=</HashCode>
+      <FileName>FExpiredValidityMaterialRecord.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FINStorageDetailReport" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQASAAFAgAAACAAVACgQAgCAPICAIUAIBAAA0ZUAQI=</HashCode>
+      <FileName>FINStorageDetailReport.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FInstorageSummaryRecord" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQACAAFAgAAACAAFACgQAACAPACAIUAIBAAA0ZUAQI=</HashCode>
+      <FileName>FInstorageSummaryRecord.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FIQCDetailReport" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQASAAFAgAAACAAVACgQAgCAPICAIUAIBAAA0ZUAQI=</HashCode>
+      <FileName>FIQCDetailReport.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FIQCSummaryReport" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQASAAFAgAAACAAVACgQAgCAPICAIUAIBAAA0ZUAQI=</HashCode>
+      <FileName>FIQCSummaryReport.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FLocationMP" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gA0IwAABggIgASJADECgEAADgIgIAAQgAAIoAFZVEQI=</HashCode>
+      <FileName>FLocationMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FLocationTransDetailCarton" Collapsed="true">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQECAABAgIAAChABAShAAACAMgAAAQAAAAAAipFARI=</HashCode>
+      <FileName>FLocationTransDetailCarton.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FLocationTransDetailMP" Collapsed="true">
+    <Position X="15.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQECAABAgIAAChABAShAAACAMgAAAQAAAAAAipFARI=</HashCode>
+      <FileName>FLocationTransDetailMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FLocationTransDetailSN" Collapsed="true">
+    <Position X="17.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQACAABAgIAACBABAShAAACAMgAAAQAAAAAAgpFARI=</HashCode>
+      <FileName>FLocationTransDetailSN.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FLocationTransMP" Collapsed="true">
+    <Position X="19.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQEAAgBAgIgAChABASpASACAIgAAAQAAAAAAC5FAQI=</HashCode>
+      <FileName>FLocationTransMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FLocStorLocTransMP" Collapsed="true">
+    <Position X="21" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCQOiEBBIgIQACRAFAehSAADBtghEARBCAgQci5FRRI=</HashCode>
+      <FileName>FLocStorLocTransMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FLocStorTransDetailMP" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQACAABAgIAACBABAShAAACAMgAAAQAAAAAAi5FARI=</HashCode>
+      <FileName>FLocStorTransDetailMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FLocStorTransDetailSNMP" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQACAABAgIAACBABAShAAACAMgAAAQAAAAAAi5FARI=</HashCode>
+      <FileName>FLocStorTransDetailSNMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FMaterialOnShelvesMP" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQIUAgBAkAOACAAjiCkAgAKIIwBEIRRAASgMJ5UQQo=</HashCode>
+      <FileName>FMaterialOnShelvesMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.AsndetailsnE" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FMaterialOnShelvesMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FoutStorageDetailRecord" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQACAAFAgAAACAAFACgQAADAfACAIUAIBAAA0ZUAQI=</HashCode>
+      <FileName>FoutStorageDetailRecord.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FoutstorageSummaryReport" Collapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQACAAFAgAAACAAFACgQAADAPACAIUAIBABA0ZUAQI=</HashCode>
+      <FileName>FoutstorageSummaryReport.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FPickAlterRecord" Collapsed="true">
+    <Position X="17.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQACAAFAhAAACAAFACgQAACAPACAIUAIBAAAwZEAQI=</HashCode>
+      <FileName>FPickAlterRecord.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FPickDoneCartonDetail" Collapsed="true">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQKAAABCgMAAGgABQCgAAACgIgAEoQAAAAAAB5EARI=</HashCode>
+      <FileName>FPickDoneCartonDetail.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FPickDoneMP" Collapsed="true">
+    <Position X="21" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wBQOBAQBCgsAACgABAKkACAihIgAEIxQBAAAAr5EARI=</HashCode>
+      <FileName>FPickDoneMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FPickDoneSNDetail" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQIMAABCgMAAGAABQCgAAACgIgAEoQAAAAAAJ5EARI=</HashCode>
+      <FileName>FPickDoneSNDetail.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FPickInOutDetail" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQICAABQgEAACAABAKhAABCAMAAAAQAAAAAApZEARI=</HashCode>
+      <FileName>FPickInOutDetail.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FPODistributionQTYMP" Collapsed="true">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQIAAAAAABAAAAABACkAABCBIAAAARgAAAQIIZEARA=</HashCode>
+      <FileName>FPODistributionQTYMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FPortionStockCheckOp" Collapsed="true">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>lAwCIAABAgIEADABFAGgQACGAajIAIwBIAAQAzpFEVI=</HashCode>
+      <FileName>FPortionStockCheckOp.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FProductInstorageRecord" Collapsed="true">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQCGAAHQgAAACAAFIKhQAgCgPICAIWAIBAAAwZEAQI=</HashCode>
+      <FileName>FProductInstorageRecord.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FProductOutStorageRecord" Collapsed="true">
+    <Position X="14" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAGAAHQgCAACAAFIChUggChPICAIWAKBAAAwZEAQI=</HashCode>
+      <FileName>FProductOutStorageRecord.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FQueryPickHeadMP" Collapsed="true">
+    <Position X="17.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBxKqgNhKlMwrClRDgehUIITIswAkoRsBEABBi5FAYI=</HashCode>
+      <FileName>FQueryPickHeadMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FQueryStoragePickMP" Collapsed="true">
+    <Position X="21" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBxKqgNhKhMwrClRDgahUIITIswAkoRsBEABBi5FAYI=</HashCode>
+      <FileName>FQueryStoragePickMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FRecordOQCMP" Collapsed="true">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAAglAgIgACBAJACgACACAogAsAUAIBAAAAJEASI=</HashCode>
+      <FileName>FRecordOQCMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FRecordOQCSumMP" Collapsed="true">
+    <Position X="7" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAAglAgIgACBgJACgACACAogAsAUAIBAAAAJEAQI=</HashCode>
+      <FileName>FRecordOQCSumMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FSAPStorageInDemandDeatil" Collapsed="true">
+    <Position X="14" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAUCSABBAxMAACNARAOgAAACAsgAEIUAAEAAAgJFARI=</HashCode>
+      <FileName>FSAPStorageInDemandDeatil.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FSAPStorageInDemandQuery" Collapsed="true">
+    <Position X="15.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQCQARBAhMAAClERAOgAIhCQooCEISACEEAAAJFAQI=</HashCode>
+      <FileName>FSAPStorageInDemandQuery.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FSendCaseReceipt" Collapsed="true">
+    <Position X="17.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gARIYQFBisKTwCuQXEOgY4ETB7yxwIY9IkDUkXpccYo=</HashCode>
+      <FileName>FSendCaseReceipt.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.CalStorageQException" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FSendCaseReceipt.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.SAPException" Collapsed="true">
+    <Position X="12.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FSendCaseReceipt.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.VerticalRegion" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FSendCaseReceipt.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.HorizontalRange" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FSendCaseReceipt.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.CellRegion" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAUAAgBAAAAAAAAAAAA=</HashCode>
+      <FileName>FSendCaseReceipt.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.XlsPackage" Collapsed="true">
+    <Position X="14" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAEAIBAAQAQAsEAJABAAgACAABIAAEBASAgEBAAEAA=</HashCode>
+      <FileName>FSendCaseReceipt.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FSendCaseReceiptDetails" Collapsed="true">
+    <Position X="19.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAACAABCoIAACoABAEmQAACA8gAAIQAAAQACnpFIRI=</HashCode>
+      <FileName>FSendCaseReceiptDetails.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FSendCaseReceiptDetailsSN" Collapsed="true">
+    <Position X="21" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAACAABCpIAACoABAEmQAACA8gAAIQAAAQACnpFIQI=</HashCode>
+      <FileName>FSendCaseReceiptDetailsSN.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FSpecInMP" Collapsed="true">
+    <Position X="5.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQQIwBCBgEaBACRADA6gIQACgohIUAQAAjIAgAJFwxI=</HashCode>
+      <FileName>FSpecInMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FSpecOutMP" Collapsed="true">
+    <Position X="7" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQQIwBCBAFaBACRADA6gIQACsogIEAQAAjIAIAJFAxI=</HashCode>
+      <FileName>FSpecOutMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FSpecStorageInfo" Collapsed="true">
+    <Position X="8.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAACAABAAAAACAABAEkQAACA8AAAAQAAAQAAkpVAQI=</HashCode>
+      <FileName>FSpecStorageInfo.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FStockCheck" Collapsed="true">
+    <Position X="10.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hB4CEAgxAgIFQCsAVAGwQIAKAKgp0IYJIIRUAfpNEUI=</HashCode>
+      <FileName>FStockCheck.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FStockCheckDetails" Collapsed="true">
+    <Position X="12.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hAAACAABAgIEACAABAEkQAACA8gAAAQBAAQAAnpVARI=</HashCode>
+      <FileName>FStockCheckDetails.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FStockCheckSummary" Collapsed="true">
+    <Position X="14" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBQACAgFAgAAACAAFACgQAACAPACAIUAIBAAA0ZEEQI=</HashCode>
+      <FileName>FStockCheckSummary.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FStockPortionCheckDetails" Collapsed="true">
+    <Position X="15.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hAAACAABggIEACAABAEkQAICA8gAEAQBAAQAAnpVARI=</HashCode>
+      <FileName>FStockPortionCheckDetails.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FStorageAgeRecord" Collapsed="true">
+    <Position X="17.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAGAABEgAAACAAFACgQAAGAPACAIQAIAQAA0ZUAQI=</HashCode>
+      <FileName>FStorageAgeRecord.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FStorageDetailMP" Collapsed="true">
+    <Position X="19.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAwo0ACBgAIkACpBDgCwECEKgogAEAQgACBAIEJFEYI=</HashCode>
+      <FileName>FStorageDetailMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FStorageDetailSN" Collapsed="true">
+    <Position X="21" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAAABAAIAACBABACgAAACAogAEAQAAAAAAgJFARA=</HashCode>
+      <FileName>FStorageDetailSN.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FStorageInOperationRecord" Collapsed="true">
+    <Position X="5.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQCCAAFAgAAACABFAKgQAACCPACAIUAIBAAI0ZEAQI=</HashCode>
+      <FileName>FStorageInOperationRecord.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FStorageMP" Collapsed="true">
+    <Position X="7" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAUIwkEBAwIEACBBDFC6EQAigokIEQQgAAJAAHNXEQI=</HashCode>
+      <FileName>FStorageMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FStorageOutRecordMP" Collapsed="true">
+    <Position X="8.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAAgFCgIgACBABACgACICAogAEIUAABAAAAJFAQM=</HashCode>
+      <FileName>FStorageOutRecordMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FStorageSap2Mes" Collapsed="true">
+    <Position X="10.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAABBAgIAACBCBACgAAACAIgAAAQQAgAAAApEAQI=</HashCode>
+      <FileName>FStorageSap2Mes.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FStorLocTransDetailCarton" Collapsed="true">
+    <Position X="12.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQECAABAgIQAChABACgAAACAMgAAAQAAAAAAipFARI=</HashCode>
+      <FileName>FStorLocTransDetailCarton.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FStorLocTransDetailMP" Collapsed="true">
+    <Position X="14" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQACAABAgIQAChABACgAAACAMgAAAQAAAAAAipFARI=</HashCode>
+      <FileName>FStorLocTransDetailMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FStorLocTransDetailSN" Collapsed="true">
+    <Position X="15.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQECAABAgIQACBABACgAAACAMgAAAQCAAAAAgpFARI=</HashCode>
+      <FileName>FStorLocTransDetailSN.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FStorLocTransMP" Collapsed="true">
+    <Position X="17.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAYOAABBAoIwLChABAKpAQACgogACAZAAAAAAC5FAQI=</HashCode>
+      <FileName>FStorLocTransMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.FTDCartonPrint" Collapsed="true">
+    <Position X="21" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gATIAAFBIgIAhGBABQGgAAACiogAQAQIAACQAA5EAQI=</HashCode>
+      <FileName>FTDCartonPrint.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.Warehouse.FCreateCheckedPickLineMP" Collapsed="true">
+    <Position X="19.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQoCAAByhIQACAABAChQQACgMgIEIQgAAAAAh5FAZI=</HashCode>
+      <FileName>FCreateCheckedPickLineMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.Warehouse.FCreatePickHeadMP" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gARL+gklKtMwrGAQLIOhUCKbsswKioVoANpBBjZFEYI=</HashCode>
+      <FileName>FCreatePickHeadMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.Warehouse.FCreatePickLineMP" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQImAARShKYAjoADASlUAAHhMgIUMQgAQIQAjdFgRI=</HashCode>
+      <FileName>FCreatePickLineMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.Warehouse.FGFPackagingOperations" Collapsed="true">
+    <Position X="19.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ggQIAEgBCoIAAChBDAqhQAACpIgBE5QCBCBQIhpFAxM=</HashCode>
+      <FileName>FGFPackagingOperations.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.Warehouse.FGFPackagingOperationsSN" Collapsed="true">
+    <Position X="21" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQIEAABAgKAACBABAKgAAACgogAEAQAAABAAhpFA5A=</HashCode>
+      <FileName>FGFPackagingOperationsSN.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.Warehouse.FPackagingOperations" Collapsed="true">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ggQIAAAhGoIAAChBDAqhQAACpIgQE5QAACBQAhpFAxI=</HashCode>
+      <FileName>FPackagingOperations.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.Warehouse.FPackagingOperationsSN" Collapsed="true">
+    <Position X="15.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQIEAABAgKAACBABAKgAAACgogAEAQAAABAAhpFA5I=</HashCode>
+      <FileName>FPackagingOperationsSN.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.Warehouse.FQueryCheckedPickLineMP" Collapsed="true">
+    <Position X="15.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQQoCAAByhIQACAEBAChQQACgMgIEIQgAAAAAh5FAYI=</HashCode>
+      <FileName>FQueryCheckedPickLineMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.Warehouse.FQueryPickLineMP" Collapsed="true">
+    <Position X="19.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hAwICAIBShKQBCgABAChQIgCAMgAEIQAAAAAAh5FCRI=</HashCode>
+      <FileName>FQueryPickLineMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.Warehouse.FSAPInvoicesDetailMP" Collapsed="true">
+    <Position X="8.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQCGAABQhIYAiAABAagQAAGBMgIUIQgAAAQAhdFgRI=</HashCode>
+      <FileName>FSAPInvoicesDetailMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.Warehouse.FSAPInvoicesMP" Collapsed="true">
+    <Position X="10.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQCGwAFIhMQgGAAJAqgQCKKk8gCCIUAABgkgj5FARI=</HashCode>
+      <FileName>FSAPInvoicesMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.Warehouse.FSAPInvoicesSoftwareMP" Collapsed="true">
+    <Position X="12.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQKGwAFIhMQgGAAJAqgQCKKk8gCCIWAABgkgi5EARI=</HashCode>
+      <FileName>FSAPInvoicesSoftwareMP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.Warehouse.FStorLocTransOperations" Collapsed="true">
+    <Position X="19.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQcBAARAoIAACwEXACgwAADgIgAEAQRCCASgBpFBwo=</HashCode>
+      <FileName>FStorLocTransOperations.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.Warehouse.FViewFieldEP" Collapsed="true">
+    <Position X="5.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAQAAAEEAAAAAAAACgAAQGBAAIEAQhAAAAAAYAAAA=</HashCode>
+      <FileName>FViewFieldEP.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.ImportData.FExcelDataImp" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwIABAUCAACQEIAAY6IQEICAEAIAAVIAQQABgJBgNA=</HashCode>
+      <FileName>ImportData\FExcelDataImp.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.ImportData.ImportDateEngine" Collapsed="true">
+    <Position X="7" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQSAAgQAACEAAAAKAAAwFAgAAAAIAAAFACgwAAAhAA=</HashCode>
+      <FileName>ImportData\ImportDateEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.ImportData.ImportExcel" Collapsed="true">
+    <Position X="8.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAACAAAAAgAQAoAIACAAAABAEBAAAAFAAA=</HashCode>
+      <FileName>ImportData\ImportExcel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BenQGuru.eMES.Web.WarehouseWeb.ImportData.ImportXMLHelper" Collapsed="true">
+    <Position X="10.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgABAAAAAAAAoAQAAAAAAAAAAoAEIAAAAAQAhABAAAA=</HashCode>
+      <FileName>ImportData\ImportXMLHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

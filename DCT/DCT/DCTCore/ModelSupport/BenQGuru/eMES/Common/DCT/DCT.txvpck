@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="0w2mcpruj_v">
+    <property name="$name" value="DCT" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="design:view:::ev1xj3ddao5k9s_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTClient" />
+      <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.EventCommandHandler" />
+      <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.DCTType" />
+      <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.ActionStatus" />
+      <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.BaseActionStack" />
+      <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.BaseDCTAction" />
+      <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTActionList" />
+      <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.FlowDirect" />
+      <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.CommandEventArgs" />
+      <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.DCTCommand" />
+      <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.BaseDCTDriver" />
+      <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IDCTDriver" />
+      <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.DCTCommandList" />
+      <reference referencedUin="csharp:e_class:src:DCTCore:BenQGuru.eMES.Common.DCT.Core.IMessageParse" />
+    </reference>
+  </view>
+</nodeSet>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WatchConfig>
+  <FacWatchConfig Attribute="Fac">
+    <TypeConfig ConfigName="S01_S01ZZ01">
+      <FacMessage>{\rtf1\ansi\ansicpg936\deff0\deflang1033\deflangfe2052{\fonttbl{\f0\fswiss\fcharset0 Arial;}{\f1\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}
+{\colortbl ;\red255\green255\blue0;}
+\viewkind4\uc1\pard\cf1\lang2052\f0\fs18 lisatest\f1\par
+}
+</FacMessage>
+      <StandbyContent>TRUE</StandbyContent>
+      <ComprehensivePanel>TRUE</ComprehensivePanel>
+      <PanelDetails>TRUE</PanelDetails>
+      <AutoRefresh>15</AutoRefresh>
+      <ScreenRefresh>30</ScreenRefresh>
+      <MaxLineCount>10</MaxLineCount>
+      <PageScrolling>10</PageScrolling>
+      <DividedHoursByDay>FALSE</DividedHoursByDay>
+      <DividedHoursByWeek>FALSE</DividedHoursByWeek>
+      <DividedHoursByMonth>TRUE</DividedHoursByMonth>
+    </TypeConfig>
+  </FacWatchConfig>
+  <LineWatchConfig Attribute="Line">
+    <LineTypeConfig ConfigName="TimerConfig">
+      <timerExceptionInterval>10000</timerExceptionInterval>
+      <timerThreeAreaInterval>10000</timerThreeAreaInterval>
+      <CuerrtDay>
+      </CuerrtDay>
+    </LineTypeConfig>
+  </LineWatchConfig>
+</WatchConfig>

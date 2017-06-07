@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Format>
+  <MainBody>
+<![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="MESRPT">
+      <DataSourceReference>MESRPT</DataSourceReference>
+      <rd:DataSourceID>8ffca567-4bf8-4927-b0b5-a2da6180d772</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+<%ExtendText%>
+<%Table%>
+<%Chart%>
+    </ReportItems>
+    <Height><%ReportHeight%></Height>
+  </Body>
+  <rd:ReportID><%ReportID%></rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+<%DataSet%>
+  <Width><%ReportWidth%></Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>zh-CN</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>
+]]>
+  </MainBody>
+  <ExtendText>
+<![CDATA[
+      <Textbox Name="<%TextBoxName%>">
+        <rd:DefaultName><%TextBoxName%></rd:DefaultName>
+        <ZIndex>1</ZIndex>
+        <Left><%Left%>cm</Left>
+        <Top><%Top%>cm</Top>
+        <Height><%Height%>cm</Height>
+        <Width><%Width%>cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+<%TableCellStyle%>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Value><%TextValue%></Value>
+      </Textbox>
+]]>
+  </ExtendText>
+  <Table>
+<![CDATA[
+      <Table Name="table1">
+        <DataSetName>MESRPT</DataSetName>
+        <Top><%Top%>cm</Top>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+<%HeaderCellList%>
+              </TableCells>
+              <Height>0.5cm</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+<%TableGroups%>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+<%TableCellList%>
+              </TableCells>
+              <Height>0.5cm</Height>
+            </TableRow>
+          </TableRows>
+<%TableDetailVisibility%>
+        </Details>
+        <TableColumns>
+<%TableColumnList%>
+        </TableColumns>
+      </Table>
+]]>
+  </Table>
+  <TableGroups>
+    <![CDATA[
+        <TableGroups>
+<%TableGroup%>
+        </TableGroups>
+]]>
+  </TableGroups>
+  <TableGroup>
+    <![CDATA[
+          <TableGroup>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+<%GroupCellList%>
+                  </TableCells>
+                  <Height>0.5cm</Height>
+                </TableRow>
+              </TableRows>
+            </Header>
+            <Sorting>
+              <SortBy>
+                <SortExpression><%GroupSortExpression%></SortExpression>
+                <Direction>Ascending</Direction>
+              </SortBy>
+            </Sorting>
+            <Grouping Name="<%GroupName%>">
+              <GroupExpressions>
+                <GroupExpression><%GroupExpression%></GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+<%Visibility%>
+          </TableGroup>
+]]>
+  </TableGroup>
+  <GroupCell>
+    <![CDATA[
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="<%TextBoxName%>">
+                      <rd:DefaultName><%TextBoxName%></rd:DefaultName>
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+<%TableCellStyle%>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value><%CellText%></Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+]]>
+  </GroupCell>
+  <TableCell>
+    <![CDATA[
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="<%TextBoxName%>">
+                      <rd:DefaultName><%TextBoxName%></rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+<%TableCellStyle%>
+                      </Style>                     
+                      <CanGrow>true</CanGrow>
+                      <Value><%TextBoxValue%></Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+]]>
+  </TableCell>
+  <TableCellStyle>
+<![CDATA[
+                        <FontFamily><%FontFamily%></FontFamily>
+                        <FontSize><%FontSize%></FontSize>
+                        <FontWeight><%FontWeight%></FontWeight>
+                        <TextDecoration><%TextDecoration%></TextDecoration>
+                        <FontStyle><%FontStyle%></FontStyle>
+                        <BackgroundColor><%BackgroundColor%></BackgroundColor>
+                        <Color><%Color%></Color>
+                        <Format><%Format%></Format>
+                        <TextAlign><%TextAlign%></TextAlign>
+                        <VerticalAlign><%VerticalAlign%></VerticalAlign>
+<%BorderStyle%>
+]]>
+  </TableCellStyle>
+  <CellBorderStyle>
+    <![CDATA[
+                        <BorderStyle>
+                          <Default><%BorderStyle%></Default>
+                        </BorderStyle>
+]]>
+  </CellBorderStyle>
+  <HeaderCell>
+    <![CDATA[
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="<%TextBoxName%>">
+                      <rd:DefaultName><%TextBoxName%></rd:DefaultName>
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+<%TableCellStyle%>
+                      </Style>
+                        <UserSort>
+                        <SortExpression><%SortColumnName%></SortExpression>
+                        <SortTarget>MESRPT</SortTarget>
+                      </UserSort>
+                      <CanGrow>true</CanGrow>
+                      <Value><%HeaderText%></Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+]]>
+  </HeaderCell>
+  <TableColumn>
+<![CDATA[
+          <TableColumn>
+            <Width><%Width%>cm</Width>
+          </TableColumn>
+]]>
+  </TableColumn>
+  <Visibility>
+<![CDATA[
+          <Visibility>
+            <ToggleItem><%ToggleItem%></ToggleItem> 
+            <Hidden>true</Hidden> 
+          </Visibility>
+]]>
+  </Visibility>
+  <DataSet>
+<![CDATA[
+  <DataSets>
+    <DataSet Name="MESRPT">
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText><%SQLQuery%></CommandText>
+        <DataSourceName>MESRPT</DataSourceName>
+      </Query>
+      <Fields>
+<%FieldList%>
+      </Fields>
+    </DataSet>
+  </DataSets>
+]]>
+  </DataSet>
+  <DataSetField>
+<![CDATA[
+        <Field Name="<%Name%>">
+          <rd:TypeName><%Type%></rd:TypeName>
+          <DataField><%Name%></DataField>
+        </Field>
+]]>
+  </DataSetField>
+  <Chart>
+<![CDATA[
+      <Chart Name="<%ChartName%>">
+        <Type><%ChartType%></Type>
+        <Legend>
+          <Visible><%ShowLegend%></Visible>
+          <Style>
+            <BorderStyle>
+              <Default>Solid</Default>
+            </BorderStyle>
+          </Style>
+          <Position>RightCenter</Position>
+        </Legend>
+        <Subtype>Plain</Subtype>
+        <Title />
+        <Top><%Top%>cm</Top>
+        <Height>8.75cm</Height>
+        <CategoryAxis>
+          <Axis>
+            <Title />
+            <MajorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MajorGridLines>
+            <MinorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MinorGridLines>
+            <MajorTickMarks>Outside</MajorTickMarks>
+            <Min>0</Min>
+            <Visible>true</Visible>
+          </Axis>
+        </CategoryAxis>
+        <PointWidth>0</PointWidth>
+        <Left>0.5cm</Left>
+        <ThreeDProperties>
+          <Rotation>30</Rotation>
+          <Inclination>30</Inclination>
+          <Shading>Simple</Shading>
+          <WallThickness>50</WallThickness>
+        </ThreeDProperties>
+        <DataSetName>MESRPT</DataSetName>
+        <SeriesGroupings>
+<%SeriesGroup%>
+        </SeriesGroupings>
+        <PlotArea>
+          <Style>
+            <BorderStyle>
+              <Default>Solid</Default>
+            </BorderStyle>
+            <BackgroundColor>LightGrey</BackgroundColor>
+          </Style>
+        </PlotArea>
+        <ValueAxis>
+          <Axis>
+            <Title />
+            <MajorGridLines>
+              <ShowGridLines>true</ShowGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MajorGridLines>
+            <MinorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MinorGridLines>
+            <MajorTickMarks>Outside</MajorTickMarks>
+            <Min>0</Min>
+            <Margin>true</Margin>
+            <Visible>true</Visible>
+            <Scalar>true</Scalar>
+          </Axis>
+        </ValueAxis>
+        <Width>20.25cm</Width>
+<%CategoryGroupingList%>
+        <Palette>Default</Palette>
+        <ChartData>
+<%ChartData%>
+        </ChartData>
+        <Style>
+          <BackgroundColor>White</BackgroundColor>
+        </Style>
+      </Chart>
+]]>
+  </Chart>
+  <SeriesGroupDynamic>
+    <![CDATA[
+          <SeriesGrouping>
+            <DynamicSeries>
+              <Grouping Name="<%SeriesName%>">
+                <GroupExpressions>
+                  <GroupExpression><%GroupExpression%></GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Label><%Label%></Label>
+            </DynamicSeries>
+          </SeriesGrouping>
+]]>
+  </SeriesGroupDynamic>
+  <SeriesGroupStatic>
+    <![CDATA[
+          <SeriesGrouping>
+            <StaticSeries>
+<%SeriesGroupStaticMember%>
+            </StaticSeries>
+          </SeriesGrouping>
+]]>
+  </SeriesGroupStatic>
+  <SeriesGroupStaticMember>
+<![CDATA[
+              <StaticMember>
+                <Label><%Label%></Label>
+              </StaticMember>
+]]>
+  </SeriesGroupStaticMember>
+  <CategoryGroupingList>
+<![CDATA[
+        <CategoryGroupings>
+<%CategoryGrouping%>
+        </CategoryGroupings>
+]]>
+  </CategoryGroupingList>
+  <CategoryGrouping>
+    <![CDATA[
+          <CategoryGrouping>
+            <DynamicCategories>
+              <Grouping Name="<%CategoryName%>">
+                <GroupExpressions>
+                  <GroupExpression><%GroupExpression%></GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Label><%Label%></Label>
+            </DynamicCategories>
+          </CategoryGrouping>
+]]>
+  </CategoryGrouping>
+  <ChartData>
+    <![CDATA[
+          <ChartSeries>
+            <DataPoints>
+              <DataPoint>
+                <DataValues>
+                  <DataValue>
+                    <Value><%Value%></Value>
+                  </DataValue>
+                </DataValues>
+                <DataLabel>
+<%DataLabelStyle%>
+                </DataLabel>
+                <Marker>
+<%MarkerType%>
+                </Marker>
+              </DataPoint>
+            </DataPoints>
+          </ChartSeries>
+]]>
+  </ChartData>
+  <ChartDataLabelStyle>
+    <![CDATA[
+                  <Style>
+<%TableCellStyle%>
+                  </Style>
+                  <Visible>true</Visible>
+]]>
+                  </ChartDataLabelStyle>
+                  <ChartDataMarkerType>
+                    <![CDATA[
+                  <Type><%MarkerType%></Type>
+                  <Size>6pt</Size>
+]]>
+  </ChartDataMarkerType>
+</Format>

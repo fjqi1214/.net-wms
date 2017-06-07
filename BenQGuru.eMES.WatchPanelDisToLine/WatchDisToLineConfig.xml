@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WatchConfig>
+  <DisToLineConfig Attribute="DisToLine">
+    <DisToLineWatchConfig ConfigName="TimerCofig">
+      <!--看板自动刷新时间(分钟)-->
+      <PanelRefresh>0.1</PanelRefresh>
+      <!--翻页时间(分钟)-->
+      <PageChangeTimer>0.1</PageChangeTimer>
+      <!--每页显示行数-->
+      <PagerRowCount>3</PagerRowCount>
+      <!--预警自动刷新时间-->
+      <MessageRefresh>0.1</MessageRefresh>
+    </DisToLineWatchConfig>
+  </DisToLineConfig>
+</WatchConfig>

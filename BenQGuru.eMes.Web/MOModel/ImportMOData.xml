@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+ <datatype name="ImportMO" text="工单导入">
+   <field>
+      <add key="MOCODE" value_CHS="工单代码"  value_CHT="工單代碼"  value_ENU="MoCode" Match="false" AllowNull="false"></add>
+      <add key="FACTORY" value_CHS="工厂"  value_CHT="工廠"  value_ENU="Factory" Match="false" AllowNull="false"></add>
+      <add key="ITEMCODE" value_CHS="产品代码"  value_CHT="產品代碼"  value_ENU="ItemCode" Match="false" AllowNull="false"></add>
+      <add key="MOTYPE" value_CHS="工单类型"  value_CHT="工單類型"  value_ENU="MoType" Match="false" AllowNull="false"></add>
+      <add key="MOPLANQTY" value_CHS="工单计划产量"  value_CHT="工單計劃產量"  value_ENU="MoPlanQty" Match="false" AllowNull="false"></add>
+      <add key="STARTDATE" value_CHS="计划开工日期"  value_CHT="計劃開工日期"  value_ENU="StartDate" Match="false" AllowNull="false"></add>
+      <add key="ENDDATE" value_CHS="计划完成日期"  value_CHT="計劃完成日期"  value_ENU="EndDate" Match="false" AllowNull="false"></add>
+      <add key="CUSTOMERCODE" value_CHS="客户代码"  value_CHT="客戶代碼"  value_ENU="CustomerCode" Match="false" AllowNull="false"></add>
+      <add key="CUSTOMERORDER" value_CHS="客户单号"  value_CHT="客戶單號"  value_ENU="CustomerOrder" Match="false" AllowNull="false"></add>
+      <add key="MOMEMO" value_CHS="工单别"  value_CHT="工單別"  value_ENU="MoMemo" Match="false" AllowNull="false"></add>
+      <add key="MOBOM" value_CHS="可选BOM"  value_CHT="可選BOM"  value_ENU="MoBOM" Match="false" AllowNull="false"></add>
+   </field>
+ </datatype>
+</data> 

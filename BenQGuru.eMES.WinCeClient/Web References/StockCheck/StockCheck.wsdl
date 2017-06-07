@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetPortionStockCheckFromCheckNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPortionStockCheckFromCheckNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPortionStockCheckFromCheckNoResult" type="tns:StockCheckDetail" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StockCheckDetail">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:DomainObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CheckNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="StorageCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LocationCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CARTONNO" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DQMCODE" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MDESC" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UNIT" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="STORAGEQTY" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="CheckQty" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="CUSER" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CDATE" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CTIME" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="MDATE" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="MTIME" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="MUSER" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DomainObject">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IsBlobIgnored" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPortionStockChecks">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPortionStockChecksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPortionStockChecksResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStorageDetailsFromCARTONNO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CARTONNO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStorageDetailsFromCARTONNOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStorageDetailsFromCARTONNOResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddStockCheckDetailCarton">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="storageCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="locationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CARTONNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DQMCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="checkQty" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SLocationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SCARTONNO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddStockCheckDetailCartonResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWaitStockCheckNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWaitStockCheckNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWaitStockCheckNoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPortionStockCheckOps">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPortionStockCheckOpsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPortionStockCheckOpsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitPortionCheck">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="checkQtyStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="locationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="diffDesc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dqmCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitPortionCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubmitPortionCheckResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPortionStockCheckFromCheckNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPortionStockCheckFromCheckNo" />
+  </wsdl:message>
+  <wsdl:message name="GetPortionStockCheckFromCheckNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPortionStockCheckFromCheckNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPortionStockChecksSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPortionStockChecks" />
+  </wsdl:message>
+  <wsdl:message name="GetPortionStockChecksSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPortionStockChecksResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStorageDetailsFromCARTONNOSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStorageDetailsFromCARTONNO" />
+  </wsdl:message>
+  <wsdl:message name="GetStorageDetailsFromCARTONNOSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStorageDetailsFromCARTONNOResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddStockCheckDetailCartonSoapIn">
+    <wsdl:part name="parameters" element="tns:AddStockCheckDetailCarton" />
+  </wsdl:message>
+  <wsdl:message name="AddStockCheckDetailCartonSoapOut">
+    <wsdl:part name="parameters" element="tns:AddStockCheckDetailCartonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWaitStockCheckNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWaitStockCheckNo" />
+  </wsdl:message>
+  <wsdl:message name="GetWaitStockCheckNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWaitStockCheckNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPortionStockCheckOpsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPortionStockCheckOps" />
+  </wsdl:message>
+  <wsdl:message name="GetPortionStockCheckOpsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPortionStockCheckOpsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitPortionCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitPortionCheck" />
+  </wsdl:message>
+  <wsdl:message name="SubmitPortionCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitPortionCheckResponse" />
+  </wsdl:message>
+  <wsdl:portType name="StockCheckSoap">
+    <wsdl:operation name="GetPortionStockCheckFromCheckNo">
+      <wsdl:input message="tns:GetPortionStockCheckFromCheckNoSoapIn" />
+      <wsdl:output message="tns:GetPortionStockCheckFromCheckNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortionStockChecks">
+      <wsdl:input message="tns:GetPortionStockChecksSoapIn" />
+      <wsdl:output message="tns:GetPortionStockChecksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageDetailsFromCARTONNO">
+      <wsdl:input message="tns:GetStorageDetailsFromCARTONNOSoapIn" />
+      <wsdl:output message="tns:GetStorageDetailsFromCARTONNOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddStockCheckDetailCarton">
+      <wsdl:input message="tns:AddStockCheckDetailCartonSoapIn" />
+      <wsdl:output message="tns:AddStockCheckDetailCartonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWaitStockCheckNo">
+      <wsdl:input message="tns:GetWaitStockCheckNoSoapIn" />
+      <wsdl:output message="tns:GetWaitStockCheckNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortionStockCheckOps">
+      <wsdl:input message="tns:GetPortionStockCheckOpsSoapIn" />
+      <wsdl:output message="tns:GetPortionStockCheckOpsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitPortionCheck">
+      <wsdl:input message="tns:SubmitPortionCheckSoapIn" />
+      <wsdl:output message="tns:SubmitPortionCheckSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="StockCheckSoap" type="tns:StockCheckSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPortionStockCheckFromCheckNo">
+      <soap:operation soapAction="http://tempuri.org/GetPortionStockCheckFromCheckNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortionStockChecks">
+      <soap:operation soapAction="http://tempuri.org/GetPortionStockChecks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageDetailsFromCARTONNO">
+      <soap:operation soapAction="http://tempuri.org/GetStorageDetailsFromCARTONNO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStockCheckDetailCarton">
+      <soap:operation soapAction="http://tempuri.org/AddStockCheckDetailCarton" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWaitStockCheckNo">
+      <soap:operation soapAction="http://tempuri.org/GetWaitStockCheckNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortionStockCheckOps">
+      <soap:operation soapAction="http://tempuri.org/GetPortionStockCheckOps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitPortionCheck">
+      <soap:operation soapAction="http://tempuri.org/SubmitPortionCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="StockCheckSoap12" type="tns:StockCheckSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPortionStockCheckFromCheckNo">
+      <soap12:operation soapAction="http://tempuri.org/GetPortionStockCheckFromCheckNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortionStockChecks">
+      <soap12:operation soapAction="http://tempuri.org/GetPortionStockChecks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageDetailsFromCARTONNO">
+      <soap12:operation soapAction="http://tempuri.org/GetStorageDetailsFromCARTONNO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStockCheckDetailCarton">
+      <soap12:operation soapAction="http://tempuri.org/AddStockCheckDetailCarton" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWaitStockCheckNo">
+      <soap12:operation soapAction="http://tempuri.org/GetWaitStockCheckNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortionStockCheckOps">
+      <soap12:operation soapAction="http://tempuri.org/GetPortionStockCheckOps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitPortionCheck">
+      <soap12:operation soapAction="http://tempuri.org/SubmitPortionCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StockCheck">
+    <wsdl:port name="StockCheckSoap" binding="tns:StockCheckSoap">
+      <soap:address location="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/StockCheck.asmx" />
+    </wsdl:port>
+    <wsdl:port name="StockCheckSoap12" binding="tns:StockCheckSoap12">
+      <soap12:address location="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/StockCheck.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <datatype name="IndirectManCount" text="非直接人力维护">
+    <field>
+      <add key="ShiftDate" value="日期" Match="false" AllowNull="false"></add>
+      <add key="ShiftCode" value="班次代码" Match="false" AllowNull="false"></add>
+      <add key="CrewCode" value="班组代码" Match="false" AllowNull="false" ></add>
+      <add key="FacCode" value="车间代码" Match="false" AllowNull="false"></add>
+      <add key="FirstClass" value="一级分类" Match="false" AllowNull="false"></add>
+      <add key="ManCount" value="人数" Match="false" AllowNull="false"></add>
+      <add key="Duration" value="时长(小时)" Match="false" AllowNull="false"></add>
+    </field>
+  </datatype>
+  <datatype name="Line2Crew" text="维护产线对应班组信息">
+    <field>
+      <add key="ShiftDate" value="日期" Match="false" AllowNull="false"></add>
+      <add key="SSCode" value="产线代码" Match="false" AllowNull="false"></add>
+      <add key="ShiftCode" value="班次代码" Match="false" AllowNull="false"></add>
+      <add key="CrewCode" value="班组代码" Match="false" AllowNull="false" ></add>      
+    </field>
+  </datatype>
+  
+
+</data>

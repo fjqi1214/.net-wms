@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+ <datatype name="ImportSMTReel" text="料站表导入">
+   <field>
+      <add key="SSCODE" value_CHS="产线代码"  value_CHT="產線代碼"  value_ENU="SSCODE" Match="false" AllowNull="false"></add>
+      <add key="ITEMCODE" value_CHS="产品代码"  value_CHT="產品代碼"  value_ENU="ITEMCODE" Match="false" AllowNull="false"></add>
+      <add key="MACHINECODE" value_CHS="机台代码"  value_CHT="機台代碼"  value_ENU="MACHINECODE" Match="false" AllowNull="false"></add>
+      <add key="MACHINESTATIONCODE" value_CHS="站位"  value_CHT="站位"  value_ENU="MACHINESTATIONCODE" Match="false" AllowNull="false"></add>
+      <add key="SOURCEMATERIALCODE" value_CHS="首选料"  value_CHT="首選料"  value_ENU="SOURCEMATERIALCODE" Match="false" AllowNull="false"></add>
+      <add key="MATERIALCODE" value_CHS="物料代码"  value_CHT="物料代碼"  value_ENU="MATERIALCODE" Match="false" AllowNull="false"></add>
+      <add key="FEEDERSPECCODE" value_CHS="Feeder规格代码"  value_CHT="Feeder規格代碼"  value_ENU="FEEDERSPECCODE" Match="false" AllowNull="false"></add>
+      <add key="QTY" value_CHS="数量"  value_CHT="數量"  value_ENU="QTY" Match="false" AllowNull="false"></add>
+      <add key="PCBTABLE" value_CHS="PCBTable"  value_CHT="PCBTable"  value_ENU="PCBTable" Match="false" AllowNull="false"></add>
+   </field>
+ </datatype>
+</data> 

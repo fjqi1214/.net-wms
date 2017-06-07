@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Formats>
+    <Format Name="PIDAOIData"
+        FileFormat = "HeaderData"
+        FileNameSeparator = ""
+        HeaderRowCount = "0"
+       	HeaderRecordSeparator = ",\n"
+       	HeaderColumnSeparator = ","
+       	ContentRecordSeparator = "\n"
+       	ContentColumnSeparator = ","
+       	IsContentMultiRecord = "1"
+       	ContentMultiRecordInterval = "1"
+      	SaveDataDirectly = "0"
+    >
+        <ObjectMap IsObjectInsert = "0"  ObjectType="BenQGuru.eMES.FacilityFileParser.PIDAOIData">
+    		<Column
+    			AttributeName="RCARD"
+    			ColumnName = "RCARD"
+    			DataType = "string"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "0"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+    		<Column
+    			AttributeName="RESULT"
+    			ColumnName = "RESULT"
+    			DataType = "string"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "1"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+    		<Column
+    			AttributeName="RESOURCE"
+    			ColumnName = "RESOURCE"
+    			DataType = "string"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "2"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>	
+    		<Column
+    			AttributeName="USER"
+    			ColumnName = "USER"
+    			DataType = "string"
+    			DataSource = "Content"
+    			DataLine = "0"
+    			DataColumn = "3"
+    			DataStringFrom = "0"
+    			DataStringTo="99"
+    			Default = ""
+    		/>
+			<Column
+    				AttributeName="ERRORCODES"
+    				ColumnName = "ERRORCODES"
+    				DataType = "string"
+    				DataSource = "Content"
+    				DataLine = "0"
+    				DataColumn = "4"
+    				DataStringFrom = "0"
+    				DataStringTo="999"
+    				Default = ""
+    			/>
+        </ObjectMap>
+    </Format>
+</Formats>

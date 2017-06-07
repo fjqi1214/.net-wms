@@ -1,0 +1,1032 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <ItemList>
+    <!-- 班制 -->
+    <Item Type="BenQGuru.eMES.Domain.BaseSetting.ShiftType" Name="ShiftType"  Text="班制" TemplateFileName="ShiftType.xls">
+      <FieldList>
+        <Field Name="ShiftTypeCode" Text="班制代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="ShiftTypeDescription" Text="班制描述"></Field>
+      </FieldList>
+    </Item>
+    <!-- 班次 -->
+    <Item Type="BenQGuru.eMES.Domain.BaseSetting.Shift" Name="Shift"  Text="班次" TemplateFileName="Shift.xls">
+      <FieldList>
+        <Field Name="ShiftSequence" Text="班次次序" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="integer"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="ShiftCode" Text="班次代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="ShiftDescription" Text="班次描述"></Field>
+        <Field Name="ShiftTypeCode" Text="所属班制" AllowNull="false">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.ShiftType" ParentObjectField="ShiftTypeCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="ShiftBeginTime" Text="起始时间" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="integer"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="ShiftEndTime" Text="结束时间" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="integer"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="IsOverDate" Text="是否跨天" AllowNull="false" MatchType="BoolType10"></Field>
+      </FieldList>
+    </Item>
+    <!-- 时段 -->
+    <Item Type="BenQGuru.eMES.Domain.BaseSetting.TimePeriod" Name="TimePeriod"  Text="时段" TemplateFileName="TimePeriod.xls">
+      <FieldList>
+        <Field Name="TimePeriodCode" Text="时段代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="TimePeriodDescription" Text="时段描述"></Field>
+        <Field Name="TimePeriodType" Text="时段类型" AllowNull="false"></Field>
+        <Field Name="ShiftCode" Text="所属班次" AllowNull="false">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.Shift" ParentObjectField="ShiftCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="TimePeriodSequence" Text="时段序列" AllowNull="false"></Field>
+        <Field Name="TimePeriodBeginTime" Text="起始时间" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="integer"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="TimePeriodEndTime" Text="结束时间" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="integer"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="IsOverDate" Text="是否跨天" AllowNull="false" MatchType="BoolType10"></Field>
+        <Field Name="ShiftTypeCode" Text="所属班制" DataFrom="Query" DataQuerySql="select shifttypecode from tblshift where shiftcode='{0}'" DataQueryParam="ShiftCode"></Field>
+      </FieldList>
+    </Item>
+    <!-- 工厂 -->
+    <Item Type="BenQGuru.eMES.Domain.Warehouse.Factory" Name="Factory"  Text="工厂" TemplateFileName="Factory.xls">
+      <FieldList>
+        <Field Name="FactoryCode" Text="工厂代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="FactoryDescription" Text="工厂名称"></Field>
+        <Field Name="OrganizationID" Text="组织编号"></Field>
+      </FieldList>
+    </Item>
+    <!-- 工段 -->
+    <Item Type="BenQGuru.eMES.Domain.BaseSetting.Segment" Name="Segment"  Text="工段" TemplateFileName="Segment.xls">
+      <FieldList>
+        <Field Name="SegmentCode" Text="工段代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="SegmentDescription" Text="工段描述"></Field>
+        <Field Name="ShiftTypeCode" Text="所属班制" AllowNull="false">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.ShiftType" ParentObjectField="ShiftTypeCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="OrganizationID" Text="组织编号"></Field>
+      </FieldList>
+    </Item>
+    <!-- 产线 -->
+    <Item Type="BenQGuru.eMES.Domain.BaseSetting.StepSequence" Name="StepSequence"  Text="产线" TemplateFileName="Line.xls">
+      <FieldList>
+        <Field Name="StepSequenceCode" Text="产线代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="StepSequenceDescription" Text="产线描述"></Field>
+        <Field Name="SegmentCode" Text="所属工段" AllowNull="false">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.Segment" ParentObjectField="SegmentCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="ShiftTypeCode" Text="所属班制" AllowNull="false">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.ShiftType" ParentObjectField="ShiftTypeCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="OrganizationID" Text="组织编号"></Field>
+        <Field Name="StepSequenceType" Text="产线类型" AllowNull="false" MatchType="StepSequenceType"></Field>
+      </FieldList>
+    </Item>
+    <!-- 资源 -->
+    <Item Type="BenQGuru.eMES.Domain.BaseSetting.Resource" Name="Resource"  Text="资源" TemplateFileName="Resource.xls">
+      <FieldList>
+        <Field Name="ResourceCode" Text="资源代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="ResourceDescription" Text="资源描述"></Field>
+        <Field Name="StepSequenceCode" Text="所属产线">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.StepSequence" ParentObjectField="StepSequenceCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="OPCode" Text="所属工序"  IncludeItem="false"  ForeignItem="true" IgnoreForeignWhenNull="true">
+          <ForeignItem Type="BenQGuru.eMES.Domain.BaseSetting.Operation2Resource" Name="Operation2Resource" Text="工序-资源">
+            <FieldList>
+              <Field Name="OPCode" Text="所属工序" UniqueGroup="1" DataFrom="ParentNode" ParentNodeField="OPCode">
+                <CheckList>
+                  <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.Operation" ParentObjectField="OPCode"></Check>
+                </CheckList>
+              </Field>
+              <Field Name="ResourceCode" Text="资源代码" UniqueGroup="1" DataFrom="ParentItem" ParentNodeField="ResourceCode"></Field>
+            </FieldList>
+            <DefaultFieldList>
+              <Field Name="ResourceSequence" DefaultValue="0"></Field>
+            </DefaultFieldList>
+          </ForeignItem>
+        </Field>
+        <Field Name="SegmentCode" Text="所属工段" DataFrom="Query" DataQuerySql="select segcode from tblss where sscode='{0}'" DataQueryParam="StepSequenceCode"></Field>
+        <Field Name="ShiftTypeCode" Text="班制代码" DataFrom="Query" DataQuerySql="select shifttypecode from tblss where sscode='{0}'" DataQueryParam="StepSequenceCode"></Field>
+        <Field Name="OrganizationID" Text="组织编号"></Field>
+      </FieldList>
+      <DefaultFieldList>
+        <Field Name="ResourceType" DefaultValue="ResourceType_Human"></Field>
+      </DefaultFieldList>
+    </Item>
+    <!-- 不良责任 -->
+    <Item Type="BenQGuru.eMES.Domain.TSModel.Duty" Name="Duty"  Text="不良责任" TemplateFileName="Duty.xls">
+      <FieldList>
+        <Field Name="DutyCode" Text="责任别代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="DutyDescription" Text="责任别描述"></Field>
+      </FieldList>
+    </Item>
+    <!-- 解决方案 -->
+    <Item Type="BenQGuru.eMES.Domain.TSModel.Solution" Name="Solution"  Text="解决方案" TemplateFileName="Solution.xls">
+      <FieldList>
+        <Field Name="SolutionCode" Text="解决方案代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="SolutionDescription" Text="解决方案描述"></Field>
+      </FieldList>
+    </Item>
+    <!-- 不良原因组 -->
+    <Item Type="BenQGuru.eMES.Domain.TSModel.ErrorCauseGroup" Name="ErrorCauseGroup"  Text="不良原因组" TemplateFileName="ErrorCauseGroup.xls">
+      <FieldList>
+        <Field Name="ErrorCauseGroupCode" Text="不良原因组" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="ErrorCauseGroupDescription" Text="不良原因组描述"></Field>
+      </FieldList>
+    </Item>
+    <!-- 不良原因 -->
+    <Item Type="BenQGuru.eMES.Domain.TSModel.ErrorCause" Name="ErrorCause"  Text="不良原因" TemplateFileName="ErrorCause.xls">
+      <FieldList>
+        <Field Name="ErrorCauseCode" Text="不良原因" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="ErrorCauseDescription" Text="不良原因描述"></Field>
+        <Field Name="ErrorCauseGroupCode" Text="不良原因组" AllowNull="false"  IncludeItem="false"  ForeignItem="true">
+          <ForeignItem Type="BenQGuru.eMES.Domain.TSModel.ErrorCauseGroup2ErrorCause" Name="ErrorCauseGroup2ErrorCause" Text="不良原因组-不良原因">
+            <FieldList>
+              <Field Name="ErrorCauseGroupCode" Text="不良原因组" UniqueGroup="1" DataFrom="ParentNode" ParentNodeField="ErrorCauseGroupCode"></Field>
+              <Field Name="ErrorCause" Text="不良原因" UniqueGroup="1" DataFrom="ParentItem" ParentNodeField="ErrorCauseCode"></Field>
+            </FieldList>
+          </ForeignItem>
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.TSModel.ErrorCauseGroup" ParentObjectField="ErrorCauseGroupCode"></Check>
+          </CheckList>
+        </Field>
+      </FieldList>
+    </Item>
+    <!-- 不良代码组 -->
+    <Item Type="BenQGuru.eMES.Domain.TSModel.ErrorCodeGroupA" Name="ErrorCodeGroup"  Text="不良代码组" TemplateFileName="ErrorCodeGroup.xls">
+      <FieldList>
+        <Field Name="ErrorCodeGroup" Text="不良代码组" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="ErrorCodeGroupDescription" Text="不良代码组描述"></Field>
+      </FieldList>
+    </Item>
+    <!-- 不良代码 -->
+    <Item Type="BenQGuru.eMES.Domain.TSModel.ErrorCodeA" Name="ErrorCode"  Text="不良代码" TemplateFileName="ErrorCode.xls">
+      <FieldList>
+        <Field Name="ErrorCode" Text="不良代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="ErrorDescription" Text="不良代码描述"></Field>
+        <Field Name="ErrorCodeGroup" Text="不良代码组" AllowNull="false"  IncludeItem="false"  ForeignItem="true">
+          <ForeignItem Type="BenQGuru.eMES.Domain.TSModel.ErrorCodeGroup2ErrorCode" Name="ErrorCodeGroup2ErrorCode" Text="不良代码组-不良代码">
+            <FieldList>
+              <Field Name="ErrorCodeGroup" Text="不良代码组" UniqueGroup="1" DataFrom="ParentNode" ParentNodeField="ErrorCodeGroup"></Field>
+              <Field Name="ErrorCode" Text="不良代码" UniqueGroup="1" DataFrom="ParentItem" ParentNodeField="ErrorCode"></Field>
+            </FieldList>
+          </ForeignItem>
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.TSModel.ErrorCodeGroupA" ParentObjectField="ErrorCodeGroup"></Check>
+          </CheckList>
+        </Field>
+      </FieldList>
+    </Item>
+    <!-- 不良代码组返工途程 -->
+    <!-- <Item Type="BenQGuru.eMES.Domain.TSModel.ErrorCodeGroupReworkRoute" Name="ErrorCodeGroupReworkRoute"  Text="不良代码组返工途程" TemplateFileName="ErrorCodeGroupReworkRoute.xls">
+      <FieldList>
+        <Field Name="ErrorCodeGroup" Text="不良代码组" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.TSModel.ErrorCodeGroupA" ParentObjectField="ErrorCodeGroup"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="ItemCode" Text="产品代码" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.MOModel.Item" ParentObjectField="ItemCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="RouteCode" Text="返工途程代码" AllowNull="false">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.Route" ParentObjectField="RouteCode"></Check>
+          </CheckList>
+        </Field>
+      </FieldList>
+    </Item>-->
+
+    <!-- 报废原因 -->
+    <!--<Item Type="BenQGuru.eMES.Domain.TSModel.ScrapCause" Name="ScrapCause"  Text="报废原因" TemplateFileName="ScrapCause.xls">
+      <FieldList>
+        <Field Name="ScrapCauseCode" Text="报废原因" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="ScrapCauseDescription" Text="报废原因描述"></Field>
+      </FieldList>
+    </Item>-->
+    <!-- 检验清单 -->
+    <Item Type="BenQGuru.eMES.Domain.OQC.OQCCheckList" Name="OQCCheckList"  Text="检验清单" TemplateFileName="OQCCheckList.xls">
+      <FieldList>
+        <Field Name="CheckItemCode" Text="检验项目代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="CheckGroupCode" Text="检验类型" AllowNull="true">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.OQC.OQCCheckGroup" ParentObjectField="CheckGroupCode"></Check>
+          </CheckList>
+        </Field>
+      </FieldList>
+    </Item>
+    <!-- 抽检规则 -->
+    <!--<Item Type="BenQGuru.eMES.Domain.OQC.OQCLotSampleRange" Name="OQCLotSampleRange"  Text="抽检规则" TemplateFileName="OQCLotSampleRange.xls">
+      <FieldList>
+        <Field Name="Sequence" Text="次序" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="integer"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="LotSizeStart" Text="起始批量范围" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="integer"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="LotSizeEnd" Text="结束批量范围" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="integer"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="SampleSize" Text="样本数量" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="integer"></Check>
+          </CheckList>
+        </Field>
+      </FieldList>
+    </Item> -->
+    <!-- IPQA抽检规则 -->
+    <!--<Item Type="BenQGuru.eMES.Domain.OQC.IPQASampleRange" Name="IPQASampleRange"  Text="IPQA抽检规则" TemplateFileName="IPQASampleRange.xls">
+      <FieldList>
+        <Field Name="Seq" Text="次序" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="integer"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="LotSizeStart" Text="起始批量范围" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="integer"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="LotSizeEnd" Text="结束批量范围" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="integer"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="SSize" Text="样本数量" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="integer"></Check>
+          </CheckList>
+        </Field>
+      </FieldList>
+    </Item>-->
+    <!-- 工序 -->
+    <Item Type="BenQGuru.eMES.Domain.BaseSetting.Operation" Name="Operation"  Text="工序" TemplateFileName="Operation.xls">
+      <FieldList>
+        <Field Name="OPCode" Text="工序代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="OPDescription" Text="工序描述"></Field>
+      </FieldList>
+      <DefaultFieldList>
+        <Field Name="OPControl" DefaultValue="000000000000000"></Field>
+        <Field Name="OPCollectionType" DefaultValue="AUTO"></Field>
+      </DefaultFieldList>
+    </Item>
+    <!-- 标准途程 -->
+    <Item Type="BenQGuru.eMES.Domain.BaseSetting.Route" Name="Route"  Text="标准途程" TemplateFileName="Route.xls">
+      <FieldList>
+        <Field Name="RouteCode" Text="途程代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="RouteDescription" Text="途程描述"></Field>
+      </FieldList>
+      <DefaultFieldList>
+        <Field Name="Enabled" DefaultValue="1"></Field>
+        <Field Name="RouteType" DefaultValue="routetype_normal"></Field>
+        <Field Name="EffectiveDate" DefaultValue="0"></Field>
+        <Field Name="InvalidDate" DataFrom="0"></Field>
+      </DefaultFieldList>
+    </Item>
+    <!-- 标准途程工序 -->
+    <Item Type="BenQGuru.eMES.Domain.BaseSetting.Route2Operation" Name="Route2Operation"  Text="标准途程工序" TemplateFileName="Route2Operation.xls">
+      <FieldList>
+        <Field Name="RouteCode" Text="途程代码" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.Route" ParentObjectField="RouteCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="OPSequence" Text="工序序列" AllowNull="false"></Field>
+        <Field Name="OPCode" Text="工序代码" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.Operation" ParentObjectField="OPCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="OPControl" Text="工序属性" DataFrom="Query" DataQuerySql="select opcontrol from tblop where opcode='{0}'" DataQueryParam="OPCode"></Field>
+      </FieldList>
+    </Item>
+    <!-- 产品别 -->
+    <Item Type="BenQGuru.eMES.Domain.MOModel.Model" Name="Model"  Text="产品别" TemplateFileName="Model.xls">
+      <FieldList>
+        <Field Name="ModelCode" Text="产品别代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="ModelDescription" Text="产品别描述"></Field>
+        <Field Name="IsInventory" Text="是否可入库" MatchType="BoolType10"></Field>
+        <Field Name="IsReflow" Text="是否使用回流" MatchType="BoolType10"></Field>
+        <Field Name="OrganizationID" Text="组织编号"></Field>
+      </FieldList>
+    </Item>
+    <!-- 产品别不良代码组 -->
+    <Item Type="BenQGuru.eMES.Domain.TSModel.Model2ErrorCodeGroup" Name="Model2ErrorCodeGroup"  Text="产品别不良代码组" TemplateFileName="Model2ErrorCodeGroup.xls">
+      <FieldList>
+        <Field Name="ModelCode" Text="产品别代码" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.MOModel.Model" ParentObjectField="ModelCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="ErrorCodeGroup" Text="不良代码组" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.TSModel.ErrorCodeGroupA" ParentObjectField="ErrorCodeGroup"></Check>
+          </CheckList>
+        </Field>
+      </FieldList>
+    </Item>
+    <!-- 产品别不良原因组 -->
+    <Item Type="BenQGuru.eMES.Domain.TSModel.Model2ErrorCauseGroup" Name="Model2ErrorCauseGroup"  Text="产品别不良原因组" TemplateFileName="Model2ErrorCauseGroup.xls">
+      <FieldList>
+        <Field Name="ModelCode" Text="产品别代码" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.MOModel.Model" ParentObjectField="ModelCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="ErrorCauseGroupCode" Text="不良原因组" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.TSModel.ErrorCauseGroup" ParentObjectField="ErrorCauseGroupCode"></Check>
+          </CheckList>
+        </Field>
+      </FieldList>
+    </Item>
+    <!-- 产品别解决方案 -->
+    <Item Type="BenQGuru.eMES.Domain.TSModel.Model2Solution" Name="Model2Solution"  Text="产品别解决方案" TemplateFileName="Model2Solution.xls">
+      <FieldList>
+        <Field Name="ModelCode" Text="产品别代码" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.MOModel.Model" ParentObjectField="ModelCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="SolutionCode" Text="解决方案代码" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.TSModel.Solution" ParentObjectField="SolutionCode"></Check>
+          </CheckList>
+        </Field>
+      </FieldList>
+    </Item>
+    <!-- 产品 -->
+    <!--<Item Type="BenQGuru.eMES.Domain.MOModel.Item" Name="Item" Text="产品" TemplateFileName="Item.xls">
+      <FieldList>
+        <Field Name="ItemCode" Text="产品代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="ItemName" Text="产品名称" AllowNull="true"></Field>
+        <Field Name="ItemDesc" Text="产品描述" AllowNull="true"></Field>
+        <Field Name="ModelCode" Text="产品别代码" AllowNull="true"  IncludeItem="false"  ForeignItem="true">
+          <ForeignItem Type="BenQGuru.eMES.Domain.MOModel.Model2Item" Name="Model2Item" Text="产品别-产品">
+            <FieldList>
+              <Field Name="ModelCode" Text="产品别代码" UniqueGroup="1" DataFrom="ParentNode" ParentNodeField="ModelCode"></Field>
+              <Field Name="ItemCode" Text="产品代码" UniqueGroup="1" DataFrom="ParentItem" ParentNodeField="ItemCode"></Field>
+              <Field Name="OrganizationID" Text="组织编号" DataFrom="ParentItem" ParentNodeField="OrganizationID"></Field>
+            </FieldList>
+          </ForeignItem>
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.MOModel.Model" ParentObjectField="ModelCode"></Check>
+          </CheckList>
+        </Field>
+		    <Field Name="ItemCartonQty" Text="包装用量" DefaultValue="0"></Field>
+		    <Field Name="ItemUOM" Text="计量单位"></Field>
+        <Field Name="ItemType" Text="料品类别"></Field>
+        <Field Name="EAttribute1" Text="预留字段1"></Field>
+        <Field Name="OrganizationID" Text="组织编号"></Field>
+      </FieldList>
+      <DefaultFieldList>
+        <Field Name="ItemBurnInQty" DefaultValue="0"></Field>
+        <Field Name="ElectricCurrentMinValue" DefaultValue="0"></Field>
+        <Field Name="ElectricCurrentMaxValue" DefaultValue="0"></Field>
+        <Field Name="ItemUser" DataFrom="UserCode"></Field>
+        <Field Name="ItemDate" DataFrom="Date"></Field>
+      </DefaultFieldList>
+    </Item>-->
+    <!-- 产品检验清单 -->
+    <Item Type="BenQGuru.eMES.Domain.OQC.Item2OQCCheckList" Name="Item2OQCCheckList"  Text="产品检验清单" TemplateFileName="Item2OQCCheckList.xls">
+      <FieldList>
+        <Field Name="Sequence" Text="项次" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="integer"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="ItemCode" Text="产品代码" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.MOModel.Item" ParentObjectField="ItemCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="CheckItemCode" Text="检验项目代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="OrganizationID" Text="组织编号"></Field>
+      </FieldList>
+    </Item>
+    <!-- 产品上料工序 -->
+    <!--<Item Type="BenQGuru.eMES.Domain.MOModel.ItemRoute2OP" Name="ItemRoute2OP"  Text="产品上料工序" TemplateFileName="ItemRoute2OP.xls">
+      <FieldList>
+        <Field Name="ItemCode" Text="产品代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="RouteCode" Text="途程代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="OPCode" Text="工序代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="OPControl" Text="是否上料工序" AllowNull="false" MatchType="BoolType10"></Field>
+        <Field Name="OrganizationID" Text="组织编号"></Field>
+      </FieldList>
+    </Item>-->
+    <!--线外工序-->
+    <!--<Item Type="BenQGuru.eMES.Domain.MOModel.ItemRoute2OP" Name="ItemRoute2OptionalOP"  Text="线外工序" TemplateFileName="ItemRoute2OptionalOP.xls">
+      <FieldList>
+        <Field Name="ItemCode" Text="产品代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="RouteCode" Text="途程代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="OPCode" Text="工序代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="OptionalOP" Text="线外工序" AllowNull="false"></Field>
+      </FieldList>
+    </Item>-->
+    <!-- 产品生产途程 -->
+    <Item Type="BenQGuru.eMES.Domain.MOModel.Item2Route" Name="Item2Route"  Text="产品生产途程" TemplateFileName="Item2Route.xls">
+      <FieldList>
+        <Field Name="ItemCode" Text="产品代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="RouteCode" Text="途程代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="OrganizationID" Text="组织编号"></Field>
+      </FieldList>
+    </Item>
+
+    <!-- 产品默认途程 -->
+    <Item Type="BenQGuru.eMES.Domain.MOModel.DefaultItem2Route" Name="DefaultItem2Route"  Text="产品默认途程" TemplateFileName="DefaultItem2Route.xls">
+      <FieldList>
+        <Field Name="ItemCode" Text="产品代码" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.MOModel.Item" ParentObjectField="ItemCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="RouteCode" Text="途程代码" AllowNull="false">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.Route" ParentObjectField="RouteCode"></Check>
+          </CheckList>
+        </Field>
+      </FieldList>
+    </Item>
+
+
+    <!-- 产品标准BOM -->
+    <Item Type="BenQGuru.eMES.Domain.MOModel.SBOM" Name="SBOM"  Text="产品标准BOM" TemplateFileName="SBOM.xls">
+      <FieldList>
+        <Field Name="ItemCode" Text="产品代码" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.MOModel.Item" ParentObjectField="ItemCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="SBOMItemCode" Text="物料代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="SBOMItemName" Text="物料名称"></Field>
+        <Field Name="SBOMSourceItemCode" Text="首选料" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="SBOMItemQty" Text="单位用量" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="numeric"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="SBOMItemUOM" Text="计量单位" AllowNull="false"></Field>
+        <Field Name="SBOMItemLocation" Text="位号"></Field>
+        <Field Name="SBOMItemEffectiveDate" Text="生效日期" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="date"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="SBOMItemInvalidDate" Text="失效日期" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="date"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="SBOMItemECN" Text="ECN"></Field>
+        <Field Name="OrganizationID" Text="组织编号"></Field>
+      </FieldList>
+      <DefaultFieldList>
+        <Field Name="SBOMItemEffectiveTime" DefaultValue="0"></Field>
+        <Field Name="SBOMItemInvalidTime" DefaultValue="0"></Field>
+        <Field Name="SBOMItemControlType" DefaultValue="item_control_nocontrol"></Field>
+        <Field Name="SBOMItemStatus" DefaultValue="0"></Field>
+        <Field Name="SBOMWH" DefaultValue="1"></Field>
+      </DefaultFieldList>
+    </Item>
+    <!-- 产品工序BOM -->
+    <Item Type="BenQGuru.eMES.Domain.MOModel.OPBOMDetail" Name="OPBOM"  Text="产品工序BOM" TemplateFileName="OPBOM.xls">
+      <FieldList>
+        <Field Name="ItemCode" Text="产品代码" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.MOModel.Item" ParentObjectField="ItemCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="OPBOMCode" Text="途程代码" AllowNull="false" UniqueGroup="1"  IncludeItem="true"  ForeignItem="true">
+          <ForeignItem Type="BenQGuru.eMES.Domain.MOModel.OPBOM" Name="OPBOM_H" Text="OPBomHead">
+            <FieldList>
+              <Field Name="ItemCode" Text="产品代码" UniqueGroup="1" DataFrom="ParentNode" ParentNodeField="ItemCode"></Field>
+              <Field Name="OPBOMCode" Text="途程代码" AllowNull="false" UniqueGroup="1" DataFrom="ParentNode" ParentNodeField="OPBOMCode"></Field>
+              <Field Name="OPBOMRoute" Text="途程代码" AllowNull="false" DataFrom="ParentNode" ParentNodeField="OPBOMCode"></Field>
+              <Field Name="OrganizationID" Text="组织编号" DataFrom="ParentNode" ParentNodeField="OrganizationID"></Field>
+            </FieldList>
+            <DefaultFieldList>
+              <Field Name="OPBOMVersion" DefaultValue="1"></Field>
+              <Field Name="Avialable" DefaultValue="1"></Field>
+            </DefaultFieldList>
+          </ForeignItem>
+        </Field>
+        <Field Name="OPCode" Text="工序代码" AllowNull="false"></Field>
+        <Field Name="OPBOMItemCode" Text="物料代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="OPBOMItemName" Text="物料名称"></Field>
+        <Field Name="OPBOMSourceItemCode" Text="首选料" AllowNull="false"></Field>
+        <Field Name="OPBOMItemQty" Text="单位用量" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="numeric"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="OPBOMItemUOM" Text="计量单位" AllowNull="false"></Field>
+        <Field Name="OPBOMItemEffectiveDate" Text="生效日期" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="date"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="OPBOMItemInvalidDate" Text="失效日期" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="date"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="OPBOMItemECN" Text="ECN"></Field>
+        <Field Name="OrganizationID" Text="组织编号"></Field>
+        <Field Name="OPBOMItemControlType" Text="管控类型" MatchType="ItemControl"></Field>
+        <Field Name="ActionType" Text="是否下料" MatchType="BoolType10" UniqueGroup="1"></Field>
+        <Field Name="OPID" Text="OPID" DataFrom="Query" DataQuerySql="select opid from tblItemRoute2OP where itemcode='{0}' and routecode='{1}' and opcode='{2}'" DataQueryParam="ItemCode,OPBOMCode,OPCode" UniqueGroup="1"></Field>
+      </FieldList>
+      <DefaultFieldList>
+        <Field Name="CheckStatus" DefaultValue="1"></Field>
+        <Field Name="OPBOMVersion" DefaultValue="1"></Field>
+        <Field Name="OPBOMItemType" DefaultValue="lot"></Field>
+        <Field Name="IsItemCheck" DefaultValue="0"></Field>
+        <Field Name="ItemCheckValue" DefaultValue="0000000"></Field>
+        <Field Name="OPBOMParseType" DefaultValue=" "></Field>
+        <Field Name="OPBOMCheckType" DefaultValue=" "></Field>
+        <Field Name="OPBOMValid" DefaultValue="1"></Field>
+        <Field Name="OPBOMItemSeq" DefaultValue="1"></Field>
+      </DefaultFieldList>
+    </Item>
+    <!-- 产品工序检验项目 -->
+    <!--<Item Type="BenQGuru.eMES.Domain.MOModel.StandardCheckItem" Name="StandardCheckItem"  Text="标准检验项目" TemplateFileName="StandardCheckItem.xls">
+      <FieldList>
+        <Field Name="ItemCode" Text="产品代码" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.MOModel.Item" ParentObjectField="ItemCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="OPCode" Text="工序代码" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.Operation" ParentObjectField="OPCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="SCheckItemCode" Text="检验项目代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="SCheckItemDESC" Text="检验项目描述"></Field>
+        <Field Name="StandardValue" Text="标准值"></Field>
+        <Field Name="LowSpec" Text="下限"></Field>
+        <Field Name="UPSpec" Text="上限"></Field>
+		<Field Name="IsOption" Text="是否可选" MatchType="BoolType10"></Field>
+		<Field Name="EAttribute1" Text="备注"></Field>
+      </FieldList>
+      <DefaultFieldList>
+        <Field Name="CreateUser" DefaultValue="IMPORTTOOL"></Field>
+        <Field Name="CreateDate" DefaultValue="0"></Field>
+        <Field Name="CreateTime" DefaultValue="0"></Field>
+      </DefaultFieldList>
+    </Item> -->
+    <!-- 工序检验项目 -->
+    <!--<Item Type="BenQGuru.eMES.Domain.MOModel.OPCheckItem" Name="OPCheckItem"  Text="工序检验项目" TemplateFileName="OPCheckItem.xls">
+      <FieldList>
+        <Field Name="ItemCode" Text="产品代码" AllowNull="false" IncludeItem="false"></Field>
+        <Field Name="RouteCode" Text="途程代码" AllowNull="false" IncludeItem="false"></Field>
+        <Field Name="OPCode" Text="工序代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="CheckItemCode" Text="检验项目代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="CheckItemDESC" Text="检验项目描述"></Field>
+        <Field Name="StandardValue" Text="标准值"></Field>
+        <Field Name="LowSpec" Text="下限"></Field>
+        <Field Name="UPSpec" Text="上限"></Field>
+        <Field Name="EAttribute1" Text="备注"></Field>
+        <Field Name="OPID" Text="OPID" DataFrom="Query" DataQuerySql="select opid from tblItemRoute2OP where itemcode='{0}' and routecode='{1}' and opcode='{2}'" DataQueryParam="ItemCode,RouteCode,OPCode" UniqueGroup="1"></Field>
+      </FieldList>
+      <DefaultFieldList>
+        <Field Name="CreateUser" DefaultValue="IMPORTTOOL"></Field>
+        <Field Name="Createdate" DefaultValue="0"></Field>
+        <Field Name="CreateTime" DefaultValue="0"></Field>
+        <Field Name="MUser" DefaultValue="IMPORTTOOL"></Field>
+        <Field Name="Mdate" DefaultValue="0"></Field>
+        <Field Name="MTime" DefaultValue="0"></Field>
+      </DefaultFieldList>
+    </Item>-->
+    <!-- 部门 -->
+    <Item Type="BenQGuru.eMES.Domain.BaseSetting.Parameter" Name="Department"  Text="部门" TemplateFileName="Department.xls">
+      <FieldList>
+        <Field Name="ParameterSequence" Text="顺序" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="integer"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="ParameterCode" Text="部门代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="ParameterAlias" Text="部门名称"></Field>
+        <Field Name="ParentParameterCode" Text="上级部门代码"></Field>
+      </FieldList>
+      <DefaultFieldList>
+        <Field Name="ParameterGroupCode" DefaultValue="DEPARTMENT" UniqueGroup="1"></Field>
+        <Field Name="IsActive" DefaultValue="1"></Field>
+        <Field Name="IsSystem" DefaultValue="0"></Field>
+      </DefaultFieldList>
+    </Item>
+    <!-- 用户(默认密码123456) -->
+    <Item Type="BenQGuru.eMES.Domain.BaseSetting.User" Name="User"  Text="用户" TemplateFileName="User.xls">
+      <FieldList>
+        <Field Name="UserCode" Text="用户代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="UserName" Text="用户名"></Field>
+        <Field Name="UserDepartment" Text="部门" AllowNull="false"></Field>
+        <Field Name="UserTelephone" Text="电话"></Field>
+        <Field Name="UserEmail" Text="电子信箱"></Field>
+        <Field Name="UserPassword" Text="密码"></Field>
+
+        <Field Name="OrganizationID" Text="默认组织编号" AllowNull="false"  IncludeItem="false"  ForeignItem="true">
+          <ForeignItem Type="BenQGuru.eMES.Domain.BaseSetting.User2Org" Name="User2Org" Text="用户-组织">
+            <FieldList>
+              <Field Name="OrganizationID" Text="默认组织编号" DataFrom="ParentNode" ParentNodeField="OrganizationID" UniqueGroup="2"></Field>
+              <Field Name="UserCode" Text="用户代码" DataFrom="ParentItem" ParentNodeField="UserCode" UniqueGroup="2"></Field>
+              <Field Name="IsDefaultOrg" Text="默认组织" DataType="integer" DataFrom="1"></Field>
+            </FieldList>
+          </ForeignItem>
+        </Field>
+      </FieldList>
+    </Item>
+    <!-- 用户组 -->
+    <Item Type="BenQGuru.eMES.Domain.BaseSetting.UserGroup" Name="UserGroup"  Text="用户组" TemplateFileName="UserGroup.xls">
+      <FieldList>
+        <Field Name="UserGroupCode" Text="用户组代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="UserGroupDescription" Text="用户组描述"></Field>
+        <Field Name="UserGroupType" Text="用户组类型" AllowNull="false"></Field>
+      </FieldList>
+    </Item>
+    <!-- 用户组-用户 -->
+    <Item Type="BenQGuru.eMES.Domain.BaseSetting.UserGroup2User" Name="UserGroup2User"  Text="用户组-用户" TemplateFileName="UserGroup2User.xls">
+      <FieldList>
+        <Field Name="UserGroupCode" Text="用户组代码" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.UserGroup" ParentObjectField="UserGroupCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="UserCode" Text="用户代码" AllowNull="false" UniqueGroup="1">
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.User" ParentObjectField="UserCode"></Check>
+          </CheckList>
+        </Field>
+      </FieldList>
+    </Item>
+    <!--<Item Type="BenQGuru.eMES.Domain.Package.PKRule" Name="PKRule"  Text="包装规则" TemplateFileName="PKRule.xls">
+		  <FieldList>
+			  <Field Name="PKRuleCode" Text="包装规则代码" AllowNull="false" UniqueGroup="1"></Field>
+			  <Field Name="PKRuleDesc" Text="规则描述"></Field>
+			  <Field Name="IsDefault" Text="是否默认规则" AllowNull="false"  MatchType="BoolTypeYesNo"></Field>
+		  </FieldList>
+	 </Item>
+	  <Item Type="BenQGuru.eMES.Domain.Package.PKRuleStep" Name="PKRuleStep"  Text="包装步骤" TemplateFileName="PKRuleStep.xls">
+		  <FieldList>
+			  <Field Name="PKRuleCode" Text="包装规则代码" AllowNull="false" UniqueGroup="1"></Field>
+			  <Field Name="Step" Text="序号" AllowNull="false" UniqueGroup="1"></Field>
+			  <Field Name="StepCode" Text="步骤代码"></Field>
+			  <Field Name="StepName" Text="步骤描述"></Field>
+			  <Field Name="IsSaveRCard" Text="是否保存条码" AllowNull="false"  MatchType="BoolTypeYesNo"></Field>
+		  </FieldList>
+	  </Item>
+	  <Item Type="BenQGuru.eMES.Domain.Package.PKRuleStepCheck" Name="PKRuleStepCheck"  Text="包装步骤" TemplateFileName="PKRuleStepCheck.xls">
+		  <FieldList>
+			  <Field Name="PKRuleCode" Text="包装规则代码" AllowNull="false" UniqueGroup="1"></Field>
+			  <Field Name="StepCode" Text="步骤代码" AllowNull="false" IncludeItem="false"></Field>
+			  <Field Name="CheckType" Text="检查类型"  MatchType="PKCheckType"></Field>
+			  <Field Name="StartPos" Text="起始字符位置" DefaultValue="0"></Field>
+			  <Field Name="EndPos" Text="终止字符位置" DefaultValue="0"></Field>
+			  <Field Name="StringType" Text="字符串类型" MatchType="PKStringType"></Field>
+			  <Field Name="CheckValue" Text="常量值"></Field>
+			  <Field Name="CheckStep" Text="步骤N序号" DefaultValue="0"></Field>
+			  <Field Name="CheckStepStartPos" Text="步骤N起始字符位置" DefaultValue="0"></Field>
+			  <Field Name="CheckStepEndPos" Text="步骤N终止字符位置" DefaultValue="0"></Field>
+			  <Field Name="ItemField" Text="产品属性" MatchType="PKItemField"></Field>
+			  <Field Name="Step" Text="序号" AllowNull="false" UniqueGroup="1" DataFrom="Query" DataQuerySql="select step from tblpkrulestep where pkrulecode='{0}' and stepcode='{1}'" DataQueryParam="PKRuleCode,StepCode"></Field>
+			  <Field Name="CheckSeq" Text="检查序号" UniqueGroup="1" DataFrom="Query" DataQuerySql="select nvl(max(CheckSeq),0)+1 from tblpkrulestepcheck where pkrulecode='{0}' and step in(select step from tblpkrulestep where pkrulecode='{0}' and stepcode='{1}')" DataQueryParam="PKRuleCode,StepCode"></Field>
+		  </FieldList>
+	  </Item>
+	  <Item Type="BenQGuru.eMES.Domain.MOModel.Label" Name="Label"  Text="标签模板" TemplateFileName="Label.xls">
+		  <FieldList>
+			  <Field Name="LabelCode" Text="模板代码" UniqueGroup="1"></Field>
+			  <Field Name="LabelDesc" Text="模板描述" AllowNull="false"></Field>
+			  <Field Name="LabelType" Text="模板类型" AllowNull="false" MatchType="LabelType"></Field>
+			  <Field Name="LabelPath" Text="模板路径" AllowNull="false"></Field>
+		  </FieldList>
+	  </Item>
+	  <Item Type="BenQGuru.eMES.Domain.MOModel.Item2Label" Name="Item2Label"  Text="产品标签模板" TemplateFileName="Item2Label.xls">
+		  <FieldList>
+			  <Field Name="ItemCode" Text="产品代码" UniqueGroup="1"></Field>
+			  <Field Name="LabelCode" Text="标签模板代码" UniqueGroup="1"></Field>
+			  <Field Name="ItemDesc" Text="产品描述" DataFrom="Query" DataQuerySql="select ItemName from tblitem where itemcode='{0}'" DataQueryParam="ItemCode"></Field>
+			  <Field Name="LabelDesc" Text="模板描述" DataFrom="Query" DataQuerySql="select LabelDesc from tbllabel where labelcode='{0}'" DataQueryParam="LabelCode"></Field>
+		   </FieldList>
+	  </Item>
+	  <Item Type="BenQGuru.eMES.Domain.HourCounting.HourCountingWorkCenter" Name="WorkCenter"  Text="Work Center" TemplateFileName="WorkCenter.xls">
+		  <FieldList>
+			  <Field Name="WorkCenter" Text="Work Center" UniqueGroup="1"></Field>
+			  <Field Name="OperationType" Text="Operation Type" AllowNull="false"></Field>
+			  <Field Name="TaskType" Text="Task Type" AllowNull="false"></Field>
+			  <Field Name="MachineType" Text="Machine Type" AllowNull="true"></Field>
+			  <Field Name="EmployeeSection" Text="Employee Section" AllowNull="false"></Field>
+		  </FieldList>
+	  </Item>
+	  <Item Type="BenQGuru.eMES.Domain.HourCounting.HourCountingWorkCenterDetail" Name="WorkCenter2LineOP"  Text="WorkCenter岗位" TemplateFileName="WorkCenter2LineOP.xls">
+		  <FieldList>
+			  <Field Name="WorkCenter" Text="Work Center"  AllowNull="false" UniqueGroup="1"></Field>
+			  <Field Name="StepSequenceCode" Text="产线代码" AllowNull="false" UniqueGroup="1"></Field>
+			  <Field Name="OPCode" Text="工序代码" AllowNull="false" UniqueGroup="1"></Field>
+			  <Field Name="CreateHoursCounting" Text="是否产生HoursCounting数据" AllowNull="false" MatchType="BoolType10"></Field>
+		  </FieldList>
+	  </Item>
+	  <Item Type="BenQGuru.eMES.Domain.MOModel.LabelRCard2Seq" Name="No2Seq"  Text="2号条码流水号" TemplateFileName="LASTTAG.xls">
+		  <FieldList>
+			  <Field Name="ModelCode" Text="PFX"  AllowNull="false" UniqueGroup="1"></Field>
+			  <Field Name="CurrSeq" Text="LASTNO" AllowNull="false"></Field>
+			  <Field Name="Year" DataFrom="0" UniqueGroup="1"></Field>
+		  </FieldList>
+	  </Item>
+	  
+	  <Item Type="BenQGuru.eMES.Domain.MOModel.ItemPanelInfo" Name="ItemPanelInfo"  Text="产品板面信息" TemplateFileName="ItemPanelInfo.xls">
+		  <FieldList>
+			  <Field Name="ItemCode" Text="产品代码"  AllowNull="false" UniqueGroup="1"></Field>
+			  <Field Name="ABType" Text="AB面" AllowNull="false"  UniqueGroup="1" MatchType="ABType0" ></Field>
+			  <Field Name="PanelType" Text="板面类型" AllowNull="false"  MatchType="PanelType0"></Field>
+			  <Field Name="Points" Text="点数" AllowNull="false"></Field>
+			  <Field Name="Hits" Text="Hits点数" AllowNull="false"></Field>
+			  <Field Name="ItemName" DataFrom="Query" DataQuerySql="select ItemName from tblItem where itemcode='{0}' "  DataQueryParam="ItemCode"></Field>		
+		  </FieldList>
+	  </Item>-->
+
+    <!-- 免检料 -->
+    <Item Type="BenQGuru.eMES.Domain.IQC.ShipToStock" Name="ShipToStock"  Text="免检料" TemplateFileName="ShipToStock.xls">
+      <FieldList>
+        <Field Name="MaterialCode" Text="产品代码" AllowNull="false" UniqueGroup="1"></Field>
+        <Field Name="OrganizationID" Text="组织编码" AllowNull="false" ></Field>
+        <Field Name="VendorCode" Text="厂商代码" AllowNull="false"></Field>
+        <Field Name="EffectDate" Text="生效日期" AllowNull="false"></Field>
+        <Field Name="InvalidDate" Text="失效日期" AllowNull="false"></Field>
+        <Field Name="Active" Text="有效性" AllowNull="false" MatchType="BoolTypeYN"></Field>
+      </FieldList>
+    </Item>
+
+    <!-- 物料分组 -->
+    <Item Type="BenQGuru.eMES.Domain.MOModel.ItemClass" Name="ItemClass"  Text="物料分组" TemplateFileName="ItemClass.xls">
+      <FieldList>
+        <Field Name="FirstClass" Text="一级分类" AllowNull="false" ></Field>
+        <Field Name="ItemGroup" Text="物料组代码" AllowNull="false" ></Field>
+        <Field Name="SecondClass" Text="二级分类" AllowNull="false"></Field>
+        <Field Name="ThirdClass" Text="三级分类" AllowNull="false"></Field>
+      </FieldList>
+    </Item>
+
+    <!-- 班组资料 -->
+    <Item Type="BenQGuru.eMES.Domain.BaseSetting.ShiftCrew" Name="ShiftCrew"  Text="班组资料" TemplateFileName="ShiftCrew.xls">
+      <FieldList>
+        <Field Name="CrewCode" Text="班组代码" AllowNull="false" ></Field>
+        <Field Name="CrewDesc" Text="班组描述" AllowNull="true" ></Field>
+      </FieldList>
+    </Item>
+
+    <!-- 事件代码资料 -->
+    <Item Type="BenQGuru.eMES.Domain.Performance.ExceptionCode" Name="ExceptionCode"  Text="事件代码资料" TemplateFileName="ExceptionCode.xls">
+      <FieldList>
+        <Field Name="Code" Text="事件代码" AllowNull="false" ></Field>
+        <Field Name="Description" Text="事件描述" AllowNull="true" ></Field>
+	<Field Name="Flag" Text="非生产性损失" AllowNull="false" MatchType="BoolTypeYN"></Field>
+	<Field Name="Name" Text="事件名称" AllowNull="false" ></Field>
+	<Field Name="Type" Text="事件类型" AllowNull="false" MatchType="EventType"></Field>
+      </FieldList>
+    </Item>
+
+<!-- 班组上线信息 -->
+    <Item Type="BenQGuru.eMES.Domain.Performance.Line2Crew" Name="Line2Crew"  Text="班组上线信息" TemplateFileName="Line2Crew.xls">
+      <FieldList>
+        
+	<Field Name="CrewCode" Text="班组代码" AllowNull="false" >
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.ShiftCrew" ParentObjectField="CrewCode"></Check>
+          </CheckList>
+        </Field>
+        <Field Name="ShiftCode" Text="班次代码" AllowNull="false" >
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.Shift" ParentObjectField="ShiftCode"></Check>
+          </CheckList>
+        </Field>
+	<Field Name="ShiftDate" Text="工作天" AllowNull="false">
+          <CheckList>
+            <Check Type="DataType" CheckDataType="date"></Check>
+          </CheckList>
+        </Field>
+	<Field Name="SSCode" Text="产线代码" AllowNull="false" >
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.StepSequence" ParentObjectField="StepSequenceCode"></Check>
+          </CheckList>
+        </Field>
+	</FieldList>
+    </Item>
+
+<!-- 排产工时 -->
+    <Item Type="BenQGuru.eMES.Domain.Performance.PlanWorkTime" Name="PlanWorkTime"  Text="排产工时信息" TemplateFileName="PlanWorkTime.xls">
+      <FieldList>
+        
+	<Field Name="CycleTime" Text="CycleTime" AllowNull="false" ></Field>
+        <Field Name="ItemCode" Text="产品代码" AllowNull="false" >
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.MOModel.Item" ParentObjectField="ItemCode"></Check>
+          </CheckList>
+        </Field>
+	<Field Name="SSCode" Text="产线代码" AllowNull="false" >
+          <CheckList>
+            <Check Type="Exist" ParentObjectType="BenQGuru.eMES.Domain.BaseSetting.StepSequence" ParentObjectField="StepSequenceCode"></Check>
+          </CheckList>
+        </Field>
+ 	<Field Name="WorkingTime" Text="排产工时" AllowNull="false"></Field>
+	</FieldList>
+    </Item>
+
+  </ItemList>
+
+
+  <MatchList>
+    <Match Name="ABType0">
+      <List Value="abtype_a" Text="A"></List>
+      <List Value="abtype_b" Text="B"></List>
+    </Match>
+
+    <Match Name="PanelType0">
+      <List Value="paneltype_glue" Text="胶面"></List>
+      <List Value="paneltype_stannum" Text="锡面"></List>
+    </Match>
+
+    <Match Name="PCBType0">
+      <List Value="pcbtype_pb" Text="铝基板"></List>
+      <List Value="pcbtype_cb" Text="控制板"></List>
+    </Match>
+
+    <Match Name="BoolType10">
+      <List Value="1" Text="是"></List>
+      <List Value="0" Text="否"></List>
+      <List Value="1" Text="Yes"></List>
+      <List Value="0" Text="No"></List>
+    </Match>
+    <Match Name="PKCheckType">
+      <List Value="pkstepchecktype_rcard" Text="条码本身"></List>
+      <List Value="pkstepchecktype_n_rcard" Text="第N步条码"></List>
+      <List Value="pkstepchecktype_lotno" Text="工单批号"></List>
+      <List Value="pkstepchecktype_itemfield" Text="产品属性"></List>
+      <List Value="pkstepchecktype_length" Text="条码长度"></List>
+      <List Value="pkstepchecktype_2match3" Text="2号匹配3号检查"></List>
+      <List Value="pkstepchecktype_no3unique" Text="3号条码唯一性"></List>
+    </Match>
+
+    <Match Name="LabelType">
+      <List Value="labeltype_rcard" Text="产品序列号"></List>
+      <List Value="labeltype_custsn" Text="客户标签"></List>
+      <List Value="labeltype_cartonno" Text="包装箱"></List>
+      <List Value="labeltype_send" Text="送货标签"></List>
+      <List Value="labeltype_ship" Text="托盘标签"></List>
+      <List Value="labeltype_va_sn" Text="VA产品序列号"></List>
+      <List Value="labeltype_db_sn" Text="子板产品序列号"></List>
+    </Match>
+    <Match Name="PKStringType">
+      <List Value="pkstringtype_letter" Text="字母"></List>
+      <List Value="pkstringtype_number" Text="数字"></List>
+      <List Value="pkstringtype_const" Text="常量"></List>
+    </Match>
+    <Match Name="PKItemField">
+      <List Value="OMRONSN" Text="EAN13"></List>
+    </Match>
+    <Match Name="BoolTypeYesNo">
+      <List Value="1" Text="是"></List>
+      <List Value="0" Text="否"></List>
+      <List Value="1" Text="Yes"></List>
+      <List Value="0" Text="No"></List>
+    </Match>
+    <Match Name="BoolTypeYN">
+      <List Value="Y" Text="是"></List>
+      <List Value="N" Text="否"></List>
+    </Match>
+    <Match Name="ItemType">
+      <List Value="itemtype_semimanufacture" Text="半成品"></List>
+      <List Value="itemtype_finishedproduct" Text="成品料"></List>
+    </Match>
+    <Match Name="ItemControl">
+      <List Value="item_control_nocontrol" Text="NOControl"></List>
+      <List Value="item_control_keyparts" Text="Keyparts"></List>
+      <List Value="item_control_lot" Text="Lot"></List>
+    </Match>
+    <Match Name="StepSequenceType">
+      <List Value="stepsequencetype_normal" Text="正常产线"></List>
+      <List Value="stepsequencetype_rework" Text="返工产线"></List>
+    </Match>
+    <Match Name="EventType">
+      <List Value="MAN" Text="人"></List>
+      <List Value="MATERIAL" Text="材料"></List>
+      <List Value="MACHINE" Text="机"></List>
+      <List Value="LAW" Text="法"></List>
+    </Match>
+  </MatchList>
+
+
+  <NodeList>
+    <Node Name="ShiftData" Text="生产时间">
+      <Node Name="ShiftType" Text="班制" ImportItemName="ShiftType"></Node>
+      <Node Name="Shift" Text="班次" ImportItemName="Shift"></Node>
+      <Node Name="TimePeriod" Text="时段" ImportItemName="TimePeriod"></Node>
+    </Node>
+    <Node Name="Workshop" Text="生产布局">
+      <Node Name="Factory" Text="工厂" ImportItemName="Factory"></Node>
+      <Node Name="Segment" Text="工段" ImportItemName="Segment"></Node>
+      <Node Name="StepSequence" Text="产线" ImportItemName="StepSequence"></Node>
+      <Node Name="Resource" Text="资源" ImportItemName="Resource"></Node>
+    </Node>
+    <Node Name="TS" Text="维修资料">
+      <Node Name="Duty" Text="不良责任" ImportItemName="Duty"></Node>
+      <Node Name="Solution" Text="解决方案" ImportItemName="Solution"></Node>
+      <Node Name="ErrorCauseGroup" Text="不良原因组" ImportItemName="ErrorCauseGroup"></Node>
+      <Node Name="ErrorCause" Text="不良原因" ImportItemName="ErrorCause"></Node>
+      <Node Name="ErrorCodeGroup" Text="不良代码组" ImportItemName="ErrorCodeGroup"></Node>
+      <Node Name="ErrorCode" Text="不良代码" ImportItemName="ErrorCode"></Node>
+      <!--<Node Name="ErrorCodeGroupReworkRoute" Text="产品不良代码组返工途程" ImportItemName="ErrorCodeGroupReworkRoute"></Node>-->
+      <!--<Node Name="ScrapCause" Text="报废原因" ImportItemName="ScrapCause"></Node>-->
+    </Node>
+    <Node Name="FQC" Text="FQC">
+      <Node Name="OQCCheckList" Text="检验清单" ImportItemName="OQCCheckList"></Node>
+      <!--<Node Name="OQCLotSampleRange" Text="抽检规则" ImportItemName="OQCLotSampleRange"></Node>
+      <Node Name="IPQASampleRange" Text="IPQA抽检规则" ImportItemName="IPQASampleRange"></Node>-->
+    </Node>
+    <Node Name="Route" Text="途程">
+      <Node Name="Operation" Text="工序" ImportItemName="Operation"></Node>
+      <Node Name="Route" Text="标准途程" ImportItemName="Route"></Node>
+      <Node Name="Route2Operation" Text="标准途程工序" ImportItemName="Route2Operation"></Node>
+    </Node>
+    <Node Name="Model" Text="产品别">
+      <Node Name="Model" Text="产品别" ImportItemName="Model"></Node>
+      <Node Name="Model2ErrorCauseGroup" Text="产品别不良代码组" ImportItemName="Model2ErrorCauseGroup"></Node>
+      <Node Name="Model2ErrorCauseGroup" Text="产品别不良原因组" ImportItemName="Model2ErrorCauseGroup"></Node>
+      <Node Name="Model2Solution" Text="产品别解决方案" ImportItemName="Model2Solution"></Node>
+    </Node>
+    <Node Name="Item" Text="产品">
+      <Node Name="ItemClass" Text="物料分组" ImportItemName="ItemClass"></Node>
+      <!--<Node Name="ItemPanel" Text="产品板面信息" ImportItemName="ItemPanelInfo"></Node>-->
+      <Node Name="Item2OQCCheckList" Text="产品检验清单" ImportItemName="Item2OQCCheckList"></Node>
+      <Node Name="SBOM" Text="产品标准BOM" ImportItemName="SBOM"></Node>
+      <Node Name="OPBOM" Text="产品工序BOM" ImportItemName="OPBOM"></Node>
+      <Node Name="Item2Route" Text="产品生产途程" ImportItemName="Item2Route"></Node>
+      <Node Name="DefaultItem2Route" Text="产品默认途程" ImportItemName="DefaultItem2Route"></Node>
+      <Node Name="Item" Text="产品" ImportItemName="Item"></Node>
+	<!--<Node Name="OPBOM" Text="产品工序BOM" ImportItemName="OPBOM"></Node>
+      <Node Name="StandardCheckItem" Text="产品工序检验项目" ImportItemName="StandardCheckItem"></Node>
+      <Node Name="ItemRoute2OP" Text="产品上料工序" ImportItemName="ItemRoute2OP"></Node>
+      <Node Name="ItemRoute2OptionalOP" Text="线外工序" ImportItemName="ItemRoute2OptionalOP"></Node>
+      <Node Name="OPCheckItem" Text="产品途程工序检验项目" ImportItemName="OPCheckItem"></Node>-->
+    </Node>
+    <Node Name="Security" Text="权限">
+      <Node Name="Department" Text="部门" ImportItemName="Department"></Node>
+      <Node Name="User" Text="用户" ImportItemName="User"></Node>
+      <Node Name="UserGroup" Text="用户组" ImportItemName="UserGroup"></Node>
+      <Node Name="UserGroup2User" Text="用户组-用户" ImportItemName="UserGroup2User"></Node>
+    </Node>
+
+    <Node Name="IQC" Text="IQC">
+      <Node Name="ShipToStock" Text="免检料" ImportItemName="ShipToStock"></Node>
+    </Node>
+    <!--<Node Name="PK" Text="包装">
+		  <Node Name="PKRule" Text="包装规则" ImportItemName="PKRule"></Node>
+		  <Node Name="PKRuleStep" Text="包装步骤" ImportItemName="PKRuleStep"></Node>
+		  <Node Name="PKRuleStepCheck" Text="检查规则" ImportItemName="PKRuleStepCheck"></Node>
+	  </Node>
+	  <Node Name="Label" Text="标签">
+		  <Node Name="Label" Text="标签模板" ImportItemName="Label"></Node>
+		  <Node Name="Item2Label" Text="产品标签模板" ImportItemName="Item2Label"></Node>
+		  <Node Name="No2Seq" Text="2号条码流水号" ImportItemName="No2Seq"  FromFile="F:\LASTTAG.dbf"></Node>
+	  </Node>
+	  <Node Name="HoursCounting" Text="Hours Counting">
+		  <Node Name="WorkCenter" Text="Work Center" ImportItemName="WorkCenter"></Node>
+		  <Node Name="WorkCenter2LineOP" Text="WorkCenter岗位" ImportItemName="WorkCenter2LineOP"></Node>
+	  </Node>-->
+    <Node Name="Security" Text="绩效管理">
+      <Node Name="ShiftCrew"  Text="班组资料" ImportItemName="ShiftCrew"></Node>
+      <Node Name="ExceptionCode"  Text="事件代码资料" ImportItemName="ExceptionCode"></Node>
+      <Node Name="Line2Crew"  Text="班组上线信息" ImportItemName="Line2Crew"></Node>
+      <Node Name="PlanWorkTime"  Text="排产工时信息" ImportItemName="PlanWorkTime"></Node>
+    </Node>
+  </NodeList>
+</Root>

@@ -1,0 +1,4 @@
+[Esc]V010[Esc]H340[Esc]L0202[Esc]XS[$mocode][$lotno][$moplanqty]
+[Esc]V050[Esc]H340[Esc]L0202[Esc]XS[$itemdesc]
+[Esc]V080[Esc]H340[Esc]B102055*[$rcard]*
+[Esc]V140[Esc]H340[Esc]L0202[Esc]XS[$rcard]

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="mp2bv2ihf_v">
+    <property name="$name" value="eMES" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="design:view:::ap2r2hnai_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="csharp:e_class:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade" />
+      <reference referencedUin="csharp:e_class:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.ItemOfRunningCard" />
+      <reference referencedUin="csharp:e_class:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.ErrorLocation" />
+      <reference referencedUin="csharp:e_class:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSErrorInfo" />
+      <reference referencedUin="csharp:e_class:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.ErrorPart" />
+    </reference>
+  </view>
+</nodeSet>

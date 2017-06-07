@@ -1,0 +1,11 @@
+!/bin
+.svn
+*.pdb
+*.dll
+*.suo
+Debug/
+Release/
+logs/
+*.sln
+*.xls
+!/bin/*.dll

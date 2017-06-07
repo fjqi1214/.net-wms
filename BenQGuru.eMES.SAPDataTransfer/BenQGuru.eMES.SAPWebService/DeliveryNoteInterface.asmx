@@ -1,0 +1,1 @@
+<%@ WebService Language="C#" CodeBehind="DeliveryNoteInterface.asmx.cs" Class="BenQGuru.eMES.SAPWebService.DeliveryNoteInterface" %>

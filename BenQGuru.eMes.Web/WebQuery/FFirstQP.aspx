@@ -1,0 +1,120 @@
+<%@ Page language="c#" Codebehind="FFirstQP.aspx.cs" AutoEventWireup="True" Inherits="BenQGuru.eMES.Web.WebQuery.FFirstQP" %>
+<%@ Register TagPrefix="uc1" TagName="eMESDate" Src="~/UserControl/DateTime/DateTime/eMESDate.ascx" %>
+<%@ Register TagPrefix="cc1" Namespace="BenQGuru.eMES.Web.Helper" Assembly="BenQGuru.eMES.WebUI.Helper" %>
+<%@ Register TagPrefix="igtbl" Namespace="Infragistics.WebUI.UltraWebGrid" Assembly="Infragistics35.WebUI.UltraWebGrid.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<title>FOnWipOP</title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="C#" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link href="<%=StyleSheet%>" rel=stylesheet>
+	</HEAD>
+	<body scroll="yes" MS_POSITIONING="GridLayout">
+		<form id="Form1" method="post" runat="server">
+			<table height="99%" width="100%">
+				<tr class="moduleTitle">
+					<td><asp:label id="lblTitle" runat="server" CssClass="labeltopic">首件及末件查询</asp:label></td>
+				</tr>
+				<tr>
+					<td>
+						<table class="query" height="100%" width="100%">
+							<TR>
+								<td class="fieldNameLeft" noWrap><asp:label id="lblSegment" runat="server">工段</asp:label></td>
+								<td class="fieldValue">
+									<asp:DropDownList id="drpSegment" runat="server" AutoPostBack="True" CssClass="dropdownlist" Width="100%" onselectedindexchanged="drpSegment_SelectedIndexChanged"></asp:DropDownList></td>
+								<td class="fieldName" noWrap><asp:label id="lblDate" runat="server"> 日期</asp:label></td>
+								<td class="fieldValue">
+                                <asp:TextBox  id="txtDate"  class='datepicker' runat="server"  Width="110px"/></td>
+								<td class="fieldName" nowrap>
+									<asp:Label id="lblTo" runat="server">到</asp:Label></td>
+								<td noWrap width="155" style="WIDTH: 155px">
+                                <asp:TextBox  id="txtDateTo"  class='datepicker' runat="server"  Width="110px"/>
+									</td>
+								<td><asp:label id="lblShip" runat="server">班次</asp:label></td>
+								<td>
+									<asp:DropDownList id="drpShift" runat="server" Width="164px"></asp:DropDownList></td>
+							</TR>
+							<TR>
+								<td class="fieldNameLeft" noWrap><asp:label id="lblSS" runat="server">产线</asp:label></td>
+								<td class="fieldValue"><asp:textbox id="txtSS" runat="server" CssClass="textbox"></asp:textbox></td>
+								<td class="fieldName" noWrap>
+									<asp:label id="lblModelCodeQuery" runat="server">产品别代码</asp:label></td>
+								<td class="fieldValue">
+									<asp:textbox id="txtModel" runat="server" CssClass="textbox"></asp:textbox></td>
+								<td noWrap><asp:label id="lblItemCodeQuery" runat="server">产品代码</asp:label></td>
+								<td class="fieldValue" noWrap width="155" style="WIDTH: 155px"><asp:textbox id="txtItemCode" runat="server" CssClass="textbox"></asp:textbox></td>
+								<td></td>
+								<td><INPUT class="submitImgButton" id="cmdQuery" type="submit" value="查 询" name="btnQuery"
+										runat="server"></td>
+							</TR>
+						</table>
+					</td>
+				</tr>
+				<tr height="100%">
+					<td class="fieldGrid"><igtbl:ultrawebgrid id="gridWebGrid" runat="server" Width="100%" Height="100%"><DISPLAYLAYOUT ColWidthDefault="" StationaryMargins="Header" AllowSortingDefault="No" RowHeightDefault="20px"
+								Version="2.00" SelectTypeRowDefault="Single" SelectTypeCellDefault="Single" HeaderClickActionDefault="SortSingle" BorderCollapseDefault="Separate" AllowColSizingDefault="Free" CellPaddingDefault="4"
+								RowSelectorsDefault="No" Name="webGrid" TableLayout="Fixed"><ADDNEWBOX>
+									<STYLE BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+
+<BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White">
+</BorderDetails>
+
+									</STYLE>
+								</ADDNEWBOX>
+								<PAGER>
+									<STYLE BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+
+<BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White">
+</BorderDetails>
+
+									</STYLE>
+								</PAGER>
+								<HEADERSTYLEDEFAULT BorderWidth="1px" BorderStyle="Dashed" BackColor="#ABABAB" Font-Size="12px" Font-Bold="True"
+									BorderColor="White" HorizontalAlign="Left">
+									<BORDERDETAILS ColorTop="White" WidthLeft="1px" ColorBottom="White" WidthTop="1px" ColorRight="White"
+										ColorLeft="White"></BORDERDETAILS>
+								</HEADERSTYLEDEFAULT>
+								<ROWSELECTORSTYLEDEFAULT BackColor="#EBEBEB"></ROWSELECTORSTYLEDEFAULT>
+								<FRAMESTYLE Width="100%" Height="100%" BorderWidth="0px" BorderStyle="Groove" Font-Size="12px"
+									BorderColor="#ABABAB" Font-Names="Verdana"></FRAMESTYLE>
+								<FOOTERSTYLEDEFAULT BorderWidth="0px" BorderStyle="Groove" BackColor="LightGray">
+									<BORDERDETAILS ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White"></BORDERDETAILS>
+								</FOOTERSTYLEDEFAULT>
+								<ACTIVATIONOBJECT BorderStyle="Dotted"></ACTIVATIONOBJECT>
+								<EDITCELLSTYLEDEFAULT BorderWidth="1px" BorderStyle="None" BorderColor="Black" VerticalAlign="Middle">
+									<PADDING Bottom="1px"></PADDING>
+								</EDITCELLSTYLEDEFAULT>
+								<ROWALTERNATESTYLEDEFAULT BackColor="White"></ROWALTERNATESTYLEDEFAULT>
+								<ROWSTYLEDEFAULT BorderWidth="1px" BorderStyle="Solid" BorderColor="#D7D8D9" HorizontalAlign="Left"
+									VerticalAlign="Middle">
+									<PADDING Left="3px"></PADDING>
+									<BORDERDETAILS WidthLeft="0px" WidthTop="0px"></BORDERDETAILS>
+								</ROWSTYLEDEFAULT>
+								<IMAGEURLS ImageDirectory="/ig_common/WebGrid3/"></IMAGEURLS>
+							</DISPLAYLAYOUT>
+							<BANDS>
+								<IGTBL:ULTRAGRIDBAND></IGTBL:ULTRAGRIDBAND>
+							</BANDS>
+						</igtbl:ultrawebgrid></td>
+				</tr>
+				<tr class="normal">
+					<td>
+						<table height="100%" cellPadding="0" width="100%">
+							<tr>
+								<TD class="smallImgButton"><INPUT class="gridExportButton" id="cmdGridExport" type="submit" value="  " name="cmdGridExport"
+										runat="server"> |
+								</TD>
+								<td></td>
+								<TD><cc1:pagersizeselector id="pagerSizeSelector" runat="server"></cc1:pagersizeselector></TD>
+								<td align="right"><cc1:pagertoolbar id="pagerToolBar" runat="server"></cc1:pagertoolbar></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</HTML>

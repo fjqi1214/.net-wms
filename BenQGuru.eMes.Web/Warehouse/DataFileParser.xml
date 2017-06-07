@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Formats>
+<Format Name="WarehouseStock"
+	FileFormat = "HeaderData"
+	FileNameSeparator = ""
+	HeaderRowCount = "1"
+	HeaderRecordSeparator = ";\n"
+	HeaderColumnSeparator = ","
+	ContentRecordSeparator = "\n"
+	ContentColumnSeparator = ","
+	IsContentMultiRecord = "1"
+	ContentMultiRecordInterval = "1"
+	SaveDataDirectly = "0"
+>
+<ObjectMap IsObjectInsert = "0"  ObjectType="BenQGuru.eMES.Domain.Warehouse.WarehouseStock,BenQGuru.eMES.Domain">
+		<Column
+			AttributeName="FactoryCode"
+			ColumnName = "FactoryCode"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="WarehouseCode"
+			ColumnName = "WarehouseCode"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "1"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="ItemCode"
+			ColumnName = "ItemCode"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "2"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="EAttribute1"
+			ColumnName = "EAttribute1"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "3"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="OpenQty"
+			ColumnName = "OpenQty"
+			DataType = "FLOAT"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "4"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0"
+		/>
+		
+		
+</ObjectMap>
+</Format>
+
+
+<Format Name="WarehouseCycleCountDetail"
+	FileFormat = "HeaderData"
+	FileNameSeparator = ""
+	HeaderRowCount = "1"
+	HeaderRecordSeparator = ";\n"
+	HeaderColumnSeparator = ","
+	ContentRecordSeparator = "\n"
+	ContentColumnSeparator = ","
+	IsContentMultiRecord = "1"
+	ContentMultiRecordInterval = "1"
+	SaveDataDirectly = "0"
+>
+<ObjectMap IsObjectInsert = "0"  ObjectType="BenQGuru.eMES.Domain.Warehouse.WarehouseCycleCountDetail,BenQGuru.eMES.Domain">
+		<Column
+			AttributeName="FactoryCode"
+			ColumnName = "FactoryCode"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "0"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="WarehouseCode"
+			ColumnName = "WarehouseCode"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "1"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="ItemCode"
+			ColumnName = "ItemCode"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "2"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="EAttribute1"
+			ColumnName = "EAttribute1"
+			DataType = "string"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "3"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = ""
+		/>
+		
+		<Column
+			AttributeName="Qty"
+			ColumnName = "Qty"
+			DataType = "FLOAT"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "4"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0"
+		/>
+		
+		<Column
+			AttributeName="LineQty"
+			ColumnName = "LineQty"
+			DataType = "FLOAT"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "5"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0"
+		/>
+		
+		<Column
+			AttributeName="Warehouse2LineQty"
+			ColumnName = "Warehouse2LineQty"
+			DataType = "FLOAT"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "6"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0"
+		/>
+		
+		<Column
+			AttributeName="PhysicalQty"
+			ColumnName = "PhysicalQty"
+			DataType = "FLOAT"
+			DataSource = "Content"
+			DataLine = "0"
+			DataColumn = "7"
+			DataStringFrom = "0"
+			DataStringTo="99"
+			Default = "0"
+		/>
+		
+		
+</ObjectMap>
+</Format>
+
+</Formats>

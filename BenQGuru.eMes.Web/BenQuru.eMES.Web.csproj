@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ResGenToolArchitecture>Managed32Bit</ResGenToolArchitecture>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1ACA2939-E952-44EE-BE06-7550445CAB7F}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BenQuru.eMES.Web</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BenQuru.eMES.Web</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BenQGuru.eMES.BaseSetting">
+      <Name>BenQGuru.eMES.BaseSetting</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.BaseSetting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\BenQGuru.eMES.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Domain">
+      <Name>BenQGuru.eMES.Domain</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Material, Version=1.0.4.13, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\BenQGuru.eMES.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.MOModel, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\BenQGuru.eMES.MOModel.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Performance, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\BenQGuru.eMES.Performance.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.ReportView, Version=1.0.2713.26665, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\BenQGuru.eMES.ReportView.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Security">
+      <Name>BenQGuru.eMES.Security</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.TSModel">
+      <Name>BenQGuru.eMES.TSModel</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.TSModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.WatchPanel, Version=1.0.3454.20098, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\BenQGuru.eMES.WatchPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\BenQGuru.eMES.Web.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.WebUI.Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\BenQGuru.eMES.WebUI.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.Public.LicenseController, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\BenQGuru.Public.LicenseController.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlLibrary">
+      <Name>ControlLibrary</Name>
+      <HintPath>..\Bin\ControlLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics35.Web.v11.2, Version=11.2.20112.1019, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics35.Web.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.Shared.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Infragistics35.WebUI.Shared.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebGrid.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Infragistics35.WebUI.UltraWebGrid.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebListbar.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Infragistics35.WebUI.UltraWebListbar.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebNavigator.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Infragistics35.WebUI.UltraWebNavigator.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.WebDataInput.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Infragistics35.WebUI.WebDataInput.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <Name>log4net</Name>
+      <HintPath>..\Bin\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FDatabaseChangePage.aspx.cs">
+      <DependentUpon>FDatabaseChangePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FDatabaseChangePage.aspx.designer.cs">
+      <DependentUpon>FDatabaseChangePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAlertNotice.aspx.cs">
+      <DependentUpon>FAlertNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAlertNotice.aspx.designer.cs">
+      <DependentUpon>FAlertNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FException.aspx.cs">
+      <DependentUpon>FException.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FException.aspx.designer.cs">
+      <DependentUpon>FException.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FIframePage.aspx.cs">
+      <DependentUpon>FIframePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FIframePage.aspx.designer.cs">
+      <DependentUpon>FIframePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FLoginNewForSRM.aspx.cs">
+      <DependentUpon>FLoginNewForSRM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FLoginNewForSRM.aspx.designer.cs">
+      <DependentUpon>FLoginNewForSRM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FDownload.aspx.cs">
+      <DependentUpon>FDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FDownload.aspx.designer.cs">
+      <DependentUpon>FDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FErrorPage.aspx.cs">
+      <DependentUpon>FErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FErrorPage.aspx.designer.cs">
+      <DependentUpon>FErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FLogin.aspx.cs">
+      <DependentUpon>FLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FLogin.aspx.designer.cs">
+      <DependentUpon>FLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FLoginNew.aspx.cs">
+      <DependentUpon>FLoginNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FLoginNew.aspx.designer.cs">
+      <DependentUpon>FLoginNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOrgChangePage.aspx.cs">
+      <DependentUpon>FOrgChangePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOrgChangePage.aspx.designer.cs">
+      <DependentUpon>FOrgChangePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FPageEntry.aspx.cs">
+      <DependentUpon>FPageEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FPageEntry.aspx.designer.cs">
+      <DependentUpon>FPageEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FPageNavigator.aspx.cs">
+      <DependentUpon>FPageNavigator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FPageNavigator.aspx.designer.cs">
+      <DependentUpon>FPageNavigator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReportMain.aspx.cs">
+      <DependentUpon>FReportMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReportMain.aspx.designer.cs">
+      <DependentUpon>FReportMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptStartPage.aspx.cs">
+      <DependentUpon>FRptStartPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptStartPage.aspx.designer.cs">
+      <DependentUpon>FRptStartPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FStartPage.aspx.cs">
+      <DependentUpon>FStartPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FStartPage.aspx.designer.cs">
+      <DependentUpon>FStartPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FStartPageBlank.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FStartPageBlank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FStartPageBlank.aspx.designer.cs">
+      <DependentUpon>FStartPageBlank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserPassWordModifyMP.aspx.cs">
+      <DependentUpon>FUserPassWordModifyMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserPassWordModifyMP.aspx.designer.cs">
+      <DependentUpon>FUserPassWordModifyMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImportData\FExcelDataImp.aspx.cs">
+      <DependentUpon>FExcelDataImp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportData\FExcelDataImp.aspx.designer.cs">
+      <DependentUpon>FExcelDataImp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportData\ImportDateEngine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImportData\ImportExcel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImportData\ImportXMLHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MenuBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MenuBuilderNew.cs" />
+    <Compile Include="PageNavigatorBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="reportMenu.aspx.cs">
+      <DependentUpon>reportMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportMenu.aspx.designer.cs">
+      <DependentUpon>reportMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportTop.aspx.cs">
+      <DependentUpon>reportTop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportTop.aspx.designer.cs">
+      <DependentUpon>reportTop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FReportViewMain.aspx.cs">
+      <DependentUpon>FReportViewMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FReportViewMain.aspx.designer.cs">
+      <DependentUpon>FReportViewMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserContorl\IframeUserControl.ascx.cs">
+      <DependentUpon>IframeUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserContorl\IframeUserControl.ascx.designer.cs">
+      <DependentUpon>IframeUserControl.ascx</DependentUpon>
+    </Compile>
+    <Content Include="Domain.xml" />
+    <Content Include="FDatabaseChangePage.aspx" />
+    <Content Include="FAlertNotice.aspx" />
+    <Content Include="FException.aspx" />
+    <Content Include="FIframePage.aspx" />
+    <Content Include="FLoginNewForSRM.aspx" />
+    <Content Include="FDownload.aspx" />
+    <Content Include="FErrorPage.aspx" />
+    <Content Include="FLogin.aspx" />
+    <Content Include="FLoginNew.aspx" />
+    <Content Include="FOrgChangePage.aspx" />
+    <Content Include="FPageEntry.aspx" />
+    <Content Include="FPageNavigator.aspx" />
+    <Content Include="FReportMain.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FRptStartPage.aspx" />
+    <Content Include="FStartPage.aspx" />
+    <Content Include="FStartPageBlank.aspx" />
+    <Content Include="FUserPassWordModifyMP.aspx" />
+    <Content Include="Global.asax">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="ImportData\FExcelDataImp.aspx" />
+    <Content Include="ImportData\ImportBasicData.xml" />
+    <Content Include="language.mdb" />
+    <Content Include="reportMenu.aspx" />
+    <Content Include="reportTop.aspx" />
+    <Content Include="reportTop.htm" />
+    <Content Include="UserContorl\IframeUserControl.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="FReportViewMain.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <EmbeddedResource Include="FLoginNewForSRM.aspx.resx">
+      <DependentUpon>FLoginNewForSRM.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDownload.aspx.resx">
+      <DependentUpon>FDownload.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FErrorPage.aspx.resx">
+      <DependentUpon>FErrorPage.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLogin.aspx.resx">
+      <DependentUpon>FLogin.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLoginNew.aspx.resx">
+      <DependentUpon>FLoginNew.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPageEntry.aspx.resx">
+      <DependentUpon>FPageEntry.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPageNavigator.aspx.resx">
+      <DependentUpon>FPageNavigator.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReportMain.aspx.resx">
+      <DependentUpon>FReportMain.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptStartPage.aspx.resx">
+      <DependentUpon>FRptStartPage.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FStartPage.aspx.resx">
+      <DependentUpon>FStartPage.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserPassWordModifyMP.aspx.resx">
+      <DependentUpon>FUserPassWordModifyMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="reportMenu.aspx.resx">
+      <DependentUpon>reportMenu.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportTop.aspx.resx">
+      <DependentUpon>reportTop.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReportViewMain.aspx.resx">
+      <DependentUpon>FReportViewMain.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61524</DevelopmentServerPort>
+          <DevelopmentServerVPath>/eMES</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost/Hisense_Roger</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

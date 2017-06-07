@@ -1,0 +1,138 @@
+﻿.ighg_Office2007BlueExpandButton
+{
+	cursor: pointer;
+	cursor: hand;
+	padding-left: 5px;
+}
+
+TBODY>TR>TD.ighg_Office2007BlueExpandableArea
+{
+	padding: 0px 0px 0px 25px;
+}
+
+.ighg_Office2007BlueExpansionColumn
+{
+	width: 25px;
+	padding: 0 !important;
+}
+
+.ighg_Office2007BlueExpansionColumnHeader
+{
+	border-top:1px solid #dee5ef;
+    border-right:1px solid #bccade;
+    border-bottom:1px solid #a6b8d2;
+    border-left:1px solid #eaeef4;
+	width: 25px;
+}
+
+.ighg_Office2007BlueExpansionColumnFooter
+{
+	width: 25px;
+}
+
+
+/* START -- GroupBy CSS Classes */
+.ighg_Office2007BlueGroupIndentHeaderCell
+{
+	border-right: 1px solid #9EB6CE;
+	border-bottom: 1px solid #9EB6CE;
+}
+
+TBODY>TR.ighg_Office2007BlueGroupedRow>TD
+{
+	background:#BEDAFB;
+	border-bottom: 2px solid #6F9DD9;
+}
+
+
+TBODY>TR>TD.ighg_Office2007BlueGroupIndentCell
+{
+	border-right: 1px solid #D0D7E5;
+}
+
+.ighg_Office2007BlueGroupArea
+{
+	background-color: #F3F4F3;
+	border-bottom: 1px solid #9EB6CE;
+	padding: 10px;
+}
+
+.ighg_Office2007BlueGroupedColumn
+{
+	display: inline-block;
+	background: url(images/ighg_GroupedColumnBg.png) repeat-x;
+	height: 16px;
+	padding: 3px 5px 0px 10px;
+}
+.ighg_Office2007BlueGroupedColumnRightEdgeEnd
+{
+	display: inline-block;
+	background: url(images/ighg_GroupedColumnRightEdgeEndBg.gif) no-repeat;		
+	width: 10px;
+	height: 16px;
+	padding-top: 3px;
+}
+.ighg_Office2007BlueGroupedColumnRightEdge
+{
+	display: inline-block;
+	background: url(images/ighg_GroupedColumnRightEdgeBg.png) no-repeat;
+	width: 10px;
+	height: 16px;
+	padding-top: 3px;
+}
+
+.ighg_Office2007BlueGroupedColumnLeftEdge
+{
+	display: inline-block;
+	background: url(images/ighg_GroupedColumnLeftEdgeBg.gif) no-repeat;
+	width: 10px;
+	height: 16px;
+	padding-top: 3px;
+}
+
+.ighg_Office2007BlueGroupedBand
+{
+	display: inline-block;
+	background: url(images/ighg_GroupedBandBg.png) repeat-x;
+	border-left: 1px solid #9EB6CE;
+	height: 16px;
+	padding: 3px 0px 0px 10px;
+}
+.ighg_Office2007BlueGroupedBandRightEdge
+{		
+	display: inline-block;
+	background: url(images/ighg_GroupedBandBg.png) repeat-x;
+	border-right: 1px solid #9EB6CE;
+	width: 10px;
+	height: 16px;
+	padding: 3px 0px 0px 0px;
+}
+
+.ighg_Office2007BlueColumnGroupingTopDragIndicator
+{
+	background-image:url(images/ighg_TopDragIndicator.gif);
+	background-repeat: no-repeat;
+	width:5px; 
+	height:3px;
+	z-index: 100;
+}
+
+.ighg_Office2007BlueColumnGroupingMiddleDragIndicator
+{
+      background-image:url(images/ighg_MiddleDragIndicator.gif);
+      background-repeat: repeat-y;
+      background-position: center;
+      width:3px; 
+}
+
+.ighg_Office2007BlueColumnGroupingBottomDragIndicator
+{
+      background-image:url(images/ighg_BottomDragIndicator.gif);
+      background-repeat: no-repeat;
+      width:5px; 
+      height:3px;
+      position: absolute;
+      z-index: 100;   
+}
+/* END -- GroupBy CSS Classes */
+@media print{.ighg_Office2007BlueControl, .ighg_Office2007BlueControl div{width:auto !important; height:auto !important; overflow: visible !important;}}

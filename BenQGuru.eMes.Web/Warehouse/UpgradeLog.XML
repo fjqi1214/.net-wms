@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="BenQGuru.eMES.Web.Warehouse">
+</Property><Property Name="解决方案文件" Value="H:\Roger\Hisense\Source\BenQGuru.eMes.Web\Warehouse\BenQGuru.eMES.Web.Warehouse.sln">
+</Property><Property Name="Date" Value="Tuesday, April 20, 2010">
+</Property><Property Name="Time" Value="12:47:36 PM">
+</Property></Properties><Event ErrorLevel="0" Project="BenQGuru.eMES.Web.Warehouse" Source="BenQGuru.eMES.Web.Warehouse.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="BenQGuru.eMES.Web.Warehouse" Source="BenQGuru.eMES.Web.Warehouse.csproj" Description="Converted">
+</Event></UpgradeLog>

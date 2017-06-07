@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<datatype name="WORKPLAN" text="生产计划">
+		<field>
+			<add key="PLANDATE" value="计划日期" Match="false" AllowNull="false"></add>
+			<add key="BIGSSCODE" value="大线代码" Match="false" AllowNull="false"></add>
+			<add key="PLANSEQ" value="生产顺序" Match="false" AllowNull="false" ></add>
+			<add key="MOCODE" value="工单代码" Match="false" AllowNull="false"></add>
+			<add key="MOSEQ" value="工单项次" Match="false" AllowNull="false"></add>
+			<add key="PLANQTY" value="计划数量" Match="false" AllowNull="false"></add>
+			<add key="PLANSTARTTIME" value="计划开始时间" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+
+	<datatype name="TESTDATA" text="TESTDATA">
+		<field>
+			<add key="RCARD" value="RCARD" Match="false" AllowNull="false"></add>
+			<add key="MOCODE" value="MOCODE" Match="false" AllowNull="false"></add>
+			<add key="ITEMCODE" value="ITEMCODE" Match="false" AllowNull="false" ></add>
+			<add key="RESCODE" value="RESCODE" Match="false" AllowNull="false" ></add>
+			<add key="DEVICENO" value="DEVICENO" Match="false" AllowNull="false"></add>
+			<add key="CKGROUP" value="CKGROUP" Match="false" AllowNull="false"></add>
+			<add key="CKITEMCODE" value="CKITEMCODE" Match="false" AllowNull="false"></add>
+			<add key="PARAM" value="PARAM" Match="false" AllowNull="true"></add>
+			<add key="USL" value="USL" Match="false" AllowNull="true"></add>
+			<add key="LSL" value="LSL" Match="false" AllowNull="true"></add>
+			<add key="TESTINGVALUE" value="TESTINGVALUE" Match="false" AllowNull="false"></add>
+			<add key="TESTINGRESULT" value="TESTINGRESULT" Match="false" AllowNull="false"></add>
+			<add key="TESTINGDATE" value="TESTINGDATE" Match="false" AllowNull="false"></add>
+			<add key="TESTINGTIME" value="TESTINGTIME" Match="false" AllowNull="false"></add>
+		</field>
+	</datatype>
+
+	<datatype name="MATERIALNEED" text="要料维护">
+		<field>
+			<add key="ITEMCODE" value="物料代码" Match="false" AllowNull="false"></add>
+			<add key="ORGID" value="组织代码" Match="false" AllowNull="false" ></add>
+			<add key="REQUESTQTY" value="需求标准数量" Match="false" AllowNull="true" ></add>
+		</field>
+	</datatype>
+
+</data>

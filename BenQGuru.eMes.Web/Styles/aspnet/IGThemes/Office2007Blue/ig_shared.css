@@ -1,0 +1,159 @@
+.ig_Office2007BlueControl
+{
+	background-color:White;
+	font-size:xx-small;
+	font-family: verdana;
+	color:Black;
+}
+
+
+.ig_Office2007BlueItem
+{
+	background-color:White;
+	font-size:10px;
+	font-family: verdana;
+	padding-left:1px;
+}
+
+
+.ig_Office2007BlueButton
+{
+	cursor:pointer;;
+}
+
+
+.ig_Office2007BlueButtonHover
+{
+}
+
+
+.ig_Office2007BlueButtonPressed
+{
+}
+
+
+.ig_Office2007BlueButtonDisabled
+{
+}
+
+
+.ig_Office2007BlueHover
+{
+}
+
+
+.ig_Office2007BlueSelected
+{
+}
+
+
+.ig_Office2007BlueDisabled
+{
+}
+
+
+.ig_Office2007BlueHeader
+{
+}
+
+
+.ig_Office2007BlueFooter
+{
+}
+
+
+.ig_Office2007BlueEditWithButtons
+{
+}
+
+
+.ig_Office2007BlueEdit
+{
+}
+
+
+.ig_Office2007BlueEditInContainer
+{
+}
+
+
+.ig_Office2007BlueAlt
+{
+	border-top:solid 1px #E3EFFF;
+	border-right:solid 0px #FFFFFF;
+	border-bottom:solid 1px #E3EFFF;
+	border-left:solid 0px #FFFFFF;
+}
+
+
+.ig_Office2007BlueDropDown
+{
+}
+
+
+.ig_Office2007BlueEditSelected
+{
+}
+
+
+Body
+{
+}
+
+
+.ms-wpbody .ig_Office2007BlueControl td
+{
+	background-color: inherit;
+	font-style:inherit;
+	font-size:xx-small;
+	border-bottom-style:none;
+}
+
+
+.ms-WPBody .igte_Office2007BlueEditWithButtons TD
+{
+	background-color:Transparent;
+	font-size:1px;
+	border-bottom-style:none;
+}
+
+
+.ms-WPBody .igdw_Office2007BlueControl TD
+{
+	background-color:White;
+}
+
+
+.ms-wpbody .ig_Office2007BlueControl table
+{
+	font-style:inherit;
+	font-size:xx-small;
+	border-collapse:Separate;
+}
+
+
+.ms-WPBody .igte_Office2007BlueEditWithButtons TABLE
+{
+	font-size:1px;
+}
+
+
+.ms-WPBody .igmc_Office2007BlueControl TD
+{
+	background-color: inherit;
+	font-style:inherit;
+	font-size:xx-small;
+	border-style:inherit;
+}
+
+
+.ms-WPBody .igmc_Office2007BlueControl TABLE
+{
+	font-style:inherit;
+	font-size:xx-small;
+}
+
+.ie7_DisplayInlineFix { display: inline-block; }
+.ie7_DisplayInlineFix { display: inline; }
+
+

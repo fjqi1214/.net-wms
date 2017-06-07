@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="6q29hbjtm_v">
+    <property name="$name" value="BenQGuru" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="design:view:::mp2bv2ihf_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::ap2r2hnai_v" />
+    </reference>
+  </view>
+</nodeSet>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<simulationclient>
+  <usercode>admin</usercode>
+  <password>admin</password>
+  <resource>dct-res-1</resource>
+  <rcard prefix="D260601-0602-GOMO-" seqlen="6" seqstart="100000" seqcount="199999" />
+  <rcardcurrentseq>12</rcardcurrentseq>
+  <commandline>
+		GOOD
+	</commandline>
+</simulationclient>

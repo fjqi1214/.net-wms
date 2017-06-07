@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<congifRoot>
+	<Category key="CPU" value="CPU">
+		<CheckItem key="CPUFrequency" value="CPU频率">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+		<CheckItem key="CPUPlatform" value="CPU平台">
+			<CheckValue value="test1"></CheckValue>
+		</CheckItem>
+		<CheckItem key="CPUModel" value="CPU型号">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+	</Category>
+	<Category key="Memory" value="内存">
+		<CheckItem key="MemoVolumn" value="内存容量">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+		<CheckItem key="MemoFrequency" value="内存频率">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+		<CheckItem key="MemoModel" value="内存型号">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+	</Category>
+	<Category key="HardDisk" value="硬盘">
+		<CheckItem key="HDVolumn" value="硬盘容量">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+		<CheckItem key="HDSpeed" value="硬盘转速">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+		<CheckItem key="HDPattern" value="硬盘类型">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+	</Category>
+	<Category key="Color" value="颜色">
+		<CheckItem key="ASideColor" value="A面颜色">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+		<CheckItem key="BSideColor" value="B面颜色">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+		<CheckItem key="CSideColor" value="C面颜色">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+		<CheckItem key="DSideColor" value="D面颜色">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+	</Category>
+	<Category key="Chipset" value="芯片组">
+		<CheckItem key="Chipset" value="芯片组">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+	</Category>
+	<Category key="ROM" value="光驱">
+		<CheckItem key="ROM" value="光驱">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+	</Category>
+	<Category key="T-Pad" value="T-Pad">
+		<CheckItem key="T-Pad" value="T-Pad">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+	</Category>
+	<Category key="LNC" value="局域网卡">
+		<CheckItem key="LNC" value="局域网卡">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+	</Category>
+	<Category key="WNC" value="无线网卡">
+		<CheckItem key="WNC" value="无线网卡">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+	</Category>
+	<Category key="LCD" value="LCD">
+		<CheckItem key="LCDArea" value="尺寸">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+		<CheckItem key="LCDMaterial" value="材料">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+	</Category>
+	<Category key="OS" value="OS">
+		<CheckItem key="OSVersion" value="OS版本">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+		<CheckItem key="OSLanguage" value="OS语言">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+	</Category>
+	<Category key="IVCard" value="独立显卡">
+		<CheckItem key="IVCard" value="独立显卡">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+	</Category>
+	<Category key="Other" value="其他">
+		<CheckItem key="FingerprintIdentification" value="指纹识别">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+		<CheckItem key="Infrared" value="红外">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+		<CheckItem key="CardReader" value="读卡器">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+		<CheckItem key="Bluetooth" value="蓝牙">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+		<CheckItem key="FM" value="FM">
+			<CheckValue value=""></CheckValue>
+		</CheckItem>
+	</Category>
+</congifRoot>

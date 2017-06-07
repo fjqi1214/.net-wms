@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<MenuRight>
+	<!-- MenuRightVersion 版本页面权限设置 -->
+	<!-- 注意 : 在此配置的模块如果 Disply="False", 那么将不会显示在界面上,任何用户(包括ADMIN)都不可访问-->
+	<!-- 配置参数说明-->
+	<!-- Version 表示版本 : Mobile 表示手机,NoteBook 表示笔记本 (可自定义); Disply 为是否显示 : True 表示显示,False 表示不显示;Code 为模块代码;Name为模块名称 -->
+	<MenuRightVersion Version="Mobile">
+		<!-- 示例  Disply="False" 表示不显示
+			<ModuleCode Disply="False" Code="ALERTBILL" Name="预警设置" />
+		-->
+		<ModuleCode Disply="True" Code="ALERTBILL" Name="预警设置" />
+	</MenuRightVersion>
+	
+	<!-- MenuRightAdmin ADMIN 特权页面 -->
+	<!-- 注意 : 在此配置的模块 如果Disply="False", 那么只有ADMIN用户才可以看到,其余用户看不到此菜单-->
+	<!-- 配置参数说明-->
+	<!-- Disply 为是否显示 True 表示显示,False 表示不显示;Code 为模块代码;Name为模块名称 -->
+	<MenuRightAdmin>
+		<!-- 示例  Disply="False" 表示不显示
+			<ModuleCode Disply="False" Code="ALERTBILL" Name="预警设置" />
+		-->
+		<ModuleCode Disply="True" Code="PARAMETER" Name="参数设置" />
+	</MenuRightAdmin>
+	
+</MenuRight>

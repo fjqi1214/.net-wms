@@ -1,0 +1,178 @@
+using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Web;
+using System.Web.SessionState;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
+
+using Infragistics.WebUI.UltraWebGrid;
+using BenQGuru.eMES.Web.Helper;
+using BenQGuru.eMES.WebQuery;
+using BenQGuru.eMES.Domain.DataCollect;
+
+namespace BenQGuru.eMES.Web.WebQuery
+{
+	/// <summary>
+	/// FTryNoDetailsQP 的摘要说明。
+	/// </summary>
+	public partial class FTryNoDetailsQP : BaseQPage
+	{
+		protected System.Web.UI.WebControls.Label lblTryNo;
+
+		protected ExcelExporter excelExporter = null;
+		protected WebQueryHelper _helper = null;
+		protected ControlLibrary.Web.Language.LanguageComponent languageComponent1;
+		private System.ComponentModel.IContainer components;
+		protected GridHelper _gridHelper = null;
+	
+		protected void Page_Load(object sender, System.EventArgs e)
+		{
+			//this.pagerSizeSelector.Readonly = true;
+
+			this.txtTryNoQuery.Text = this.GetRequestParam("TRYNO");
+
+			this._gridHelper = new GridHelper(this.gridWebGrid);
+
+			this._helper = new WebQueryHelper( null,this.cmdGridExport,this.gridWebGrid,this.pagerSizeSelector,this.pagerToolBar,this.languageComponent1 );
+			this._helper.LoadGridDataSource +=new EventHandler(_helper_LoadGridDataSource);
+			this._helper.DomainObjectToGridRow +=new EventHandler(_helper_DomainObjectToGridRow);
+			this._helper.DomainObjectToExportRow +=new EventHandler(_helper_DomainObjectToExportRow);
+			this._helper.GetExportHeadText +=new EventHandler(_helper_GetExportHeadText);				
+
+			if( !this.IsPostBack )
+			{
+				// 初始化页面语言
+				this.InitPageLanguage(this.languageComponent1, false);
+
+				this._initialWebGrid();
+				this._helper.Query(sender);
+			}
+		}
+
+		private void _initialWebGrid()
+		{
+			this._gridHelper.AddColumn("RunningCard",				"产品序列号",null);
+			this._gridHelper.AddColumn("OPCode",			"当前工位",null);
+			this._gridHelper.AddColumn("StepSequenceCode",			"当前线别",null);
+			this._gridHelper.AddColumn("ResourceCode",			"当前资源",null);		
+			this._gridHelper.AddColumn("SNState",			"产品状态",null);
+
+			//多语言
+			this._gridHelper.ApplyLanguage( this.languageComponent1 );
+		}
+
+		#region Web 窗体设计器生成的代码
+		override protected void OnInit(EventArgs e)
+		{
+			//
+			// CODEGEN: 该调用是 ASP.NET Web 窗体设计器所必需的。
+			//
+			InitializeComponent();
+			base.OnInit(e);
+		}
+		
+		/// <summary>
+		/// 设计器支持所需的方法 - 不要使用代码编辑器修改
+		/// 此方法的内容。
+		/// </summary>
+		private void InitializeComponent()
+		{    
+			this.components = new System.ComponentModel.Container();
+			this.languageComponent1 = new ControlLibrary.Web.Language.LanguageComponent(this.components);
+			// 
+			// languageComponent1
+			// 
+			this.languageComponent1.Language = "CHS";
+			this.languageComponent1.LanguagePackageDir = "\\\\grd2-build\\language pack\\";
+			this.languageComponent1.RuntimePage = null;
+			this.languageComponent1.RuntimeUserControl = null;
+			this.languageComponent1.UserControlName = "";
+
+		}
+		#endregion
+
+		private bool _checkRequireFields()
+		{			
+			PageCheckManager manager = new PageCheckManager();
+			manager.Add( new LengthCheck(this.lblTryNo,this.txtTryNoQuery,System.Int32.MaxValue,true) );
+
+			if( !manager.Check() )
+			{
+				WebInfoPublish.Publish(this,manager.CheckMessage,this.languageComponent1);
+				return false;
+			}	
+			return true;
+		}
+
+		private void _helper_LoadGridDataSource(object sender, EventArgs e)
+		{	
+			if( this._checkRequireFields() )
+			{
+				FacadeFactory facadeFactory = new FacadeFactory(base.DataProvider);
+				( e as WebQueryEventArgs ).GridDataSource = 
+					facadeFactory.CreateQueryTryNoFacade().QueryTryNoDetails(	
+					FormatHelper.CleanString(this.txtTryNoQuery.Text).ToUpper(),
+					( e as WebQueryEventArgs ).StartRow,
+					( e as WebQueryEventArgs ).EndRow);
+
+				( e as WebQueryEventArgs ).RowCount = 
+					facadeFactory.CreateQueryTryNoFacade().QueryTryNoDetailsCount(	
+					FormatHelper.CleanString(this.txtTryNoQuery.Text).ToUpper());
+			}
+		}
+
+		private void _helper_DomainObjectToGridRow(object sender, EventArgs e)
+		{
+			if( ( e as DomainObjectToGridRowEventArgs ).DomainObject != null )
+			{
+				QDOTryNo obj = ( e as DomainObjectToGridRowEventArgs ).DomainObject as QDOTryNo;
+				( e as DomainObjectToGridRowEventArgs ).GridRow = 
+					new UltraGridRow( new object[]{
+													  obj.RunningCard,
+													  obj.OPCode,
+													  obj.StepSequenceCode,
+													  obj.ResourceCode,
+													  this.languageComponent1.GetString(obj.SNState),
+												  }
+					);
+			}
+		}
+
+		private void _helper_DomainObjectToExportRow(object sender, EventArgs e)
+		{
+			if( ( e as DomainObjectToExportRowEventArgs ).DomainObject != null )
+			{
+				QDOTryNo obj = ( e as DomainObjectToExportRowEventArgs ).DomainObject as QDOTryNo;
+				( e as DomainObjectToExportRowEventArgs ).ExportRow = 
+					new string[]{
+									obj.RunningCard,
+									obj.OPCode,
+									obj.StepSequenceCode,
+									obj.ResourceCode,
+									this.languageComponent1.GetString(obj.SNState)
+								};
+			}
+		}
+
+		private void _helper_GetExportHeadText(object sender, EventArgs e)
+		{
+			( e as ExportHeadEventArgs ).Heads = 
+				new string[]{								
+								"RunningCard",
+								"OPCode",
+								"StepSequenceCode",
+								"ResourceCode",
+								"SNState"
+							};
+		}
+
+		protected void cmdReturn_ServerClick(object sender, System.EventArgs e)
+		{
+			this.Response.Redirect("FTryNoQP.aspx");
+		}		
+	}
+}

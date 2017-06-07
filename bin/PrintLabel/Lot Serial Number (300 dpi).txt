@@ -1,0 +1,3 @@
+[Esc]V020[Esc]H340[Esc]L0202[Esc]XS[$itemdesc]
+[Esc]V060[Esc]H340[Esc]B102055*[$rcard]*
+[Esc]V130[Esc]H340[Esc]XS[$rcard0to3]-[$rcard4to10]-[$rcard10to14]-[$rcardoverage]

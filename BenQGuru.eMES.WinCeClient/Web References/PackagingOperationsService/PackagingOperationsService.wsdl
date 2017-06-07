@@ -1,0 +1,3649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetDBDateTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDBDateTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDBDateTimeResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BeginTransaction">
+        <s:complexType />
+      </s:element>
+      <s:element name="BeginTransactionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CommitTransaction">
+        <s:complexType />
+      </s:element>
+      <s:element name="CommitTransactionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RollbackTransaction">
+        <s:complexType />
+      </s:element>
+      <s:element name="RollbackTransactionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCartonInvoices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCartonInvoicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCartonInvoicesResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPickDetailMaterial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPickDetailMaterialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryPickDetailMaterialResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPickDetailMaterial_PQty">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPickDetailMaterial_PQtyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryPickDetailMaterial_PQtyResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCartonInvDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carInvNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCartonInvDetailResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddCartonInvDetailMaterial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="carInvNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCartonInvDetailMaterialResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddCARTONINVDETAILSN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="carInvNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCARTONINVDETAILSNResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdatePick">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePickResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdatePickdetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePickdetailResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdatePickdetailmaterial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pQtyAddValue" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePickdetailmaterialResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdatePickdetailmaterialAndGetQty">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dqMaterialNO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="qty" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePickdetailmaterialAndGetQtyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatePickdetailmaterialAndGetQtyResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCartonInvDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carInvNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCartonInvDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCartonInvDetailResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCartonInvDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carInvNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCartonInvDetailResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="QueryPickDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryPickDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryPickDetailsResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPickDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPickDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPickDetailResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePickDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePickDetailsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateCartonInvoices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="carInvNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCartonInvoicesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateTBLCartonInvoices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carInvNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTBLCartonInvoicesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTBLCartonInvoices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carInvNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTBLCartonInvoicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTBLCartonInvoicesResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPickDetailMaterialSN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPickDetailMaterialSNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPickDetailMaterialSNResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPickDetailMaterialSN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPickDetailMaterialSNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryPickDetailMaterialSNResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCartonInvDetailSN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carInvNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCartonInvDetailSNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCartonInvDetailSNResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OperateCartonInvDetailMaterial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="carInvNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OperateCartonInvDetailMaterialResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="_OperateCartonInvDetailMaterial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="carInvNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="qty" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_OperateCartonInvDetailMaterialResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IsEqual">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gfHWItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gfPackingSEQ" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsEqualResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsEqualResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_IsEqual">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gfHWItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gfPackingSEQ" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_IsEqualResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="_IsEqualResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCartonNoCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gfHWItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gfPackingSEQ" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCartonNoCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCartonNoCountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaterialInfoByQDMCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dqMCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaterialInfoByQDMCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMaterialInfoByQDMCodeResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsKeypartsControlType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dqMCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsKeypartsControlTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsKeypartsControlTypeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllPickDetailMaterialByPickNoAndLine">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllPickDetailMaterialByPickNoAndLineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllPickDetailMaterialByPickNoAndLineResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPickNO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gfFlag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryPickNOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryPickNOResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPickNONotY">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPickNONotYResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryPickNONotYResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryDQMaterialNO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryDQMaterialNOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryDQMaterialNOResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryGFDqsMcode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dqmcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryGFDqsMcodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryGFDqsMcodeResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryCarInvNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryCarInvNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryCarInvNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGrid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGridResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataGridResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGrid1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGrid1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataGrid1Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGrid2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGrid2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataGrid2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CartonNOKeyPressReturnMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dqMCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CartonNOKeyPressReturnMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CartonNOKeyPressReturnMessageResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QTYKeyPressReturnMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dqMCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="qty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QTYKeyPressReturnMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QTYKeyPressReturnMessageResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SNKeyPressReturnMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dqMCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SNKeyPressReturnMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SNKeyPressReturnMessageResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitReturnMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitReturnMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitReturnMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryGFHWItemCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryGFHWItemCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryGFHWItemCodeResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryGFPackingSEQ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gfHWItemCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryGFPackingSEQResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryGFPackingSEQResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGrid3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gfHWItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gfPackingSEQ" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGrid3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataGrid3Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGrid4">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGrid4Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataGrid4Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GFCartonNOKeyPressReturnMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gfHWItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gfPackingSEQ" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="suiteQTY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dqMCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GFCartonNOKeyPressReturnMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GFCartonNOKeyPressReturnMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GFQTYKeyPressReturnMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gfHWItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gfPackingSEQ" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="suiteQTY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dqMCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dqsMCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="qty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GFQTYKeyPressReturnMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GFQTYKeyPressReturnMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GFSNKeyPressReturnMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gfHWItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gfPackingSEQ" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="suiteQTY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dqMCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dqsMCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GFSNKeyPressReturnMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GFSNKeyPressReturnMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GFSubmitReturnMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GFSubmitReturnMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GFSubmitReturnMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryTransNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryTransNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryTransNoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStorLocTransOperationsDataGrid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStorLocTransOperationsDataGridResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStorLocTransOperationsDataGridResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsBelong">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="locationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsBelongResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsBelongResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCompliance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromCartonNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsComplianceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsComplianceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StorLocTransOperationsSubmitReturnMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="locationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromCartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="qty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tLocationCartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StorLocTransOperationsSubmitReturnMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StorLocTransOperationsSubmitReturnMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryIQCNo">
+        <s:complexType />
+      </s:element>
+      <s:element name="QueryIQCNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryIQCNoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAQLStandard">
+        <s:complexType />
+      </s:element>
+      <s:element name="QueryAQLStandardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryAQLStandardResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAQLStr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IQCNO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAQLStrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryAQLStrResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAQLStandard1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IQCNO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAQLStandard1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryAQLStandard1Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAQLStr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="seq" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="aqlLevel" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAQLStrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAQLStrResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAQLLevel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_IQCNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAQLLevelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAQLLevelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAQLStrByLevel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aqlLevel" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAQLStrByLevelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAQLStrByLevelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIQCCheckResultMPDataGrid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iqcNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIQCCheckResultMPDataGridResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIQCCheckResultMPDataGridResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetASN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iqcNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetASNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetASNResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IQCCheckResultMPSubmitReturnMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_IQCNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="checkType" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="aqlLevelAndSeq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rejectNumStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IQCCheckResultMPSubmitReturnMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IQCCheckResultMPSubmitReturnMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIQCNGRecordDataGrid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iqcNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIQCNGRecordDataGridResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIQCNGRecordDataGridResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="isKeyparts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DQMcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="isKeypartsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="isKeypartsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IQCNGRecordSaveReturnMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="isAdd" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="IQCNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DQMcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stLine" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="eCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ngType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ngDesc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_sn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ngQty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cartonNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IQCNGRecordSaveReturnMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IQCNGRecordSaveReturnMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IQCNGRecordDeleteReturnMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IQCNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strs" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IQCNGRecordDeleteReturnMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IQCNGRecordDeleteReturnMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGridDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iqcNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGridDocResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataGridDocResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGridTableForPackageWinc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGridTableForPackageWincResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGridTableForPackageWincResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bytes" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="iqcNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDoc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fileNames" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDocResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDrpNGType">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDrpNGTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDrpNGTypeResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InitDrpNGDesc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NGTYPE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InitDrpNGDescResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InitDrpNGDescResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIQCNoFromCartonno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cartonno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIQCNoFromCartonnoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIQCNoFromCartonnoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PackFinish">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PackFinishResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PackFinishResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GFPackFinish">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GFPackFinishResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GFPackFinishResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApplyOQC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CARINVNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pickNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApplyOQCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApplyOQCResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDBDateTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDBDateTime" />
+  </wsdl:message>
+  <wsdl:message name="GetDBDateTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDBDateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="BeginTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:BeginTransaction" />
+  </wsdl:message>
+  <wsdl:message name="BeginTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:BeginTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommitTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:CommitTransaction" />
+  </wsdl:message>
+  <wsdl:message name="CommitTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:CommitTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="RollbackTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:RollbackTransaction" />
+  </wsdl:message>
+  <wsdl:message name="RollbackTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:RollbackTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCartonInvoicesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCartonInvoices" />
+  </wsdl:message>
+  <wsdl:message name="GetCartonInvoicesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCartonInvoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPickDetailMaterialSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPickDetailMaterial" />
+  </wsdl:message>
+  <wsdl:message name="QueryPickDetailMaterialSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPickDetailMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPickDetailMaterial_PQtySoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPickDetailMaterial_PQty" />
+  </wsdl:message>
+  <wsdl:message name="QueryPickDetailMaterial_PQtySoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPickDetailMaterial_PQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCartonInvDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCartonInvDetail" />
+  </wsdl:message>
+  <wsdl:message name="AddCartonInvDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCartonInvDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCartonInvDetailMaterialSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCartonInvDetailMaterial" />
+  </wsdl:message>
+  <wsdl:message name="AddCartonInvDetailMaterialSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCartonInvDetailMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCARTONINVDETAILSNSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCARTONINVDETAILSN" />
+  </wsdl:message>
+  <wsdl:message name="AddCARTONINVDETAILSNSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCARTONINVDETAILSNResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePickSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePick" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePickSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePickResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePickdetailSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePickdetail" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePickdetailSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePickdetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePickdetailmaterialSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePickdetailmaterial" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePickdetailmaterialSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePickdetailmaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePickdetailmaterialAndGetQtySoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePickdetailmaterialAndGetQty" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePickdetailmaterialAndGetQtySoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePickdetailmaterialAndGetQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCartonInvDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCartonInvDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetCartonInvDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCartonInvDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCartonInvDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCartonInvDetail" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCartonInvDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCartonInvDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPickDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPickDetails" />
+  </wsdl:message>
+  <wsdl:message name="QueryPickDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPickDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPickDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPickDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetPickDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPickDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePickDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePickDetails" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePickDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePickDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCartonInvoicesSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCartonInvoices" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCartonInvoicesSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCartonInvoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTBLCartonInvoicesSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateTBLCartonInvoices" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTBLCartonInvoicesSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateTBLCartonInvoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTBLCartonInvoicesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTBLCartonInvoices" />
+  </wsdl:message>
+  <wsdl:message name="GetTBLCartonInvoicesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTBLCartonInvoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPickDetailMaterialSNSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPickDetailMaterialSN" />
+  </wsdl:message>
+  <wsdl:message name="GetPickDetailMaterialSNSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPickDetailMaterialSNResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPickDetailMaterialSNSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPickDetailMaterialSN" />
+  </wsdl:message>
+  <wsdl:message name="QueryPickDetailMaterialSNSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPickDetailMaterialSNResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCartonInvDetailSNSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCartonInvDetailSN" />
+  </wsdl:message>
+  <wsdl:message name="GetCartonInvDetailSNSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCartonInvDetailSNResponse" />
+  </wsdl:message>
+  <wsdl:message name="OperateCartonInvDetailMaterialSoapIn">
+    <wsdl:part name="parameters" element="tns:OperateCartonInvDetailMaterial" />
+  </wsdl:message>
+  <wsdl:message name="OperateCartonInvDetailMaterialSoapOut">
+    <wsdl:part name="parameters" element="tns:OperateCartonInvDetailMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="_OperateCartonInvDetailMaterialSoapIn">
+    <wsdl:part name="parameters" element="tns:_OperateCartonInvDetailMaterial" />
+  </wsdl:message>
+  <wsdl:message name="_OperateCartonInvDetailMaterialSoapOut">
+    <wsdl:part name="parameters" element="tns:_OperateCartonInvDetailMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsEqualSoapIn">
+    <wsdl:part name="parameters" element="tns:IsEqual" />
+  </wsdl:message>
+  <wsdl:message name="IsEqualSoapOut">
+    <wsdl:part name="parameters" element="tns:IsEqualResponse" />
+  </wsdl:message>
+  <wsdl:message name="_IsEqualSoapIn">
+    <wsdl:part name="parameters" element="tns:_IsEqual" />
+  </wsdl:message>
+  <wsdl:message name="_IsEqualSoapOut">
+    <wsdl:part name="parameters" element="tns:_IsEqualResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCartonNoCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCartonNoCount" />
+  </wsdl:message>
+  <wsdl:message name="GetCartonNoCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCartonNoCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMaterialInfoByQDMCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMaterialInfoByQDMCode" />
+  </wsdl:message>
+  <wsdl:message name="GetMaterialInfoByQDMCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMaterialInfoByQDMCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsKeypartsControlTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:IsKeypartsControlType" />
+  </wsdl:message>
+  <wsdl:message name="IsKeypartsControlTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:IsKeypartsControlTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPickDetailMaterialByPickNoAndLineSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllPickDetailMaterialByPickNoAndLine" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPickDetailMaterialByPickNoAndLineSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllPickDetailMaterialByPickNoAndLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPickNOSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPickNO" />
+  </wsdl:message>
+  <wsdl:message name="QueryPickNOSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPickNOResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPickNONotYSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPickNONotY" />
+  </wsdl:message>
+  <wsdl:message name="QueryPickNONotYSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPickNONotYResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryDQMaterialNOSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryDQMaterialNO" />
+  </wsdl:message>
+  <wsdl:message name="QueryDQMaterialNOSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryDQMaterialNOResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryGFDqsMcodeSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryGFDqsMcode" />
+  </wsdl:message>
+  <wsdl:message name="QueryGFDqsMcodeSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryGFDqsMcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStringSoapIn">
+    <wsdl:part name="parameters" element="tns:GetString" />
+  </wsdl:message>
+  <wsdl:message name="GetStringSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryCarInvNoSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryCarInvNo" />
+  </wsdl:message>
+  <wsdl:message name="QueryCarInvNoSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryCarInvNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGridSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataGrid" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGridSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataGridResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGrid1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataGrid1" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGrid1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataGrid1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGrid2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataGrid2" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGrid2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataGrid2Response" />
+  </wsdl:message>
+  <wsdl:message name="CartonNOKeyPressReturnMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:CartonNOKeyPressReturnMessage" />
+  </wsdl:message>
+  <wsdl:message name="CartonNOKeyPressReturnMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:CartonNOKeyPressReturnMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="QTYKeyPressReturnMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:QTYKeyPressReturnMessage" />
+  </wsdl:message>
+  <wsdl:message name="QTYKeyPressReturnMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:QTYKeyPressReturnMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SNKeyPressReturnMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:SNKeyPressReturnMessage" />
+  </wsdl:message>
+  <wsdl:message name="SNKeyPressReturnMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:SNKeyPressReturnMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitReturnMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitReturnMessage" />
+  </wsdl:message>
+  <wsdl:message name="SubmitReturnMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitReturnMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryGFHWItemCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryGFHWItemCode" />
+  </wsdl:message>
+  <wsdl:message name="QueryGFHWItemCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryGFHWItemCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryGFPackingSEQSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryGFPackingSEQ" />
+  </wsdl:message>
+  <wsdl:message name="QueryGFPackingSEQSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryGFPackingSEQResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGrid3SoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataGrid3" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGrid3SoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataGrid3Response" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGrid4SoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataGrid4" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGrid4SoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataGrid4Response" />
+  </wsdl:message>
+  <wsdl:message name="GFCartonNOKeyPressReturnMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:GFCartonNOKeyPressReturnMessage" />
+  </wsdl:message>
+  <wsdl:message name="GFCartonNOKeyPressReturnMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:GFCartonNOKeyPressReturnMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GFQTYKeyPressReturnMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:GFQTYKeyPressReturnMessage" />
+  </wsdl:message>
+  <wsdl:message name="GFQTYKeyPressReturnMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:GFQTYKeyPressReturnMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GFSNKeyPressReturnMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:GFSNKeyPressReturnMessage" />
+  </wsdl:message>
+  <wsdl:message name="GFSNKeyPressReturnMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:GFSNKeyPressReturnMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GFSubmitReturnMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:GFSubmitReturnMessage" />
+  </wsdl:message>
+  <wsdl:message name="GFSubmitReturnMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:GFSubmitReturnMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryTransNoSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryTransNo" />
+  </wsdl:message>
+  <wsdl:message name="QueryTransNoSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryTransNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStorLocTransOperationsDataGridSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStorLocTransOperationsDataGrid" />
+  </wsdl:message>
+  <wsdl:message name="GetStorLocTransOperationsDataGridSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStorLocTransOperationsDataGridResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsBelongSoapIn">
+    <wsdl:part name="parameters" element="tns:IsBelong" />
+  </wsdl:message>
+  <wsdl:message name="IsBelongSoapOut">
+    <wsdl:part name="parameters" element="tns:IsBelongResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsComplianceSoapIn">
+    <wsdl:part name="parameters" element="tns:IsCompliance" />
+  </wsdl:message>
+  <wsdl:message name="IsComplianceSoapOut">
+    <wsdl:part name="parameters" element="tns:IsComplianceResponse" />
+  </wsdl:message>
+  <wsdl:message name="StorLocTransOperationsSubmitReturnMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:StorLocTransOperationsSubmitReturnMessage" />
+  </wsdl:message>
+  <wsdl:message name="StorLocTransOperationsSubmitReturnMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:StorLocTransOperationsSubmitReturnMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryIQCNoSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryIQCNo" />
+  </wsdl:message>
+  <wsdl:message name="QueryIQCNoSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryIQCNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAQLStandardSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryAQLStandard" />
+  </wsdl:message>
+  <wsdl:message name="QueryAQLStandardSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryAQLStandardResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAQLStrSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryAQLStr" />
+  </wsdl:message>
+  <wsdl:message name="QueryAQLStrSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryAQLStrResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAQLStandard1SoapIn">
+    <wsdl:part name="parameters" element="tns:QueryAQLStandard1" />
+  </wsdl:message>
+  <wsdl:message name="QueryAQLStandard1SoapOut">
+    <wsdl:part name="parameters" element="tns:QueryAQLStandard1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetAQLStrSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAQLStr" />
+  </wsdl:message>
+  <wsdl:message name="GetAQLStrSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAQLStrResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAQLLevelSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAQLLevel" />
+  </wsdl:message>
+  <wsdl:message name="GetAQLLevelSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAQLLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAQLStrByLevelSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAQLStrByLevel" />
+  </wsdl:message>
+  <wsdl:message name="GetAQLStrByLevelSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAQLStrByLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIQCCheckResultMPDataGridSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIQCCheckResultMPDataGrid" />
+  </wsdl:message>
+  <wsdl:message name="GetIQCCheckResultMPDataGridSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIQCCheckResultMPDataGridResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetASNSoapIn">
+    <wsdl:part name="parameters" element="tns:GetASN" />
+  </wsdl:message>
+  <wsdl:message name="GetASNSoapOut">
+    <wsdl:part name="parameters" element="tns:GetASNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQCCheckResultMPSubmitReturnMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:IQCCheckResultMPSubmitReturnMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQCCheckResultMPSubmitReturnMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:IQCCheckResultMPSubmitReturnMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIQCNGRecordDataGridSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIQCNGRecordDataGrid" />
+  </wsdl:message>
+  <wsdl:message name="GetIQCNGRecordDataGridSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIQCNGRecordDataGridResponse" />
+  </wsdl:message>
+  <wsdl:message name="isKeypartsSoapIn">
+    <wsdl:part name="parameters" element="tns:isKeyparts" />
+  </wsdl:message>
+  <wsdl:message name="isKeypartsSoapOut">
+    <wsdl:part name="parameters" element="tns:isKeypartsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQCNGRecordSaveReturnMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:IQCNGRecordSaveReturnMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQCNGRecordSaveReturnMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:IQCNGRecordSaveReturnMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQCNGRecordDeleteReturnMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:IQCNGRecordDeleteReturnMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQCNGRecordDeleteReturnMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:IQCNGRecordDeleteReturnMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGridDocSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataGridDoc" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGridDocSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataGridDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGridTableForPackageWincSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGridTableForPackageWinc" />
+  </wsdl:message>
+  <wsdl:message name="GetGridTableForPackageWincSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGridTableForPackageWincResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadFile" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDocSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDoc" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDocSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDrpNGTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDrpNGType" />
+  </wsdl:message>
+  <wsdl:message name="GetDrpNGTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDrpNGTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InitDrpNGDescSoapIn">
+    <wsdl:part name="parameters" element="tns:InitDrpNGDesc" />
+  </wsdl:message>
+  <wsdl:message name="InitDrpNGDescSoapOut">
+    <wsdl:part name="parameters" element="tns:InitDrpNGDescResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIQCNoFromCartonnoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIQCNoFromCartonno" />
+  </wsdl:message>
+  <wsdl:message name="GetIQCNoFromCartonnoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIQCNoFromCartonnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="PackFinishSoapIn">
+    <wsdl:part name="parameters" element="tns:PackFinish" />
+  </wsdl:message>
+  <wsdl:message name="PackFinishSoapOut">
+    <wsdl:part name="parameters" element="tns:PackFinishResponse" />
+  </wsdl:message>
+  <wsdl:message name="GFPackFinishSoapIn">
+    <wsdl:part name="parameters" element="tns:GFPackFinish" />
+  </wsdl:message>
+  <wsdl:message name="GFPackFinishSoapOut">
+    <wsdl:part name="parameters" element="tns:GFPackFinishResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApplyOQCSoapIn">
+    <wsdl:part name="parameters" element="tns:ApplyOQC" />
+  </wsdl:message>
+  <wsdl:message name="ApplyOQCSoapOut">
+    <wsdl:part name="parameters" element="tns:ApplyOQCResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PackagingOperationsServiceSoap">
+    <wsdl:operation name="GetDBDateTime">
+      <wsdl:input message="tns:GetDBDateTimeSoapIn" />
+      <wsdl:output message="tns:GetDBDateTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BeginTransaction">
+      <wsdl:input message="tns:BeginTransactionSoapIn" />
+      <wsdl:output message="tns:BeginTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommitTransaction">
+      <wsdl:input message="tns:CommitTransactionSoapIn" />
+      <wsdl:output message="tns:CommitTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RollbackTransaction">
+      <wsdl:input message="tns:RollbackTransactionSoapIn" />
+      <wsdl:output message="tns:RollbackTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCartonInvoices">
+      <wsdl:input message="tns:GetCartonInvoicesSoapIn" />
+      <wsdl:output message="tns:GetCartonInvoicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickDetailMaterial">
+      <wsdl:input message="tns:QueryPickDetailMaterialSoapIn" />
+      <wsdl:output message="tns:QueryPickDetailMaterialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickDetailMaterial_PQty">
+      <wsdl:input message="tns:QueryPickDetailMaterial_PQtySoapIn" />
+      <wsdl:output message="tns:QueryPickDetailMaterial_PQtySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCartonInvDetail">
+      <wsdl:input message="tns:AddCartonInvDetailSoapIn" />
+      <wsdl:output message="tns:AddCartonInvDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCartonInvDetailMaterial">
+      <wsdl:input message="tns:AddCartonInvDetailMaterialSoapIn" />
+      <wsdl:output message="tns:AddCartonInvDetailMaterialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCARTONINVDETAILSN">
+      <wsdl:input message="tns:AddCARTONINVDETAILSNSoapIn" />
+      <wsdl:output message="tns:AddCARTONINVDETAILSNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePick">
+      <wsdl:input message="tns:UpdatePickSoapIn" />
+      <wsdl:output message="tns:UpdatePickSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePickdetail">
+      <wsdl:input message="tns:UpdatePickdetailSoapIn" />
+      <wsdl:output message="tns:UpdatePickdetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePickdetailmaterial">
+      <wsdl:input message="tns:UpdatePickdetailmaterialSoapIn" />
+      <wsdl:output message="tns:UpdatePickdetailmaterialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePickdetailmaterialAndGetQty">
+      <wsdl:input message="tns:UpdatePickdetailmaterialAndGetQtySoapIn" />
+      <wsdl:output message="tns:UpdatePickdetailmaterialAndGetQtySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCartonInvDetail">
+      <wsdl:input message="tns:GetCartonInvDetailSoapIn" />
+      <wsdl:output message="tns:GetCartonInvDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCartonInvDetail">
+      <wsdl:input message="tns:UpdateCartonInvDetailSoapIn" />
+      <wsdl:output message="tns:UpdateCartonInvDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickDetails">
+      <wsdl:input message="tns:QueryPickDetailsSoapIn" />
+      <wsdl:output message="tns:QueryPickDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPickDetail">
+      <wsdl:input message="tns:GetPickDetailSoapIn" />
+      <wsdl:output message="tns:GetPickDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePickDetails">
+      <wsdl:input message="tns:UpdatePickDetailsSoapIn" />
+      <wsdl:output message="tns:UpdatePickDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCartonInvoices">
+      <wsdl:input message="tns:UpdateCartonInvoicesSoapIn" />
+      <wsdl:output message="tns:UpdateCartonInvoicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTBLCartonInvoices">
+      <wsdl:input message="tns:UpdateTBLCartonInvoicesSoapIn" />
+      <wsdl:output message="tns:UpdateTBLCartonInvoicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTBLCartonInvoices">
+      <wsdl:input message="tns:GetTBLCartonInvoicesSoapIn" />
+      <wsdl:output message="tns:GetTBLCartonInvoicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPickDetailMaterialSN">
+      <wsdl:input message="tns:GetPickDetailMaterialSNSoapIn" />
+      <wsdl:output message="tns:GetPickDetailMaterialSNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickDetailMaterialSN">
+      <wsdl:input message="tns:QueryPickDetailMaterialSNSoapIn" />
+      <wsdl:output message="tns:QueryPickDetailMaterialSNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCartonInvDetailSN">
+      <wsdl:input message="tns:GetCartonInvDetailSNSoapIn" />
+      <wsdl:output message="tns:GetCartonInvDetailSNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OperateCartonInvDetailMaterial">
+      <wsdl:input message="tns:OperateCartonInvDetailMaterialSoapIn" />
+      <wsdl:output message="tns:OperateCartonInvDetailMaterialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="_OperateCartonInvDetailMaterial">
+      <wsdl:input message="tns:_OperateCartonInvDetailMaterialSoapIn" />
+      <wsdl:output message="tns:_OperateCartonInvDetailMaterialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsEqual">
+      <wsdl:input message="tns:IsEqualSoapIn" />
+      <wsdl:output message="tns:IsEqualSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="_IsEqual">
+      <wsdl:input message="tns:_IsEqualSoapIn" />
+      <wsdl:output message="tns:_IsEqualSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCartonNoCount">
+      <wsdl:input message="tns:GetCartonNoCountSoapIn" />
+      <wsdl:output message="tns:GetCartonNoCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialInfoByQDMCode">
+      <wsdl:input message="tns:GetMaterialInfoByQDMCodeSoapIn" />
+      <wsdl:output message="tns:GetMaterialInfoByQDMCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsKeypartsControlType">
+      <wsdl:input message="tns:IsKeypartsControlTypeSoapIn" />
+      <wsdl:output message="tns:IsKeypartsControlTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPickDetailMaterialByPickNoAndLine">
+      <wsdl:input message="tns:GetAllPickDetailMaterialByPickNoAndLineSoapIn" />
+      <wsdl:output message="tns:GetAllPickDetailMaterialByPickNoAndLineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickNO">
+      <wsdl:input message="tns:QueryPickNOSoapIn" />
+      <wsdl:output message="tns:QueryPickNOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickNONotY">
+      <wsdl:input message="tns:QueryPickNONotYSoapIn" />
+      <wsdl:output message="tns:QueryPickNONotYSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryDQMaterialNO">
+      <wsdl:input message="tns:QueryDQMaterialNOSoapIn" />
+      <wsdl:output message="tns:QueryDQMaterialNOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryGFDqsMcode">
+      <wsdl:input message="tns:QueryGFDqsMcodeSoapIn" />
+      <wsdl:output message="tns:QueryGFDqsMcodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetString">
+      <wsdl:input message="tns:GetStringSoapIn" />
+      <wsdl:output message="tns:GetStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarInvNo">
+      <wsdl:input message="tns:QueryCarInvNoSoapIn" />
+      <wsdl:output message="tns:QueryCarInvNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid">
+      <wsdl:input message="tns:GetDataGridSoapIn" />
+      <wsdl:output message="tns:GetDataGridSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid1">
+      <wsdl:input message="tns:GetDataGrid1SoapIn" />
+      <wsdl:output message="tns:GetDataGrid1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid2">
+      <wsdl:input message="tns:GetDataGrid2SoapIn" />
+      <wsdl:output message="tns:GetDataGrid2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CartonNOKeyPressReturnMessage">
+      <wsdl:input message="tns:CartonNOKeyPressReturnMessageSoapIn" />
+      <wsdl:output message="tns:CartonNOKeyPressReturnMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QTYKeyPressReturnMessage">
+      <wsdl:input message="tns:QTYKeyPressReturnMessageSoapIn" />
+      <wsdl:output message="tns:QTYKeyPressReturnMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SNKeyPressReturnMessage">
+      <wsdl:input message="tns:SNKeyPressReturnMessageSoapIn" />
+      <wsdl:output message="tns:SNKeyPressReturnMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitReturnMessage">
+      <wsdl:input message="tns:SubmitReturnMessageSoapIn" />
+      <wsdl:output message="tns:SubmitReturnMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryGFHWItemCode">
+      <wsdl:input message="tns:QueryGFHWItemCodeSoapIn" />
+      <wsdl:output message="tns:QueryGFHWItemCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryGFPackingSEQ">
+      <wsdl:input message="tns:QueryGFPackingSEQSoapIn" />
+      <wsdl:output message="tns:QueryGFPackingSEQSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid3">
+      <wsdl:input message="tns:GetDataGrid3SoapIn" />
+      <wsdl:output message="tns:GetDataGrid3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid4">
+      <wsdl:input message="tns:GetDataGrid4SoapIn" />
+      <wsdl:output message="tns:GetDataGrid4SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GFCartonNOKeyPressReturnMessage">
+      <wsdl:input message="tns:GFCartonNOKeyPressReturnMessageSoapIn" />
+      <wsdl:output message="tns:GFCartonNOKeyPressReturnMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GFQTYKeyPressReturnMessage">
+      <wsdl:input message="tns:GFQTYKeyPressReturnMessageSoapIn" />
+      <wsdl:output message="tns:GFQTYKeyPressReturnMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GFSNKeyPressReturnMessage">
+      <wsdl:input message="tns:GFSNKeyPressReturnMessageSoapIn" />
+      <wsdl:output message="tns:GFSNKeyPressReturnMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GFSubmitReturnMessage">
+      <wsdl:input message="tns:GFSubmitReturnMessageSoapIn" />
+      <wsdl:output message="tns:GFSubmitReturnMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryTransNo">
+      <wsdl:input message="tns:QueryTransNoSoapIn" />
+      <wsdl:output message="tns:QueryTransNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStorLocTransOperationsDataGrid">
+      <wsdl:input message="tns:GetStorLocTransOperationsDataGridSoapIn" />
+      <wsdl:output message="tns:GetStorLocTransOperationsDataGridSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsBelong">
+      <wsdl:input message="tns:IsBelongSoapIn" />
+      <wsdl:output message="tns:IsBelongSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsCompliance">
+      <wsdl:input message="tns:IsComplianceSoapIn" />
+      <wsdl:output message="tns:IsComplianceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StorLocTransOperationsSubmitReturnMessage">
+      <wsdl:input message="tns:StorLocTransOperationsSubmitReturnMessageSoapIn" />
+      <wsdl:output message="tns:StorLocTransOperationsSubmitReturnMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryIQCNo">
+      <wsdl:input message="tns:QueryIQCNoSoapIn" />
+      <wsdl:output message="tns:QueryIQCNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAQLStandard">
+      <wsdl:input message="tns:QueryAQLStandardSoapIn" />
+      <wsdl:output message="tns:QueryAQLStandardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAQLStr">
+      <wsdl:input message="tns:QueryAQLStrSoapIn" />
+      <wsdl:output message="tns:QueryAQLStrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAQLStandard1">
+      <wsdl:input message="tns:QueryAQLStandard1SoapIn" />
+      <wsdl:output message="tns:QueryAQLStandard1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAQLStr">
+      <wsdl:input message="tns:GetAQLStrSoapIn" />
+      <wsdl:output message="tns:GetAQLStrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAQLLevel">
+      <wsdl:input message="tns:GetAQLLevelSoapIn" />
+      <wsdl:output message="tns:GetAQLLevelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAQLStrByLevel">
+      <wsdl:input message="tns:GetAQLStrByLevelSoapIn" />
+      <wsdl:output message="tns:GetAQLStrByLevelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIQCCheckResultMPDataGrid">
+      <wsdl:input message="tns:GetIQCCheckResultMPDataGridSoapIn" />
+      <wsdl:output message="tns:GetIQCCheckResultMPDataGridSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetASN">
+      <wsdl:input message="tns:GetASNSoapIn" />
+      <wsdl:output message="tns:GetASNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IQCCheckResultMPSubmitReturnMessage">
+      <wsdl:input message="tns:IQCCheckResultMPSubmitReturnMessageSoapIn" />
+      <wsdl:output message="tns:IQCCheckResultMPSubmitReturnMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIQCNGRecordDataGrid">
+      <wsdl:input message="tns:GetIQCNGRecordDataGridSoapIn" />
+      <wsdl:output message="tns:GetIQCNGRecordDataGridSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="isKeyparts">
+      <wsdl:input message="tns:isKeypartsSoapIn" />
+      <wsdl:output message="tns:isKeypartsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IQCNGRecordSaveReturnMessage">
+      <wsdl:input message="tns:IQCNGRecordSaveReturnMessageSoapIn" />
+      <wsdl:output message="tns:IQCNGRecordSaveReturnMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IQCNGRecordDeleteReturnMessage">
+      <wsdl:input message="tns:IQCNGRecordDeleteReturnMessageSoapIn" />
+      <wsdl:output message="tns:IQCNGRecordDeleteReturnMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGridDoc">
+      <wsdl:input message="tns:GetDataGridDocSoapIn" />
+      <wsdl:output message="tns:GetDataGridDocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGridTableForPackageWinc">
+      <wsdl:input message="tns:GetGridTableForPackageWincSoapIn" />
+      <wsdl:output message="tns:GetGridTableForPackageWincSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <wsdl:input message="tns:UploadFileSoapIn" />
+      <wsdl:output message="tns:UploadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDoc">
+      <wsdl:input message="tns:DeleteDocSoapIn" />
+      <wsdl:output message="tns:DeleteDocSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrpNGType">
+      <wsdl:input message="tns:GetDrpNGTypeSoapIn" />
+      <wsdl:output message="tns:GetDrpNGTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InitDrpNGDesc">
+      <wsdl:input message="tns:InitDrpNGDescSoapIn" />
+      <wsdl:output message="tns:InitDrpNGDescSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIQCNoFromCartonno">
+      <wsdl:input message="tns:GetIQCNoFromCartonnoSoapIn" />
+      <wsdl:output message="tns:GetIQCNoFromCartonnoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PackFinish">
+      <wsdl:input message="tns:PackFinishSoapIn" />
+      <wsdl:output message="tns:PackFinishSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GFPackFinish">
+      <wsdl:input message="tns:GFPackFinishSoapIn" />
+      <wsdl:output message="tns:GFPackFinishSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyOQC">
+      <wsdl:input message="tns:ApplyOQCSoapIn" />
+      <wsdl:output message="tns:ApplyOQCSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PackagingOperationsServiceSoap" type="tns:PackagingOperationsServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDBDateTime">
+      <soap:operation soapAction="http://tempuri.org/GetDBDateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BeginTransaction">
+      <soap:operation soapAction="http://tempuri.org/BeginTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitTransaction">
+      <soap:operation soapAction="http://tempuri.org/CommitTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RollbackTransaction">
+      <soap:operation soapAction="http://tempuri.org/RollbackTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCartonInvoices">
+      <soap:operation soapAction="http://tempuri.org/GetCartonInvoices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickDetailMaterial">
+      <soap:operation soapAction="http://tempuri.org/QueryPickDetailMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickDetailMaterial_PQty">
+      <soap:operation soapAction="http://tempuri.org/QueryPickDetailMaterial_PQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCartonInvDetail">
+      <soap:operation soapAction="http://tempuri.org/AddCartonInvDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCartonInvDetailMaterial">
+      <soap:operation soapAction="http://tempuri.org/AddCartonInvDetailMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCARTONINVDETAILSN">
+      <soap:operation soapAction="http://tempuri.org/AddCARTONINVDETAILSN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePick">
+      <soap:operation soapAction="http://tempuri.org/UpdatePick" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePickdetail">
+      <soap:operation soapAction="http://tempuri.org/UpdatePickdetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePickdetailmaterial">
+      <soap:operation soapAction="http://tempuri.org/UpdatePickdetailmaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePickdetailmaterialAndGetQty">
+      <soap:operation soapAction="http://tempuri.org/UpdatePickdetailmaterialAndGetQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCartonInvDetail">
+      <soap:operation soapAction="http://tempuri.org/GetCartonInvDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCartonInvDetail">
+      <soap:operation soapAction="http://tempuri.org/UpdateCartonInvDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickDetails">
+      <soap:operation soapAction="http://tempuri.org/QueryPickDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPickDetail">
+      <soap:operation soapAction="http://tempuri.org/GetPickDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePickDetails">
+      <soap:operation soapAction="http://tempuri.org/UpdatePickDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCartonInvoices">
+      <soap:operation soapAction="http://tempuri.org/UpdateCartonInvoices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTBLCartonInvoices">
+      <soap:operation soapAction="http://tempuri.org/UpdateTBLCartonInvoices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTBLCartonInvoices">
+      <soap:operation soapAction="http://tempuri.org/GetTBLCartonInvoices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPickDetailMaterialSN">
+      <soap:operation soapAction="http://tempuri.org/GetPickDetailMaterialSN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickDetailMaterialSN">
+      <soap:operation soapAction="http://tempuri.org/QueryPickDetailMaterialSN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCartonInvDetailSN">
+      <soap:operation soapAction="http://tempuri.org/GetCartonInvDetailSN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OperateCartonInvDetailMaterial">
+      <soap:operation soapAction="http://tempuri.org/OperateCartonInvDetailMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_OperateCartonInvDetailMaterial">
+      <soap:operation soapAction="http://tempuri.org/_OperateCartonInvDetailMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsEqual">
+      <soap:operation soapAction="http://tempuri.org/IsEqual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_IsEqual">
+      <soap:operation soapAction="http://tempuri.org/_IsEqual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCartonNoCount">
+      <soap:operation soapAction="http://tempuri.org/GetCartonNoCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialInfoByQDMCode">
+      <soap:operation soapAction="http://tempuri.org/GetMaterialInfoByQDMCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsKeypartsControlType">
+      <soap:operation soapAction="http://tempuri.org/IsKeypartsControlType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPickDetailMaterialByPickNoAndLine">
+      <soap:operation soapAction="http://tempuri.org/GetAllPickDetailMaterialByPickNoAndLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickNO">
+      <soap:operation soapAction="http://tempuri.org/QueryPickNO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickNONotY">
+      <soap:operation soapAction="http://tempuri.org/QueryPickNONotY" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDQMaterialNO">
+      <soap:operation soapAction="http://tempuri.org/QueryDQMaterialNO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGFDqsMcode">
+      <soap:operation soapAction="http://tempuri.org/QueryGFDqsMcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetString">
+      <soap:operation soapAction="http://tempuri.org/GetString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarInvNo">
+      <soap:operation soapAction="http://tempuri.org/QueryCarInvNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid">
+      <soap:operation soapAction="http://tempuri.org/GetDataGrid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid1">
+      <soap:operation soapAction="http://tempuri.org/GetDataGrid1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid2">
+      <soap:operation soapAction="http://tempuri.org/GetDataGrid2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CartonNOKeyPressReturnMessage">
+      <soap:operation soapAction="http://tempuri.org/CartonNOKeyPressReturnMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QTYKeyPressReturnMessage">
+      <soap:operation soapAction="http://tempuri.org/QTYKeyPressReturnMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SNKeyPressReturnMessage">
+      <soap:operation soapAction="http://tempuri.org/SNKeyPressReturnMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitReturnMessage">
+      <soap:operation soapAction="http://tempuri.org/SubmitReturnMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGFHWItemCode">
+      <soap:operation soapAction="http://tempuri.org/QueryGFHWItemCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGFPackingSEQ">
+      <soap:operation soapAction="http://tempuri.org/QueryGFPackingSEQ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid3">
+      <soap:operation soapAction="http://tempuri.org/GetDataGrid3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid4">
+      <soap:operation soapAction="http://tempuri.org/GetDataGrid4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GFCartonNOKeyPressReturnMessage">
+      <soap:operation soapAction="http://tempuri.org/GFCartonNOKeyPressReturnMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GFQTYKeyPressReturnMessage">
+      <soap:operation soapAction="http://tempuri.org/GFQTYKeyPressReturnMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GFSNKeyPressReturnMessage">
+      <soap:operation soapAction="http://tempuri.org/GFSNKeyPressReturnMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GFSubmitReturnMessage">
+      <soap:operation soapAction="http://tempuri.org/GFSubmitReturnMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryTransNo">
+      <soap:operation soapAction="http://tempuri.org/QueryTransNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorLocTransOperationsDataGrid">
+      <soap:operation soapAction="http://tempuri.org/GetStorLocTransOperationsDataGrid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsBelong">
+      <soap:operation soapAction="http://tempuri.org/IsBelong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCompliance">
+      <soap:operation soapAction="http://tempuri.org/IsCompliance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StorLocTransOperationsSubmitReturnMessage">
+      <soap:operation soapAction="http://tempuri.org/StorLocTransOperationsSubmitReturnMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryIQCNo">
+      <soap:operation soapAction="http://tempuri.org/QueryIQCNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAQLStandard">
+      <soap:operation soapAction="http://tempuri.org/QueryAQLStandard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAQLStr">
+      <soap:operation soapAction="http://tempuri.org/QueryAQLStr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAQLStandard1">
+      <soap:operation soapAction="http://tempuri.org/QueryAQLStandard1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAQLStr">
+      <soap:operation soapAction="http://tempuri.org/GetAQLStr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAQLLevel">
+      <soap:operation soapAction="http://tempuri.org/GetAQLLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAQLStrByLevel">
+      <soap:operation soapAction="http://tempuri.org/GetAQLStrByLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIQCCheckResultMPDataGrid">
+      <soap:operation soapAction="http://tempuri.org/GetIQCCheckResultMPDataGrid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetASN">
+      <soap:operation soapAction="http://tempuri.org/GetASN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IQCCheckResultMPSubmitReturnMessage">
+      <soap:operation soapAction="http://tempuri.org/IQCCheckResultMPSubmitReturnMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIQCNGRecordDataGrid">
+      <soap:operation soapAction="http://tempuri.org/GetIQCNGRecordDataGrid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isKeyparts">
+      <soap:operation soapAction="http://tempuri.org/isKeyparts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IQCNGRecordSaveReturnMessage">
+      <soap:operation soapAction="http://tempuri.org/IQCNGRecordSaveReturnMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IQCNGRecordDeleteReturnMessage">
+      <soap:operation soapAction="http://tempuri.org/IQCNGRecordDeleteReturnMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGridDoc">
+      <soap:operation soapAction="http://tempuri.org/GetDataGridDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGridTableForPackageWinc">
+      <soap:operation soapAction="http://tempuri.org/GetGridTableForPackageWinc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap:operation soapAction="http://tempuri.org/UploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDoc">
+      <soap:operation soapAction="http://tempuri.org/DeleteDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrpNGType">
+      <soap:operation soapAction="http://tempuri.org/GetDrpNGType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InitDrpNGDesc">
+      <soap:operation soapAction="http://tempuri.org/InitDrpNGDesc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIQCNoFromCartonno">
+      <soap:operation soapAction="http://tempuri.org/GetIQCNoFromCartonno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackFinish">
+      <soap:operation soapAction="http://tempuri.org/PackFinish" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GFPackFinish">
+      <soap:operation soapAction="http://tempuri.org/GFPackFinish" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyOQC">
+      <soap:operation soapAction="http://tempuri.org/ApplyOQC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PackagingOperationsServiceSoap12" type="tns:PackagingOperationsServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDBDateTime">
+      <soap12:operation soapAction="http://tempuri.org/GetDBDateTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BeginTransaction">
+      <soap12:operation soapAction="http://tempuri.org/BeginTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitTransaction">
+      <soap12:operation soapAction="http://tempuri.org/CommitTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RollbackTransaction">
+      <soap12:operation soapAction="http://tempuri.org/RollbackTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCartonInvoices">
+      <soap12:operation soapAction="http://tempuri.org/GetCartonInvoices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickDetailMaterial">
+      <soap12:operation soapAction="http://tempuri.org/QueryPickDetailMaterial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickDetailMaterial_PQty">
+      <soap12:operation soapAction="http://tempuri.org/QueryPickDetailMaterial_PQty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCartonInvDetail">
+      <soap12:operation soapAction="http://tempuri.org/AddCartonInvDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCartonInvDetailMaterial">
+      <soap12:operation soapAction="http://tempuri.org/AddCartonInvDetailMaterial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCARTONINVDETAILSN">
+      <soap12:operation soapAction="http://tempuri.org/AddCARTONINVDETAILSN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePick">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePick" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePickdetail">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePickdetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePickdetailmaterial">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePickdetailmaterial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePickdetailmaterialAndGetQty">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePickdetailmaterialAndGetQty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCartonInvDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetCartonInvDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCartonInvDetail">
+      <soap12:operation soapAction="http://tempuri.org/UpdateCartonInvDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickDetails">
+      <soap12:operation soapAction="http://tempuri.org/QueryPickDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPickDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetPickDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePickDetails">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePickDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCartonInvoices">
+      <soap12:operation soapAction="http://tempuri.org/UpdateCartonInvoices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTBLCartonInvoices">
+      <soap12:operation soapAction="http://tempuri.org/UpdateTBLCartonInvoices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTBLCartonInvoices">
+      <soap12:operation soapAction="http://tempuri.org/GetTBLCartonInvoices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPickDetailMaterialSN">
+      <soap12:operation soapAction="http://tempuri.org/GetPickDetailMaterialSN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickDetailMaterialSN">
+      <soap12:operation soapAction="http://tempuri.org/QueryPickDetailMaterialSN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCartonInvDetailSN">
+      <soap12:operation soapAction="http://tempuri.org/GetCartonInvDetailSN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OperateCartonInvDetailMaterial">
+      <soap12:operation soapAction="http://tempuri.org/OperateCartonInvDetailMaterial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_OperateCartonInvDetailMaterial">
+      <soap12:operation soapAction="http://tempuri.org/_OperateCartonInvDetailMaterial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsEqual">
+      <soap12:operation soapAction="http://tempuri.org/IsEqual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_IsEqual">
+      <soap12:operation soapAction="http://tempuri.org/_IsEqual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCartonNoCount">
+      <soap12:operation soapAction="http://tempuri.org/GetCartonNoCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialInfoByQDMCode">
+      <soap12:operation soapAction="http://tempuri.org/GetMaterialInfoByQDMCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsKeypartsControlType">
+      <soap12:operation soapAction="http://tempuri.org/IsKeypartsControlType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPickDetailMaterialByPickNoAndLine">
+      <soap12:operation soapAction="http://tempuri.org/GetAllPickDetailMaterialByPickNoAndLine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickNO">
+      <soap12:operation soapAction="http://tempuri.org/QueryPickNO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPickNONotY">
+      <soap12:operation soapAction="http://tempuri.org/QueryPickNONotY" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDQMaterialNO">
+      <soap12:operation soapAction="http://tempuri.org/QueryDQMaterialNO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGFDqsMcode">
+      <soap12:operation soapAction="http://tempuri.org/QueryGFDqsMcode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetString">
+      <soap12:operation soapAction="http://tempuri.org/GetString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCarInvNo">
+      <soap12:operation soapAction="http://tempuri.org/QueryCarInvNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid">
+      <soap12:operation soapAction="http://tempuri.org/GetDataGrid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid1">
+      <soap12:operation soapAction="http://tempuri.org/GetDataGrid1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid2">
+      <soap12:operation soapAction="http://tempuri.org/GetDataGrid2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CartonNOKeyPressReturnMessage">
+      <soap12:operation soapAction="http://tempuri.org/CartonNOKeyPressReturnMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QTYKeyPressReturnMessage">
+      <soap12:operation soapAction="http://tempuri.org/QTYKeyPressReturnMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SNKeyPressReturnMessage">
+      <soap12:operation soapAction="http://tempuri.org/SNKeyPressReturnMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitReturnMessage">
+      <soap12:operation soapAction="http://tempuri.org/SubmitReturnMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGFHWItemCode">
+      <soap12:operation soapAction="http://tempuri.org/QueryGFHWItemCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGFPackingSEQ">
+      <soap12:operation soapAction="http://tempuri.org/QueryGFPackingSEQ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid3">
+      <soap12:operation soapAction="http://tempuri.org/GetDataGrid3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGrid4">
+      <soap12:operation soapAction="http://tempuri.org/GetDataGrid4" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GFCartonNOKeyPressReturnMessage">
+      <soap12:operation soapAction="http://tempuri.org/GFCartonNOKeyPressReturnMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GFQTYKeyPressReturnMessage">
+      <soap12:operation soapAction="http://tempuri.org/GFQTYKeyPressReturnMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GFSNKeyPressReturnMessage">
+      <soap12:operation soapAction="http://tempuri.org/GFSNKeyPressReturnMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GFSubmitReturnMessage">
+      <soap12:operation soapAction="http://tempuri.org/GFSubmitReturnMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryTransNo">
+      <soap12:operation soapAction="http://tempuri.org/QueryTransNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorLocTransOperationsDataGrid">
+      <soap12:operation soapAction="http://tempuri.org/GetStorLocTransOperationsDataGrid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsBelong">
+      <soap12:operation soapAction="http://tempuri.org/IsBelong" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCompliance">
+      <soap12:operation soapAction="http://tempuri.org/IsCompliance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StorLocTransOperationsSubmitReturnMessage">
+      <soap12:operation soapAction="http://tempuri.org/StorLocTransOperationsSubmitReturnMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryIQCNo">
+      <soap12:operation soapAction="http://tempuri.org/QueryIQCNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAQLStandard">
+      <soap12:operation soapAction="http://tempuri.org/QueryAQLStandard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAQLStr">
+      <soap12:operation soapAction="http://tempuri.org/QueryAQLStr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAQLStandard1">
+      <soap12:operation soapAction="http://tempuri.org/QueryAQLStandard1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAQLStr">
+      <soap12:operation soapAction="http://tempuri.org/GetAQLStr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAQLLevel">
+      <soap12:operation soapAction="http://tempuri.org/GetAQLLevel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAQLStrByLevel">
+      <soap12:operation soapAction="http://tempuri.org/GetAQLStrByLevel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIQCCheckResultMPDataGrid">
+      <soap12:operation soapAction="http://tempuri.org/GetIQCCheckResultMPDataGrid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetASN">
+      <soap12:operation soapAction="http://tempuri.org/GetASN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IQCCheckResultMPSubmitReturnMessage">
+      <soap12:operation soapAction="http://tempuri.org/IQCCheckResultMPSubmitReturnMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIQCNGRecordDataGrid">
+      <soap12:operation soapAction="http://tempuri.org/GetIQCNGRecordDataGrid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isKeyparts">
+      <soap12:operation soapAction="http://tempuri.org/isKeyparts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IQCNGRecordSaveReturnMessage">
+      <soap12:operation soapAction="http://tempuri.org/IQCNGRecordSaveReturnMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IQCNGRecordDeleteReturnMessage">
+      <soap12:operation soapAction="http://tempuri.org/IQCNGRecordDeleteReturnMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGridDoc">
+      <soap12:operation soapAction="http://tempuri.org/GetDataGridDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGridTableForPackageWinc">
+      <soap12:operation soapAction="http://tempuri.org/GetGridTableForPackageWinc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap12:operation soapAction="http://tempuri.org/UploadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDoc">
+      <soap12:operation soapAction="http://tempuri.org/DeleteDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrpNGType">
+      <soap12:operation soapAction="http://tempuri.org/GetDrpNGType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InitDrpNGDesc">
+      <soap12:operation soapAction="http://tempuri.org/InitDrpNGDesc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIQCNoFromCartonno">
+      <soap12:operation soapAction="http://tempuri.org/GetIQCNoFromCartonno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackFinish">
+      <soap12:operation soapAction="http://tempuri.org/PackFinish" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GFPackFinish">
+      <soap12:operation soapAction="http://tempuri.org/GFPackFinish" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyOQC">
+      <soap12:operation soapAction="http://tempuri.org/ApplyOQC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PackagingOperationsService">
+    <wsdl:port name="PackagingOperationsServiceSoap" binding="tns:PackagingOperationsServiceSoap">
+      <soap:address location="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/PackagingOperationsService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PackagingOperationsServiceSoap12" binding="tns:PackagingOperationsServiceSoap12">
+      <soap12:address location="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/PackagingOperationsService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

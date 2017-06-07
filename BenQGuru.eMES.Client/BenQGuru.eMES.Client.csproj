@@ -1,0 +1,1887 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ResGenToolArchitecture>Managed32Bit</ResGenToolArchitecture>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF6BFCBC-A723-4777-ABA8-45336C41D33B}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BenQGuru.eMES.Client</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BenQGuru.eMES.Client</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/BenQGuru.eMES.Client/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxMSCommLib">
+      <Name>AxMSCommLib</Name>
+      <HintPath>..\bin\AxMSCommLib.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Alert">
+      <Name>BenQGuru.eMES.Alert</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.Alert.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.BaseSetting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.ClientBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.CodeSoftPrint, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Common">
+      <Name>BenQGuru.eMES.Common</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.DataCollect, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Domain">
+      <Name>BenQGuru.eMES.Domain</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.DrawFlow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.IQC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.LotDataCollect, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Material, Version=1.0.4.13, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.MOModel">
+      <Name>BenQGuru.eMES.MOModel</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.MOModel.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.OQC">
+      <Name>BenQGuru.eMES.OQC</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.OQC.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Performance, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Report, Version=1.0.3231.27856, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.ReportViewBase, Version=1.0.3168.22806, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Rework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Security">
+      <Name>BenQGuru.eMES.Security</Name>
+      <HintPath>..\bin\BenQGuru.eMES.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.SMT">
+      <Name>BenQGuru.eMES.SMT</Name>
+      <HintPath>..\bin\BenQGuru.eMES.SMT.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.SPCDataCenter">
+      <Name>BenQGuru.eMES.SPCDataCenter</Name>
+      <HintPath>..\bin\BenQGuru.eMES.SPCDataCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.TS">
+      <Name>BenQGuru.eMES.TS</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.TS.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.TSModel">
+      <Name>BenQGuru.eMES.TSModel</Name>
+      <HintPath>..\bin\BenQGuru.eMES.TSModel.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.WatchPanel">
+      <Name>BenQGuru.eMES.WatchPanel</Name>
+      <HintPath>..\bin\BenQGuru.eMES.WatchPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.Helper">
+      <Name>BenQGuru.eMES.Web.Helper</Name>
+      <HintPath>..\bin\BenQGuru.eMES.Web.Helper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics2.Documents.Excel.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Documents.Excel.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Shared.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.Misc.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinChart.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinChart.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinDataSource.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinDataSource.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinEditors.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinExplorerBar.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinExplorerBar.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.ExcelExport.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinGrid.ExcelExport.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinGrid.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinSchedule.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinStatusBar.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinStatusBar.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabbedMdi.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinTabbedMdi.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinTabControl.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinToolbars.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTree.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.UltraWinTree.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics2.Win.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.OracleClient, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_32\System.Data.OracleClient\2.0.0.0__b77a5c561934e089\System.Data.OracleClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap">
+      <Name>System.Runtime.Serialization.Formatters.Soap</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="UserControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FAuthentication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAuthentication.Designer.cs">
+      <DependentUpon>FAuthentication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FBurn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBurn.Designer.cs">
+      <DependentUpon>FBurn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FBurnIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBurnOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDisToLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDisTOLineList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDisTOLineList.Designer.cs">
+      <DependentUpon>FDisTOLineList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRcardImprotByMo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRcardImprotByMo.designer.cs">
+      <DependentUpon>FRcardImprotByMo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRcardImprotByOQC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRcardImprotByOQC.designer.cs">
+      <DependentUpon>FRcardImprotByOQC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FAuthentication.resx">
+      <DependentUpon>FAuthentication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBurn.resx">
+      <DependentUpon>FBurn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBurnIn.resx">
+      <DependentUpon>FBurnIn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBurnOut.resx">
+      <DependentUpon>FBurnOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDisToLine.resx">
+      <DependentUpon>FDisToLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDisTOLineList.resx">
+      <DependentUpon>FDisTOLineList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRcardImprotByMo.resx">
+      <DependentUpon>FRcardImprotByMo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRcardImprotByOQC.resx">
+      <DependentUpon>FRcardImprotByOQC.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DataSetPalletPrint.xsc">
+      <DependentUpon>DataSetPalletPrint.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPalletPrint.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPalletPrint.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPalletPrint.xss">
+      <DependentUpon>DataSetPalletPrint.xsd</DependentUpon>
+    </None>
+    <None Include="Data\dsDropMaterial.xsx">
+      <DependentUpon>dsDropMaterial.xsd</DependentUpon>
+    </None>
+    <None Include="Data\dsMultiMo.xsx">
+      <DependentUpon>dsMultiMo.xsd</DependentUpon>
+    </None>
+    <Content Include="App.ico" />
+    <Content Include="Data\dsDropMaterial.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Data\dsMultiMo.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\Login_banner_emes.jpg" />
+    <None Include="Resources\Index_eMES_logo.gif" />
+    <None Include="Resources\Index_eMES_banner.gif" />
+    <None Include="Resources\Login_copyright_bg_text2.jpg" />
+    <None Include="Resources\Login_logo.jpg" />
+    <None Include="MaterialLot.Lab">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="ApplicationRun.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBigSSCodeQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBigSSCodeQuery.Designer.cs">
+      <DependentUpon>FBigSSCodeQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChangePassword.Designer.cs">
+      <DependentUpon>FChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCheckRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCheckRoute.Designer.cs">
+      <DependentUpon>FCheckRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCollectionIDMerge_OutLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCollectionViewFlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCollectionViewFlow.Designer.cs">
+      <DependentUpon>FCollectionViewFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCollectionEsopPicNGView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCollectionEsopPicNGView.Designer.cs">
+      <DependentUpon>FCollectionEsopPicNGView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCollectionCarton_BV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCollectionCarton_BV.designer.cs">
+      <DependentUpon>FCollectionCarton_BV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCollectionCarton_SKD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCollectionCarton_SKD.Designer.cs">
+      <DependentUpon>FCollectionCarton_SKD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCollectionEsopPicNGEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCollectionEsopPicNGEdit.Designer.cs">
+      <DependentUpon>FCollectionEsopPicNGEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCollectionPICView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCollectionPICView.Designer.cs">
+      <DependentUpon>FCollectionPICView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDocView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDocView.designer.cs">
+      <DependentUpon>FDocView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEQPEFficiencyQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEQPEFficiencyQuery.designer.cs">
+      <DependentUpon>FEQPEFficiencyQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEQPMaintainAutoRemind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEQPMaintainAutoRemind.designer.cs">
+      <DependentUpon>FEQPMaintainAutoRemind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FItemCodeQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FItemCodeQuery.designer.cs">
+      <DependentUpon>FItemCodeQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLotCollectionGDNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLotCollectionMetrial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLotMaintain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMateiralStockout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMateiralStockout.Designer.cs">
+      <DependentUpon>FMateiralStockout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMaterialFullCheckMcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMaterialFullCheckMcode.designer.cs">
+      <DependentUpon>FMaterialFullCheckMcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMaterialFullCheckMo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMaterialFullCheckMo.designer.cs">
+      <DependentUpon>FMaterialFullCheckMo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMaterialLabPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMaterialLabPrint.Designer.cs">
+      <DependentUpon>FMaterialLabPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMaterialMSD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMaterialMSD.Designer.cs">
+      <DependentUpon>FMaterialMSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMaterialReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMaterialReceive.designer.cs">
+      <DependentUpon>FMaterialReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMaterialStockIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMaterialStockIn.Designer.cs">
+      <DependentUpon>FMaterialStockIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMaterialTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMaterialTransfer.designer.cs">
+      <DependentUpon>FMaterialTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMCodeQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMCodeQuery.designer.cs">
+      <DependentUpon>FMCodeQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMetrialKeypart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FModelQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FModelQuery.designer.cs">
+      <DependentUpon>FModelQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMSDAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMSDAlter.Designer.cs">
+      <DependentUpon>FMSDAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FOnOffPostByCrew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOnOffPostByCrew.Designer.cs">
+      <DependentUpon>FOnOffPostByCrew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FOnOffPostByUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOnOffPostByUser.Designer.cs">
+      <DependentUpon>FOnOffPostByUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FOPCodeQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOPCodeQuery.designer.cs">
+      <DependentUpon>FOPCodeQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCLotQA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOQCLotQA.Designer.cs">
+      <DependentUpon>FOQCLotQA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRCardQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRCardQuery.designer.cs">
+      <DependentUpon>FRCardQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FReceiveMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FReceiveMaterial.Designer.cs">
+      <DependentUpon>FReceiveMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRecNoSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRecNoSelect.designer.cs">
+      <DependentUpon>FRecNoSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FResCodeQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FResCodeQuery.Designer.cs">
+      <DependentUpon>FResCodeQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FReturneMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FReturneMaterial.Designer.cs">
+      <DependentUpon>FReturneMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSendMetrial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSendMetrial.Designer.cs">
+      <DependentUpon>FSendMetrial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSMTScrapQty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSMTScrapQty.designer.cs">
+      <DependentUpon>FSMTScrapQty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FStackCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FStackCode.designer.cs">
+      <DependentUpon>FStackCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FStorageCodeMulQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FStorageCodeMulQuery.designer.cs">
+      <DependentUpon>FStorageCodeMulQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FStorageCodeQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FStorageCodeQuery.designer.cs">
+      <DependentUpon>FStorageCodeQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTSInputEditUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSHelper.cs" />
+    <Compile Include="CustomEvent.cs" />
+    <Compile Include="FChangeCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChangeCompany.Designer.cs">
+      <DependentUpon>FChangeCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FChangeRCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChangeRCard.Designer.cs">
+      <DependentUpon>FChangeRCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCollectionOQC_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCollectionOQC_New.Designer.cs">
+      <DependentUpon>FCollectionOQC_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCompAppendix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCompAppendix.Designer.cs">
+      <DependentUpon>FCompAppendix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Command\AbstractCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Command\CommandCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Command\CommandFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Command\CommandWindows.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Command\ICommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FCollectErrorCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCollectErrorCode.designer.cs">
+      <DependentUpon>FCollectErrorCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDown.Designer.cs">
+      <DependentUpon>FDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFrozen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFrozen.Designer.cs">
+      <DependentUpon>FFrozen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFrozenReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFrozenReason.Designer.cs">
+      <DependentUpon>FFrozenReason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FInInvByNonProduce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInInvByNonProduce.Designer.cs">
+      <DependentUpon>FInInvByNonProduce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FInInvByProduce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInInvByProduce.Designer.cs">
+      <DependentUpon>FInInvByProduce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FErrorPartSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FErrorPartSelect.Designer.cs">
+      <DependentUpon>FErrorPartSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMetrialLotParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSetPalletPrint.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPalletPrint.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\dsDropMaterial.cs">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Data\dsMultiMo.cs">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="FArmorPlate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAutoTestAction.cs" />
+    <Compile Include="FAutoTestConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCodingTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCodingTest.Designer.cs">
+      <DependentUpon>FCodingTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCollectionGDNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCollectionIDMerge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCollectionMetrial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCollectionOQC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCollectionSMTGDNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCollectionSoftware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCollectMo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCollectReject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDialogInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDropMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFeederGetOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFeederMaintain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFirstOffline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFirstOnline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FfunTestInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGenLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGenLotIDMerge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInvCarton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInvPlanate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInvRCardSwitchType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInvRecCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInvReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInvShipCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInvShipImp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLastOffline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLastOnline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FManualAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMergeLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMetrialINNO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMetrialINNOInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMetrialKeyparts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMultiGoMO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNewMo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNormalReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNormalShip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOffMo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOffTry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOffTry.Designer.cs">
+      <DependentUpon>FOffTry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOQCDimention.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOQCFuncTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOQCLotOperate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOQCLotOperate.Designer.cs">
+      <DependentUpon>FOQCLotOperate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCOffLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOQCOffLot.Designer.cs">
+      <DependentUpon>FOQCOffLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOQCQuery.Designer.cs">
+      <DependentUpon>FOQCQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FOQCSamplePlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCartonSplit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOutInv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOutInv.Designer.cs">
+      <DependentUpon>FOutInv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPackCarton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPackPallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPackPallet.Designer.cs">
+      <DependentUpon>FPackPallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPackPalletPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPackPalletPrint.Designer.cs">
+      <DependentUpon>FPackPalletPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPauseSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPauseSetting.Designer.cs">
+      <DependentUpon>FPauseSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPerformanceTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPrintLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FProductSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FProductSelect.Designer.cs">
+      <DependentUpon>FProductSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPTCollectionGDNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FQtyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FQtyForm.Designer.cs">
+      <DependentUpon>FQtyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMACollectionGDNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMATSInputEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSMTCheckReelQty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSMTFeederReelWatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSMTLoadFeeder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSMTReelPrepare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSMTTransferMO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSNCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSoftVersionSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSoftVersionSelector.Designer.cs">
+      <DependentUpon>FSoftVersionSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSoftVersionUpgrade_FG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSoftVersionUpgrade_FG.Designer.cs">
+      <DependentUpon>FSoftVersionUpgrade_FG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSoftVersionUpgrade_SEMI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSoftVersionUpgrade_SEMI.Designer.cs">
+      <DependentUpon>FSoftVersionUpgrade_SEMI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSPControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSplitLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSPManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSPProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSSChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FStackAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FStackAdjustment.Designer.cs">
+      <DependentUpon>FStackAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FStackInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FStackInfo.Designer.cs">
+      <DependentUpon>FStackInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FStockDelInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FStockInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FStockOutput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FStockRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTempRework.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTempRework.Designer.cs">
+      <DependentUpon>FTempRework.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTossDarfonERP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTransferCarton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTryLotNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTryLotNo.Designer.cs">
+      <DependentUpon>FTryLotNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTSErrorCodeSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTSErrorEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTSInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTSInputComplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTSInputEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTSInputEditInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTSInputEditInfo.Designer.cs">
+      <DependentUpon>FTSInputEditInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTSScrap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUnNormalReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUnNormalShip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUp.Designer.cs">
+      <DependentUpon>FUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FVendorCodeQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FVendorCodeQuery.designer.cs">
+      <DependentUpon>FVendorCodeQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FWatchPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridProgress.cs" />
+    <Compile Include="ListChangeHelper.cs" />
+    <Compile Include="LoginInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Menu\AbstractMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Menu\IMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Menu\MenuCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MultiLanguageHelper.cs" />
+    <Compile Include="OQCHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ApplicationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\clsRCard2Mo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\MenuBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\MenuSerivce.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UltraWinGridHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FMoCodeRCardLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMoCodeLotLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMoLotMaintain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLotTransferCarton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLotCollectionCarton_BV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLotCollectionCarton_BV.designer.cs">
+      <DependentUpon>FLotCollectionCarton_BV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLotCollectionCartonForLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLotCollectionCartonForLot.designer.cs">
+      <DependentUpon>FLotCollectionCartonForLot.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBigSSCodeQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FBigSSCodeQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChangePassword.resx">
+      <DependentUpon>FChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCheckRoute.resx">
+      <DependentUpon>FCheckRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectionCarton_BV.resx">
+      <DependentUpon>FCollectionCarton_BV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectionCarton_SKD.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FCollectionCarton_SKD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectionEsopPicNGEdit.resx">
+      <DependentUpon>FCollectionEsopPicNGEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectionEsopPicNGView.resx">
+      <DependentUpon>FCollectionEsopPicNGView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectionIDMerge_OutLine.resx">
+      <DependentUpon>FCollectionIDMerge_OutLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectionPICView.resx">
+      <DependentUpon>FCollectionPICView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectionViewFlow.resx">
+      <DependentUpon>FCollectionViewFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDocView.resx">
+      <DependentUpon>FDocView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEQPEFficiencyQuery.resx">
+      <DependentUpon>FEQPEFficiencyQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEQPMaintainAutoRemind.resx">
+      <DependentUpon>FEQPMaintainAutoRemind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItemCodeQuery.resx">
+      <DependentUpon>FItemCodeQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLotCollectionGDNG.resx">
+      <DependentUpon>FLotCollectionGDNG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLotCollectionMetrial.resx">
+      <DependentUpon>FLotCollectionMetrial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLotMaintain.resx">
+      <DependentUpon>FLotMaintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMateiralStockout.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FMateiralStockout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMaterialFullCheckMcode.resx">
+      <DependentUpon>FMaterialFullCheckMcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMaterialFullCheckMo.resx">
+      <DependentUpon>FMaterialFullCheckMo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMaterialLabPrint.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FMaterialLabPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMaterialMSD.resx">
+      <DependentUpon>FMaterialMSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMaterialReceive.resx">
+      <DependentUpon>FMaterialReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMaterialStockIn.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FMaterialStockIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMaterialTransfer.resx">
+      <DependentUpon>FMaterialTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMCodeQuery.resx">
+      <DependentUpon>FMCodeQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMetrialKeypart.resx">
+      <DependentUpon>FMetrialKeypart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModelQuery.resx">
+      <DependentUpon>FModelQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMSDAlter.resx">
+      <DependentUpon>FMSDAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOnOffPostByCrew.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FOnOffPostByCrew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOnOffPostByUser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FOnOffPostByUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOPCodeQuery.resx">
+      <DependentUpon>FOPCodeQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCLotQA.resx">
+      <DependentUpon>FOQCLotQA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRCardQuery.resx">
+      <DependentUpon>FRCardQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReceiveMaterial.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FReceiveMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRecNoSelect.resx">
+      <DependentUpon>FRecNoSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FResCodeQuery.resx">
+      <DependentUpon>FResCodeQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FReturneMaterial.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FReturneMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSendMetrial.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FSendMetrial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTScrapQty.resx">
+      <DependentUpon>FSMTScrapQty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FStackCode.resx">
+      <DependentUpon>FStackCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FStorageCodeMulQuery.resx">
+      <DependentUpon>FStorageCodeMulQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FStorageCodeQuery.resx">
+      <DependentUpon>FStorageCodeQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSInputEditUpdate.resx">
+      <DependentUpon>FTSInputEditUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChangeCompany.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FChangeCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChangeRCard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FChangeRCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectionOQC_New.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FCollectionOQC_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCompAppendix.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FCompAppendix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectErrorCode.resx">
+      <DependentUpon>FCollectErrorCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDown.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFrozen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FFrozen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFrozenReason.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FFrozenReason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInInvByNonProduce.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FInInvByNonProduce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInInvByProduce.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FInInvByProduce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FErrorPartSelect.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FErrorPartSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMetrialLotParts.resx">
+      <DependentUpon>FMetrialLotParts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FArmorPlate.resx">
+      <DependentUpon>FArmorPlate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAutoTestConfig.resx">
+      <DependentUpon>FAutoTestConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBonus.resx">
+      <DependentUpon>FBonus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectionGDNG.resx">
+      <DependentUpon>FCollectionGDNG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectionIDMerge.resx">
+      <DependentUpon>FCollectionIDMerge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectionMetrial.resx">
+      <DependentUpon>FCollectionMetrial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectionOQC.resx">
+      <DependentUpon>FCollectionOQC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectionSMTGDNG.resx">
+      <DependentUpon>FCollectionSMTGDNG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectionSoftware.resx">
+      <DependentUpon>FCollectionSoftware.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectMo.resx">
+      <DependentUpon>FCollectMo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCollectReject.resx">
+      <DependentUpon>FCollectReject.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDialogInput.resx">
+      <DependentUpon>FDialogInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDropMaterial.resx">
+      <DependentUpon>FDropMaterial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFeederGetOut.resx">
+      <DependentUpon>FFeederGetOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFeederMaintain.resx">
+      <DependentUpon>FFeederMaintain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFirstOffline.resx">
+      <DependentUpon>FFirstOffline.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFirstOnline.resx">
+      <DependentUpon>FFirstOnline.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FfunTestInfo.resx">
+      <DependentUpon>FfunTestInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGenLot.resx">
+      <DependentUpon>FGenLot.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGenLotIDMerge.resx">
+      <DependentUpon>FGenLotIDMerge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInfoForm.resx">
+      <DependentUpon>FInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInvCarton.resx">
+      <DependentUpon>FInvCarton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInvPlanate.resx">
+      <DependentUpon>FInvPlanate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInvRCardSwitchType.resx">
+      <DependentUpon>FInvRCardSwitchType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInvRecCheck.resx">
+      <DependentUpon>FInvRecCheck.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInvReceive.resx">
+      <DependentUpon>FInvReceive.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInvShipCheck.resx">
+      <DependentUpon>FInvShipCheck.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInvShipImp.resx">
+      <DependentUpon>FInvShipImp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLastOffline.resx">
+      <DependentUpon>FLastOffline.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLastOnline.resx">
+      <DependentUpon>FLastOnline.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLoss.resx">
+      <DependentUpon>FLoss.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FManualAlert.resx">
+      <DependentUpon>FManualAlert.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMergeLot.resx">
+      <DependentUpon>FMergeLot.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMetrialINNO.resx">
+      <DependentUpon>FMetrialINNO.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMetrialINNOInput.resx">
+      <DependentUpon>FMetrialINNOInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMetrialKeyparts.resx">
+      <DependentUpon>FMetrialKeyparts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMultiGoMO.resx">
+      <DependentUpon>FMultiGoMO.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNewMo.resx">
+      <DependentUpon>FNewMo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNormalReceive.resx">
+      <DependentUpon>FNormalReceive.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNormalShip.resx">
+      <DependentUpon>FNormalShip.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOffMo.resx">
+      <DependentUpon>FOffMo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOffTry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FOffTry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCDetail.resx">
+      <DependentUpon>FOQCDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCDimention.resx">
+      <DependentUpon>FOQCDimention.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCFuncTest.resx">
+      <DependentUpon>FOQCFuncTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCLotOperate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FOQCLotOperate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCOffLot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FOQCOffLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCQuery.resx">
+      <DependentUpon>FOQCQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOQCSamplePlan.resx">
+      <DependentUpon>FOQCSamplePlan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCartonSplit.resx">
+      <DependentUpon>FormCartonSplit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOutInv.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FOutInv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPack.resx">
+      <DependentUpon>FPack.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPackCarton.resx">
+      <DependentUpon>FPackCarton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPackPallet.resx">
+      <DependentUpon>FPackPallet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPackPalletPrint.resx">
+      <DependentUpon>FPackPalletPrint.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPauseSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FPauseSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPerformanceTest.resx">
+      <DependentUpon>FPerformanceTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPrintLabel.resx">
+      <DependentUpon>FPrintLabel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FProductSelect.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FProductSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPTCollectionGDNG.resx">
+      <DependentUpon>FPTCollectionGDNG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FQtyForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FQtyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMACollectionGDNG.resx">
+      <DependentUpon>FRMACollectionGDNG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMATSInputEdit.resx">
+      <DependentUpon>FRMATSInputEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDialog.resx">
+      <DependentUpon>frmDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTCheckReelQty.resx">
+      <DependentUpon>FSMTCheckReelQty.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTFeederReelWatch.resx">
+      <DependentUpon>FSMTFeederReelWatch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTLoadFeeder.resx">
+      <DependentUpon>FSMTLoadFeeder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTReelPrepare.resx">
+      <DependentUpon>FSMTReelPrepare.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSMTTransferMO.resx">
+      <DependentUpon>FSMTTransferMO.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSNCheck.resx">
+      <DependentUpon>FSNCheck.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSoftVersionSelector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FSoftVersionSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSoftVersionUpgrade_FG.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FSoftVersionUpgrade_FG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSoftVersionUpgrade_SEMI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FSoftVersionUpgrade_SEMI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSPControl.resx">
+      <DependentUpon>FSPControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSplashForm.resx">
+      <DependentUpon>FSplashForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSplitLot.resx">
+      <DependentUpon>FSplitLot.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSPManage.resx">
+      <DependentUpon>FSPManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSPProcess.resx">
+      <DependentUpon>FSPProcess.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSSChoose.resx">
+      <DependentUpon>FSSChoose.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FStackAdjustment.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FStackAdjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FStackInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FStackInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FStockDelInfo.resx">
+      <DependentUpon>FStockDelInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FStockInput.resx">
+      <DependentUpon>FStockInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FStockOutput.resx">
+      <DependentUpon>FStockOutput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FStockRemove.resx">
+      <DependentUpon>FStockRemove.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTempRework.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FTempRework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTossDarfonERP.resx">
+      <DependentUpon>FTossDarfonERP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTransferCarton.resx">
+      <DependentUpon>FTransferCarton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTryLotNo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FTryLotNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSErrorCodeSelect.resx">
+      <DependentUpon>FTSErrorCodeSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSErrorEdit.resx">
+      <DependentUpon>FTSErrorEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSInput.resx">
+      <DependentUpon>FTSInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSInputComplete.resx">
+      <DependentUpon>FTSInputComplete.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSInputEdit.resx">
+      <DependentUpon>FTSInputEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSInputEditInfo.resx">
+      <DependentUpon>FTSInputEditInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSScrap.resx">
+      <DependentUpon>FTSScrap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUnNormalReceive.resx">
+      <DependentUpon>FUnNormalReceive.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUnNormalShip.resx">
+      <DependentUpon>FUnNormalShip.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FVendorCodeQuery.resx">
+      <DependentUpon>FVendorCodeQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FWatchPanel.resx">
+      <DependentUpon>FWatchPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackPalletPrint.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMoCodeRCardLink.resx">
+      <DependentUpon>FMoCodeRCardLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMoCodeLotLink.resx">
+      <DependentUpon>FMoCodeLotLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMoLotMaintain.resx">
+      <DependentUpon>FMoLotMaintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLotTransferCarton.resx">
+      <DependentUpon>FLotTransferCarton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLotCollectionCarton_BV.resx">
+      <DependentUpon>FLotCollectionCarton_BV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLotCollectionCartonForLot.resx">
+      <DependentUpon>FLotCollectionCartonForLot.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

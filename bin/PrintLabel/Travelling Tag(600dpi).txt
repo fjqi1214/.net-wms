@@ -1,0 +1,5 @@
+[Esc]V010[Esc]H620[Esc]OB[$mocode]
+[Esc]V100[Esc]H620[Esc]OB[$itemdesc]
+[Esc]V200[Esc]H620[Esc]F001-001[Esc]BD103195*[$rcard]*
+[Esc]V200[Esc]H1700[Esc]L0303[Esc]OB[Esc]MQTY[$moplanqty]
+[Esc]V300[Esc]H1700[Esc]L0303[Esc]OB[Esc]MLOT #[$lotno]

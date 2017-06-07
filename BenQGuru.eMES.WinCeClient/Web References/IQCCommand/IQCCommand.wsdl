@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetCommand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="invNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommandResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelDownCommand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="asns" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CancelDownCommandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelDownCommandResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FirstCheck">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="asns" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FirstCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FirstCheckResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FirstCheckWithUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="asns" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FirstCheckWithUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FirstCheckWithUserResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateASNStatusForIQC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="asns" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateASNStatusForIQCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateASNStatusForIQCResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateASNSTTypeForIQC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="asns" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateASNSTTypeForIQCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateASNSTTypeForIQCResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveIQCInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="asns" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="usrCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveIQCInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveIQCInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCommandSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCommand" />
+  </wsdl:message>
+  <wsdl:message name="GetCommandSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommandResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelDownCommandSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelDownCommand" />
+  </wsdl:message>
+  <wsdl:message name="CancelDownCommandSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelDownCommandResponse" />
+  </wsdl:message>
+  <wsdl:message name="FirstCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:FirstCheck" />
+  </wsdl:message>
+  <wsdl:message name="FirstCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:FirstCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="FirstCheckWithUserSoapIn">
+    <wsdl:part name="parameters" element="tns:FirstCheckWithUser" />
+  </wsdl:message>
+  <wsdl:message name="FirstCheckWithUserSoapOut">
+    <wsdl:part name="parameters" element="tns:FirstCheckWithUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateASNStatusForIQCSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateASNStatusForIQC" />
+  </wsdl:message>
+  <wsdl:message name="ValidateASNStatusForIQCSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateASNStatusForIQCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateASNSTTypeForIQCSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateASNSTTypeForIQC" />
+  </wsdl:message>
+  <wsdl:message name="ValidateASNSTTypeForIQCSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateASNSTTypeForIQCResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveIQCInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveIQCInfo" />
+  </wsdl:message>
+  <wsdl:message name="SaveIQCInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveIQCInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IQCCommandSoap">
+    <wsdl:operation name="GetCommand">
+      <wsdl:input message="tns:GetCommandSoapIn" />
+      <wsdl:output message="tns:GetCommandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelDownCommand">
+      <wsdl:input message="tns:CancelDownCommandSoapIn" />
+      <wsdl:output message="tns:CancelDownCommandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FirstCheck">
+      <wsdl:input message="tns:FirstCheckSoapIn" />
+      <wsdl:output message="tns:FirstCheckSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FirstCheckWithUser">
+      <wsdl:input message="tns:FirstCheckWithUserSoapIn" />
+      <wsdl:output message="tns:FirstCheckWithUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateASNStatusForIQC">
+      <wsdl:input message="tns:ValidateASNStatusForIQCSoapIn" />
+      <wsdl:output message="tns:ValidateASNStatusForIQCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateASNSTTypeForIQC">
+      <wsdl:input message="tns:ValidateASNSTTypeForIQCSoapIn" />
+      <wsdl:output message="tns:ValidateASNSTTypeForIQCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveIQCInfo">
+      <wsdl:input message="tns:SaveIQCInfoSoapIn" />
+      <wsdl:output message="tns:SaveIQCInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IQCCommandSoap" type="tns:IQCCommandSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCommand">
+      <soap:operation soapAction="http://tempuri.org/GetCommand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelDownCommand">
+      <soap:operation soapAction="http://tempuri.org/CancelDownCommand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FirstCheck">
+      <soap:operation soapAction="http://tempuri.org/FirstCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FirstCheckWithUser">
+      <soap:operation soapAction="http://tempuri.org/FirstCheckWithUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateASNStatusForIQC">
+      <soap:operation soapAction="http://tempuri.org/ValidateASNStatusForIQC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateASNSTTypeForIQC">
+      <soap:operation soapAction="http://tempuri.org/ValidateASNSTTypeForIQC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveIQCInfo">
+      <soap:operation soapAction="http://tempuri.org/SaveIQCInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IQCCommandSoap12" type="tns:IQCCommandSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCommand">
+      <soap12:operation soapAction="http://tempuri.org/GetCommand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelDownCommand">
+      <soap12:operation soapAction="http://tempuri.org/CancelDownCommand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FirstCheck">
+      <soap12:operation soapAction="http://tempuri.org/FirstCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FirstCheckWithUser">
+      <soap12:operation soapAction="http://tempuri.org/FirstCheckWithUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateASNStatusForIQC">
+      <soap12:operation soapAction="http://tempuri.org/ValidateASNStatusForIQC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateASNSTTypeForIQC">
+      <soap12:operation soapAction="http://tempuri.org/ValidateASNSTTypeForIQC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveIQCInfo">
+      <soap12:operation soapAction="http://tempuri.org/SaveIQCInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IQCCommand">
+    <wsdl:port name="IQCCommandSoap" binding="tns:IQCCommandSoap">
+      <soap:address location="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/IQCCommand.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IQCCommandSoap12" binding="tns:IQCCommandSoap12">
+      <soap12:address location="http://112.74.38.84/mestest/BenQGuru.eMES.Web.WebService/IQCCommand.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

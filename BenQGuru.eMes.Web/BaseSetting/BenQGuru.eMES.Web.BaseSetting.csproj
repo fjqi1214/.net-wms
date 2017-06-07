@@ -1,0 +1,951 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ResGenToolArchitecture>Managed32Bit</ResGenToolArchitecture>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{918AB183-C77B-4A74-8B2B-612BABD0EDD8}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BenQGuru.eMES.Web.BaseSetting</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BenQGuru.eMES.Web.BaseSetting</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BenQGuru.eMES.BaseSetting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.BaseSetting.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Common">
+      <Name>BenQGuru.eMES.Common</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.DataCollect, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.DataCollect.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Domain, Version=1.0.4.13, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Material">
+      <Name>BenQGuru.eMES.Material</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.MOModel">
+      <Name>BenQGuru.eMES.MOModel</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.MOModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.OQC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.OQC.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Performance, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.Performance.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Rework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.Rework.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Security">
+      <Name>BenQGuru.eMES.Security</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.TSModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.TSModel.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.Web.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.SelectQuery, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="BenQGuru.eMES.WebUI.Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.WebUI.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlLibrary">
+      <Name>ControlLibrary</Name>
+      <HintPath>..\..\bin\ControlLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Infragistics3.Documents.Excel.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics3.Documents.Excel.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.Web.v11.2, Version=11.2.20112.1019, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Infragistics35.Web.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.Documents.Excel.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics35.WebUI.Documents.Excel.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.Shared.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics35.WebUI.Shared.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebGrid.ExcelExport.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics35.WebUI.UltraWebGrid.ExcelExport.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebGrid.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics35.WebUI.UltraWebGrid.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebNavigator.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics35.WebUI.UltraWebNavigator.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UserControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\UserControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseModelFacadeFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FBSHomeSettingDetailMP.aspx.cs">
+      <DependentUpon>FBSHomeSettingDetailMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FBSHomeSettingDetailMP.aspx.designer.cs">
+      <DependentUpon>FBSHomeSettingDetailMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FDeleteExceptionCodeAndCheckException.ashx.cs">
+      <DependentUpon>FDeleteExceptionCodeAndCheckException.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FDocDirMP.aspx.cs">
+      <DependentUpon>FDocDirMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FDocDirMP.aspx.designer.cs">
+      <DependentUpon>FDocDirMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FDocView.aspx.cs">
+      <DependentUpon>FDocView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FDocView.aspx.designer.cs">
+      <DependentUpon>FDocView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FErrorCodeGroup2ErrorCodeAP.aspx.cs">
+      <DependentUpon>FErrorCodeGroup2ErrorCodeAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FErrorCodeGroup2ErrorCodeAP.aspx.designer.cs">
+      <DependentUpon>FErrorCodeGroup2ErrorCodeAP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FErrorCodeGroup2ErrorCodeSP.aspx.cs">
+      <DependentUpon>FErrorCodeGroup2ErrorCodeSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FErrorCodeGroup2ErrorCodeSP.aspx.designer.cs">
+      <DependentUpon>FErrorCodeGroup2ErrorCodeSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FErrorCodeGroupMP.aspx.cs">
+      <DependentUpon>FErrorCodeGroupMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FErrorCodeGroupMP.aspx.designer.cs">
+      <DependentUpon>FErrorCodeGroupMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FErrorCodeMP.aspx.cs">
+      <DependentUpon>FErrorCodeMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FErrorCodeMP.aspx.designer.cs">
+      <DependentUpon>FErrorCodeMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FFileUpLoadMP.aspx.cs">
+      <DependentUpon>FFileUpLoadMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FFileUpLoadMP.aspx.designer.cs">
+      <DependentUpon>FFileUpLoadMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FBSHomeSettingMP.aspx.cs">
+      <DependentUpon>FBSHomeSettingMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FBSHomeSettingMP.aspx.designer.cs">
+      <DependentUpon>FBSHomeSettingMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItem2OpPics.aspx.cs">
+      <DependentUpon>FItem2OpPics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItem2OpPics.aspx.designer.cs">
+      <DependentUpon>FItem2OpPics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTSMaintainMP.aspx.cs">
+      <DependentUpon>FTSMaintainMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FTSMaintainMP.aspx.designer.cs">
+      <DependentUpon>FTSMaintainMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FViewJobLog.aspx.cs">
+      <DependentUpon>FViewJobLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FViewJobLog.aspx.designer.cs">
+      <DependentUpon>FViewJobLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportIndirectManCountDate\FExcelDataImp.aspx.cs">
+      <DependentUpon>FExcelDataImp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportIndirectManCountDate\FExcelDataImp.aspx.designer.cs">
+      <DependentUpon>FExcelDataImp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportIndirectManCountDate\ImportManCountDateEngine.cs" />
+    <Compile Include="ShowImg.aspx.cs">
+      <DependentUpon>ShowImg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowImg.aspx.designer.cs">
+      <DependentUpon>ShowImg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSModelFacadeFactory.cs" />
+    <Compile Include="_StandardMaintainPageDetail.aspx.cs">
+      <DependentUpon>_StandardMaintainPageDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_StandardMaintainPageDetail.aspx.designer.cs">
+      <DependentUpon>_StandardMaintainPageDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOracleJobMP.aspx.cs">
+      <DependentUpon>FOracleJobMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOracleJobMP.aspx.designer.cs">
+      <DependentUpon>FOracleJobMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_StandardMaintainPage.aspx.cs">
+      <DependentUpon>_StandardMaintainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_StandardMaintainPage.aspx.designer.cs">
+      <DependentUpon>_StandardMaintainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FErrorCode2OPRework.aspx.cs">
+      <DependentUpon>FErrorCode2OPRework.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FErrorCode2OPRework.aspx.designer.cs">
+      <DependentUpon>FErrorCode2OPRework.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FPrintTemplateMP.aspx.cs">
+      <DependentUpon>FPrintTemplateMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FPrintTemplateMP.aspx.designer.cs">
+      <DependentUpon>FPrintTemplateMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroup2FunctionGroupAP.aspx.cs">
+      <DependentUpon>FUserGroup2FunctionGroupAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserGroup2FunctionGroupAP.aspx.designer.cs">
+      <DependentUpon>FUserGroup2FunctionGroupAP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroup2FunctionGroupSP.aspx.cs">
+      <DependentUpon>FUserGroup2FunctionGroupSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserGroup2FunctionGroupSP.aspx.designer.cs">
+      <DependentUpon>FUserGroup2FunctionGroupSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroup2UserSP2.aspx.cs">
+      <DependentUpon>FUserGroup2UserSP2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserGroup2UserSP2.aspx.designer.cs">
+      <DependentUpon>FUserGroup2UserSP2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroup2UserAP2.aspx.cs">
+      <DependentUpon>FUserGroup2UserAP2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserGroup2UserAP2.aspx.designer.cs">
+      <DependentUpon>FUserGroup2UserAP2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FFunctionGroup2FunctionSP.aspx.cs">
+      <DependentUpon>FFunctionGroup2FunctionSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FFunctionGroup2FunctionSP.aspx.designer.cs">
+      <DependentUpon>FFunctionGroup2FunctionSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FFunctionGroupMP.aspx.cs">
+      <DependentUpon>FFunctionGroupMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FFunctionGroupMP.aspx.designer.cs">
+      <DependentUpon>FFunctionGroupMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FCustSelect.aspx.cs">
+      <DependentUpon>FCustSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FCustSelect.aspx.designer.cs">
+      <DependentUpon>FCustSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FItemCheck.aspx.cs">
+      <DependentUpon>FItemCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FItemCheck.aspx.designer.cs">
+      <DependentUpon>FItemCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMenuMP.aspx.cs">
+      <DependentUpon>FMenuMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMenuMP.aspx.designer.cs">
+      <DependentUpon>FMenuMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FModuleMP.aspx.cs">
+      <DependentUpon>FModuleMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FModuleMP.aspx.designer.cs">
+      <DependentUpon>FModuleMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOperation2ResourceAP.aspx.cs">
+      <DependentUpon>FOperation2ResourceAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOperation2ResourceAP.aspx.designer.cs">
+      <DependentUpon>FOperation2ResourceAP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOperation2ResourceSP.aspx.cs">
+      <DependentUpon>FOperation2ResourceSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOperation2ResourceSP.aspx.designer.cs">
+      <DependentUpon>FOperation2ResourceSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOperationMP.aspx.cs">
+      <DependentUpon>FOperationMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOperationMP.aspx.designer.cs">
+      <DependentUpon>FOperationMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FOrganizationMP.aspx.cs">
+      <DependentUpon>FOrganizationMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FOrganizationMP.aspx.designer.cs">
+      <DependentUpon>FOrganizationMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FParameterGroupMP.aspx.cs">
+      <DependentUpon>FParameterGroupMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FParameterGroupMP.aspx.designer.cs">
+      <DependentUpon>FParameterGroupMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FParameterMP.aspx.cs">
+      <DependentUpon>FParameterMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FParameterMP.aspx.designer.cs">
+      <DependentUpon>FParameterMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSecurityMP.aspx.cs">
+      <DependentUpon>FSecurityMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSecurityMP.aspx.designer.cs">
+      <DependentUpon>FSecurityMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSystemErrorMP.aspx.cs">
+      <DependentUpon>FSystemErrorMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSystemErrorMP.aspx.designer.cs">
+      <DependentUpon>FSystemErrorMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroup2ModuleAP.aspx.cs">
+      <DependentUpon>FUserGroup2ModuleAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserGroup2ModuleAP.aspx.designer.cs">
+      <DependentUpon>FUserGroup2ModuleAP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroup2ModuleNewSP.aspx.cs">
+      <DependentUpon>FUserGroup2ModuleNewSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserGroup2ModuleNewSP.aspx.designer.cs">
+      <DependentUpon>FUserGroup2ModuleNewSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroup2ModuleSP.aspx.cs">
+      <DependentUpon>FUserGroup2ModuleSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserGroup2ModuleSP.aspx.designer.cs">
+      <DependentUpon>FUserGroup2ModuleSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroup2ResourceAP.aspx.cs">
+      <DependentUpon>FUserGroup2ResourceAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserGroup2ResourceAP.aspx.designer.cs">
+      <DependentUpon>FUserGroup2ResourceAP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroup2ResourceSP.aspx.cs">
+      <DependentUpon>FUserGroup2ResourceSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserGroup2ResourceSP.aspx.designer.cs">
+      <DependentUpon>FUserGroup2ResourceSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroup2UserAP.aspx.cs">
+      <DependentUpon>FUserGroup2UserAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserGroup2UserAP.aspx.designer.cs">
+      <DependentUpon>FUserGroup2UserAP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroup2UserSP.aspx.cs">
+      <DependentUpon>FUserGroup2UserSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserGroup2UserSP.aspx.designer.cs">
+      <DependentUpon>FUserGroup2UserSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroupForQuery.aspx.cs">
+      <DependentUpon>FUserGroupForQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserGroupForQuery.aspx.designer.cs">
+      <DependentUpon>FUserGroupForQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroupMP.aspx.cs">
+      <DependentUpon>FUserGroupMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserGroupMP.aspx.designer.cs">
+      <DependentUpon>FUserGroupMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserMP.aspx.cs">
+      <DependentUpon>FUserMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserMP.aspx.designer.cs">
+      <DependentUpon>FUserMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridColumnBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImportData\FBasicDataImp.aspx.cs">
+      <DependentUpon>FBasicDataImp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportData\FBasicDataImp.aspx.designer.cs">
+      <DependentUpon>FBasicDataImp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportData\ImportDateEngine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImportData\ImportExcel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImportData\ImportXMLHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OperationListFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ShiftModelFacadeFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SystemParameterListBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SystemSettingFacadeFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserManagerFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FFileCheckMP.aspx.cs">
+      <DependentUpon>FFileCheckMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FFileCheckMP.aspx.designer.cs">
+      <DependentUpon>FFileCheckMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FCustomerQuery.aspx.cs">
+      <DependentUpon>FCustomerQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FCustomerQuery.aspx.designer.cs">
+      <DependentUpon>FCustomerQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FVendorQuery.aspx.cs">
+      <DependentUpon>FVendorQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FVendorQuery.aspx.designer.cs">
+      <DependentUpon>FVendorQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMaterialMP.aspx.cs">
+      <DependentUpon>FMaterialMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMaterialMP.aspx.designer.cs">
+      <DependentUpon>FMaterialMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSAPClosePreiodMP.aspx.cs">
+      <DependentUpon>FSAPClosePreiodMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FSAPClosePreiodMP.aspx.designer.cs">
+      <DependentUpon>FSAPClosePreiodMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroup2VendorSP.aspx.cs">
+      <DependentUpon>FUserGroup2VendorSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserGroup2VendorSP.aspx.designer.cs">
+      <DependentUpon>FUserGroup2VendorSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUserGroup2VendorAP.aspx.cs">
+      <DependentUpon>FUserGroup2VendorAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FUserGroup2VendorAP.aspx.designer.cs">
+      <DependentUpon>FUserGroup2VendorAP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FInDocView.aspx.cs">
+      <DependentUpon>FInDocView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FInDocView.aspx.designer.cs">
+      <DependentUpon>FInDocView.aspx</DependentUpon>
+    </Compile>
+    <Content Include="FErrorCodeGroup2ErrorCodeAP.aspx" />
+    <Content Include="FErrorCodeGroup2ErrorCodeSP.aspx" />
+    <Content Include="FErrorCodeGroupMP.aspx" />
+    <Content Include="FErrorCodeMP.aspx" />
+    <Content Include="FItem2OpPicsViewLocal.htm" />
+    <Content Include="FTSMaintainMP.aspx" />
+    <Content Include="FViewJobLog.aspx" />
+    <Content Include="ImportIndirectManCountDate\FExcelDataImp.aspx" />
+    <Content Include="ImportIndirectManCountDate\ImportBasicData.xml" />
+    <Content Include="_StandardMaintainPageDetail.aspx" />
+    <Content Include="FOracleJobMP.aspx" />
+    <Content Include="_StandardMaintainPage.aspx" />
+    <Content Include="FErrorCode2OPRework.aspx" />
+    <Content Include="FPrintTemplateMP.aspx" />
+    <Content Include="FUserGroup2FunctionGroupAP.aspx" />
+    <Content Include="FUserGroup2FunctionGroupSP.aspx" />
+    <Content Include="FUserGroup2UserSP2.aspx" />
+    <Content Include="FUserGroup2UserAP2.aspx" />
+    <Content Include="FFunctionGroup2FunctionSP.aspx" />
+    <Content Include="FFunctionGroupMP.aspx" />
+    <Content Include="FCustSelect.aspx" />
+    <Content Include="FItemCheck.aspx" />
+    <Content Include="FMenuMP.aspx" />
+    <Content Include="FModuleMP.aspx" />
+    <Content Include="FOperation2ResourceAP.aspx" />
+    <Content Include="FOperation2ResourceSP.aspx" />
+    <Content Include="FOperationMP.aspx" />
+    <Content Include="FOrganizationMP.aspx" />
+    <Content Include="FParameterGroupMP.aspx" />
+    <Content Include="FParameterMP.aspx" />
+    <Content Include="FSecurityMP.aspx" />
+    <Content Include="FSystemErrorMP.aspx" />
+    <Content Include="FUserGroup2ModuleAP.aspx" />
+    <Content Include="FUserGroup2ModuleNewSP.aspx" />
+    <Content Include="FUserGroup2ModuleSP.aspx" />
+    <Content Include="FUserGroup2ResourceAP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FUserGroup2ResourceSP.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="FUserGroup2UserAP.aspx" />
+    <Content Include="FUserGroup2UserSP.aspx" />
+    <Content Include="FUserGroupForQuery.aspx" />
+    <Content Include="FUserGroupMP.aspx" />
+    <Content Include="FUserMP.aspx" />
+    <Content Include="ImportData\FBasicDataImp.aspx" />
+    <Content Include="ImportData\ImportBasicData.xml" />
+    <Content Include="ImportIndirectManCountDate\MatchType.xml" />
+    <Content Include="JS\StyleSetting.js" />
+    <Content Include="Skin\StyleSheet.css" />
+    <Content Include="SoftWareVersionImport.xml" />
+    <Content Include="FUserGroup2VendorSP.aspx" />
+    <Content Include="FUserGroup2VendorAP.aspx" />
+    <Content Include="FInDocView.aspx" />
+    <EmbeddedResource Include="FDocView.aspx.resx">
+      <DependentUpon>FDocView.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FErrorCodeGroup2ErrorCodeAP.aspx.resx">
+      <DependentUpon>FErrorCodeGroup2ErrorCodeAP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FErrorCodeGroup2ErrorCodeSP.aspx.resx">
+      <DependentUpon>FErrorCodeGroup2ErrorCodeSP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FErrorCodeGroupMP.aspx.resx">
+      <DependentUpon>FErrorCodeGroupMP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FErrorCodeMP.aspx.resx">
+      <DependentUpon>FErrorCodeMP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTSMaintainMP.aspx.resx">
+      <DependentUpon>FTSMaintainMP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FViewJobLog.aspx.resx">
+      <DependentUpon>FViewJobLog.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_StandardMaintainPageDetail.aspx.resx">
+      <DependentUpon>_StandardMaintainPageDetail.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOracleJobMP.aspx.resx">
+      <DependentUpon>FOracleJobMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_StandardMaintainPage.aspx.resx">
+      <DependentUpon>_StandardMaintainPage.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPrintTemplateMP.aspx.resx">
+      <DependentUpon>FPrintTemplateMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroup2FunctionGroupAP.aspx.resx">
+      <DependentUpon>FUserGroup2FunctionGroupAP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroup2FunctionGroupSP.aspx.resx">
+      <DependentUpon>FUserGroup2FunctionGroupSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroup2UserSP2.aspx.resx">
+      <DependentUpon>FUserGroup2UserSP2.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroup2UserAP2.aspx.resx">
+      <DependentUpon>FUserGroup2UserAP2.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFunctionGroup2FunctionSP.aspx.resx">
+      <DependentUpon>FFunctionGroup2FunctionSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFunctionGroupMP.aspx.resx">
+      <DependentUpon>FFunctionGroupMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCustSelect.aspx.resx">
+      <DependentUpon>FCustSelect.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FItemCheck.aspx.resx">
+      <DependentUpon>FItemCheck.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMenuMP.aspx.resx">
+      <DependentUpon>FMenuMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModuleMP.aspx.resx">
+      <DependentUpon>FModuleMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOperation2ResourceAP.aspx.resx">
+      <DependentUpon>FOperation2ResourceAP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOperation2ResourceSP.aspx.resx">
+      <DependentUpon>FOperation2ResourceSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOperationMP.aspx.resx">
+      <DependentUpon>FOperationMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FParameterGroupMP.aspx.resx">
+      <DependentUpon>FParameterGroupMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FParameterMP.aspx.resx">
+      <DependentUpon>FParameterMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSecurityMP.aspx.resx">
+      <DependentUpon>FSecurityMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSystemErrorMP.aspx.resx">
+      <DependentUpon>FSystemErrorMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroup2ModuleAP.aspx.resx">
+      <DependentUpon>FUserGroup2ModuleAP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroup2ModuleNewSP.aspx.resx">
+      <DependentUpon>FUserGroup2ModuleNewSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroup2ModuleSP.aspx.resx">
+      <DependentUpon>FUserGroup2ModuleSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroup2ResourceAP.aspx.resx">
+      <DependentUpon>FUserGroup2ResourceAP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroup2ResourceSP.aspx.resx">
+      <DependentUpon>FUserGroup2ResourceSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroup2UserAP.aspx.resx">
+      <DependentUpon>FUserGroup2UserAP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroup2UserSP.aspx.resx">
+      <DependentUpon>FUserGroup2UserSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroupForQuery.aspx.resx">
+      <DependentUpon>FUserGroupForQuery.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroupMP.aspx.resx">
+      <DependentUpon>FUserGroupMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserMP.aspx.resx">
+      <DependentUpon>FUserMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportData\FBasicDataImp.aspx.resx">
+      <DependentUpon>FBasicDataImp.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="FCustomerQuery.aspx.resx">
+      <DependentUpon>FCustomerQuery.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FVendorQuery.aspx.resx">
+      <DependentUpon>FVendorQuery.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSAPClosePreiodMP.aspx.resx">
+      <DependentUpon>FSAPClosePreiodMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroup2VendorSP.aspx.resx">
+      <DependentUpon>FUserGroup2VendorSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUserGroup2VendorAP.aspx.resx">
+      <DependentUpon>FUserGroup2VendorAP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInDocView.aspx.resx">
+      <DependentUpon>FInDocView.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FBSHomeSettingDetailMP.aspx" />
+    <Content Include="FDeleteExceptionCodeAndCheckException.ashx" />
+    <Content Include="FBSHomeSettingMP.aspx" />
+    <Content Include="FDocDirMP.aspx" />
+    <Content Include="FDocView.aspx" />
+    <Content Include="FFileUpLoadMP.aspx" />
+    <Content Include="FFileCheckMP.aspx" />
+    <Content Include="FItem2OpPics.aspx" />
+    <Content Include="ShowImg.aspx" />
+    <Content Include="FCustomerQuery.aspx" />
+    <Content Include="FVendorQuery.aspx" />
+    <Content Include="FMaterialMP.aspx" />
+    <Content Include="FSAPClosePreiodMP.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BenQuru.eMES.Web.csproj">
+      <Project>{1ACA2939-E952-44EE-BE06-7550445CAB7F}</Project>
+      <Name>BenQuru.eMES.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52820</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

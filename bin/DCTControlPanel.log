@@ -1,0 +1,20 @@
+2008-06-18 15:58:45   at BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, String message, Exception innerException)
+   at BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, Exception innerException)
+   at BenQGuru.eMES.Common.PersistBroker.OLEDBPersistBroker.Query(String commandText, String[] parameters, Type[] parameterTypes, Object[] parameterValues)
+   at BenQGuru.eMES.Common.DomainDataProvider.SQLDomainDataProvider.CustomSearch(Type type, Object[] keyAttributeValus)
+   at BenQGuru.eMES.BaseSetting.UserFacade.GetUser(String userCode)
+   at BenQGuru.eMES.Security.SecurityFacade.PasswordCheck(String userCode, String password)
+   at BenQGuru.eMES.Security.SecurityFacade.LoginCheck(String userCode, String password, Object[]& groups)
+   at BenQGuru.eMES.Common.DCT.Action.ActionPassword.Action(Object act) in D:\GuruMES\hisense\Product\Source\DCT\DCT\Action3.0\Login\ActionPassword.cs:line 78
+   at BenQGuru.eMES.Common.DCT.Core.BaseDCTAction.Do(Object act) in D:\GuruMES\hisense\Product\Source\DCT\DCT\DCTCore\BaseClass\BaseDCTAction.cs:line 83
+   at BenQGuru.eMES.Common.DCT.ATop.DT4000.DT4000DCTDriver.CycleRequest() in D:\GuruMES\hisense\Product\Source\DCT\DCT\DT4000Driver\DT4000DCTDriver.cs:line 169
+2008-06-18 15:58:47   at BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, String message, Exception innerException)
+   at BenQGuru.eMES.Common.ExceptionManager.Raise(Type type, String errorCode, Exception innerException)
+   at BenQGuru.eMES.Common.PersistBroker.OLEDBPersistBroker.Query(String commandText, String[] parameters, Type[] parameterTypes, Object[] parameterValues)
+   at BenQGuru.eMES.Common.DomainDataProvider.SQLDomainDataProvider.CustomSearch(Type type, Object[] keyAttributeValus)
+   at BenQGuru.eMES.BaseSetting.UserFacade.GetUser(String userCode)
+   at BenQGuru.eMES.Security.SecurityFacade.PasswordCheck(String userCode, String password)
+   at BenQGuru.eMES.Security.SecurityFacade.LoginCheck(String userCode, String password, Object[]& groups)
+   at BenQGuru.eMES.Common.DCT.Action.ActionPassword.Action(Object act) in D:\GuruMES\hisense\Product\Source\DCT\DCT\Action3.0\Login\ActionPassword.cs:line 78
+   at BenQGuru.eMES.Common.DCT.Core.BaseDCTAction.Do(Object act) in D:\GuruMES\hisense\Product\Source\DCT\DCT\DCTCore\BaseClass\BaseDCTAction.cs:line 83
+   at BenQGuru.eMES.Common.DCT.ATop.DT4000.DT4000DCTDriver.CycleRequest() in D:\GuruMES\hisense\Product\Source\DCT\DCT\DT4000Driver\DT4000DCTDriver.cs:line 169

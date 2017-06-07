@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ResGenToolArchitecture>Managed32Bit</ResGenToolArchitecture>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F6064CE6-03B1-4A7A-B1B0-47CE728B37DE}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BenQGuru.eMES.WebUI.Helper</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BenQGuru.eMES.Web.Helper</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\Bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '123|AnyCPU' ">
+    <OutputPath>..\..\ReleaseDlls\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '123|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\123\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADODB">
+      <Name>adodb</Name>
+      <HintPath>C:\Program Files\Microsoft.NET\Primary Interop Assemblies\adodb.dll</HintPath>
+      <AssemblyFolderKey>hklm\primary interop assemblies</AssemblyFolderKey>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.BaseSetting">
+      <Name>BenQGuru.eMES.BaseSetting</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.BaseSetting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Common">
+      <Name>BenQGuru.eMES.Common</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Domain">
+      <Name>BenQGuru.eMES.Domain</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.Domain.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Material, Version=1.0.4.13, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\BenQGuru.eMES.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.MOModel">
+      <Name>BenQGuru.eMES.MOModel</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.MOModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Security, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="BenQGuru.eMES.SelectQuery, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\BenQGuru.eMES.SelectQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.Helper">
+      <Name>BenQGuru.eMES.Web.Helper</Name>
+      <HintPath>..\bin\BenQGuru.eMES.Web.Helper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.SelectQuery, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BenQGuru.eMes.Web\bin\BenQGuru.eMES.Web.SelectQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.Palau.Common">
+      <Name>BenQGuru.Palau.Common</Name>
+      <HintPath>..\Bin\BenQGuru.Palau.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.Public.LicenseController, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ControlLibrary">
+      <Name>ControlLibrary</Name>
+      <HintPath>..\Bin\ControlLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Infragistics35.Web.v11.2, Version=11.2.20112.1019, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics35.WebUI.Shared.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BenQGuru.eMes.Web\bin\Infragistics35.WebUI.Shared.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebGrid.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BenQGuru.eMes.Web\bin\Infragistics35.WebUI.UltraWebGrid.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.WebDataInput.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BenQGuru.eMes.Web\bin\Infragistics35.WebUI.WebDataInput.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseAPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseAPageNew.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseMPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePageSelectNew.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseQPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseQPageNew.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseRMPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseRQPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseSPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ButtonHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DropDownListBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExcelExporter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FacadeFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileLoadProcess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageCenter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OWCChartSpace.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OWCPivotTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageCheckInfoPublish.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageCheckManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PagerSizeSelector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PagerToolbar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RefreshController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SendMailHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SessionHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserControl\ColorPicker\UCColorPicker.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ColorPicker\UCColorPicker.ascx.designer.cs">
+      <DependentUpon>UCColorPicker.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DateTime\DateTime\eMESDate.ascx.cs">
+      <DependentUpon>eMESDate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DateTime\DateTime\eMESDate.ascx.designer.cs">
+      <DependentUpon>eMESDate.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DateTime\DateTime\eMESTime.ascx.cs">
+      <DependentUpon>eMESTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DateTime\DateTime\eMESTime.ascx.designer.cs">
+      <DependentUpon>eMESTime.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Navigator\PageNavigator.ascx.cs">
+      <DependentUpon>PageNavigator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\NumericUpDown\UCNumericUpDown.ascx.cs">
+      <DependentUpon>UCNumericUpDown.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\NumericUpDown\UCNumericUpDown.ascx.designer.cs">
+      <DependentUpon>UCNumericUpDown.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidationCodeGenerator.cs" />
+    <Compile Include="GridHelperNew.cs" />
+    <Compile Include="BaseMPageNew.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseMPageMinus.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseMPageForIQC.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <EmbeddedResource Include="ExcelExporter.resx">
+      <DependentUpon>ExcelExporter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\DateTime\DateTime\eMESDate.ascx.resx">
+      <DependentUpon>eMESDate.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\DateTime\DateTime\eMESTime.ascx.resx">
+      <DependentUpon>eMESTime.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Navigator\PageNavigator.ascx.resx">
+      <DependentUpon>PageNavigator.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\NumericUpDown\UCNumericUpDown.ascx.resx">
+      <DependentUpon>UCNumericUpDown.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="UserControl\ColorPicker\ColorPicker.js" />
+    <Content Include="UserControl\ColorPicker\colorpickerui.htm" />
+    <Content Include="UserControl\ColorPicker\UCColorPicker.ascx" />
+    <Content Include="UserControl\DateTime\DateTime\eMESDate.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="UserControl\DateTime\DateTime\eMESTime.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="UserControl\DateTime\Script\calendar.js" />
+    <Content Include="UserControl\DateTime\Script\calendar2.js" />
+    <Content Include="UserControl\DateTime\Script\CHSCalendarDate.htm" />
+    <Content Include="UserControl\DateTime\Script\CHSCalendarFrame.htm" />
+    <Content Include="UserControl\DateTime\Script\CHScalendarSrc.js" />
+    <Content Include="UserControl\DateTime\Script\CHTCalendar1Frame.htm" />
+    <Content Include="UserControl\DateTime\Script\CHTCalendarDate.htm" />
+    <Content Include="UserControl\DateTime\Script\CHTcalendarSrc.js" />
+    <Content Include="UserControl\DateTime\Script\DateCheck.js" />
+    <Content Include="UserControl\DateTime\Script\ENUCalendarDate.htm" />
+    <Content Include="UserControl\DateTime\Script\ENUCalendarFrame.htm" />
+    <Content Include="UserControl\DateTime\Script\ENUcalendarSrc.js" />
+    <Content Include="UserControl\Navigator\PageNavigator.ascx" />
+    <Content Include="UserControl\NumericUpDown\numericupdown.jpg" />
+    <Content Include="UserControl\NumericUpDown\UCNumericUpDown.ascx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

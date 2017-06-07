@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsMo" targetNamespace="http://tempuri.org/dsMo.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/dsMo.xsd" xmlns:mstns="http://tempuri.org/dsMo.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsMo" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="MultiMo">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="工单" type="xs:string" minOccurs="0" msdata:ReadOnly="true" />
+							<xs:element name="产品序列号" type="xs:string" msdata:ReadOnly="false" />
+							<xs:element name="产品代码" type="xs:string" minOccurs="0" msdata:ReadOnly="true" />
+							<xs:element name="已投入数量" type="xs:string" minOccurs="0" msdata:ReadOnly="true" />
+							<xs:element name="计划数量" type="xs:integer" minOccurs="0" msdata:ReadOnly="true" />
+							<xs:element name="已拆解数量" type="xs:integer" minOccurs="0" msdata:ReadOnly="true" />
+							<xs:element name="已脱离数量" type="xs:integer" minOccurs="0" msdata:ReadOnly="true" />
+							<xs:element name="已完工数量" type="xs:integer" />
+							<xs:element name="待投入数量" type="xs:integer" minOccurs="0" msdata:ReadOnly="true" />
+						</xs:sequence>
+					</xs:complexType>
+					<xs:key name="MultiMoKey1" msdata:PrimaryKey="true">
+						<xs:selector xpath="." />
+						<xs:field xpath="mstns:工单" />
+					</xs:key>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

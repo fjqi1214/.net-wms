@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48622493-B525-4468-B7C1-0DE88629AA00}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BenQGuru.eMES.WebQuery</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BenQGuru.eMES.WebQuery</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/BenQGuru.eMES.WebQuery/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BenQGuru.eMES.BaseSetting">
+      <Name>BenQGuru.eMES.BaseSetting</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.BaseSetting.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Common">
+      <Name>BenQGuru.eMES.Common</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Domain">
+      <Name>BenQGuru.eMES.Domain</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Material">
+      <Name>BenQGuru.eMES.Material</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.SPCDataCenter">
+      <Name>BenQGuru.eMES.SPCDataCenter</Name>
+      <HintPath>..\bin\BenQGuru.eMES.SPCDataCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.TSModel">
+      <Name>BenQGuru.eMES.TSModel</Name>
+      <HintPath>..\bin\BenQGuru.eMES.TSModel.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.Helper">
+      <Name>BenQGuru.eMES.Web.Helper</Name>
+      <HintPath>..\Bin\BenQGuru.eMES.Web.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KPIQueryFacade.cs" />
+    <Compile Include="NewReportDomainObject.cs" />
+    <Compile Include="OutSourcingQueryFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QDOComponentLoading.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QDOECNList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QDOItemConfigration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QDOMultiMOMemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QDOSNNGList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QDOTryItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QDOTryNo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QDOTSDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QDOTSInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QDOTSPerformance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QDOTSRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QDOTSRecordPerformance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QSMTNGList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QStockDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryCardTransferFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryComponentLoadingFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryDoamainObjects2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryDomainObjects.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryECNFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryFacade1.cs" />
+    <Compile Include="QueryFacade2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryFacade3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryItemConfigrationFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryMultiMOMemoFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryOQCFunctionFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryOQCLotDetailsFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryRMATSFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QuerySMTComponentLoadingFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QuerySMTNGFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QuerySNNGFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QuerySoftwareVersionFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QuerySolderPasteFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QuerySPC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryStockFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryTryItemFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryTryNoFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryTSChangedPartsFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryTSDetailsFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryTSInfoFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryTSPerformanceFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryTSRecordFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryTSRecordPerformanceFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportHelpher.cs" />
+    <Compile Include="ReportSQLEngine.cs" />
+    <Compile Include="ReportSQLHelper.cs" />
+    <Compile Include="ReportViewConfigFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SAPMESStorageCompareFacade.cs" />
+    <Compile Include="WebQueryVariable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

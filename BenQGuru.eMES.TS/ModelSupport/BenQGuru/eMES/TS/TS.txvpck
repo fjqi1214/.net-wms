@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="ap2r2hnai_v">
+    <property name="$name" value="TS" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="csharp:e_class:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.IsCardScrapeOrSplit(System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_field:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade._domainDataProvider" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.TSFacade(BenQGuru.eMES.Common.Domain.IDomainDataProvider)" />
+      <reference referencedUin="csharp:e_property:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DataProvider" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.CreateNewTS()" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.AddTS(BenQGuru.eMES.Domain.TS.TS)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.UpdateTS(BenQGuru.eMES.Domain.TS.TS)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.UpdateTSConfirmStatus(BenQGuru.eMES.Domain.TS.TS)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.UpdateTSStatus(BenQGuru.eMES.Domain.TS.TS)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.UpdateTSReflowStatus(BenQGuru.eMES.Domain.TS.TS)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteTS(BenQGuru.eMES.Domain.TS.TS)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetTS(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.QueryTSCount(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.QueryTS(System.String,System.Int32,System.Int32)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetAllTS()" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.QueryTSCountByLine(System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.QueryTSCountLineByLotNo(System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.QueryNoTSStusTSCountByRunningCard(System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetCardScrapeOrSplit(System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.HaveNewStatusCardInOQCLot(System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.CheckCardInTS(System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteCardInTS(System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.IsCardInTS(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetCardLastTSRecordInNewStatus(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetCardPreviousTSRecord(System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetCardLastTSRecordInConfirmOrTSStatus(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetCardLastTSRecordInTSStatus(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetCardLastTSRecord(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.IllegibilityQueryTS(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.IllegibilityQueryTS(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.UpdateTSStatus(System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.ExtraQueryTSItem(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.AddTSItem(BenQGuru.eMES.Domain.TS.TSItem)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.UpdateTSItem(BenQGuru.eMES.Domain.TS.TSItem)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteTSItem(BenQGuru.eMES.Domain.TS.TSItem)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteTSItem(System.String,System.String[])" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.CreateTSItem()" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetUniqueTSItemSequence(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.CreateNewTSErrorCause()" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.AddTSErrorCause(BenQGuru.eMES.Domain.TS.TSErrorCause)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.UpdateTSErrorCause(BenQGuru.eMES.Domain.TS.TSErrorCause)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetTSErrorCause(System.String,System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.QueryTSErrorCauseCount(System.String,System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.QueryTSErrorCause(System.String,System.String,System.String,System.String,System.Int32,System.Int32)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetAllTSErrorCause()" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.CreateNewTSErrorCode()" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.AddTSErrorCode(BenQGuru.eMES.Domain.TS.TSErrorCode)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.UpdateTSErrorCode(BenQGuru.eMES.Domain.TS.TSErrorCode)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteTSErrorCode(BenQGuru.eMES.Domain.TS.TSErrorCode)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteTSErrorCodeWithChildrenWith(BenQGuru.eMES.Common.Domain.IDomainDataProvider,BenQGuru.eMES.Domain.TS.TSErrorCode)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetTSErrorCode(System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.QueryTSErrorCodeCount(System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.QueryTSErrorCode(System.String,System.String,System.String,System.Int32,System.Int32)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.ExtraQueryTSErrorCode(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetAllTSErrorCode()" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.CreateNewTSErrorCode2Location()" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.AddTSErrorCode2Location(BenQGuru.eMES.Domain.TS.TSErrorCode2Location)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.UpdateTSErrorCode2Location(BenQGuru.eMES.Domain.TS.TSErrorCode2Location)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteTSErrorCode2Location(BenQGuru.eMES.Domain.TS.TSErrorCode2Location)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetTSErrorCode2Location(System.String,System.String,System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.QueryTSErrorCode2LocationCount(System.String,System.String,System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.QueryTSErrorCode2Location(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetAllTSErrorCode2Location()" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetExistedErrorCode2ErrorCodesFromTSID(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetTSInfoByTS(BenQGuru.eMES.Domain.TS.TS)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetTSErrorCode(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.AddTSErrorCode(BenQGuru.eMES.Domain.TS.TS,System.Object[])" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteTSErrorCode(BenQGuru.eMES.Domain.TS.TS,System.Object[])" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteTSErrorCode(System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.HasInfoBelowTSErrorCode(BenQGuru.eMES.Domain.TS.TSErrorCode)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteTSErrorCause(BenQGuru.eMES.Domain.TS.TSErrorCause)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetTSErrorCode2Location(System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetUnselectedTSErrorCode2Location(System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.AddTSErrorCode2Location(BenQGuru.eMES.Domain.TS.TSErrorCode,System.String[])" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteTSErrorCode2Location(BenQGuru.eMES.Domain.TS.TSErrorCode,System.String[])" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetTSErrorCause2Location(System.String,System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetUnselectedTSErrorCause2Location(System.String,System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.AddTSErrorCause2Location(BenQGuru.eMES.Domain.TS.TSErrorCause,System.String[])" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteTSErrorCause2Location(BenQGuru.eMES.Domain.TS.TSErrorCause,System.String[])" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetTSErrorCause2ErrorPart(System.String,System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetUnselectedTSErrorCause2ErrorPart(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.AddTSErrorCause2ErrorPart(BenQGuru.eMES.Domain.TS.TSErrorCause,System.String[])" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteTSErrorCause2ErrorPart(BenQGuru.eMES.Domain.TS.TSErrorCause,System.String[])" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.CreateNewOnWIP()" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.AddOnWIP(BenQGuru.eMES.Domain.DataCollect.OnWIP)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.UpdateOnWIP(BenQGuru.eMES.Domain.DataCollect.OnWIP)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteOnWIP(BenQGuru.eMES.Domain.DataCollect.OnWIP)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.CreateNewSimulationReport()" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.AddSimulationReport(BenQGuru.eMES.Domain.DataCollect.SimulationReport)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.UpdateSimulationReport(BenQGuru.eMES.Domain.DataCollect.SimulationReport)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteSimulationReport(BenQGuru.eMES.Domain.DataCollect.Simulation)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteSimulationReport(BenQGuru.eMES.Domain.DataCollect.SimulationReport)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.CreateNewSimulation()" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.AddSimulation(BenQGuru.eMES.Domain.DataCollect.Simulation)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.UpdateSimulation(BenQGuru.eMES.Domain.DataCollect.Simulation)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.DeleteSimulation(BenQGuru.eMES.Domain.DataCollect.Simulation)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetSimulation(System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.doAction(System.String,System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetItemsOfRunningCard(System.String,System.Decimal)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetSpliteItems(System.String,System.Decimal,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.SplitItem(System.String,System.Object[],System.String,System.String,System.Collections.Hashtable)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetUniqueTSSplitItemSequence(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetUniqueTSRunningCardSequence(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.GetSimulation(System.String,System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.CheckForTSComplete(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.CheckErrorCodeCountAndErrorSolutionForTSComplete(System.String)" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.CheckErrorPartAndErrorLocationForTSComplete(System.String)" />
+      <reference referencedUin="csharp:e_field:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.TransactionStatus_None" />
+      <reference referencedUin="csharp:e_field:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.TSSource_TS" />
+      <reference referencedUin="csharp:e_field:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.TSSource_OnWIP" />
+      <reference referencedUin="csharp:e_method:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSFacade.QueryTSCountByLine(System.String,System.String,System.Int32)" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.ItemOfRunningCard">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.ErrorLocation">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.TSErrorInfo">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="csharp:e_class:src:BenQGuru.eMES.TS:BenQGuru.eMES.TS.ErrorPart">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

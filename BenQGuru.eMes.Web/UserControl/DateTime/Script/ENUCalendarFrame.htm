@@ -1,0 +1,91 @@
+<HTML>
+	<HEAD>
+		<title>Please Select Date</title>
+		<META http-equiv="Content-Type" content="text/html; charset=GB2312">
+		<style> <!-- 
+	.OutButton{ font-family: Arial; font-size: 12px; background-color: #7295BC; color: rgb(0,0,0); font-weight: bold;  vertical-align: middle; border: 2px outset rgb(255,255,255);cursor:hand }
+	.InButton{ font-family: Arial; font-size: 12px; background-color: #C2D5EA; color: rgb(0,0,0);  font-weight: bold;  vertical-align: middle; border: 1px solid  rgb(128,128,128);cursor:hand }
+	--></style>
+		<SCRIPT language="JavaScript">
+	var sTemp
+		</SCRIPT>
+	</HEAD>
+
+	<BODY bgColor="#c2d5ea" leftMargin="0" topMargin="0" scroll="no">
+		<TABLE height="100%" cellSpacing="0" cellPadding="0" width="100%" border="0">
+			<TR  height="100%">
+				<TD height="100%">
+					<iframe id="cal" name="cal" FRAMEBORDER=0 SCROLLING=NO  style="LEFT: 0px; WIDTH: 100%; TOP: 0px; HEIGHT: 100%"  src="ENUCalendarDate.htm">
+					</iframe>
+				</TD>
+			</TR>
+			<tr height="4">
+			<td>
+			</td>
+			</tr>
+			<TR  height="25px">
+				<TD valign=middle align =center height="25px">
+				<TABLE  cellSpacing="0" cellPadding="0" width="100%" height="100%" border="0">
+					<tr height="100%" >
+						<td align=left>
+						<INPUT id="Button1" class="InButton" style="WIDTH: 100%; HEIGHT: 100%"  onclick="dateclear()"
+								type="button" value="Clear" name="cmdClear">
+						</td>				
+						<td width=20></td>
+						<td align=right>				
+						<INPUT class="InButton" style="WIDTH: 100%; HEIGHT: 100%"  onclick="returntoday()"
+								type="button" value="Today" name="cmdtoday" >
+						</td>
+					</tr>
+				</table>
+				</TD>
+			</TR>
+			<tr height="4">
+			<td>
+			</td>
+			</tr>
+		</TABLE>
+		<SCRIPT language="JavaScript">
+document.onmouseover = raiseCel;
+document.onmouseout = sinkCel;
+window.onload = initWindow;
+function initWindow() {
+	window.returnValue = window.dialogArguments;
+	cal.setDate(window.returnValue);
+}
+
+function dateChange(sValue) {
+	//alert(sValue);
+	window.returnValue = sValue;
+	window.close();
+}
+
+function dateclear() {
+dateChange("")
+}
+function datetoday(){
+  var d, s ="";
+			d = new Date();
+			s += d.getYear() + "/";
+			s += (d.getMonth() + 1) + "/";
+			s += d.getDate() ;	
+			return(s);
+}
+function returntoday()
+{
+ var _str = datetoday();
+  dateChange(_str)
+ }
+ 
+ function raiseCel() {
+	objItem = window.event.srcElement;
+	if (objItem.className == "InButton") objItem.className = "OutButton";
+}
+
+function sinkCel() {
+	objItem = window.event.srcElement;
+	if (objItem.className == "OutButton") objItem.className = "InButton";
+}
+		</SCRIPT>
+	</BODY>
+</HTML>

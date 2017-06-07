@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dataExpSchema>
+	<!--MO导出-->
+  <!--Name:要导出的报表名称-->
+  <!--SeparateChar: 用文本文件导出时的分割符-->
+  <!--NeedTitle: 是否需要导出标题栏, 1:需要; 0:不需要-->
+  <!--Path: 导出文件路径-->
+  <!--Type: 导出文件类型, Text:文本文件; Excel: Excel文件-->
+	<object Name="工单" SeparateChar="" NeedTitle ="1" FilePath="F:\" Type="Text">
+    
+    <!--FileName: 设置文件名的部分, 常量直接写在Format属性上, 第一个变量用{0},第二个用}{1}-->
+    <FileName Format="Y{0}{1}{2}C">
+      
+      <!--变量部分-->
+      <FormatList>
+       
+        <!--Type: 变量类型 ,Date: 日期型; Parameter: 报表界面上用户传入的参数; SQL:通过SQL语句来查询的变量-->
+        <Format Type="Date" Value="yyMMdd"></Format>
+        <!--Parameter类型的变量Value为参数的顺序, 第一个为1-->
+        <Format Type="Parameter" Value="1"></Format>
+        
+        <!--SQL类型的变量Value为SQL语句, 如果这个SQL语句需要使用界面上传入的参数值,则第一个参数使用{0}代替, 第二个使用{1}-->
+        <Format Type="SQL" Value="select piinvoice from v_invoice_h where invoicecode='{0}'">
+          
+          <!--传给SQL的参数列表-->
+          <PrameterList>
+            <!--Seq: 界面传入的参数顺序-->
+            <Parameter Seq="1"></Parameter>
+          </PrameterList>
+        
+        </Format>
+      </FormatList>
+    </FileName>
+    <!--发票要导出的字段字段列表-->
+    
+    <FieldList>
+      <!--字段是固定长度设定RightPadLen为字段的长度, PadChar为填充的字符; ConstChar属性设定在字段的右边固定增加的字符-->
+      <Field Name="MoCode" LeftPadLen="6" RightPadLen="6" PadChar=" " ConstChar=" "/>
+    </FieldList>
+	</object>
+</dataExpSchema>

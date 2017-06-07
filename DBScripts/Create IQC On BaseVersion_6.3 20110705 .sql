@@ -1,0 +1,491 @@
+
+-----模块---
+
+insert into tblmdl (MDLCODE, PMDLCODE, MDLVER, MDLTYPE, MDLSTATUS, MDLDESC, MDLSEQ, MDLHFNAME, MUSER, MDATE, MTIME, ISSYS, ISACTIVE, FORMURL, EATTRIBUTE1, ISRESTRAIN)
+values ('IQCSTANDMP', 'IQC', '1', 'B/S', 'Alpha', 'IQC检验标准维护', 6, '', 'ADMIN', 20100907, 104806, '1', '1', 'BenQGuru.eMES.Web.IQC/FIQCSTANDMP.ASPX', '', '0');
+
+
+insert into tblmdl (MDLCODE, PMDLCODE, MDLVER, MDLTYPE, MDLSTATUS, MDLDESC, MDLSEQ, MDLHFNAME, MUSER, MDATE, MTIME, ISSYS, ISACTIVE, FORMURL, EATTRIBUTE1, ISRESTRAIN)
+values ('INVRECEIPTMP', 'IQC', '1', 'B/S', 'Alpha', 'FINVReceiptMP', 2, '', 'ADMIN', 20100811, 150810, '1', '1', 'BenQGuru.eMES.Web.IQC/FINVReceiptMP.aspx', '', '0');
+
+insert into tblmdl (MDLCODE, PMDLCODE, MDLVER, MDLTYPE, MDLSTATUS, MDLDESC, MDLSEQ, MDLHFNAME, MUSER, MDATE, MTIME, ISSYS, ISACTIVE, FORMURL, EATTRIBUTE1, ISRESTRAIN)
+values ('INVRECEIPTDETAIL', 'IQC', '1', 'B/S', 'Alpha', 'FInvReceiptDetail', 5, '', 'ADMIN', 20100811, 150810, '1', '1', 'BenQGuru.eMES.Web.IQC/FInvReceiptDetail.aspx', '', '0');
+
+UPDATE TBLMDL SET FORMURL = 'BenQGuru.eMES.Client.FKeyPart' WHERE MDLCODE = 'MATERIALKEYPARTS';
+
+UPDATE TBLMDL SET FORMURL = 'BenQGuru.eMES.Client.FMaterialReceive' WHERE MDLCODE = 'CS_FMATERIALSTOCKIN';
+
+insert into TBLMDL (MDLCODE, PMDLCODE, MDLVER, MDLTYPE, MDLSTATUS, MDLDESC, MDLSEQ, MDLHFNAME, MUSER, MDATE, MTIME, ISSYS, ISACTIVE, FORMURL, EATTRIBUTE1, ISRESTRAIN)
+values ('LOTMAINTAIN', 'CS_PREPAREMATERIAL', '', 'C/S', 'Alpha', '分批合批', 40, '', 'ADMIN', 20101130, 151923, '1', '1', 'BenQGuru.eMES.Client.FLotMaintain', '', '0');
+
+insert into TBLMDL (MDLCODE, PMDLCODE, MDLVER, MDLTYPE, MDLSTATUS, MDLDESC, MDLSEQ, MDLHFNAME, MUSER, MDATE, MTIME, ISSYS, ISACTIVE, FORMURL, EATTRIBUTE1, ISRESTRAIN)
+values ('MATERIALTRANSFER', 'CS_PREPAREMATERIAL', '', 'C/S', 'Alpha', '物料转移', 45, '', 'ADMIN', 20100915, 104224, '1', '1', 'BenQGuru.eMES.Client.FMaterialTransfer', '', '0');
+
+insert into TBLMDL (MDLCODE, PMDLCODE, MDLVER, MDLTYPE, MDLSTATUS, MDLDESC, MDLSEQ, MDLHFNAME, MUSER, MDATE, MTIME, ISSYS, ISACTIVE, FORMURL, EATTRIBUTE1, ISRESTRAIN)
+values ('WH_INVTRANSFER', 'WAREHOUSE', '', 'B/S', 'Alpha', '发料、移转单维护', 11, '', 'ADMIN', 20100903, 161931, '1', '1', 'Warehouse/FInvTransferMP.aspx', '', '0');
+
+insert into TBLMDL (MDLCODE, PMDLCODE, MDLVER, MDLTYPE, MDLSTATUS, MDLDESC, MDLSEQ, MDLHFNAME, MUSER, MDATE, MTIME, ISSYS, ISACTIVE, FORMURL, EATTRIBUTE1, ISRESTRAIN)
+values ('MATERIALFULLMCODE', 'CS_PREPAREMATERIAL', '', 'C/S', 'Alpha', '物料齐套检查-物料', 51, '', 'ADMIN', 20101116, 134011, '1', '1', 'BenQGuru.eMES.Client.FMaterialFullCheckMcode', '', '0');
+
+insert into TBLMDL (MDLCODE, PMDLCODE, MDLVER, MDLTYPE, MDLSTATUS, MDLDESC, MDLSEQ, MDLHFNAME, MUSER, MDATE, MTIME, ISSYS, ISACTIVE, FORMURL, EATTRIBUTE1, ISRESTRAIN)
+values ('MATERIALFULLMO', 'CS_PREPAREMATERIAL', '', 'C/S', 'Alpha', '物料齐套检查-工单', 52, '', 'ADMIN', 20101116, 134011, '1', '1', 'BenQGuru.eMES.Client.FMaterialFullCheckMo', '', '0');
+
+
+insert into TBLMDL (MDLCODE, PMDLCODE, MDLVER, MDLTYPE, MDLSTATUS, MDLDESC, MDLSEQ, MDLHFNAME, MUSER, MDATE, MTIME, ISSYS, ISACTIVE, FORMURL, EATTRIBUTE1, ISRESTRAIN)
+values ('WH_INVTRANSFERDETAIL', 'WAREHOUSE', '', 'B/S', 'Alpha', '发料、移转单详细维护', 12, '', 'ADMIN', 20100903, 162137, '1', '1', 'Warehouse/FInvTransferDetailMP.aspx', '', '0');
+
+
+--delete from tblmdl where MDLCODE = 'MATERIALFULLMO';
+--delete from tblmdl where MDLCODE = 'INVRECEIPTDETAIL';
+
+-----菜单------
+insert into tblmenu (MENUCODE, MDLCODE, PMENUCODE, MENUDESC, MENUSEQ, MENUTYPE, MUSER, MDATE, MTIME, EATTRIBUTE1, VISIBILITY)
+values ('IQCSTANDMP', 'IQCSTANDMP', 'IQC', 'IQC标准维护', 6, 'B/S', '0302403', 20100811, 94531, '', '0');
+
+
+insert into tblmenu (MENUCODE, MDLCODE, PMENUCODE, MENUDESC, MENUSEQ, MENUTYPE, MUSER, MDATE, MTIME, EATTRIBUTE1, VISIBILITY)
+values ('INVRECEIPTMP', 'INVRECEIPTMP', 'IQC', 'FINVReceiptMP', 2, 'B/S', 'ADMIN', 20100811, 150933, '', '0');
+
+delete from tblmenu where MENUCODE = 'CREATEIQCMP';
+insert into tblmenu (MENUCODE, MDLCODE, PMENUCODE, MENUDESC, MENUSEQ, MENUTYPE, MUSER, MDATE, MTIME, EATTRIBUTE1, VISIBILITY)
+values ('CREATEIQCMP', 'CREATEIQCMP', 'IQC', ' 生成打印IQC送检单', 5, 'B/S', 'ADMIN', 20100811, 150933, '', '0');
+
+insert into TBLMENU (MENUCODE, MDLCODE, PMENUCODE, MENUDESC, MENUSEQ, MENUTYPE, MUSER, MDATE, MTIME, EATTRIBUTE1, VISIBILITY)
+values ('CS_FMATERIALSTOCKIN', 'CS_FMATERIALSTOCKIN', 'CS_PREPAREMATERIAL', '物料收料入库', 41, 'C/S', 'ADMIN', 20090904, 122434, '', '0');
+
+insert into TBLMENU (MENUCODE, MDLCODE, PMENUCODE, MENUDESC, MENUSEQ, MENUTYPE, MUSER, MDATE, MTIME, EATTRIBUTE1, VISIBILITY)
+values ('CS_LOTMAINTAIN', 'LOTMAINTAIN', 'CS_PREPAREMATERIAL', '分批合批', 40, 'C/S', 'ADMIN', 20101130, 152121, '', '0');
+
+insert into TBLMENU (MENUCODE, MDLCODE, PMENUCODE, MENUDESC, MENUSEQ, MENUTYPE, MUSER, MDATE, MTIME, EATTRIBUTE1, VISIBILITY)
+values ('CS_FMATERIALTRANSFER', 'MATERIALTRANSFER', 'CS_PREPAREMATERIAL', '物料转移', 44, 'C/S', 'ADMIN', 20100915, 104955, '', '0');
+
+insert into TBLMENU (MENUCODE, MDLCODE, PMENUCODE, MENUDESC, MENUSEQ, MENUTYPE, MUSER, MDATE, MTIME, EATTRIBUTE1, VISIBILITY)
+values ('WH_INVTRANSFER', 'WH_INVTRANSFER', 'WAREHOUSEMT', '发料、移转单维护', 6, 'B/S', 'ADMIN', 20100903, 162350, '', '0');
+
+insert into TBLMENU (MENUCODE, MDLCODE, PMENUCODE, MENUDESC, MENUSEQ, MENUTYPE, MUSER, MDATE, MTIME, EATTRIBUTE1, VISIBILITY)
+values ('CS_FMATERIALFULLMCODE', 'MATERIALFULLMCODE', 'CS_PREPAREMATERIAL', '物料齐套检查-物料', 46, 'C/S', 'ADMIN', 20101116, 134215, '', '0');
+
+insert into TBLMENU (MENUCODE, MDLCODE, PMENUCODE, MENUDESC, MENUSEQ, MENUTYPE, MUSER, MDATE, MTIME, EATTRIBUTE1, VISIBILITY)
+values ('CS_FMATERIALFULLMO', 'MATERIALFULLMO', 'CS_PREPAREMATERIAL', '物料齐套检查-工单', 47, 'C/S', 'ADMIN', 20101116, 134215, '', '0');
+
+
+delete from tblmenu where MENUCODE = 'CS_FMATERIALFULLMO';
+
+-------创建表---------
+
+-- Create table  TBLAQL
+create table TBLAQL
+(
+  AQLSEQ     NUMBER not null,
+  LOTSIZEMIN NUMBER(22) not null,
+  LOTSIZEMAX NUMBER(22) not null,
+  SAMPLESIZE NUMBER(20) not null,
+  REJECTSIZE NUMBER(20) not null,
+  MUSER      VARCHAR2(40) not null,
+  MDATE      NUMBER(8) not null,
+  MTIME      NUMBER(6) not null,
+  AQLLEVEL   VARCHAR2(40) default ' ' not null
+)
+;
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLAQL
+  add primary key (AQLSEQ, AQLLEVEL);
+  
+     
+  -- Create table TBLINVRECEIPT
+create table TBLINVRECEIPT
+(
+  RECEIPTNO  VARCHAR2(40) not null,
+  STORAGEID  VARCHAR2(40) not null,
+  RECSTATUS  VARCHAR2(40) not null,
+  VENDORCODE VARCHAR2(40),
+  RECTYPE    VARCHAR2(40) not null,
+  MEMO       VARCHAR2(2000),
+  CREATEDATE NUMBER(22),
+  CREATETIME NUMBER(22),
+  CREATEUSER VARCHAR2(40),
+  ORGID      NUMBER(22) not null,
+  MDATE      NUMBER(22) not null,
+  MTIME      NUMBER(22) not null,
+  MUSER      VARCHAR2(40) not null
+);
+
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLINVRECEIPT
+  add primary key (RECEIPTNO);
+  
+
+-- Create table TBLINVRECEIPTDETAIL
+create table TBLINVRECEIPTDETAIL
+(
+  RECEIPTNO   VARCHAR2(40) not null,
+  RECEIPTLINE NUMBER(22) not null,
+  ORDERNO     VARCHAR2(40),
+  ORDERLINE   NUMBER(22),
+  RECSTATUS   VARCHAR2(40) not null,
+  IQCSTATUS   VARCHAR2(40) not null,
+  MEMO        VARCHAR2(2000),
+  MOCode      varchar2(40),
+  ITEMCODE    VARCHAR2(40) not null,
+  PLANQTY     NUMBER(22) not null,
+  QUALIFYQTY  NUMBER(22),
+  ACTQTY      NUMBER(22),
+  RECDATE     NUMBER(22),
+  RECTIME     NUMBER(22),
+  RECUSER     VARCHAR2(40),
+  MDATE       NUMBER(22) not null,
+  MTIME       NUMBER(22) not null,
+  MUSER       VARCHAR2(40) not null,
+  VENDERLOTNO VARCHAR2(40)
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLINVRECEIPTDETAIL
+  add primary key (RECEIPTNO, RECEIPTLINE);
+  
+--ALTER TABLE TBLIQCDETAIL;
+ALTER TABLE TBLIQCDETAIL ADD  PurchaseMEMO	VARCHAR2(2000);
+ALTER TABLE TBLIQCDETAIL ADD  INSType	VARCHAR2(40) ; 
+ALTER TABLE TBLIQCDETAIL modify StorageID  VARCHAR2(40);
+
+
+----ALTER TABLE TBLOQCCKLIST;
+ALTER TABLE TBLOQCCKLIST ADD  SetValueMax	VARCHAR2(40);
+ALTER TABLE TBLOQCCKLIST ADD  SetValueMin	VARCHAR2(40); 
+ALTER TABLE TBLOQCCKLIST ADD  UNIT  VARCHAR2(40);
+
+
+-- Create table TBLIQCTESTDATA
+create table TBLIQCTESTDATA
+(
+  SERIAL        NUMBER(22) not null,
+  IQCNO         VARCHAR2(50) not null,
+  STNO          VARCHAR2(40) not null,
+  STLINE        NUMBER(22) not null,
+  ITEMCODE      VARCHAR2(40) not null,
+  CKGROUP       VARCHAR2(400),
+  CKITEMCODE    VARCHAR2(400) not null,
+  USL           NUMBER(28,6),
+  LSL           NUMBER(28,6),
+  TESTINGVALUE  VARCHAR2(200),
+  TESTINGRESULT VARCHAR2(40),
+  TESTINGDATE   NUMBER(8) not null,
+  TESTINGTIME   NUMBER(6) not null
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLIQCTESTDATA
+  add constraint TBLIQCTESTDATA_PK primary key (SERIAL);
+
+
+CREATE SEQUENCE TBLIQCTESTDATA_id_s
+  INCREMENT BY 1
+  START WITH 1
+  MINVALUE 1
+  MAXVALUE 999999999999999999999999999
+  NOCYCLE
+  NOORDER
+  CACHE 20;
+/
+
+CREATE OR REPLACE TRIGGER TBLIQCTESTDATA_BRI1
+  BEFORE INSERT ON TBLIQCTESTDATA
+  REFERENCING NEW AS NEW OLD AS OLD
+  FOR EACH ROW
+BEGIN
+  SELECT TBLIQCTESTDATA_id_s.NEXTVAL INTO :NEW.serial FROM DUAL;
+END;
+
+
+
+-- Create table TBLSTORAGEINFO
+create table TBLSTORAGEINFO
+(
+  MCODE      VARCHAR2(40) not null,
+  STORAGEID  VARCHAR2(40) not null,
+  STACKCODE  VARCHAR2(40) not null,
+  STORAGEQTY NUMBER(22,13) not null,
+  ORGID      NUMBER(22) not null,
+  MDATE      NUMBER(8) not null,
+  MTIME      NUMBER(6) not null,
+  MUSER      VARCHAR2(40) not null
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLSTORAGEINFO
+  add primary key (MCODE, STORAGEID, STACKCODE);
+-- Create/Recreate indexes 
+create index INDEX_TBLSTORAGEINFO on TBLSTORAGEINFO (STORAGEID);
+
+
+-- Create table
+create table TBLSTORAGELOTINFO
+(
+  LOTNO       VARCHAR2(100) not null,
+  STORAGEID   VARCHAR2(40) not null,
+  STACKCODE   VARCHAR2(40) not null,
+  MCODE       VARCHAR2(40) not null,
+  LOTQTY      NUMBER(28,6) not null,
+  RECEIVEDATE NUMBER(22) not null,
+  MUSER       VARCHAR2(40) not null,
+  MDATE       NUMBER(22) not null,
+  MTIME       NUMBER(22) not null
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLSTORAGELOTINFO
+  add primary key (LOTNO, STORAGEID, STACKCODE, MCODE);
+-- Create/Recreate indexes 
+create index IDX_TBLSTORAGELOTINFO on TBLSTORAGELOTINFO (MCODE, STORAGEID);
+
+
+-- Create table TBLITEMLOTDETAIL
+create table TBLITEMLOTDETAIL
+(
+  SERIALNO      VARCHAR2(40) not null,
+  LOTNO         VARCHAR2(100) not null,
+  MCODE         VARCHAR2(40) not null,
+  STORAGEID     VARCHAR2(40),
+  STACKCODE     VARCHAR2(40),
+  SERIALSTATUS  VARCHAR2(40) not null,
+  PRINTTIMES    NUMBER(6) not null,
+  LASTPRINTUSER VARCHAR2(40) not null,
+  LASTPRINTDATE NUMBER(8) not null,
+  LASTPRINTTIME NUMBER(6) not null,
+  MUSER         VARCHAR2(40) not null,
+  MDATE         NUMBER(8) not null,
+  MTIME         NUMBER(6) not null
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLITEMLOTDETAIL
+  add primary key (SERIALNO, MCODE);
+  
+  
+-- Create table TBLITEMTRANS
+create table TBLITEMTRANS
+(
+  SERIAL       NUMBER(38) not null,
+  TRANSNO      VARCHAR2(50),
+  TRANSLINE    NUMBER(22),
+  ITEMCODE     VARCHAR2(40),
+  FRMSTORAGEID VARCHAR2(40),
+  FRMSTACKCODE VARCHAR2(40),
+  TOSTORAGEID  VARCHAR2(40),
+  TOSTACKCODE  VARCHAR2(40),
+  TRANSQTY     NUMBER(22,13) not null,
+  MEMO         VARCHAR2(1000),
+  TRANSTYPE    VARCHAR2(40) not null,
+  BUSINESSCODE VARCHAR2(40) not null,
+  ORGID        NUMBER(22,8) not null,
+  MUSER        VARCHAR2(40) not null,
+  MDATE        NUMBER(22,8) not null,
+  MTIME        NUMBER(22,6) not null
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLITEMTRANS
+  add primary key (SERIAL);
+  
+  
+  CREATE SEQUENCE TBLITEMTRANS_id_s
+  INCREMENT BY 1
+  START WITH 1
+  MINVALUE 1
+  MAXVALUE 999999999999999999999999999
+  NOCYCLE
+  NOORDER
+  CACHE 20;
+/
+
+CREATE OR REPLACE TRIGGER TBLITEMTRANS_BRI1
+  BEFORE INSERT ON TBLITEMTRANS
+  REFERENCING NEW AS NEW OLD AS OLD
+  FOR EACH ROW
+BEGIN
+  SELECT TBLITEMTRANS_id_s.NEXTVAL INTO :NEW.serial FROM DUAL;
+END;
+
+  
+  -- Create table
+create table TBLITEMTRANSLOT
+(
+  TBLITEMTRANS_SERIAL NUMBER(38) not null,
+  LOTNO               VARCHAR2(100) not null,
+  ITEMCODE            VARCHAR2(40),
+  TRANSQTY            NUMBER(22) not null,
+  MEMO                VARCHAR2(1000),
+  MUSER               VARCHAR2(40) not null,
+  MDATE               NUMBER(22) not null,
+  MTIME               NUMBER(22) not null
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLITEMTRANSLOT
+  add primary key (TBLITEMTRANS_SERIAL, LOTNO);
+  
+-- Create table
+create table TBLITEMTRANSLOTDETAIL
+(
+  TBLITEMTRANS_SERIAL NUMBER(38) not null,
+  LOTNO               VARCHAR2(100) not null,
+  ITEMCODE            VARCHAR2(40),
+  SERIALNO            VARCHAR2(40) not null,
+  MUSER               VARCHAR2(40) not null,
+  MDATE               NUMBER(8) not null,
+  MTIME               NUMBER(6) not null
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLITEMTRANSLOTDETAIL
+  add primary key (TBLITEMTRANS_SERIAL, LOTNO, SERIALNO);
+  
+  
+  
+  -- Create table
+create table TBLSERIALBOOK
+(
+  SNPREFIX  VARCHAR2(40) not null,
+  MAXSERIAL VARCHAR2(40) not null,
+  MUSER     VARCHAR2(40),
+  MDATE     NUMBER,
+  MTIME     NUMBER
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLSERIALBOOK
+  add primary key (SNPREFIX);
+  
+  
+-- Create table
+create table TBLMO2RCARDLINK
+(
+  MOCODE        VARCHAR2(40) not null,
+  RCARD         VARCHAR2(40) not null,
+  PRINTTIMES    NUMBER not null,
+  LASTPRINTUSER VARCHAR2(40),
+  LASTPRINTDATE NUMBER,
+  LASTPRINTTIME NUMBER,
+  MUSER         VARCHAR2(40),
+  MDATE         NUMBER,
+  MTIME         NUMBER
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLMO2RCARDLINK
+  add constraint RCARD primary key (RCARD);  
+  
+  
+-- Create table TBLLOTCHANGELOG
+create table TBLLOTCHANGELOG
+(
+  SERIAL    NUMBER(38) not null,
+  NEWLOTNO  VARCHAR2(100) not null,
+  NEWLOTQTY NUMBER(28,6) not null,
+  OLDLOTNO  VARCHAR2(100) not null,
+  OLDLOTQTY NUMBER(28,6) not null,
+  CHGTYPE   VARCHAR2(40) not null,
+  MUSER     VARCHAR2(40) not null,
+  MDATE     NUMBER(8) not null,
+  MTIME     NUMBER(6) not null
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLLOTCHANGELOG
+  add constraint TBLLOTCHANGELOG_PK primary key (SERIAL);
+ 
+
+  CREATE SEQUENCE TBLLOTCHANGELOG_id_s
+  INCREMENT BY 1
+  START WITH 1
+  MINVALUE 1
+  MAXVALUE 999999999999999999999999999
+  NOCYCLE
+  NOORDER
+  CACHE 20;
+/
+
+CREATE OR REPLACE TRIGGER TBLLOTCHANGELOG_BRI1
+  BEFORE INSERT ON TBLLOTCHANGELOG
+  REFERENCING NEW AS NEW OLD AS OLD
+  FOR EACH ROW
+BEGIN
+  SELECT TBLLOTCHANGELOG_id_s.NEXTVAL INTO :NEW.serial FROM DUAL;
+END;
+   
+-- ALTER table TBLINVBUSINESS
+ALTER TABLE TBLINVBUSINESS ADD  ISFIFO  VARCHAR2(40);
+  
+
+-- Create table TBLINVTRANSFER
+create table TBLINVTRANSFER
+(
+  TRANSFERNO     VARCHAR2(40) not null,
+  FRMSTORAGEID   VARCHAR2(40) not null,
+  TOSTORAGEID    VARCHAR2(40),
+  TRANSFERSTATUS VARCHAR2(40) not null,
+  RECTYPE        VARCHAR2(40) not null,
+  MEMO           VARCHAR2(2000),
+  CREATEDATE     NUMBER(8),
+  CREATETIME     NUMBER(6),
+  CREATEUSER     VARCHAR2(40),
+  ORGID          NUMBER(22) not null,
+  MDATE          NUMBER(8) not null,
+  MTIME          NUMBER(6) not null,
+  MUSER          VARCHAR2(40) not null
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLINVTRANSFER
+  add primary key (TRANSFERNO);
+  
+ -- Create table TBLINVTRANSFERDETAIL
+create table TBLINVTRANSFERDETAIL
+(
+  TRANSFERNO     VARCHAR2(40) not null,
+  TRANSFERLINE   NUMBER(22) not null,
+  ORDERNO        VARCHAR2(40),
+  ORDERLINE      NUMBER(22),
+  TRANSFERSTATUS VARCHAR2(40) not null,
+  MEMO           VARCHAR2(2000),
+  ITEMCODE       VARCHAR2(40) not null,
+  MOCODE         VARCHAR2(40),
+  PLANQTY        NUMBER(22) not null,
+  ACTQTY         NUMBER(22),
+  CUSTOMERCODE   VARCHAR2(40),
+  CUSTOMERNAME   VARCHAR2(100),
+  TRANSFERDATE   NUMBER(8),
+  TRANSFERTIME   NUMBER(6),
+  TRANSFERUSER   VARCHAR2(40),
+  MDATE          NUMBER(8) not null,
+  MTIME          NUMBER(6) not null,
+  MUSER          VARCHAR2(40) not null
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLINVTRANSFERDETAIL
+  add primary key (TRANSFERNO, TRANSFERLINE); 
+  
+  
+  -- Create table TBLINVTRANSFERMERGE
+create table TBLINVTRANSFERMERGE
+(
+  SERIAL        NUMBER(22) not null,
+  TRANSFERNO    VARCHAR2(40) not null,
+  FRMTRANSFERNO VARCHAR2(40) not null,
+  MDATE         NUMBER(8) not null,
+  MTIME         NUMBER(6) not null,
+  MUSER         VARCHAR2(40) not null
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TBLINVTRANSFERMERGE
+  add constraint TBLINVTRANSFERMERGE_PK primary key (SERIAL);
+  
+  
+
+
+  CREATE SEQUENCE TBLINVTRANSFERMERGE_id_s
+  INCREMENT BY 1
+  START WITH 1
+  MINVALUE 1
+  MAXVALUE 999999999999999999999999999
+  NOCYCLE
+  NOORDER
+  CACHE 20;
+/
+
+CREATE OR REPLACE TRIGGER TBLINVTRANSFERMERGE_BRI1
+  BEFORE INSERT ON TBLINVTRANSFERMERGE
+  REFERENCING NEW AS NEW OLD AS OLD
+  FOR EACH ROW
+BEGIN
+  SELECT TBLINVTRANSFERMERGE_id_s.NEXTVAL INTO :NEW.serial FROM DUAL;
+END;
+   

@@ -1,0 +1,875 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="MESRPT">
+      <DataSourceReference>MESRPT</DataSourceReference>
+      <rd:DataSourceID>8ffca567-4bf8-4927-b0b5-a2da6180d772</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+
+
+      <Table Name="table1">
+        <DataSetName>MESRPT</DataSetName>
+        <Top>0cm</Top>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="table_header_field_SHIFTDAY">
+                      <rd:DefaultName>table_header_field_SHIFTDAY</rd:DefaultName>
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+
+                        <FontFamily>Agency FB</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <FontStyle>Normal</FontStyle>
+                        <BackgroundColor>PowderBlue</BackgroundColor>
+                        <Color>Black</Color>
+                        <Format></Format>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+
+
+                      </Style>
+                        <UserSort>
+                        <SortExpression>=Fields!SHIFTDAY.Value</SortExpression>
+                        <SortTarget>MESRPT</SortTarget>
+                      </UserSort>
+                      <CanGrow>true</CanGrow>
+                      <Value>日期</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="table_header_field_N">
+                      <rd:DefaultName>table_header_field_N</rd:DefaultName>
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+
+                        <FontFamily>Agency FB</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <FontStyle>Normal</FontStyle>
+                        <BackgroundColor>PowderBlue</BackgroundColor>
+                        <Color>Black</Color>
+                        <Format></Format>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+
+
+                      </Style>
+                        <UserSort>
+                        <SortExpression>=Fields!N.Value</SortExpression>
+                        <SortTarget>MESRPT</SortTarget>
+                      </UserSort>
+                      <CanGrow>true</CanGrow>
+                      <Value>N</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="table_header_field_X">
+                      <rd:DefaultName>table_header_field_X</rd:DefaultName>
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+
+                        <FontFamily>Agency FB</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <FontStyle>Normal</FontStyle>
+                        <BackgroundColor>PowderBlue</BackgroundColor>
+                        <Color>Black</Color>
+                        <Format></Format>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+
+
+                      </Style>
+                        <UserSort>
+                        <SortExpression>=Fields!X.Value</SortExpression>
+                        <SortTarget>MESRPT</SortTarget>
+                      </UserSort>
+                      <CanGrow>true</CanGrow>
+                      <Value>X</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="table_header_field_P">
+                      <rd:DefaultName>table_header_field_P</rd:DefaultName>
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+
+                        <FontFamily>Agency FB</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <FontStyle>Normal</FontStyle>
+                        <BackgroundColor>PowderBlue</BackgroundColor>
+                        <Color>Black</Color>
+                        <Format></Format>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+
+
+                      </Style>
+                        <UserSort>
+                        <SortExpression>=Fields!P.Value</SortExpression>
+                        <SortTarget>MESRPT</SortTarget>
+                      </UserSort>
+                      <CanGrow>true</CanGrow>
+                      <Value>P</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="table_header_field_PBAR">
+                      <rd:DefaultName>table_header_field_PBAR</rd:DefaultName>
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+
+                        <FontFamily>Agency FB</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <FontStyle>Normal</FontStyle>
+                        <BackgroundColor>PowderBlue</BackgroundColor>
+                        <Color>Black</Color>
+                        <Format></Format>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+
+
+                      </Style>
+                        <UserSort>
+                        <SortExpression>=Fields!PBAR.Value</SortExpression>
+                        <SortTarget>MESRPT</SortTarget>
+                      </UserSort>
+                      <CanGrow>true</CanGrow>
+                      <Value>PBAR</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="table_header_field_UCL">
+                      <rd:DefaultName>table_header_field_UCL</rd:DefaultName>
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+
+                        <FontFamily>Agency FB</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <FontStyle>Normal</FontStyle>
+                        <BackgroundColor>PowderBlue</BackgroundColor>
+                        <Color>Black</Color>
+                        <Format></Format>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+
+
+                      </Style>
+                        <UserSort>
+                        <SortExpression>=Fields!UCL.Value</SortExpression>
+                        <SortTarget>MESRPT</SortTarget>
+                      </UserSort>
+                      <CanGrow>true</CanGrow>
+                      <Value>UCL</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="table_header_field_LCL">
+                      <rd:DefaultName>table_header_field_LCL</rd:DefaultName>
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+
+                        <FontFamily>Agency FB</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <FontStyle>Normal</FontStyle>
+                        <BackgroundColor>PowderBlue</BackgroundColor>
+                        <Color>Black</Color>
+                        <Format></Format>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+
+
+                      </Style>
+                        <UserSort>
+                        <SortExpression>=Fields!LCL.Value</SortExpression>
+                        <SortTarget>MESRPT</SortTarget>
+                      </UserSort>
+                      <CanGrow>true</CanGrow>
+                      <Value>LCL</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+
+              </TableCells>
+              <Height>0.5cm</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="table_cell_SHIFTDAY">
+                      <rd:DefaultName>table_cell_SHIFTDAY</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+
+                        <FontFamily>Agency FB</FontFamily>
+                        <FontSize>12pt</FontSize>
+                        <FontWeight>400</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <FontStyle>Normal</FontStyle>
+                        <BackgroundColor>White</BackgroundColor>
+                        <Color>Black</Color>
+                        <Format></Format>
+                        <TextAlign>Left</TextAlign>
+                        <VerticalAlign>Top</VerticalAlign>
+
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+
+
+                      </Style>                     
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!SHIFTDAY.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="table_cell_N">
+                      <rd:DefaultName>table_cell_N</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+
+                        <FontFamily>Agency FB</FontFamily>
+                        <FontSize>12pt</FontSize>
+                        <FontWeight>400</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <FontStyle>Normal</FontStyle>
+                        <BackgroundColor>White</BackgroundColor>
+                        <Color>Black</Color>
+                        <Format></Format>
+                        <TextAlign>Left</TextAlign>
+                        <VerticalAlign>Top</VerticalAlign>
+
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+
+
+                      </Style>                     
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!N.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="table_cell_X">
+                      <rd:DefaultName>table_cell_X</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+
+                        <FontFamily>Agency FB</FontFamily>
+                        <FontSize>12pt</FontSize>
+                        <FontWeight>400</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <FontStyle>Normal</FontStyle>
+                        <BackgroundColor>White</BackgroundColor>
+                        <Color>Black</Color>
+                        <Format></Format>
+                        <TextAlign>Left</TextAlign>
+                        <VerticalAlign>Top</VerticalAlign>
+
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+
+
+                      </Style>                     
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!X.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="table_cell_P">
+                      <rd:DefaultName>table_cell_P</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+
+                        <FontFamily>Agency FB</FontFamily>
+                        <FontSize>12pt</FontSize>
+                        <FontWeight>400</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <FontStyle>Normal</FontStyle>
+                        <BackgroundColor>White</BackgroundColor>
+                        <Color>Black</Color>
+                        <Format></Format>
+                        <TextAlign>Left</TextAlign>
+                        <VerticalAlign>Top</VerticalAlign>
+
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+
+
+                      </Style>                     
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!P.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="table_cell_PBAR">
+                      <rd:DefaultName>table_cell_PBAR</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+
+                        <FontFamily>Agency FB</FontFamily>
+                        <FontSize>12pt</FontSize>
+                        <FontWeight>400</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <FontStyle>Normal</FontStyle>
+                        <BackgroundColor>White</BackgroundColor>
+                        <Color>Black</Color>
+                        <Format></Format>
+                        <TextAlign>Left</TextAlign>
+                        <VerticalAlign>Top</VerticalAlign>
+
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+
+
+                      </Style>                     
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!PBAR.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="table_cell_UCL">
+                      <rd:DefaultName>table_cell_UCL</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+
+                        <FontFamily>Agency FB</FontFamily>
+                        <FontSize>12pt</FontSize>
+                        <FontWeight>400</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <FontStyle>Normal</FontStyle>
+                        <BackgroundColor>White</BackgroundColor>
+                        <Color>Black</Color>
+                        <Format></Format>
+                        <TextAlign>Left</TextAlign>
+                        <VerticalAlign>Top</VerticalAlign>
+
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+
+
+                      </Style>                     
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!UCL.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="table_cell_LCL">
+                      <rd:DefaultName>table_cell_LCL</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+
+                        <FontFamily>Agency FB</FontFamily>
+                        <FontSize>12pt</FontSize>
+                        <FontWeight>400</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <FontStyle>Normal</FontStyle>
+                        <BackgroundColor>White</BackgroundColor>
+                        <Color>Black</Color>
+                        <Format></Format>
+                        <TextAlign>Left</TextAlign>
+                        <VerticalAlign>Top</VerticalAlign>
+
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+
+
+                      </Style>                     
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!LCL.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+
+              </TableCells>
+              <Height>0.5cm</Height>
+            </TableRow>
+          </TableRows>
+
+        </Details>
+        <TableColumns>
+
+          <TableColumn>
+            <Width>2.50000cm</Width>
+          </TableColumn>
+
+          <TableColumn>
+            <Width>2.50000cm</Width>
+          </TableColumn>
+
+          <TableColumn>
+            <Width>2.50000cm</Width>
+          </TableColumn>
+
+          <TableColumn>
+            <Width>2.50000cm</Width>
+          </TableColumn>
+
+          <TableColumn>
+            <Width>2.50000cm</Width>
+          </TableColumn>
+
+          <TableColumn>
+            <Width>2.50000cm</Width>
+          </TableColumn>
+
+          <TableColumn>
+            <Width>2.50000cm</Width>
+          </TableColumn>
+
+        </TableColumns>
+      </Table>
+
+
+      <Chart Name="CHART1">
+        <Type>Line</Type>
+        <Legend>
+          <Visible>true</Visible>
+          <Style>
+            <BorderStyle>
+              <Default>Solid</Default>
+            </BorderStyle>
+          </Style>
+          <Position>RightCenter</Position>
+        </Legend>
+        <Subtype>Plain</Subtype>
+        <Title />
+        <Top>1.0cm</Top>
+        <Height>8.75cm</Height>
+        <CategoryAxis>
+          <Axis>
+            <Title />
+            <MajorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MajorGridLines>
+            <MinorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MinorGridLines>
+            <MajorTickMarks>Outside</MajorTickMarks>
+            <Min>0</Min>
+            <Visible>true</Visible>
+          </Axis>
+        </CategoryAxis>
+        <PointWidth>0</PointWidth>
+        <Left>0.5cm</Left>
+        <ThreeDProperties>
+          <Rotation>30</Rotation>
+          <Inclination>30</Inclination>
+          <Shading>Simple</Shading>
+          <WallThickness>50</WallThickness>
+        </ThreeDProperties>
+        <DataSetName>MESRPT</DataSetName>
+        <SeriesGroupings>
+
+          <SeriesGrouping>
+            <StaticSeries>
+
+              <StaticMember>
+                <Label>P</Label>
+              </StaticMember>
+
+              <StaticMember>
+                <Label>UCL</Label>
+              </StaticMember>
+
+              <StaticMember>
+                <Label>LCL</Label>
+              </StaticMember>
+
+            </StaticSeries>
+          </SeriesGrouping>
+
+        </SeriesGroupings>
+        <PlotArea>
+          <Style>
+            <BorderStyle>
+              <Default>Solid</Default>
+            </BorderStyle>
+            <BackgroundColor>LightGrey</BackgroundColor>
+          </Style>
+        </PlotArea>
+        <ValueAxis>
+          <Axis>
+            <Title />
+            <MajorGridLines>
+              <ShowGridLines>true</ShowGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MajorGridLines>
+            <MinorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MinorGridLines>
+            <MajorTickMarks>Outside</MajorTickMarks>
+            <Min>0</Min>
+            <Margin>true</Margin>
+            <Visible>true</Visible>
+            <Scalar>true</Scalar>
+          </Axis>
+        </ValueAxis>
+        <Width>20.25cm</Width>
+
+        <CategoryGroupings>
+
+          <CategoryGrouping>
+            <DynamicCategories>
+              <Grouping Name="chart_1_category_SHIFTDAY">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!SHIFTDAY.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Label>=Fields!SHIFTDAY.Value</Label>
+            </DynamicCategories>
+          </CategoryGrouping>
+
+        </CategoryGroupings>
+
+        <Palette>Default</Palette>
+        <ChartData>
+
+          <ChartSeries>
+            <DataPoints>
+              <DataPoint>
+                <DataValues>
+                  <DataValue>
+                    <Value>=Sum(Fields!P.Value)</Value>
+                  </DataValue>
+                </DataValues>
+                <DataLabel>
+
+                </DataLabel>
+                <Marker>
+
+                  <Type>Cross</Type>
+                  <Size>6pt</Size>
+
+                </Marker>
+              </DataPoint>
+            </DataPoints>
+          </ChartSeries>
+
+          <ChartSeries>
+            <DataPoints>
+              <DataPoint>
+                <DataValues>
+                  <DataValue>
+                    <Value>=Sum(Fields!UCL.Value)</Value>
+                  </DataValue>
+                </DataValues>
+                <DataLabel>
+
+                </DataLabel>
+                <Marker>
+
+                  <Type>Cross</Type>
+                  <Size>6pt</Size>
+
+                </Marker>
+              </DataPoint>
+            </DataPoints>
+          </ChartSeries>
+
+          <ChartSeries>
+            <DataPoints>
+              <DataPoint>
+                <DataValues>
+                  <DataValue>
+                    <Value>=Sum(Fields!LCL.Value)</Value>
+                  </DataValue>
+                </DataValues>
+                <DataLabel>
+
+                </DataLabel>
+                <Marker>
+
+                  <Type>Cross</Type>
+                  <Size>6pt</Size>
+
+                </Marker>
+              </DataPoint>
+            </DataPoints>
+          </ChartSeries>
+
+        </ChartData>
+        <Style>
+          <BackgroundColor>White</BackgroundColor>
+        </Style>
+      </Chart>
+
+    </ReportItems>
+    <Height>10.0cm</Height>
+  </Body>
+  <rd:ReportID>8acc13b7-54fb-4b2a-93ec-e1f089200463</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+
+  <DataSets>
+    <DataSet Name="MESRPT">
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText></CommandText>
+        <DataSourceName>MESRPT</DataSourceName>
+      </Query>
+      <Fields>
+
+        <Field Name="SHIFTDAY">
+          <rd:TypeName>数值</rd:TypeName>
+          <DataField>SHIFTDAY</DataField>
+        </Field>
+
+        <Field Name="N">
+          <rd:TypeName>字符</rd:TypeName>
+          <DataField>N</DataField>
+        </Field>
+
+        <Field Name="X">
+          <rd:TypeName>字符</rd:TypeName>
+          <DataField>X</DataField>
+        </Field>
+
+        <Field Name="P">
+          <rd:TypeName>数值</rd:TypeName>
+          <DataField>P</DataField>
+        </Field>
+
+        <Field Name="PBAR">
+          <rd:TypeName>数值</rd:TypeName>
+          <DataField>PBAR</DataField>
+        </Field>
+
+        <Field Name="UCL">
+          <rd:TypeName>数值</rd:TypeName>
+          <DataField>UCL</DataField>
+        </Field>
+
+        <Field Name="LCL">
+          <rd:TypeName>数值</rd:TypeName>
+          <DataField>LCL</DataField>
+        </Field>
+
+      </Fields>
+    </DataSet>
+  </DataSets>
+
+  <Width>17.50000cm</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>zh-CN</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

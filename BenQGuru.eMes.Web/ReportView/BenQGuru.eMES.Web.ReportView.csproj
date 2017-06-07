@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ResGenToolArchitecture>Managed32Bit</ResGenToolArchitecture>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D8F0C0D5-DB19-4181-AC7C-0657991836DD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>BenQGuru.eMES.Web.ReportView</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BenQGuru.eMES.Web.ReportView</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BenQGuru.eMES.BaseSetting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.BaseSetting.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.DataExp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.DataExp.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Domain">
+      <Name>BenQGuru.eMES.Domain</Name>
+      <HintPath>..\..\Bin\BenQGuru.eMES.Domain.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.ReportView, Version=1.0.3341.27899, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.ReportView.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.ReportViewBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.ReportViewBase.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.SelectQuery, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BenQGuru.eMES.SelectQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.Helper">
+      <Name>BenQGuru.eMES.Web.Helper</Name>
+      <HintPath>..\..\bin\BenQGuru.eMES.Web.Helper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.Web.SelectQuery, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="BenQGuru.eMES.WebUI.Helper">
+      <Name>BenQGuru.eMES.WebUI.Helper</Name>
+      <HintPath>..\..\bin\BenQGuru.eMES.WebUI.Helper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ControlLibrary">
+      <Name>ControlLibrary</Name>
+      <HintPath>..\..\Bin\ControlLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Infragistics35.Web.v11.2, Version=11.2.20112.1019, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Infragistics35.Web.v11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.Shared.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics35.WebUI.Shared.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebGrid.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics35.WebUI.UltraWebGrid.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.WebUI.UltraWebNavigator.v11.1, Version=11.1.20111.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Infragistics35.WebUI.UltraWebNavigator.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Conversion.v3.5" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\bin\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\bin\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FRptAccessRightMP.aspx" />
+    <Content Include="FRptDBServer.aspx" />
+    <Content Include="FRptDesignChartEntryMP.aspx" />
+    <Content Include="FRptDesignChartMP.aspx" />
+    <Content Include="FRptDesignGridChartEntryMP.aspx" />
+    <Content Include="FRptDesignStep1MP.aspx" />
+    <Content Include="FRptDesignStep2MP.aspx" />
+    <Content Include="FRptDesignStep3MP.aspx" />
+    <Content Include="FRptDesignStep3TotalTypeSP.aspx" />
+    <Content Include="FRptDesignStep4FilterUISP.aspx" />
+    <Content Include="FRptDesignStep4MP.aspx" />
+    <Content Include="FRptDesignStep5MP.aspx" />
+    <Content Include="FRptEntryMP.aspx" />
+    <Content Include="FRptMaintainStartPageMP.aspx" />
+    <Content Include="FRptPublishDesignMP.aspx" />
+    <Content Include="FRptStartPage.aspx" />
+    <Content Include="FRptStyleDetailMP.aspx" />
+    <Content Include="FRptStyleMP.aspx" />
+    <Content Include="FRptSubscripteMP.aspx" />
+    <Content Include="FRptTextFormatMP.aspx" />
+    <Content Include="FRptUploadStep1MP.aspx" />
+    <Content Include="FRptUploadStep2MP.aspx" />
+    <Content Include="FRptUploadStep3MP.aspx" />
+    <Content Include="FRptUploadStep4MP.aspx" />
+    <Content Include="FRptViewDataSource.aspx" />
+    <Content Include="FRptViewDataSourceColumn.aspx" />
+    <Content Include="FRptViewDataSourceParam.aspx" />
+    <Content Include="FRptViewMP.aspx" />
+    <Content Include="ReportFormat.xml" />
+    <Content Include="ReportSecurity.ascx" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DisplayReportHelper.cs" />
+    <Compile Include="FRptAccessRightMP.aspx.cs">
+      <DependentUpon>FRptAccessRightMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptAccessRightMP.aspx.designer.cs">
+      <DependentUpon>FRptAccessRightMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptDBServer.aspx.cs">
+      <DependentUpon>FRptDBServer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptDBServer.aspx.designer.cs">
+      <DependentUpon>FRptDBServer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptDesignChartEntryMP.aspx.cs">
+      <DependentUpon>FRptDesignChartEntryMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptDesignChartEntryMP.aspx.designer.cs">
+      <DependentUpon>FRptDesignChartEntryMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptDesignChartMP.aspx.cs">
+      <DependentUpon>FRptDesignChartMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptDesignChartMP.aspx.designer.cs">
+      <DependentUpon>FRptDesignChartMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptDesignGridChartEntryMP.aspx.cs">
+      <DependentUpon>FRptDesignGridChartEntryMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptDesignGridChartEntryMP.aspx.designer.cs">
+      <DependentUpon>FRptDesignGridChartEntryMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptDesignStep1MP.aspx.cs">
+      <DependentUpon>FRptDesignStep1MP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptDesignStep1MP.aspx.designer.cs">
+      <DependentUpon>FRptDesignStep1MP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptDesignStep2MP.aspx.cs">
+      <DependentUpon>FRptDesignStep2MP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptDesignStep2MP.aspx.designer.cs">
+      <DependentUpon>FRptDesignStep2MP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptDesignStep3MP.aspx.cs">
+      <DependentUpon>FRptDesignStep3MP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptDesignStep3MP.aspx.designer.cs">
+      <DependentUpon>FRptDesignStep3MP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptDesignStep3TotalTypeSP.aspx.cs">
+      <DependentUpon>FRptDesignStep3TotalTypeSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptDesignStep3TotalTypeSP.aspx.designer.cs">
+      <DependentUpon>FRptDesignStep3TotalTypeSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptDesignStep4FilterUISP.aspx.cs">
+      <DependentUpon>FRptDesignStep4FilterUISP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptDesignStep4FilterUISP.aspx.designer.cs">
+      <DependentUpon>FRptDesignStep4FilterUISP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptDesignStep4MP.aspx.cs">
+      <DependentUpon>FRptDesignStep4MP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptDesignStep4MP.aspx.designer.cs">
+      <DependentUpon>FRptDesignStep4MP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptDesignStep5MP.aspx.cs">
+      <DependentUpon>FRptDesignStep5MP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptDesignStep5MP.aspx.designer.cs">
+      <DependentUpon>FRptDesignStep5MP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptEntryMP.aspx.cs">
+      <DependentUpon>FRptEntryMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptEntryMP.aspx.designer.cs">
+      <DependentUpon>FRptEntryMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptMaintainStartPageMP.aspx.cs">
+      <DependentUpon>FRptMaintainStartPageMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptMaintainStartPageMP.aspx.designer.cs">
+      <DependentUpon>FRptMaintainStartPageMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptPublishDesignMP.aspx.cs">
+      <DependentUpon>FRptPublishDesignMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptPublishDesignMP.aspx.designer.cs">
+      <DependentUpon>FRptPublishDesignMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptStartPage.aspx.cs">
+      <DependentUpon>FRptStartPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptStartPage.aspx.designer.cs">
+      <DependentUpon>FRptStartPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptStyleDetailMP.aspx.cs">
+      <DependentUpon>FRptStyleDetailMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptStyleDetailMP.aspx.designer.cs">
+      <DependentUpon>FRptStyleDetailMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptStyleMP.aspx.cs">
+      <DependentUpon>FRptStyleMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptStyleMP.aspx.designer.cs">
+      <DependentUpon>FRptStyleMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptSubscripteMP.aspx.cs">
+      <DependentUpon>FRptSubscripteMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptSubscripteMP.aspx.designer.cs">
+      <DependentUpon>FRptSubscripteMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptTextFormatMP.aspx.cs">
+      <DependentUpon>FRptTextFormatMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptTextFormatMP.aspx.designer.cs">
+      <DependentUpon>FRptTextFormatMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptUploadStep1MP.aspx.cs">
+      <DependentUpon>FRptUploadStep1MP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptUploadStep1MP.aspx.designer.cs">
+      <DependentUpon>FRptUploadStep1MP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptUploadStep2MP.aspx.cs">
+      <DependentUpon>FRptUploadStep2MP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptUploadStep2MP.aspx.designer.cs">
+      <DependentUpon>FRptUploadStep2MP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptUploadStep3MP.aspx.cs">
+      <DependentUpon>FRptUploadStep3MP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptUploadStep3MP.aspx.designer.cs">
+      <DependentUpon>FRptUploadStep3MP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptUploadStep4MP.aspx.cs">
+      <DependentUpon>FRptUploadStep4MP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptUploadStep4MP.aspx.designer.cs">
+      <DependentUpon>FRptUploadStep4MP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptViewDataSource.aspx.cs">
+      <DependentUpon>FRptViewDataSource.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptViewDataSource.aspx.designer.cs">
+      <DependentUpon>FRptViewDataSource.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptViewDataSourceColumn.aspx.cs">
+      <DependentUpon>FRptViewDataSourceColumn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptViewDataSourceColumn.aspx.designer.cs">
+      <DependentUpon>FRptViewDataSourceColumn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptViewDataSourceParam.aspx.cs">
+      <DependentUpon>FRptViewDataSourceParam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptViewDataSourceParam.aspx.designer.cs">
+      <DependentUpon>FRptViewDataSourceParam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRptViewMP.aspx.cs">
+      <DependentUpon>FRptViewMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRptViewMP.aspx.designer.cs">
+      <DependentUpon>FRptViewMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSecurity.ascx.cs">
+      <DependentUpon>ReportSecurity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportSecurity.ascx.designer.cs">
+      <DependentUpon>ReportSecurity.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportWizardBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FRptAccessRightMP.aspx.resx">
+      <DependentUpon>FRptAccessRightMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptDesignChartMP.aspx.resx">
+      <DependentUpon>FRptDesignChartMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptDesignStep1MP.aspx.resx">
+      <DependentUpon>FRptDesignStep1MP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptDesignStep2MP.aspx.resx">
+      <DependentUpon>FRptDesignStep2MP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptDesignStep3MP.aspx.resx">
+      <DependentUpon>FRptDesignStep3MP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptDesignStep3TotalTypeSP.aspx.resx">
+      <DependentUpon>FRptDesignStep3TotalTypeSP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptDesignStep4FilterUISP.aspx.resx">
+      <DependentUpon>FRptDesignStep4FilterUISP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptDesignStep4MP.aspx.resx">
+      <DependentUpon>FRptDesignStep4MP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptDesignStep5MP.aspx.resx">
+      <DependentUpon>FRptDesignStep5MP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptEntryMP.aspx.resx">
+      <DependentUpon>FRptEntryMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptPublishDesignMP.aspx.resx">
+      <DependentUpon>FRptPublishDesignMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptStartPage.aspx.resx">
+      <DependentUpon>FRptStartPage.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptStyleDetailMP.aspx.resx">
+      <DependentUpon>FRptStyleDetailMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptStyleMP.aspx.resx">
+      <DependentUpon>FRptStyleMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptSubscripteMP.aspx.resx">
+      <DependentUpon>FRptSubscripteMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptTextFormatMP.aspx.resx">
+      <DependentUpon>FRptTextFormatMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptUploadStep1MP.aspx.resx">
+      <DependentUpon>FRptUploadStep1MP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptUploadStep2MP.aspx.resx">
+      <DependentUpon>FRptUploadStep2MP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptUploadStep3MP.aspx.resx">
+      <DependentUpon>FRptUploadStep3MP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptUploadStep4MP.aspx.resx">
+      <DependentUpon>FRptUploadStep4MP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRptViewMP.aspx.resx">
+      <DependentUpon>FRptViewMP.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54819</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

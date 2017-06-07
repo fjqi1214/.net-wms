@@ -1,0 +1,95 @@
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleORCL)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=ORCL)(CID=(PROGRAM=D:\GuruMES\hisense\Product\Source\bin\DCTControlPanel.vshost.exe)(HOST=HI1-IBMSV610)(USER=scott.gu))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 18-6‘¬ -2008 15:29:35
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS: –≠“È  ≈‰∆˜¥ÌŒÛ
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: –≠“È  ≈‰∆˜¥ÌŒÛ
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleORCL)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=ORCL)(CID=(PROGRAM=D:\GuruMES\hisense\Product\Source\bin\DCTControlPanel.vshost.exe)(HOST=HI1-IBMSV610)(USER=scott.gu))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 18-6‘¬ -2008 15:58:45
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS: –≠“È  ≈‰∆˜¥ÌŒÛ
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: –≠“È  ≈‰∆˜¥ÌŒÛ
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleORCL)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=ORCL)(CID=(PROGRAM=D:\GuruMES\hisense\Product\Source\bin\DCTControlPanel.vshost.exe)(HOST=HI1-IBMSV610)(USER=scott.gu))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 18-6‘¬ -2008 15:58:47
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS: –≠“È  ≈‰∆˜¥ÌŒÛ
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: –≠“È  ≈‰∆˜¥ÌŒÛ
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12170.
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 17-9ø  -2009 16:56:33
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12535
+    TNS-12535: TNS: øøøø
+    ns secondary err code: 12560
+    nt main err code: 505
+    TNS-00505: øøøø
+    nt secondary err code: 60
+    nt OS err code: 0
+  Client address: <unknown>
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleorcl)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=orcl)(CID=(PROGRAM=D:\MES\Hisense\Source\Source\bin\BenQGuru.eMES.Client.exe)(HOST=HI1-ERIC-Q-LIU)(USER=eric.q.liu))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 17-9ø  -2009 16:56:33
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS: øøøøøøø
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: øøøøøøø
+    nt secondary err code: 2
+    nt OS err code: 0

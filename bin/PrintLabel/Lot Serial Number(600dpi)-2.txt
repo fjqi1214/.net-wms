@@ -1,0 +1,6 @@
+[Esc]V050[Esc]H200[Esc]L0405[Esc]XS[$itemdesc1]
+[Esc]V135[Esc]H200[Esc]B103085*[$rcard1]*
+[Esc]V240[Esc]H200[Esc]XS[$rcard10to3]-[$rcard14to10]-[$rcard110to14]-[$rcardoverage1]
+[Esc]V050[Esc]H1440[Esc]L0405[Esc]XS[$itemdesc2]
+[Esc]V135[Esc]H1440[Esc]B103085*[$rcard2]*
+[Esc]V240[Esc]H1440[Esc]XS[$rcard20to3]-[$rcard24to10]-[$rcard210to14]-[$rcardoverage2]
