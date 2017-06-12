@@ -428,17 +428,39 @@ namespace BenQGuru.eMES.Web.Warehouse
             {
                 carInvNo = (obj as CARTONINVOICES).CARINVNO;
             }
+            else
+            {
+                WebInfoPublish.Publish(this, "该拣货任务令号未产生发货箱单号", this.languageComponent1);//add by sam 2016年5月25日
+                return;
+            }
 
             string dqMaterialNO = this.ddlDQMaterialNO.SelectedValue;
             string cartonNo = this.txtCartonNo.Text.Trim().ToUpper();
             string qty = this.txtQTY.Text.Trim();
             string sn = this.txtSNEdit.Text.Trim().ToUpper();
             StorageDetail storageDetail = (StorageDetail)_WarehouseFacade.GetStorageDetail(cartonNo);
+            object objPick = this._InventoryFacade.GetPick(pickNo);
+            Pick pick = objPick as Pick;
             if (storageDetail != null)
             {
-                if (storageDetail.AvailableQty > 0)
+                if (storageDetail.AvailableQty >= 0)
                 {
                     WebInfoPublish.Publish(this, "请使用新箱包装", this.languageComponent1);
+                    return;
+                }
+            }
+
+            if (pick == null)
+            {
+                WebInfoPublish.Publish(this, "拣货任务令不存在！", this.languageComponent1);
+                return;
+            }
+            if (pick.PickType == "JCC" || pick.PickType == "BLC")
+            {
+                object[] objss = _WarehouseFacade.GetCartonInvDetailMaterial(carInvNo, cartonNo);
+                if (objss != null && objss.Length > 0)
+                {
+                    WebInfoPublish.Publish(this, "同一个包装箱单不能包含同一个箱号！", this.languageComponent1);
                     return;
                 }
             }
@@ -452,16 +474,15 @@ namespace BenQGuru.eMES.Web.Warehouse
             {
                 this.DataProvider.BeginTransaction();
                 //更新状态
-                object objPick = this._InventoryFacade.GetPick(pickNo);
-                if (objPick != null)
-                {
-                    Pick pick = objPick as Pick;
-                    pick.Status = "Pack";
-                    pick.MaintainUser = mUser;
-                    pick.MaintainDate = mDate;
-                    pick.MaintainTime = mTime;
-                    this._InventoryFacade.UpdatePick(pick);
-                }
+
+
+
+                pick.Status = "Pack";
+                pick.MaintainUser = mUser;
+                pick.MaintainDate = mDate;
+                pick.MaintainTime = mTime;
+                this._InventoryFacade.UpdatePick(pick);
+
 
                 object objPICKDetailMaterial = this._WarehouseFacade.QueryPICKDetailMaterial(pickNo, cartonNo);
                 //拣料表中是否存在箱号？
