@@ -249,7 +249,7 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
             row["StorageInType"] = this.GetInvInName(((ASN)obj).StType);
             row["SAPInvNo"] = ((ASN)obj).InvNo;
             row["Status"] = languageComponent1.GetString(((ASN)obj).Status);
-         
+
             row["StorageInCode"] = ((ASN)obj).StorageCode;
             row["PredictDate"] = FormatHelper.ToDateString(((ASN)obj).PreictDate);
             row["DirectFlag"] = ((ASN)obj).DirectFlag;
@@ -443,21 +443,27 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
                 }
                 object[] asnList = ((ASN[])objList.ToArray(typeof(ASN)));
                 ASN asn = (ASN)asnList[0];
-                if (asn.DirectFlag.ToUpper() == "Y")
-                {
-                    WebInfoPublish.Publish(this, "该入库指令是供应商直发，不能做以下操作[取消下发][初检][申请IQC]", this.languageComponent1);
-                    return;
-                }
+
                 if (clickName == "initial")
                 {
                     this.InitialObjects(asnList);
                 }
                 else if (clickName == "InitialCheck")
                 {
+                    if (asn.DirectFlag.ToUpper() == "Y")
+                    {
+                        WebInfoPublish.Publish(this, "该入库指令是供应商直发，不能做以下操作[初检][申请IQC]", this.languageComponent1);
+                        return;
+                    }
                     InitialCheckObjects(asnList);
                 }
                 else if (clickName == "ApplyIQC")
                 {
+                    if (asn.DirectFlag.ToUpper() == "Y")
+                    {
+                        WebInfoPublish.Publish(this, "该入库指令是供应商直发，不能做以下操作[初检][申请IQC]", this.languageComponent1);
+                        return;
+                    }
                     ApplyIqcObjects(asnList);
                 }
                 this.gridHelper.RequestData();
@@ -487,7 +493,7 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
                     WebInfoPublish.Publish(this, asn.StNo + "入库指令号不能取消下发,状态必须是到货初检中才能取消下发", this.languageComponent1);
                     return;
                 }
-               
+
                 this.DataProvider.BeginTransaction();
 
                 _wa.UpdateASNForCancelDown(new string[] { asn.StNo }, "Release");

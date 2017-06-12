@@ -78,7 +78,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\bin\BenQGuru.eMES.Web.Helper.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TeamSystem.Data.UnitTesting, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -94,12 +97,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseSetup.cs" />
+    <Compile Include="MutualLock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ryan.cs" />
     <Compile Include="ShareKit.cs" />
     <Compile Include="ShareTrans.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

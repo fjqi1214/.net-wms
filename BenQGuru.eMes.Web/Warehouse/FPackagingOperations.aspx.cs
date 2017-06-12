@@ -434,14 +434,17 @@ namespace BenQGuru.eMES.Web.Warehouse
             string qty = this.txtQTY.Text.Trim();
             string sn = this.txtSNEdit.Text.Trim().ToUpper();
             StorageDetail storageDetail = (StorageDetail)_WarehouseFacade.GetStorageDetail(cartonNo);
+            object objPick = this._InventoryFacade.GetPick(pickNo);
             if (storageDetail != null)
             {
-                if (storageDetail.AvailableQty > 0)
+                if (storageDetail.AvailableQty >= 0)
                 {
                     WebInfoPublish.Publish(this, "请使用新箱包装", this.languageComponent1);
                     return;
                 }
             }
+          
+           
 
             DBDateTime dbDateTime = FormatHelper.GetNowDBDateTime(base.DataProvider);
             string mUser = this.GetUserCode();
@@ -452,7 +455,7 @@ namespace BenQGuru.eMES.Web.Warehouse
             {
                 this.DataProvider.BeginTransaction();
                 //更新状态
-                object objPick = this._InventoryFacade.GetPick(pickNo);
+               
                 if (objPick != null)
                 {
                     Pick pick = objPick as Pick;
