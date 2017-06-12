@@ -22,7 +22,8 @@ using NPOI.HSSF.Util;
 using System.Text;
 using BenQGuru.eMES.SAPRFCService.Domain;
 using BenQGuru.eMES.BaseSetting;
-
+using ShareLib;
+using BenQGuru.eMES.Common;
 
 
 namespace BenQGuru.eMES.Web.WarehouseWeb
@@ -39,6 +40,9 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
         protected System.Web.UI.HtmlControls.HtmlInputButton Submit1;
         BenQGuru.eMES.BaseSetting.SystemSettingFacade _SystemSettingFacade = null;
         private Dictionary<string, string> dd = new Dictionary<string, string>();
+
+
+        private static object sapLock = new object();
 
         #region Web 窗体设计器生成的代码
         override protected void OnInit(EventArgs e)
@@ -1941,396 +1945,428 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
             //系统出库
             ArrayList array = this.gridHelper.GetCheckedRows();
 
-
+            if (array.Count != 1)
+            {
+                WebInfoPublish.Publish(this, "请选择一行！", this.languageComponent1);
+                return;
+            }
             DBDateTime dbTime = FormatHelper.GetNowDBDateTime(this.DataProvider);
             #region add by sam
             //is2Sap = _WarehouseFacade.GetRecordCount(dbTime.DBDate, dbTime.DBTime) > 0;
             #endregion
-
-            if (array.Count > 0)
+            List<PickInfo> picks = new List<PickInfo>();
+            ArrayList objList = new ArrayList(array.Count);
+            if (_WarehouseFacade == null)
             {
-                List<PickInfo> picks = new List<PickInfo>();
-                ArrayList objList = new ArrayList(array.Count);
-                if (_WarehouseFacade == null)
+                _WarehouseFacade = new BenQGuru.eMES.Material.WarehouseFacade(base.DataProvider);
+            }
+            if (inventoryFacade == null)
+            {
+                inventoryFacade = new Material.InventoryFacade(base.DataProvider);
+            }
+
+
+
+            foreach (GridRecord row in array)
+            {
+                //string picnNo = row.Items.FindItemByKey("PICKNO").Text;
+                //PickInfo pifo = new PickInfo();
+                //pifo.CARINVNO = row.Items.FindItemByKey("CARINVNO").Text;
+                //pifo.PICKNO = picnNo;
+                //pifo.INVNO = row.Items.FindItemByKey("INVNO").Text;
+                //pifo.STATUS = row.Items.FindItemByKey("STATUS").Text;
+                //PickInfo pifo = obj as PickInfo;
+                string picnNo = row.Items.FindItemByKey("PICKNO").Text;
+                Pick pick11 = (Pick)_WarehouseFacade.GetPick(picnNo);
+                if (pick11 == null)
                 {
-                    _WarehouseFacade = new BenQGuru.eMES.Material.WarehouseFacade(base.DataProvider);
-                }
-                if (inventoryFacade == null)
-                {
-                    inventoryFacade = new Material.InventoryFacade(base.DataProvider);
+                    WebInfoPublish.Publish(this, "未找到拣货任务令信息！", this.languageComponent1);
+                    return;
                 }
 
-                try
+                PickInfo pifo = new PickInfo();
+                pifo.CARINVNO = row.Items.FindItemByKey("CARINVNO").Text;
+                pifo.PICKNO = picnNo;
+                pifo.INVNO = row.Items.FindItemByKey("INVNO").Text;
+                pifo.STATUS = pick11.Status;
+
+                if (!CheckDataStatus(pifo.CARINVNO, pifo.INVNO))
                 {
-                    #region check
-                    foreach (GridRecord row in array)
+                    return;
+                }
+                object car_obj = _WarehouseFacade.GetCartoninvoices(pifo.CARINVNO);
+                if (car_obj == null)
+                {
+
+                    WebInfoPublish.Publish(this, "发货箱单错误", this.languageComponent1);
+                    return;
+                }
+                object[] pima_objs = _WarehouseFacade.GetPickDeMaterialByPickNo(pifo.PICKNO);
+                if (pima_objs == null)
+                {
+
+                    WebInfoPublish.Publish(this, "拣货作业信息错误", this.languageComponent1);
+                    return;
+                }
+
+                object[] pikd_objs = _WarehouseFacade.GetPickLineByPickNoNotCancel(pick11.PickNo);
+                if (pikd_objs == null)
+                {
+
+                    WebInfoPublish.Publish(this, "没有可用的拣货任务令行！", this.languageComponent1);
+                    return;
+                }
+
+
+                if (pifo.STATUS != PickHeadStatus.PickHeadStatus_ClosePackingList)
+                {
+
+                    WebInfoPublish.Publish(this, "箱单必须是待出库状态，才能出库！", this.languageComponent1);
+                    return;
+                }
+                object[] pikdList = _WarehouseFacade.GetAllLineByPickNo(pifo.PICKNO,
+                                                                         PickDetail_STATUS.Status_ClosePack);
+
+                if (pikdList != null)
+                {
+
+                    WebInfoPublish.Publish(this, "箱单未完成", this.languageComponent1);
+                    return;
+                }
+                picks.Add(pifo);
+            }
+
+            try
+            {
+                using (MutualLock mutual = new MutualLock())
+                {
+
+                    PickInfo pifo = picks[0];
+                    string pickNo = picks[0].PICKNO;
+
+                    if (!mutual.getLock(pickNo))
                     {
-                        //string picnNo = row.Items.FindItemByKey("PICKNO").Text;
-
-
-                        //PickInfo pifo = new PickInfo();
-                        //pifo.CARINVNO = row.Items.FindItemByKey("CARINVNO").Text;
-                        //pifo.PICKNO = picnNo;
-                        //pifo.INVNO = row.Items.FindItemByKey("INVNO").Text;
-                        //pifo.STATUS = row.Items.FindItemByKey("STATUS").Text;
-                        //PickInfo pifo = obj as PickInfo;
-                        string picnNo = row.Items.FindItemByKey("PICKNO").Text;
-
-                        Pick pick11 = (Pick)_WarehouseFacade.GetPick(picnNo);
-                        PickInfo pifo = new PickInfo();
-                        pifo.CARINVNO = row.Items.FindItemByKey("CARINVNO").Text;
-                        pifo.PICKNO = picnNo;
-                        pifo.INVNO = row.Items.FindItemByKey("INVNO").Text;
-                        pifo.STATUS = pick11.Status;
-
-                        if (!CheckDataStatus(pifo.CARINVNO, pifo.INVNO))
-                        {
-                            return;
-                        }
-                        object car_obj = _WarehouseFacade.GetCartoninvoices(pifo.CARINVNO);
-                        if (car_obj == null)
-                        {
-
-                            WebInfoPublish.Publish(this, "发货箱单错误", this.languageComponent1);
-                            return;
-                        }
-                        object[] pima_objs = _WarehouseFacade.GetPickDeMaterialByPickNo(pifo.PICKNO);
-                        if (pima_objs == null)
-                        {
-
-                            WebInfoPublish.Publish(this, "拣货作业信息错误", this.languageComponent1);
-                            return;
-                        }
-                        object obj_pi = inventoryFacade.GetPick(pifo.PICKNO);
-                        if (obj_pi == null)
-                        {
-
-                            WebInfoPublish.Publish(this, "拣货任务令错误", this.languageComponent1);
-                            return;
-                        }
-                        object[] pikd_objs = _WarehouseFacade.GetPickLineByPickNo(pifo.PICKNO);
-                        if (pikd_objs == null)
-                        {
-
-                            WebInfoPublish.Publish(this, "拣货任务令行错误", this.languageComponent1);
-                            return;
-                        }
-                        //if (pifo.STATUS == CartonInvoices_STATUS.Status_Close)
-                        //{
-
-                        //    WebInfoPublish.Publish(this, "该发货箱单已经发货", this.languageComponent1);
-                        //    return;
-                        //}
-                        if (pifo.STATUS != PickHeadStatus.PickHeadStatus_ClosePackingList)
-                        {
-
-                            WebInfoPublish.Publish(this, "箱单未完成", this.languageComponent1);
-                            return;
-                        }
-                        object[] pikdList = _WarehouseFacade.GetAllLineByPickNo(pifo.PICKNO,
-                                                                                 PickDetail_STATUS.Status_ClosePack);
-                        if (pikdList != null)
-                        {
-
-                            WebInfoPublish.Publish(this, "箱单未完成", this.languageComponent1);
-                            return;
-                        }
-                        picks.Add(pifo);
+                        Log.Error("获取锁失败！！ 标识符：" + pickNo);
+                        WebInfoPublish.Publish(this, "出库失败！请稍候重试！", this.languageComponent1);
+                        return;
                     }
-                    #endregion
+
+
+
+                    Pick pick = (Pick)_WarehouseFacade.GetPick(pickNo);
+
+                    if (pick.Status != PickHeadStatus.PickHeadStatus_ClosePackingList)
+                    {
+
+                        WebInfoPublish.Publish(this, "箱单必须是待出库状态，才能出库！", this.languageComponent1);
+                        return;
+                    }
                     string message = string.Empty;
                     #region picks
-                    foreach (PickInfo pifo in picks)
+
+
+
+                    if (_WarehouseFacade == null)
+                    {
+                        _WarehouseFacade = new BenQGuru.eMES.Material.WarehouseFacade(base.DataProvider);
+                    }
+
+
+
+
+                    if (pick.PickType == "BFC")
                     {
 
-                        string pickNo = pifo.PICKNO;
+                        StockScrapToSAP(pick);
 
-                        if (_WarehouseFacade == null)
+                        this.DataProvider.BeginTransaction();
+                        try
                         {
-                            _WarehouseFacade = new BenQGuru.eMES.Material.WarehouseFacade(base.DataProvider);
+                            DecreaseStorOut(dbTime, pifo);
+                            this.DataProvider.CommitTransaction();
                         }
-                        Pick obj = (Pick)_WarehouseFacade.GetPick(pickNo);
-
-                        if (obj == null)
+                        catch (Exception ex)
                         {
-                            WebInfoPublish.Publish(this, "拣货任务令号对应的拣货任务令不能为空!", this.languageComponent1);
-                            return;
-
+                            this.DataProvider.RollbackTransaction();
+                            throw new CalStorageQException(ex.Message);
                         }
-                        Pick pick = (Pick)obj;
-                        if (pick.PickType == "BFC")
+                    }
+                    else if (pick.PickType == "PD")
+                    {
+                        this.DataProvider.BeginTransaction();
+                        try
                         {
-                            StockScrapToSAP(pick);
-
-                            this.DataProvider.BeginTransaction();
-                            try
-                            {
-                                DecreaseStorOut(dbTime, pifo);
-                                this.DataProvider.CommitTransaction();
-                            }
-                            catch (Exception ex)
-                            {
-                                this.DataProvider.RollbackTransaction();
-                                throw new CalStorageQException(ex.Message);
-                            }
+                            DecreaseStorOut(dbTime, pifo);
+                            this.DataProvider.CommitTransaction();
                         }
-                        else if (pick.PickType == "PD")
+                        catch (Exception ex)
                         {
-                            this.DataProvider.BeginTransaction();
-                            try
-                            {
-                                DecreaseStorOut(dbTime, pifo);
-                                this.DataProvider.CommitTransaction();
-                            }
-                            catch (Exception ex)
-                            {
-                                this.DataProvider.RollbackTransaction();
-                                throw new CalStorageQException(ex.Message);
-                            }
+                            this.DataProvider.RollbackTransaction();
+                            throw new CalStorageQException(ex.Message);
                         }
-                        else if (pick.PickType == "DNC" || pick.PickType == "DNZC" || pick.PickType == "UB" || pick.PickType == "JCC" || pick.PickType == "BLC" || pick.PickType == "PRC" || pick.PickType == "GZC" || pick.PickType == "WWPOC" || pick.PickType == "POC")
+                    }
+                    else if (pick.PickType == "DNC" || pick.PickType == "DNZC" || pick.PickType == "UB" || pick.PickType == "JCC" || pick.PickType == "BLC" || pick.PickType == "PRC" || pick.PickType == "GZC" || pick.PickType == "WWPOC" || pick.PickType == "POC")
+                    {
+
+
+                        BenQGuru.eMES.Material.PickDetailDN[] ds = _WarehouseFacade.GetPickDetailsForDN(pickNo);
+
+                        Dictionary<string, decimal> ddd = new Dictionary<string, decimal>();
+                        Dictionary<string, decimal> xxx = new Dictionary<string, decimal>();//add by sam
+
+                        foreach (BenQGuru.eMES.Material.PickDetailDN i in ds)
                         {
-
-                            BenQGuru.eMES.Material.PickDetailDN[] ds = _WarehouseFacade.GetPickDetailsForDN(pickNo);
-
-                            Dictionary<string, decimal> ddd = new Dictionary<string, decimal>();
-                            Dictionary<string, decimal> xxx = new Dictionary<string, decimal>();//add by sam
-
-                            foreach (BenQGuru.eMES.Material.PickDetailDN i in ds)
+                            if (i.PQTY >= 0)
                             {
-                                if (i.PQTY >= 0)
+                                if (ddd.ContainsKey(i.DQMCODE))
                                 {
-                                    if (ddd.ContainsKey(i.DQMCODE))
-                                    {
-                                        ddd[i.DQMCODE] += i.PQTY;
-                                    }
-                                    else
-                                    {
-                                        ddd.Add(i.DQMCODE, i.PQTY);
-                                    }
-
-                                    #region add by sam Support用的变量
-                                    if (xxx.ContainsKey(i.DQMCODE))
-                                    {
-                                        xxx[i.DQMCODE] += i.PQTY;
-                                    }
-                                    else
-                                    {
-                                        xxx.Add(i.DQMCODE, i.PQTY);
-                                    }
-                                }
-                                    #endregion
-                            }
-
-                            List<string> batchCodes = new List<string>();
-                            foreach (BenQGuru.eMES.Material.PickDetailDN i in ds)
-                            {
-                                if (!batchCodes.Contains(i.BatchCode))
-                                {
-                                    batchCodes.Add(i.BatchCode);
-                                }
-                            }
-                            foreach (string batchCode in batchCodes)
-                            {
-                                #region PickType
-                                if (pick.PickType == "DNC" || pick.PickType == "DNZC")
-                                {//DN出库
-                                    BenQGuru.eMES.Material.InvoicesDetailEx[] ins = _WarehouseFacade.GetDNInVoicesDetails(batchCode);
-
-                                    if (ins == null || ins.Length <= 0)
-                                        throw new SAPException(batchCode + "发货批号对应的SAP单据号为空！");
-                                    DNToSAP(ddd, batchCode, ins);
-
-
-                                    this.DataProvider.BeginTransaction();
-                                    try
-                                    {
-                                        DecreaseStorOut(dbTime, pifo);
-                                        this.DataProvider.CommitTransaction();
-                                    }
-                                    catch (Exception ex)
-                                    {
-                                        this.DataProvider.RollbackTransaction();
-                                        throw new CalStorageQException(ex.Message);
-                                    }
-                                }
-                                else if (pick.PickType == "UB")//调拨出库
-                                {
-                                    if (!UBOutOP(dbTime, pifo, ddd, batchCode, out message))
-                                    {
-                                        WebInfoPublish.Publish(this, message, this.languageComponent1);
-                                        return;
-                                    }
-                                }
-                                else if (pick.PickType == "JCC" || pick.PickType == "BLC") //检测返工||不良品出库 
-                                {
-                                    if (!JCCAndBLCOutOP(dbTime, pifo, pickNo, ddd, batchCode, out message))
-                                    {
-                                        WebInfoPublish.Publish(this, message, this.languageComponent1);
-                                        return;
-                                    }
-                                }
-                                else if (pick.PickType == "PRC" || pick.PickType == "GZC")
-                                {
-                                    BenQGuru.eMES.Material.InvoicesDetailEx[] ins = _WarehouseFacade.GetInVoicesDetailsForNotDN(batchCode);
-
-                                    if (ins == null || ins.Length <= 0)
-                                        throw new SAPException(batchCode + "发货批号对应的SAP单据号为空！");
-
-                                    Invoices inv = (Invoices)inventoryFacade.GetInvoices(pick.InvNo);
-                                    if (inv.InvType == "GZC")
-                                        RSToSAP(ddd, batchCode, ins, "241", pick.PickNo);
-                                    else if (inv.InvType == "PRC")
-                                        RSToSAP(ddd, batchCode, ins, "201", pick.PickNo);
-
-
-                                    this.DataProvider.BeginTransaction();
-                                    try
-                                    {
-                                        DecreaseStorOut(dbTime, pifo);
-                                        this.DataProvider.CommitTransaction();
-                                    }
-                                    catch (Exception ex)
-                                    {
-                                        this.DataProvider.RollbackTransaction();
-                                        throw new CalStorageQException(ex.Message);
-                                    }
-                                }
-                                else if (pick.PickType == "WWPOC")
-                                {
-
-                                    //    BenQGuru.eMES.Material.InvoicesDetailEx[] ins = _WarehouseFacade.GetInVoicesDetailsForNotDN(batchCode);
-                                    BenQGuru.eMES.Material.InvoicesDetailEx[] ins = _WarehouseFacade.GetWWpoForNotDN(pickNo);
-                                    if (ins == null || ins.Length <= 0)
-                                        throw new SAPException(batchCode + "发货批号对应的SAP单据号为空！");
-                                    WWPoToSAP(ddd, batchCode, ins, pick.StorageCode, pickNo);
-
-
-                                    this.DataProvider.BeginTransaction();
-                                    try
-                                    {
-                                        DecreaseStorOut(dbTime, pifo);
-                                        this.DataProvider.CommitTransaction();
-                                    }
-                                    catch (Exception ex)
-                                    {
-                                        this.DataProvider.RollbackTransaction();
-                                        throw new CalStorageQException(ex.Message);
-                                    }
-                                }
-                                else if (pick.PickType == "POC")
-                                {
-                                    BenQGuru.eMES.Material.InvoicesDetailEx[] ins = _WarehouseFacade.GetInVoicesDetailsForNotDN(batchCode);
-
-                                    if (ins == null || ins.Length <= 0)
-                                        throw new SAPException(batchCode + "发货批号对应的SAP单据号为空！");
-                                    PoToSAP(ddd, batchCode, ins, pickNo);
-
-
-                                    this.DataProvider.BeginTransaction();
-                                    try
-                                    {
-                                        DecreaseStorOut(dbTime, pifo);
-                                        this.DataProvider.CommitTransaction();
-                                    }
-                                    catch (Exception ex)
-                                    {
-                                        this.DataProvider.RollbackTransaction();
-                                        throw new CalStorageQException(ex.Message);
-                                    }
+                                    ddd[i.DQMCODE] += i.PQTY;
                                 }
                                 else
                                 {
-                                    throw new Exception(pick.PickType + ":拣货任务令类型不正确！");
+                                    ddd.Add(i.DQMCODE, i.PQTY);
                                 }
-                                #endregion
-                                if (ShareLib.ShareKit.IsReBackSupport)
+
+                                #region add by sam Support用的变量
+                                if (xxx.ContainsKey(i.DQMCODE))
                                 {
-                                    #region add by sam webservice support
-                                    BackToSupport(pickNo, pick, xxx, batchCode);
-                                    #endregion
+                                    xxx[i.DQMCODE] += i.PQTY;
                                 }
+                                else
+                                {
+                                    xxx.Add(i.DQMCODE, i.PQTY);
+                                }
+                            }
+                                #endregion
+                        }
+
+
+
+                        string batchCode = ds[0].BatchCode;
+
+
+                        #region PickType
+                        if (pick.PickType == "DNC" || pick.PickType == "DNZC")
+                        {//DN出库
+                            BenQGuru.eMES.Material.InvoicesDetailEx[] ins = _WarehouseFacade.GetDNInVoicesDetails(batchCode);
+
+                            if (ins == null || ins.Length <= 0)
+                                throw new SAPException(batchCode + "发货批号对应的SAP单据号为空！");
+                            DNToSAP(ddd, batchCode, ins);
+
+
+                            //pick.Status = "SAPPOSTED";
+                            //_WarehouseFacade.UpdatePick(pick);
+
+                            this.DataProvider.BeginTransaction();
+                            try
+                            {
+                                DecreaseStorOut(dbTime, pifo);
+                                this.DataProvider.CommitTransaction();
+                            }
+                            catch (Exception ex)
+                            {
+                                this.DataProvider.RollbackTransaction();
+                                throw new CalStorageQException(ex.Message);
+                            }
+                        }
+                        else if (pick.PickType == "UB")//调拨出库
+                        {
+                            if (!UBOutOP(dbTime, pifo, ddd, batchCode, out message))
+                            {
+
+
+                                //if (pick.Status == "SAPPOSTING")
+                                //{
+                                //    pick.Status = PickHeadStatus.PickHeadStatus_ClosePackingList;
+                                //    _WarehouseFacade.UpdatePick(pick);
+                                //}
+
+                                WebInfoPublish.Publish(this, message, this.languageComponent1);
+                                return;
+                            }
+                        }
+                        else if (pick.PickType == "JCC" || pick.PickType == "BLC") //检测返工||不良品出库 
+                        {
+                            if (!JCCAndBLCOutOP(dbTime, pifo, pickNo, ddd, batchCode, out message))
+                            {
+
+                                //if (pick.Status == "SAPPOSTING")
+                                //{
+                                //    pick.Status = PickHeadStatus.PickHeadStatus_ClosePackingList;
+                                //    _WarehouseFacade.UpdatePick(pick);
+                                //}
+
+                                WebInfoPublish.Publish(this, message, this.languageComponent1);
+                                return;
+                            }
+                        }
+                        else if (pick.PickType == "PRC" || pick.PickType == "GZC")
+                        {
+                            BenQGuru.eMES.Material.InvoicesDetailEx[] ins = _WarehouseFacade.GetInVoicesDetailsForNotDN(batchCode);
+
+                            if (ins == null || ins.Length <= 0)
+                                throw new SAPException(batchCode + "发货批号对应的SAP单据号为空！");
+
+                            Invoices inv = (Invoices)inventoryFacade.GetInvoices(pick.InvNo);
+                            if (inv.InvType == "GZC")
+                                RSToSAP(ddd, batchCode, ins, "241", pick.PickNo);
+                            else if (inv.InvType == "PRC")
+                                RSToSAP(ddd, batchCode, ins, "201", pick.PickNo);
+
+
+                            this.DataProvider.BeginTransaction();
+                            try
+                            {
+                                DecreaseStorOut(dbTime, pifo);
+                                this.DataProvider.CommitTransaction();
+                            }
+                            catch (Exception ex)
+                            {
+                                this.DataProvider.RollbackTransaction();
+                                throw new CalStorageQException(ex.Message);
+                            }
+                        }
+                        else if (pick.PickType == "WWPOC")
+                        {
+
+                            //    BenQGuru.eMES.Material.InvoicesDetailEx[] ins = _WarehouseFacade.GetInVoicesDetailsForNotDN(batchCode);
+                            BenQGuru.eMES.Material.InvoicesDetailEx[] ins = _WarehouseFacade.GetWWpoForNotDN(pickNo);
+                            if (ins == null || ins.Length <= 0)
+                                throw new SAPException(batchCode + "发货批号对应的SAP单据号为空！");
+                            WWPoToSAP(ddd, batchCode, ins, pick.StorageCode, pickNo);
+
+
+                            this.DataProvider.BeginTransaction();
+                            try
+                            {
+                                DecreaseStorOut(dbTime, pifo);
+                                this.DataProvider.CommitTransaction();
+                            }
+                            catch (Exception ex)
+                            {
+                                this.DataProvider.RollbackTransaction();
+                                throw new CalStorageQException(ex.Message);
+                            }
+                        }
+                        else if (pick.PickType == "POC")
+                        {
+                            BenQGuru.eMES.Material.InvoicesDetailEx[] ins = _WarehouseFacade.GetInVoicesDetailsForNotDN(batchCode);
+
+                            if (ins == null || ins.Length <= 0)
+                                throw new SAPException(batchCode + "发货批号对应的SAP单据号为空！");
+                            PoToSAP(ddd, batchCode, ins, pickNo);
+
+
+                            this.DataProvider.BeginTransaction();
+                            try
+                            {
+                                DecreaseStorOut(dbTime, pifo);
+                                this.DataProvider.CommitTransaction();
+                            }
+                            catch (Exception ex)
+                            {
+                                this.DataProvider.RollbackTransaction();
+                                throw new CalStorageQException(ex.Message);
                             }
                         }
                         else
                         {
                             throw new Exception(pick.PickType + ":拣货任务令类型不正确！");
                         }
+                        #endregion
+                        if (ShareLib.ShareKit.IsReBackSupport)
+                        {
+                            #region add by sam webservice support
+                            BackToSupport(pickNo, pick, xxx, batchCode);
+                            #endregion
+                        }
+
                     }
+                    else
+                    {
+                        throw new Exception(pick.PickType + ":拣货任务令类型不正确！");
+                    }
+
                     #endregion
 
-                    foreach (PickInfo pifo in picks)
+
+                    object[] objs = this._WarehouseFacade.GetPickLineByPickNoNotCancel(pifo.PICKNO);
+
+
+                    #region 在invinouttrans表中增加一条数据
+
+                    WarehouseFacade facade = new WarehouseFacade(base.DataProvider);
+
+
+                    DBDateTime dbTime1 = FormatHelper.GetNowDBDateTime(this.DataProvider);
+                    foreach (PickDetail pickDetail in objs)
                     {
-                        object[] objs = this._WarehouseFacade.GetPickLineByPickNoNotCancel(pifo.PICKNO);
-                        if (objs == null)
-                        {
-                            this.DataProvider.RollbackTransaction();
-                            WebInfoPublish.Publish(this, "当前拣货任务令号没有对应的拣货任务令明细信息", this.languageComponent1);
-                            return;
-                        }
-
-                        #region 在invinouttrans表中增加一条数据
-
-                        WarehouseFacade facade = new WarehouseFacade(base.DataProvider);
-
-                        Pick pick = (Pick)_WarehouseFacade.GetPick(pifo.PICKNO);
-                        DBDateTime dbTime1 = FormatHelper.GetNowDBDateTime(this.DataProvider);
-                        foreach (PickDetail pickDetail in objs)
-                        {
-                            InvInOutTrans trans = facade.CreateNewInvInOutTrans();
-                            trans.CartonNO = string.Empty;
-                            trans.DqMCode = pickDetail.DQMCode;
-                            trans.FacCode = string.Empty;
-                            trans.FromFacCode = string.Empty;
-                            trans.FromStorageCode = string.Empty;
-                            trans.InvNO = pick.InvNo; //.InvNo;
-                            trans.InvType = pick.PickType;
-                            trans.LotNo = string.Empty;
-                            trans.MaintainDate = dbTime1.DBDate;
-                            trans.MaintainTime = dbTime1.DBTime;
-                            trans.MaintainUser = this.GetUserCode();
-                            trans.MCode = pickDetail.MCode;
-                            trans.ProductionDate = 0;
-                            trans.Qty = pickDetail.QTY;
-                            trans.Serial = 0;
-                            trans.StorageAgeDate = 0;
-                            trans.StorageCode = string.Empty;
-                            trans.SupplierLotNo = string.Empty;
-                            trans.TransNO = pickDetail.PickNo; // asnIqc.IqcNo;
-                            trans.TransType = "OUT";
-                            trans.Unit = string.Empty;
-                            trans.ProcessType = "SendCase";
-                            facade.AddInvInOutTrans(trans);
-                        }
-
-                        #endregion
+                        InvInOutTrans trans = facade.CreateNewInvInOutTrans();
+                        trans.CartonNO = string.Empty;
+                        trans.DqMCode = pickDetail.DQMCode;
+                        trans.FacCode = string.Empty;
+                        trans.FromFacCode = string.Empty;
+                        trans.FromStorageCode = string.Empty;
+                        trans.InvNO = pick.InvNo; //.InvNo;
+                        trans.InvType = pick.PickType;
+                        trans.LotNo = string.Empty;
+                        trans.MaintainDate = dbTime1.DBDate;
+                        trans.MaintainTime = dbTime1.DBTime;
+                        trans.MaintainUser = this.GetUserCode();
+                        trans.MCode = pickDetail.MCode;
+                        trans.ProductionDate = 0;
+                        trans.Qty = pickDetail.QTY;
+                        trans.Serial = 0;
+                        trans.StorageAgeDate = 0;
+                        trans.StorageCode = string.Empty;
+                        trans.SupplierLotNo = string.Empty;
+                        trans.TransNO = pickDetail.PickNo; // asnIqc.IqcNo;
+                        trans.TransType = "OUT";
+                        trans.Unit = string.Empty;
+                        trans.ProcessType = "SendCase";
+                        facade.AddInvInOutTrans(trans);
                     }
 
-                    WebInfoPublish.Publish(this, "出库成功！", this.languageComponent1);
-                }
-                catch (SAPException ex)
-                {
-
-                    WebInfoPublish.Publish(this, ex.Message, this.languageComponent1);
-                }
-                catch (CalStorageQException ex)
-                {
-
-
-                    BenQGuru.eMES.Common.Log.Error(ex.Message);
-                    BenQGuru.eMES.Common.Log.Error(ex.StackTrace);
-                    throw ex;
+                    #endregion
 
                 }
-                catch (Exception ex)
-                {
-                    BenQGuru.eMES.Common.Log.Error(ex.Message);
-                    BenQGuru.eMES.Common.Log.Error(ex.StackTrace);
-                    throw ex;
-
-                }
+                WebInfoPublish.Publish(this, "出库成功！", this.languageComponent1);
 
             }
+            catch (SAPException ex)
+            {
+
+                //foreach (PickInfo pickInfo in picks)
+                //{
+                //    Pick pick = (Pick)_WarehouseFacade.GetPick(pickInfo.PICKNO);
+                //    if (pick.Status == "SAPPOSTING")
+                //    {
+                //        pick.Status = PickHeadStatus.PickHeadStatus_ClosePackingList;
+                //        _WarehouseFacade.UpdatePick(pick);
+                //    }
+                //}
+
+                WebInfoPublish.Publish(this, ex.Message, this.languageComponent1);
+            }
+            catch (CalStorageQException ex)
+            {
+
+
+                BenQGuru.eMES.Common.Log.Error(ex.Message);
+                BenQGuru.eMES.Common.Log.Error(ex.StackTrace);
+                throw ex;
+
+            }
+            catch (Exception ex)
+            {
+                BenQGuru.eMES.Common.Log.Error(ex.Message);
+                BenQGuru.eMES.Common.Log.Error(ex.StackTrace);
+                throw ex;
+
+            }
+
+
         }
 
         private void BackToSupport(string pickNo, Pick pick, Dictionary<string, decimal> xxx, string batchCode)
@@ -4219,22 +4255,22 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
             //    }
             //}
             //2，判断发货箱单头是否ClosePackingList:箱单完成
-            if (_WarehouseFacade == null)
-            {
-                _WarehouseFacade = new BenQGuru.eMES.Material.WarehouseFacade(base.DataProvider);
-            }
-            object carinvno_obj = _WarehouseFacade.GetCartoninvoices(CarInvNo);
-            if (carinvno_obj == null)
-            {
-                WebInfoPublish.Publish(this, "发货箱单头错误", this.languageComponent1);
-                return false;
-            }
-            CARTONINVOICES carinvno = carinvno_obj as CARTONINVOICES;
-            if (carinvno.STATUS != CartonInvoices_STATUS.Status_ClosePackingList)
-            {
-                WebInfoPublish.Publish(this, "发货箱单状态不是箱单完成", this.languageComponent1);
-                return false;
-            }
+            //if (_WarehouseFacade == null)
+            //{
+            //    _WarehouseFacade = new BenQGuru.eMES.Material.WarehouseFacade(base.DataProvider);
+            //}
+            //object carinvno_obj = _WarehouseFacade.GetCartoninvoices(CarInvNo);
+            //if (carinvno_obj == null)
+            //{
+            //    WebInfoPublish.Publish(this, "发货箱单头错误", this.languageComponent1);
+            //    return false;
+            //}
+            //CARTONINVOICES carinvno = carinvno_obj as CARTONINVOICES;
+            //if (carinvno.STATUS != CartonInvoices_STATUS.Status_ClosePackingList)
+            //{
+            //    WebInfoPublish.Publish(this, "发货箱单状态不是箱单完成", this.languageComponent1);
+            //    return false;
+            //}
 
             return true;
         }

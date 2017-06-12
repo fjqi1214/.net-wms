@@ -1488,7 +1488,7 @@ namespace ShareLib
                     foreach (Asndetail asnDetail in asndetails)
                     {
                         Log.Error("2------------------------------------" + asnDetail.Stno + ":" + asnDetail.Stline + ":" + asnDetail.LocationCode1);
-                        if (string.IsNullOrEmpty(asnDetail.LocationCode1))
+                        if (string.IsNullOrEmpty(asnDetail.LocationCode1) && asnDetail.Status == "IQCClose")
                             canSend = false;
                     }
 
@@ -3558,7 +3558,7 @@ namespace ShareLib
                 #endregion
 
                 #region xml
-            
+
                 //string xmlStr = "<?xml version='1.0' encoding='utf-8'?> ";
                 string xmlStr = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
                 xmlStr += string.Format(@"   <inputs>
@@ -3593,7 +3593,7 @@ namespace ShareLib
                     string uri = System.Web.Configuration.WebConfigurationManager.AppSettings["SupportUri"];
 
                     ryan ryan = new ryan();
-                   
+
                     if (!string.IsNullOrEmpty(uri))
                     {
                         ryan.Url = uri;
