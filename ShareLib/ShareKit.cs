@@ -1591,7 +1591,7 @@ namespace ShareLib
                 {
                     if (canSend)
                     {
-                        Asndetail[] asndetails = facade.GetAsnDetails(((Asndetail)details[0]).Stno);
+                        Asndetail[] asndetails = facade.GetIQCCloseAsnDetails(((Asndetail)details[0]).Stno);
                         if (OnShelves(asndetails, dbTime, _Invenfacade, facade, DataProvider, out message, usr, locationNo))
                         {
                             message = "上架成功！";

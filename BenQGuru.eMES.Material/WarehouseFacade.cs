@@ -12264,6 +12264,21 @@ and t1.cartonno is not null";
 
         }
 
+        public Asndetail[] GetIQCCloseAsnDetails(string stno)
+        {
+            string sql = "SELECT * FROM TBLASNDETAIL WHERE STNO='" + stno + "' AND STATUS='IQCClose'";
+            object[] oo = this.DataProvider.CustomQuery(typeof(Asndetail), new SQLCondition(sql));
+
+            List<Asndetail> ds = new List<Asndetail>();
+
+            if (oo != null && oo.Length > 0)
+            {
+                foreach (Asndetail d in oo)
+                    ds.Add(d);
+            }
+            return ds.ToArray();
+        }
+
 
         public Asndetail[] GetAsnDetails(string stno)
         {

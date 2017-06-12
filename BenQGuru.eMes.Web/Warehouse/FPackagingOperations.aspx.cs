@@ -440,10 +440,9 @@ namespace BenQGuru.eMES.Web.Warehouse
             string sn = this.txtSNEdit.Text.Trim().ToUpper();
             StorageDetail storageDetail = (StorageDetail)_WarehouseFacade.GetStorageDetail(cartonNo);
             object objPick = this._InventoryFacade.GetPick(pickNo);
-<<<<<<< HEAD
+
             Pick pick = objPick as Pick;
-=======
->>>>>>> bug01
+
             if (storageDetail != null)
             {
                 if (storageDetail.AvailableQty >= 0)
