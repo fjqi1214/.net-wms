@@ -179,40 +179,41 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
             row["ASNDOWNCOUNT"] = s.ASNDOWNCOUNT;
             row["StorageCode"] = s.StorageCode;
 
-            decimal averReceive = facade.ReceiveAverPeriod(s.StorageCode, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            decimal averReceive = facade.ReceiveAverPeriod(s.StorageCode, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                        FormatHelper.TODateInt(dateInDateToQuery.Text));
-            decimal averIQC = facade.IQCAverPeriod(s.StorageCode, string.Empty, string.Empty, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            decimal averIQC = facade.IQCAverPeriod(s.StorageCode, string.Empty, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                        FormatHelper.TODateInt(dateInDateToQuery.Text));
 
-           decimal averOnShelf= facade.InstorageAverPeriod1(s.StorageCode, FormatHelper.TODateInt(dateInDateFromQuery.Text),
-                                   FormatHelper.TODateInt(dateInDateToQuery.Text));
-            row["AVERINSTORAGEPERIOD"] = averReceive+averIQC+averOnShelf;
+            decimal averOnShelf = facade.InstorageAverPeriod1(s.StorageCode, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+                                    FormatHelper.TODateInt(dateInDateToQuery.Text));
+            row["AVERINSTORAGEPERIOD"] = facade.InstorageAverPeriod(s.StorageCode,   FormatHelper.TODateInt(dateInDateFromQuery.Text),
+                                    FormatHelper.TODateInt(dateInDateToQuery.Text));
 
 
             row["ASNRECEIVECOUNT"] = s.ASNRECEIVECOUNT;
-            row["RECEIVECARTONNOTOTAL"] = facade.ReceiveSummaryCartonno(s.StorageCode, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            row["RECEIVECARTONNOTOTAL"] = facade.ReceiveSummaryCartonno(s.StorageCode, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                          FormatHelper.TODateInt(dateInDateToQuery.Text));
-            row["RECEIVETOTALWEIGHT"] = facade.ReceiveSummaryWeight(s.StorageCode, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            row["RECEIVETOTALWEIGHT"] = facade.ReceiveSummaryWeight(s.StorageCode, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                          FormatHelper.TODateInt(dateInDateToQuery.Text));
 
 
-            row["RECEIVETOTALVOLUMN"] = facade.ReceiveSummaryVolume(s.StorageCode, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            row["RECEIVETOTALVOLUMN"] = facade.ReceiveSummaryVolume(s.StorageCode, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                        FormatHelper.TODateInt(dateInDateToQuery.Text));
 
             row["AVERRECEIVEPERIOD"] = averReceive;
 
             row["AVERIQCPERIOD"] = averIQC;
             row["ONSHELFASNCOUNT"] = s.ASNINSTORAGECOUNT;
-            row["ONSHELFCARTONNOTOTAL"] = facade.OnShelfSummaryCartonno(s.StorageCode, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            row["ONSHELFCARTONNOTOTAL"] = facade.OnShelfSummaryCartonno(s.StorageCode, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                        FormatHelper.TODateInt(dateInDateToQuery.Text));
             ;
 
-            row["ONSHELFWEIGHTTOTAL"] = facade.OnShelfSummaryWeight(s.StorageCode, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            row["ONSHELFWEIGHTTOTAL"] = facade.OnShelfSummaryWeight(s.StorageCode, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                    FormatHelper.TODateInt(dateInDateToQuery.Text));
 
 
 
-            row["ONSHELFVOLUMNTOTAL"] = facade.OnShelfSummaryVolume(s.StorageCode, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            row["ONSHELFVOLUMNTOTAL"] = facade.OnShelfSummaryVolume(s.StorageCode, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                    FormatHelper.TODateInt(dateInDateToQuery.Text));
 
 

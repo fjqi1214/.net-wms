@@ -13061,7 +13061,7 @@ and t1.cartonno is not null";
         public bool IsInvoicesAvailable(string invNo)
         {
             string sql1 = @"SELECT t3.dqmcode,t2.qty,t3.planqty FROM (SELECT e.invno invno,e.invline invline,NVL (SUM (e.planqty), 0) planqty,e.dqmcode
-          FROM TBLInvoicesDetail e where (e.INVLINESTATUS='Release' or e.INVLINESTATUS is null) AND E.INVNO='" + invNo + @"'
+          FROM TBLInvoicesDetail e,tblinvoices e2 where e.invno=e2.invno and (((e.INVLINESTATUS='Release' or e.INVLINESTATUS is null) and e2.invtype<>'DNR') or (e2.invtype='DNR' and e.movementtype is not null and (e.INVLINESTATUS='Release' or e.INVLINESTATUS is null))) AND E.INVNO='" + invNo + @"'
            group by e.invno,e.invline,e.dqmcode  ) t3 LEFT JOIN (SELECT NVL (SUM (a.QCPASSQTY), 0) qty,
                  a.INVNO,a.invline,A.DQMCODE
             FROM TBLASNDETAILITEM a, TBLASNDETAIL c,TBLASN D
@@ -13084,7 +13084,7 @@ and t1.cartonno is not null";
                  AND (c.status <> 'Cancel') and d.sttype<>'SCTR'
         GROUP BY a.INVNO, a.INVLINE,a.dqmcode) d left join
        (SELECT e.invno invno,e.invline invline,  NVL (SUM (e.planqty), 0) planqty
-          FROM TBLInvoicesDetail e where (e.INVLINESTATUS='Release' or e.INVLINESTATUS is null) 
+          FROM TBLInvoicesDetail e,tblinvoices e2 where e.invno=e2.invno and (((e.INVLINESTATUS='Release' or e.INVLINESTATUS is null) AND E2.INVTYPE<>'DNR') OR( E2.INVTYPE='DNR' AND e.movementtype is not null AND (e.INVLINESTATUS='Release' or e.INVLINESTATUS is null))) 
           and e.invno='" + invNo + @"' group by e.invno,e.invline,e.dqmcode ) f
  on f.INVNO = d.invno AND f.INVLINE = d.INVLINE";
             object[] oo2 = this.DataProvider.CustomQuery(typeof(QTYN), new SQLCondition(sql2));
@@ -13423,7 +13423,7 @@ and t1.cartonno is not null";
 
             if (oo != null && oo.Length > 0)
             {
-                foreach (Asn asn in asns)
+                foreach (Asn asn in oo)
                 {
                     asns.Add(asn);
 
@@ -13979,6 +13979,7 @@ and t1.cartonno is not null";
                     (SELECT  TRANSNO,max(mdate||' '||mtime) issuedate FROM TBLINVINOUTTRANS WHERE  TRANSTYPE='IN' AND ProcessType='ISSUE' GROUP BY TRANSNO) T10 ON T10.TRANSNO=T1_3.STNO LEFT JOIN 
                     (SELECT STNO,max(CDATE||' '||CTIME) CDATE FROM TBLASNIQC GROUP BY STNO ) T4 ON T1_3.STNO=T4.STNO  where 1=1 ";
 
+
             if (!string.IsNullOrEmpty(invno))
             {
                 sql += " AND T1_3.INVNO='" + invno + "' ";
@@ -13988,6 +13989,7 @@ and t1.cartonno is not null";
             {
                 sql += " AND T1_3.STNO='" + stno + "' ";
             }
+
             if (!string.IsNullOrEmpty(storageCode))
             {
                 sql += " AND STORAGECODE='" + storageCode + "' ";
@@ -14011,6 +14013,7 @@ and t1.cartonno is not null";
             {
                 sql += " AND ASNCDATE<=" + dateEnd;
             }
+        
 
             object[] oo = this.DataProvider.CustomQuery(typeof(InStorageDetailRecord), new SQLCondition(sql));
             if (oo != null && oo.Length > 0)
@@ -14915,11 +14918,18 @@ LEFT JOIN TBLPICKDetailMaterialSN D ON  A.PICKNO=D.PICKNO AND A.PICKLINE=D.PICKL
 
             }
 
-            string dateFilter = string.Empty;
+            string dateFilter1 = string.Empty;
             if (dateBegin > 0)
-                dateFilter += " AND  MDATE >=" + dateBegin;
+                dateFilter1 += " AND  cDATE >=" + dateBegin;
             if (dateEnd > 0)
-                dateFilter += " AND  MDATE <=" + dateEnd;
+                dateFilter1 += " AND  cDATE <=" + dateEnd;
+
+            string dateFilter2 = string.Empty;
+            if (dateBegin > 0)
+                dateFilter2 += " AND  MDATE >=" + dateBegin;
+            if (dateEnd > 0)
+                dateFilter2 += " AND  MDATE <=" + dateEnd;
+
 
             string typeFilter = string.Empty;
             string typeFilter1 = string.Empty;
@@ -14928,7 +14938,7 @@ LEFT JOIN TBLPICKDetailMaterialSN D ON  A.PICKNO=D.PICKNO AND A.PICKLINE=D.PICKL
                 typeFilter = " AND STTYPE='" + sttype + "'";
                 typeFilter1 = " AND INVTYPE='" + sttype + "'";
             }
-            sql = string.Format(sql, dateFilter, dateFilter, dateFilter, dateFilter, typeFilter, typeFilter1);
+            sql = string.Format(sql, dateFilter1, dateFilter2, dateFilter2, dateFilter1, typeFilter, typeFilter1);
 
 
 
@@ -14946,25 +14956,30 @@ LEFT JOIN TBLPICKDetailMaterialSN D ON  A.PICKNO=D.PICKNO AND A.PICKLINE=D.PICKL
             return records.ToArray();
         }
 
-        public int ReceiveSummaryCartonno(string stroageCode, int dateBegin, int dateEnd)
+        public int ReceiveSummaryCartonno(string stroageCode, string sttype, int dateBegin, int dateEnd)
         {
 
-            string sql = "SELECT COUNT(*) FROM TBLASNDETAIL WHERE STNO IN( SELECt transno FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='Receive' ";
+            string sql = "SELECT COUNT(*) FROM TBLASNDETAIL A ,TBLASN B WHERE A.STNO=B.STNO AND A.STNO IN( SELECt transno FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='Receive') ";
             if (!string.IsNullOrEmpty(stroageCode))
             {
-                sql += " AND STORAGECODE='" + stroageCode + "' ";
+                sql += " AND B.STORAGECODE='" + stroageCode + "' ";
+            }
+            if (!string.IsNullOrEmpty(sttype))
+            {
+
+                sql += " AND B.STTYPE='" + sttype + "' ";
             }
             if (dateBegin > 0)
-                sql += " AND  MDATE >=" + dateBegin;
+                sql += " AND  B.CDATE >=" + dateBegin;
             if (dateEnd > 0)
-                sql += " AND  MDATE <=" + dateEnd;
-            sql += ")";
+                sql += " AND  B.CDATE <=" + dateEnd;
+
 
             return this.DataProvider.GetCount(new SQLCondition(sql));
         }
 
 
-        public decimal ReceiveSummaryWeight(string stroageCode, int dateBegin, int dateEnd)
+        public decimal ReceiveSummaryWeight(string stroageCode, string sttype, int dateBegin, int dateEnd)
         {
 
             string sql = "SELECT SUM(GROSS_WEIGHT) GROSS_WEIGHT  FROM TBLASN WHERE STNO IN( SELECt transno FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='Receive' ";
@@ -14972,17 +14987,22 @@ LEFT JOIN TBLPICKDetailMaterialSN D ON  A.PICKNO=D.PICKNO AND A.PICKLINE=D.PICKL
             {
                 sql += " AND STORAGECODE='" + stroageCode + "' ";
             }
+            if (!string.IsNullOrEmpty(sttype))
+            {
+
+                sql += " AND STTYPE='" + sttype + "' ";
+            }
             if (dateBegin > 0)
-                sql += " AND  MDATE >=" + dateBegin;
+                sql += " AND  CDATE >=" + dateBegin;
             if (dateEnd > 0)
-                sql += " AND  MDATE <=" + dateEnd;
+                sql += " AND  CDATE <=" + dateEnd;
             sql += ")";
             object[] os = this.DataProvider.CustomQuery(typeof(WeightVolume), new SQLCondition(sql));
             return Math.Round(((WeightVolume)os[0]).GROSS_WEIGHT, 2);
 
         }
 
-        public decimal ReceiveSummaryVolume(string stroageCode, int dateBegin, int dateEnd)
+        public decimal ReceiveSummaryVolume(string stroageCode, string sttype, int dateBegin, int dateEnd)
         {
 
             string sql = "SELECT SUM(VOLUME) VOLUME FROM TBLASN WHERE STNO IN( SELECt transno FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='Receive' ";
@@ -14990,6 +15010,13 @@ LEFT JOIN TBLPICKDetailMaterialSN D ON  A.PICKNO=D.PICKNO AND A.PICKLINE=D.PICKL
             {
                 sql += " AND STORAGECODE='" + stroageCode + "' ";
             }
+
+            if (!string.IsNullOrEmpty(sttype))
+            {
+
+                sql += " AND STTYPE='" + sttype + "' ";
+            }
+
             if (dateBegin > 0)
                 sql += " AND  MDATE >=" + dateBegin;
             if (dateEnd > 0)
@@ -15000,60 +15027,73 @@ LEFT JOIN TBLPICKDetailMaterialSN D ON  A.PICKNO=D.PICKNO AND A.PICKLINE=D.PICKL
             return Math.Round(((WeightVolume)os[0]).Volume, 2);
         }
 
-        public int OnShelfSummaryCartonno(string stroageCode, int dateBegin, int dateEnd)
+        public int OnShelfSummaryCartonno(string stroageCode, string sttype, int dateBegin, int dateEnd)
         {
 
-            string sql = "SELECT COUNT(*) FROM TBLASNDETAIL WHERE STNO IN( SELECt transno FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='INSTORAEE' ";
+            string sql = "SELECT COUNT(*) FROM TBLASNDETAIL A,TBLASN B WHERE A.STNO=B.STNO AND A.STNO IN( SELECt transno FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='INSTORAEE')";
             if (!string.IsNullOrEmpty(stroageCode))
             {
-                sql += " AND STORAGECODE='" + stroageCode + "' ";
+                sql += " AND B.STORAGECODE='" + stroageCode + "' ";
             }
+
+            if (!string.IsNullOrEmpty(sttype))
+            {
+
+                sql += " AND B.STTYPE='" + sttype + "' ";
+            }
+
             if (dateBegin > 0)
-                sql += " AND  MDATE >=" + dateBegin;
+                sql += " AND  B.CDATE >=" + dateBegin;
             if (dateEnd > 0)
-                sql += " AND  MDATE <=" + dateEnd;
-            sql += ")";
+                sql += " AND  B.CDATE <=" + dateEnd;
+
 
             return this.DataProvider.GetCount(new SQLCondition(sql));
         }
 
-        public decimal OnShelfSummaryWeight(string stroageCode, int dateBegin, int dateEnd)
+        public decimal OnShelfSummaryWeight(string stroageCode, string sttype, int dateBegin, int dateEnd)
         {
 
-            string sql = "SELECT SUM(GROSS_WEIGHT) GROSS_WEIGHT FROM TBLASN WHERE STNO IN( SELECt transno FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='INSTORAEE' ";
+            string sql = "SELECT SUM(GROSS_WEIGHT) GROSS_WEIGHT FROM TBLASN WHERE STNO IN( SELECt transno FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='INSTORAEE') ";
             if (!string.IsNullOrEmpty(stroageCode))
             {
                 sql += " AND STORAGECODE='" + stroageCode + "' ";
             }
+
+            if (!string.IsNullOrEmpty(sttype))
+            {
+
+                sql += " AND STTYPE='" + sttype + "' ";
+            }
             if (dateBegin > 0)
-                sql += " AND  MDATE >=" + dateBegin;
+                sql += " AND  cDATE >=" + dateBegin;
             if (dateEnd > 0)
-                sql += " AND  MDATE <=" + dateEnd;
-            sql += ")";
+                sql += " AND  cDATE <=" + dateEnd;
+
 
             object[] os = this.DataProvider.CustomQuery(typeof(WeightVolume), new SQLCondition(sql));
             return Math.Round(((WeightVolume)os[0]).GROSS_WEIGHT, 2);
         }
 
-        public decimal OnShelfSummaryVolume(string stroageCode, int dateBegin, int dateEnd)
+        public decimal OnShelfSummaryVolume(string stroageCode, string sttype, int dateBegin, int dateEnd)
         {
 
-            string sql = "SELECT SUM(VOLUME) VOLUME FROM TBLASN WHERE STNO IN( SELECt transno FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='INSTORAEE' ";
+            string sql = "SELECT SUM(VOLUME) VOLUME FROM TBLASN WHERE STNO IN( SELECt transno FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='INSTORAEE')";
             if (!string.IsNullOrEmpty(stroageCode))
             {
                 sql += " AND STORAGECODE='" + stroageCode + "' ";
             }
             if (dateBegin > 0)
-                sql += " AND  MDATE >=" + dateBegin;
+                sql += " AND  cDATE >=" + dateBegin;
             if (dateEnd > 0)
-                sql += " AND  MDATE <=" + dateEnd;
-            sql += ")";
+                sql += " AND  cDATE <=" + dateEnd;
+           
 
             object[] os = this.DataProvider.CustomQuery(typeof(WeightVolume), new SQLCondition(sql));
             return Math.Round(((WeightVolume)os[0]).Volume, 2);
         }
 
-        public decimal ReceiveAverPeriod(string stroageCode, int dateBegin, int dateEnd)
+        public decimal ReceiveAverPeriod(string stroageCode, string sttype, int dateBegin, int dateEnd)
         {
 
             string sql = "select transno,MAX(MDATE||'-'||MTIME) maxdate ,MIN(MDATE||'-'||MTIME) mindate FROM TBLINVINOUTTRANS WHERE TransType='IN' AND (PROCESSTYPE='Receive' OR PROCESSTYPE='RECEIVEBEGIN') ";
@@ -15109,7 +15149,7 @@ LEFT JOIN TBLPICKDetailMaterialSN D ON  A.PICKNO=D.PICKNO AND A.PICKLINE=D.PICKL
         public decimal IQCAverPeriod(string stroageCode, string vendorCode, string sttype, int dateBegin, int dateEnd)
         {
 
-            string sql = "select transno,MAX(A.MDATE||'-'||A.MTIME) maxdate ,MIN(B.CDATE||'-'||B.CTIME) mindate FROM TBLINVINOUTTRANS A,TBLASNIQC B,TBLASN C WHERE (A.TRANSNO=B.STNO OR A.TRANSNO=B.IQCNO) AND B.STNO=C.STNO AND A.TransType='IN' AND A.PROCESSTYPE='IQC' ";
+            string sql = "select C.stno transno,MAX(A.MDATE||'-'||A.MTIME) maxdate ,MIN(B.CDATE||'-'||B.CTIME) mindate FROM TBLINVINOUTTRANS A,TBLASNIQC B,TBLASN C WHERE (A.TRANSNO=B.STNO OR A.TRANSNO=B.IQCNO) AND B.STNO=C.STNO AND A.TransType='IN' AND A.PROCESSTYPE='IQC' ";
             if (!string.IsNullOrEmpty(stroageCode))
                 sql += " AND C.STORAGECODE='" + stroageCode + "' ";
             if (!string.IsNullOrEmpty(sttype))
@@ -15117,10 +15157,10 @@ LEFT JOIN TBLPICKDetailMaterialSN D ON  A.PICKNO=D.PICKNO AND A.PICKLINE=D.PICKL
             if (!string.IsNullOrEmpty(vendorCode))
                 sql += " AND c.VENDORCODE='" + vendorCode + "' ";
             if (dateBegin > 0)
-                sql += " AND  A.MDATE >=" + dateBegin;
+                sql += " AND  C.CDATE >=" + dateBegin;
             if (dateEnd > 0)
-                sql += " AND  A.MDATE <=" + dateEnd;
-            sql += "GROUP BY  A.transno";
+                sql += " AND  C.CDATE <=" + dateEnd;
+            sql += " GROUP BY  C.stno";
 
             object[] oo = this.DataProvider.CustomQuery(typeof(DateWithTimeRange), new SQLCondition(sql));
             List<decimal> ls = new List<decimal>();
@@ -15387,7 +15427,7 @@ LEFT JOIN TBLPICKDetailMaterialSN D ON  A.PICKNO=D.PICKNO AND A.PICKLINE=D.PICKL
                 sql += " AND A.storageCode='" + storageCode + "' ";
             if (!string.IsNullOrEmpty(pickType))
                 sql += " AND A.picktype='" + pickType + "' ";
-
+            sql += " AND A.STATUS<>'Cancel' ";
             if (dateBegin > 0)
                 sql += " AND  A.CDATE >=" + dateBegin;
             if (dateEnd > 0)
@@ -15417,7 +15457,7 @@ LEFT JOIN TBLPICKDetailMaterialSN D ON  A.PICKNO=D.PICKNO AND A.PICKLINE=D.PICKL
                 sql += " AND A.storageCode='" + storageCode + "' ";
             if (!string.IsNullOrEmpty(pickType))
                 sql += " AND A.picktype='" + pickType + "' ";
-
+            sql += " AND A.STATUS<>'Cancel' ";
             if (dateBegin > 0)
                 sql += " AND  A.CDATE >=" + dateBegin;
             if (dateEnd > 0)
@@ -15443,6 +15483,7 @@ LEFT JOIN TBLPICKDetailMaterialSN D ON  A.PICKNO=D.PICKNO AND A.PICKLINE=D.PICKL
             if (!string.IsNullOrEmpty(pickType))
                 sql += " AND A.picktype='" + pickType + "' ";
 
+            sql += " AND A.STATUS<>'Cancel' ";
             if (dateBegin > 0)
                 sql += " AND  A.CDATE >=" + dateBegin;
             if (dateEnd > 0)
@@ -15990,7 +16031,7 @@ LEFT JOIN TBLPICKDetailMaterialSN D ON  A.PICKNO=D.PICKNO AND A.PICKLINE=D.PICKL
             {
                 foreach (OutStorageDetail d in os)
                 {
-                 
+
                     DateWithTime dwtE = StrToDateWithTime(d.CDATETIME, '-');
                     decimal t = Totalday(d.Packing_List_Date, d.Packing_List_Time, dwtE.Date, dwtE.Time);
                     if (t >= 0)
@@ -17185,20 +17226,20 @@ SELECT A.*,B.VALIDITY,(case when b.VALIDITY>0 then ((sysdate - to_date( to_char(
         public decimal InstorageAverPeriod(string stroageCode, int dateBegin, int dateEnd)
         {
             string sql = @"SELECT T1.TRANSNO, T1.BeginDate,T2.ENDDATE FROM TBLASN T,
-                            (select transno,MAX(MDATE||'-'||MTIME) BeginDate  FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='RECEIVEBEGIN' {0} GROUP BY TRANSNO) T1£¬
-                            (select transno,MAX(MDATE||'-'||MTIME) ENDDATE  FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='INSTORAEE' {0} GROUP BY TRANSNO) T2 WHERE T.STNO=T1.TRANSNO AND T.STNO=T2.TRANSNO ";
+                            (select transno,MAX(MDATE||'-'||MTIME) BeginDate  FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='RECEIVEBEGIN' GROUP BY TRANSNO) T1£¬
+                            (select transno,MAX(MDATE||'-'||MTIME) ENDDATE  FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='INSTORAEE' GROUP BY TRANSNO) T2 WHERE T.STNO=T1.TRANSNO AND T.STNO=T2.TRANSNO ";
             if (!string.IsNullOrEmpty(stroageCode))
             {
                 sql += " AND T.STORAGECODE='" + stroageCode + "' ";
             }
 
-            string dateFilter = string.Empty;
+         
             if (dateBegin > 0)
-                dateFilter += " AND  MDATE >=" + dateBegin;
+                sql += " AND  T.CDATE >=" + dateBegin;
             if (dateEnd > 0)
-                dateFilter += " AND  MDATE <=" + dateEnd;
+                sql += " AND  T.CDATE <=" + dateEnd;
 
-            sql = string.Format(sql, dateFilter);
+          
             object[] oo = this.DataProvider.CustomQuery(typeof(DateTimeRange), new SQLCondition(sql));
 
 
@@ -17245,23 +17286,28 @@ SELECT A.*,B.VALIDITY,(case when b.VALIDITY>0 then ((sysdate - to_date( to_char(
 
 
 
-        public decimal InstorageAverPeriod1(string stroageCode, int dateBegin, int dateEnd)
+        public decimal InstorageAverPeriod1(string stroageCode,string sttype, int dateBegin, int dateEnd)
         {
             string sql = @"SELECT T1.TRANSNO, T1.BeginDate,T2.ENDDATE FROM TBLASN T,
-                            (select transno,min(MDATE||'-'||MTIME) BeginDate  FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='INSTORAEE' {0} GROUP BY TRANSNO) T1£¬
-                            (select transno,MAX(MDATE||'-'||MTIME) ENDDATE  FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='INSTORAEE' {0} GROUP BY TRANSNO) T2 WHERE T.STNO=T1.TRANSNO AND T.STNO=T2.TRANSNO ";
+                            (select transno,min(MDATE||'-'||MTIME) BeginDate  FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='INSTORAEE'  GROUP BY TRANSNO) T1£¬
+                            (select transno,MAX(MDATE||'-'||MTIME) ENDDATE  FROM TBLINVINOUTTRANS WHERE TransType='IN' AND PROCESSTYPE='INSTORAEE'  GROUP BY TRANSNO) T2 WHERE T.STNO=T1.TRANSNO AND T.STNO=T2.TRANSNO ";
             if (!string.IsNullOrEmpty(stroageCode))
             {
                 sql += " AND T.STORAGECODE='" + stroageCode + "' ";
             }
 
-            string dateFilter = string.Empty;
-            if (dateBegin > 0)
-                dateFilter += " AND  MDATE >=" + dateBegin;
-            if (dateEnd > 0)
-                dateFilter += " AND  MDATE <=" + dateEnd;
+            if (!string.IsNullOrEmpty(sttype))
+            {
+                sql += " AND T.STTYPE='" + sttype + "' ";
+            }
 
-            sql = string.Format(sql, dateFilter);
+          
+            if (dateBegin > 0)
+                sql += " AND  T.CDATE >=" + dateBegin;
+            if (dateEnd > 0)
+                sql += " AND  T.CDATE <=" + dateEnd;
+
+            
             object[] oo = this.DataProvider.CustomQuery(typeof(DateTimeRange), new SQLCondition(sql));
 
 

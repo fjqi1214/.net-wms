@@ -193,7 +193,7 @@ namespace BenQGuru.eMES.Web.Warehouse
             //}
 
             //return row;
-
+            
             #endregion
             DataRow row = this.DtSource.NewRow();
             PickDetailQuery p = (PickDetailQuery)obj;
@@ -211,7 +211,7 @@ namespace BenQGuru.eMES.Web.Warehouse
             Pick pick = (Pick)_InventoryFacade.GetPick(p.PickNo);
             if (pick.PickType == PickType.PickType_UB)
 
-                row["HWItemCode"] = p.CustMCode;
+                row["HWItemCode"] = p.CustMCode; 
             else
                 row["HWItemCode"] = p.VEnderItemCode;
 
@@ -445,41 +445,56 @@ namespace BenQGuru.eMES.Web.Warehouse
 
         protected override string[] FormatExportRecord(object obj)
         {
-            string[] objs = new string[this.PickHeadViewFieldList.Length];
 
-            PickDetailQuery pickLine = obj as PickDetailQuery;
-            Type type = pickLine.GetType();
-            for (int i = 0; i < this.PickHeadViewFieldList.Length; i++)
-            {
-                ViewField field = this.PickHeadViewFieldList[i];
-                string strValue = string.Empty;
-                System.Reflection.FieldInfo fieldInfo = type.GetField(field.FieldName);
-                if (fieldInfo != null)
-                {
-                    strValue = fieldInfo.GetValue(pickLine).ToString();
-                }
-                if (field.FieldName == "Status")
-                {
-                    strValue = languageComponent1.GetString(pickLine.Status);
-                }
-                if (field.FieldName == "NewOrderNo")
-                {
-                    strValue = pickLine.OrderNo;
-                }
 
-                objs[i] = strValue;
-            }
-            return objs;
+
+          
+
+         
+
+           
+          
+        
+      
+            Pick pick = (Pick)_InventoryFacade.GetPick(((PickDetailQuery)obj).PickNo);
+            string hwItemCode = string.Empty;
+            if (pick.PickType == PickType.PickType_UB)
+
+                hwItemCode = ((PickDetailQuery)obj).CustMCode;
+            else
+                hwItemCode = ((PickDetailQuery)obj).VEnderItemCode;
+
+            return new string[]{((PickDetailQuery)obj).PickNo,
+                                ((PickDetailQuery)obj).PickLine,
+                                languageComponent1.GetString( ((PickDetailQuery)obj).Status),
+                                ((PickDetailQuery)obj).DQMCode,
+                                ((PickDetailQuery)obj).MDesc,
+                                hwItemCode,
+                                ((PickDetailQuery)obj).QTY.ToString(),
+                                ((PickDetailQuery)obj).Unit,
+                                ((PickDetailQuery)obj).SQTY.ToString("G0"),
+                                ((PickDetailQuery)obj).OutQTY.ToString("G0"),
+                                ((PickDetailQuery)obj).OweQTY.ToString("G0"),
+                                FormatHelper.ToDateString(((PickDetailQuery)obj).CDate),
+                               FormatHelper.ToTimeString(((PickDetailQuery)obj).CTime),
+                               ((PickDetailQuery)obj).CUser,
+                                FormatHelper.ToDateString(((PickDetailQuery)obj).MaintainDate),
+
+                                FormatHelper.ToTimeString(((PickDetailQuery)obj).MaintainTime),
+                             
+                           ((PickDetailQuery)obj).MaintainUser,
+                              
+                                };
+
         }
 
         protected override string[] GetColumnHeaderText()
         {
-            string[] strHeader = new string[this.PickHeadViewFieldList.Length];
-            for (int i = 0; i < strHeader.Length; i++)
-            {
-                strHeader[i] = this.PickHeadViewFieldList[i].Description;
-            }
-            return strHeader;
+
+
+
+
+            return new string[] { "拣货任务令号", "行号", "状态", "鼎桥物料编码", "物料描述", "华为物料编码", "数量", "单位", "已拣数量", "已出库数量", "欠料发货数量", "创建日期", "创建时间", "创建人", "维护日期", "维护时间", "维护人" };
         }
 
         #endregion

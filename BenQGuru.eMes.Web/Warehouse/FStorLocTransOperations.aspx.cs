@@ -325,6 +325,7 @@ namespace BenQGuru.eMES.Web.Warehouse
                 fromCartonno = row.Items.FindItemByKey("FromCartonno").Text;
             }
             StorageDetail storageDetail = (StorageDetail)_InventoryFacade.GetStorageDetail(fromCartonno);
+
             if (storageDetail == null)
             {
                 DataProvider.RollbackTransaction();
@@ -374,6 +375,27 @@ namespace BenQGuru.eMES.Web.Warehouse
                 {
                     this.DataProvider.RollbackTransaction();
                     WebInfoPublish.Publish(this, "拆箱目标箱号不能与原箱号一样！", this.languageComponent1);
+                    return;
+                }
+
+
+                StorageDetail tStorageDetail = (StorageDetail)_InventoryFacade.GetStorageDetail(tCartonNo);
+
+                if (tStorageDetail != null && tStorageDetail.DQMCode != storageDetail.DQMCode)
+                {
+
+
+                    this.DataProvider.RollbackTransaction();
+                    WebInfoPublish.Publish(this, "原箱与目标箱的物料必须相同！", this.languageComponent1);
+                    return;
+
+
+                }
+
+                if (tStorageDetail != null && storageDetail.StorageQty > totalsum && _Storloctrans.StorageCode != tStorageDetail.StorageCode)
+                {
+                    this.DataProvider.RollbackTransaction();
+                    WebInfoPublish.Publish(this, "目标箱库位必须与转储单的目标库位相同！", this.languageComponent1);
                     return;
                 }
 

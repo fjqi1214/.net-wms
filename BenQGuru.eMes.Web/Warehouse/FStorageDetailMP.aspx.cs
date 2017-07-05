@@ -76,6 +76,8 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
                 InitTextBox();
                 InitStorageList();
             }
+
+            HttpContext.Current.Server.ScriptTimeout = 720;
         }
         #region  单据类型下拉框
         private void InitStorageList()

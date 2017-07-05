@@ -213,7 +213,9 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
                 instorageRage = 0;
 
 
-            row["INSTORAGERange1"] = receiveRange + iqcRange + instorageRage;
+            //decimal instorageRage1 = facade.Totalday(s.InStoraeeDateInt, s.InStoraeeTimeInt, s.ReceiveBeginDateInt, s.ReceiveBeginTimeInt);
+
+            row["INSTORAGERange1"] = instorageRage;
 
 
             row["RECEIVEBEGIN"] = FormatHelper.TODateTimeString(s.ReceiveBeginDateInt, s.ReceiveBeginTimeInt);
@@ -387,7 +389,7 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
                     instorageRange = 0;
                 string INSTORAGERange = string.Empty;
 
-                INSTORAGERange = (receiveRange + iqcRange + instorageRange).ToString();
+                INSTORAGERange = (instorageRange).ToString();
 
                 xls.Cell(11, INSTORAGERange, style);
 
@@ -439,7 +441,7 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
                 INSTORAGERANGE = instorageRange.ToString();
 
 
-
+                    
 
 
                 xls.Cell(18, INSTORAGEBEGIN, style);

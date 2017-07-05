@@ -147,6 +147,7 @@ namespace BenQGuru.eMES.Web.Helper
                 ScriptManager sc1 = new ScriptManager();
                 sc1.ID = "sc1";
                 sc1.EnablePartialRendering = true;
+                sc1.AsyncPostBackTimeout = 1000;
                 form1.Controls.AddAt(0, sc1);
 
                 UpdatePanel up1 = new UpdatePanel();

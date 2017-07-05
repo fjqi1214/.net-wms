@@ -1212,7 +1212,7 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
                                     this.DataProvider.RollbackTransaction();
                                     WebInfoPublish.Publish(this, "返工申请人:" + asn.ReworkapplyUser + " 申请的物料：" + asnDetail.DqmCode + "在库存中不存在！", this.languageComponent1);
                                     //BenQGuru.eMES.Common.ExceptionManager.Raise(this.GetType().BaseType, "$Error_PICKDetail_NO_FIND_INFO");
-                                    return; 
+                                    return;
                                 }
                                 else
                                 {
@@ -1511,10 +1511,10 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
                         Asn[] asnObjs = _facade.GetASNIncludesThisSNs(strs);
                         foreach (Asn objAsn in asnObjs)
                         {
-                            if (objAsn.Status != ASNHeadStatus.ReceiveRejection && objAsn.Status != ASNHeadStatus.IQCRejection)
+                            if (objAsn.Status != ASNHeadStatus.ReceiveRejection && objAsn.Status != ASNHeadStatus.IQCRejection && objAsn.Status != ASNHeadStatus.Close)
                             {
                                 this.DataProvider.RollbackTransaction();
-                                WebInfoPublish.Publish(this, objAsn.Stno + "包含导入的SN 并且此入库指令不是初检拒收或者IQC拒收！", this.languageComponent1);
+                                WebInfoPublish.Publish(this, "此箱单中的SN以存在于" + objAsn.Stno + ",请检查后重新上传！", this.languageComponent1);
                                 // BenQGuru.eMES.Common.ExceptionManager.Raise(this.GetType().BaseType, "$Error_SAP_NEED_DATA_ERROR");
                                 return;
                             }

@@ -11174,7 +11174,7 @@ DomainObjectUtility.GetDomainObjectFieldsStringWithTableName(typeof(SAPMaterialT
 
         public PickDetail[] GetPickDetailMCodeByPickNo1(string pickno)
         {
-            string sql = "select distinct a.dqmcode from tblpickdetail a  where 1=1 ";
+            string sql = "select distinct a.dqmcode from tblpickdetail a  where 1=1 AND STATUS<>'Cancel' ";
             if (!string.IsNullOrEmpty(pickno))
             {
                 sql += string.Format(@" AND a.pickno ='{0}'", pickno);
@@ -11244,7 +11244,7 @@ DomainObjectUtility.GetDomainObjectFieldsStringWithTableName(typeof(SAPMaterialT
 
         public int GetPickDetailSumQtyByMCode(string pickno, string mcode)
         {
-            string sql = "select nvl(sum(qty),0) from tblpickdetail where 1=1 ";
+            string sql = "select nvl(sum(qty),0) from tblpickdetail where 1=1 and status<>'Cancel'";
             if (!string.IsNullOrEmpty(mcode))
             {
                 sql += string.Format(@" AND mcode ='{0}'", mcode);

@@ -4066,6 +4066,8 @@ namespace BenQGuru.eMES.Web.WebService
 
                     }
 
+
+
                     #region 拆箱
                     //1，	无论输入是【原箱号】，【SN】，首先判断管控类型，如果是单件管控，已输入SN为条件进行录入；如果是批管控或不管控则以【原箱号】和【数量】为录入条件。
                     StorageDetail[] storageDetails = this._WarehouseFacade.GetStorageDetailsFromCARTONNO(fromCartonNo);
@@ -4081,6 +4083,31 @@ namespace BenQGuru.eMES.Web.WebService
                         this.DataProvider.RollbackTransaction();
                         return "原箱号物料信息不存在";
                     }
+
+                    StorageDetail tStorageDetail = (StorageDetail)_InventoryFacade.GetStorageDetail(tLocationCartonNo);
+
+                    if (tStorageDetail != null)
+                    {
+                        if (tStorageDetail.DQMCode != storageDetail.DQMCode)
+                        {
+
+                            this.DataProvider.RollbackTransaction();
+                            return "原箱与目标箱的物料必须相同！";
+
+
+                        }
+                    }
+                    if (tStorageDetail != null)
+                    {
+                        if (_Storloctrans.StorageCode != tStorageDetail.StorageCode)
+                        {
+                            this.DataProvider.RollbackTransaction();
+                            return "目标箱库位必须与转储单的目标库位相同！";
+
+                        }
+                    }
+
+
                     Domain.MOModel.Material mar = mar_objs[0] as Domain.MOModel.Material;
                     if (mar.MCONTROLTYPE == SAP_CONTROLTYPE.SAP_ITEM_CONTROL_KEYPARTS)  //单件管控
                     {
@@ -5556,7 +5583,7 @@ namespace BenQGuru.eMES.Web.WebService
             //sbShowMsg.AppendFormat(c1.CARINVNO + "已经申请OQC,不能重复申请！");
             //continue;
 
-                
+
             if (c1.STATUS == "OQC")
                 return c1.CARINVNO + "已经申请OQC,不能重复申请！";
 
