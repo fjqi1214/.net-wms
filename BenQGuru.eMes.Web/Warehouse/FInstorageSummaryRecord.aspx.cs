@@ -191,29 +191,29 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
 
 
             row["ASNRECEIVECOUNT"] = s.ASNRECEIVECOUNT;
-            row["RECEIVECARTONNOTOTAL"] = facade.ReceiveSummaryCartonno(s.StorageCode, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            row["RECEIVECARTONNOTOTAL"] = facade.ReceiveSummaryCartonno(s.StorageCode, drpStorageInTypeQuery.SelectedValue, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                          FormatHelper.TODateInt(dateInDateToQuery.Text));
-            row["RECEIVETOTALWEIGHT"] = facade.ReceiveSummaryWeight(s.StorageCode, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            row["RECEIVETOTALWEIGHT"] = facade.ReceiveSummaryWeight(s.StorageCode, drpStorageInTypeQuery.SelectedValue, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                          FormatHelper.TODateInt(dateInDateToQuery.Text));
 
 
-            row["RECEIVETOTALVOLUMN"] = facade.ReceiveSummaryVolume(s.StorageCode, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            row["RECEIVETOTALVOLUMN"] = facade.ReceiveSummaryVolume(s.StorageCode, drpStorageInTypeQuery.SelectedValue, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                        FormatHelper.TODateInt(dateInDateToQuery.Text));
 
             row["AVERRECEIVEPERIOD"] = averReceive;
 
             row["AVERIQCPERIOD"] = averIQC;
             row["ONSHELFASNCOUNT"] = s.ASNINSTORAGECOUNT;
-            row["ONSHELFCARTONNOTOTAL"] = facade.OnShelfSummaryCartonno(s.StorageCode, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            row["ONSHELFCARTONNOTOTAL"] = facade.OnShelfSummaryCartonno(s.StorageCode, drpStorageInTypeQuery.SelectedValue, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                        FormatHelper.TODateInt(dateInDateToQuery.Text));
             ;
 
-            row["ONSHELFWEIGHTTOTAL"] = facade.OnShelfSummaryWeight(s.StorageCode, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            row["ONSHELFWEIGHTTOTAL"] = facade.OnShelfSummaryWeight(s.StorageCode, drpStorageInTypeQuery.SelectedValue, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                    FormatHelper.TODateInt(dateInDateToQuery.Text));
 
 
 
-            row["ONSHELFVOLUMNTOTAL"] = facade.OnShelfSummaryVolume(s.StorageCode, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            row["ONSHELFVOLUMNTOTAL"] = facade.OnShelfSummaryVolume(s.StorageCode, drpStorageInTypeQuery.SelectedValue, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                    FormatHelper.TODateInt(dateInDateToQuery.Text));
 
 
