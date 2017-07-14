@@ -196,12 +196,15 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
                                          FormatHelper.TODateInt(dateInDateToQuery.Text));
             decimal averClosePackList = facade.averCARTONNOPeriod(s.StorageCode, drpPickTypeQuery.SelectedValue, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                          FormatHelper.TODateInt(dateInDateToQuery.Text));
-            decimal averWare = averPick + averPack + averOQC + averClosePackList;
+            decimal averWare = facade.averWarePeriod(s.StorageCode, drpPickTypeQuery.SelectedValue, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+                                         FormatHelper.TODateInt(dateInDateToQuery.Text));
             decimal averDown = facade.averDownPeriod(s.StorageCode, drpPickTypeQuery.SelectedValue, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                          FormatHelper.TODateInt(dateInDateToQuery.Text));
             decimal averDeliery = facade.averDeliveryPeriod(s.StorageCode, drpPickTypeQuery.SelectedValue, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                          FormatHelper.TODateInt(dateInDateToQuery.Text));
-            row["AVEROUTSTORAGEPERIOD"] = averWare + averDown + averDeliery;
+            decimal averDeliery2 = facade.averDeliveryPeriod2(s.StorageCode, drpPickTypeQuery.SelectedValue, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+                                         FormatHelper.TODateInt(dateInDateToQuery.Text));
+            row["AVEROUTSTORAGEPERIOD"] = averDeliery;
             row["AVGERWAREPERIOD"] = averWare;
             row["AVERDOWNPERIOD"] = averDown;
             row["CLOSEPICKCOUNT"] = s.PICKCOUNT;
@@ -222,7 +225,7 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
 
 
 
-            row["AVERFINISHCARTONNOPERIOD"] = averDeliery;
+            row["AVERFINISHCARTONNOPERIOD"] = averDeliery2;
             row["CARTONNOS"] = s.CARTONNOS;
             row["WEIGHT"] = s.GROSS_WEIGHT;
             row["VOLUME"] = s.VOLUME;

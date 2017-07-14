@@ -894,7 +894,7 @@ namespace BenQGuru.eMES.Web.IQC
             try
             {
 
-              
+
 
                 //并修改当前箱号对应的TBLASNIQCDETAIL. NGQTY= TBLASNIQCDETAIL. NGQTY- TBLASNIQCDETAILEC. NGQTY
                 AsnIQCDetailEc asnIqcDetailEc0 = domainObjects.ToArray()[0] as AsnIQCDetailEc;
@@ -989,49 +989,48 @@ namespace BenQGuru.eMES.Web.IQC
                 {
                     #region 更新表 TBLASNIQC,TBLASNIQCDETAIL,TBLASNIQCDETAILSN
 
-                    if (iqc != null)
+
+                    iqc.IqcType = IQCType.IQCType_FullCheck;
+                    iqc.Status = IQCStatus.IQCStatus_SQEJudge;
+                    iqc.AQLLevel = drpAQLStandardQuery.SelectedValue;
+                    iqc.QcStatus = "N";
+
+                    _IQCFacade.UpdateAsnIQC(iqc);
+                    ToSTS1(IqcNo);
+                    object[] objAsnIqcDetail = _IQCFacade.GetAsnIQCDetailByIqcNo(_IQCNo);
+                    if (objAsnIqcDetail != null)
                     {
-                        iqc.IqcType = IQCType.IQCType_FullCheck;
-                        iqc.Status = IQCStatus.IQCStatus_SQEJudge;
-                        iqc.AQLLevel = drpAQLStandardQuery.SelectedValue;
-                        iqc.QcStatus = "N";
-
-                        _IQCFacade.UpdateAsnIQC(iqc);
-                        ToSTS1(IqcNo);
-                        object[] objAsnIqcDetail = _IQCFacade.GetAsnIQCDetailByIqcNo(_IQCNo);
-                        if (objAsnIqcDetail != null)
+                        foreach (AsnIQCDetail asnIQCDetail in objAsnIqcDetail)
                         {
-                            foreach (AsnIQCDetail asnIQCDetail in objAsnIqcDetail)
-                            {
 
-                                asnIQCDetail.QcStatus = "Y";
-                                asnIQCDetail.QcPassQty = asnIQCDetail.Qty;
-                                _IQCFacade.UpdateAsnIQCDetail(asnIQCDetail);
+                            asnIQCDetail.QcStatus = "Y";
+                            asnIQCDetail.QcPassQty = asnIQCDetail.Qty;
+                            _IQCFacade.UpdateAsnIQCDetail(asnIQCDetail);
 
-                            }
                         }
+                    }
 
-                        object[] objAsnIqcDetailSN = _IQCFacade.GetAsnIqcDetailSNByIqcNo(_IQCNo);
-                        if (objAsnIqcDetailSN != null)
+                    object[] objAsnIqcDetailSN = _IQCFacade.GetAsnIqcDetailSNByIqcNo(_IQCNo);
+                    if (objAsnIqcDetailSN != null)
+                    {
+                        foreach (AsnIqcDetailSN asnIqcDetailSN in objAsnIqcDetailSN)
                         {
-                            foreach (AsnIqcDetailSN asnIqcDetailSN in objAsnIqcDetailSN)
+
+                            asnIqcDetailSN.QcStatus = "Y";
+                            _IQCFacade.UpdateAsnIqcDetailSN(asnIqcDetailSN);
+
+
+                            Asndetailsn asnDetailSn = (Asndetailsn)_InventoryFacade.GetAsndetailsn(asnIqcDetailSN.Sn, asnIqcDetailSN.StNo, Convert.ToInt32(asnIqcDetailSN.StLine));
+
+                            if (asnDetailSn != null)
                             {
-
-                                asnIqcDetailSN.QcStatus = "Y";
-                                _IQCFacade.UpdateAsnIqcDetailSN(asnIqcDetailSN);
-
-
-                                Asndetailsn asnDetailSn = (Asndetailsn)_InventoryFacade.GetAsndetailsn(asnIqcDetailSN.Sn, asnIqcDetailSN.StNo, Convert.ToInt32(asnIqcDetailSN.StLine));
-
-                                if (asnDetailSn != null)
-                                {
-                                    asnDetailSn.QcStatus = "Y";
-                                    _InventoryFacade.UpdateAsndetailsn(asnDetailSn);
-                                }
+                                asnDetailSn.QcStatus = "Y";
+                                _InventoryFacade.UpdateAsndetailsn(asnDetailSn);
                             }
                         }
                     }
-                    ToSTS1(IqcNo);
+
+
                     #endregion
                 }
                 else if (this.rblType.Items[0].Selected && ngQty > 0)

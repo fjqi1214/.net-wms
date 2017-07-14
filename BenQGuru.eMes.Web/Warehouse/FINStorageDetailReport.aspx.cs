@@ -208,12 +208,14 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
             if (iqcRange < 0)
                 iqcRange = 0;
 
-            decimal instorageRage = facade.Totalday(s.InStoraeeDateInt, s.InStoraeeTimeInt, s.IQCDateInt > s.IQCSQEDateInt ? s.IQCDateInt : s.IQCSQEDateInt, s.IQCDateInt > s.IQCSQEDateInt ? s.IQCTimeInt : s.IQCSQETimeInt);
+            decimal instorageRage = facade.Totalday(s.InStoraeeDateInt, s.InStoraeeTimeInt, s.ReceiveBeginDateInt, s.ReceiveBeginTimeInt);
             if (instorageRage < 0)
                 instorageRage = 0;
 
 
-            //decimal instorageRage1 = facade.Totalday(s.InStoraeeDateInt, s.InStoraeeTimeInt, s.ReceiveBeginDateInt, s.ReceiveBeginTimeInt);
+            decimal instorageRage1 = facade.Totalday(s.InStoraeeDateInt, s.InStoraeeTimeInt, s.IQCDateInt, s.IQCTimeInt);
+            if (instorageRage1 < 0)
+                instorageRage1 = 0;
 
             row["INSTORAGERange1"] = instorageRage;
 
@@ -243,7 +245,7 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
 
 
 
-            row["INSTORAGERANGE"] = instorageRage;
+            row["INSTORAGERANGE"] = instorageRage1;
 
 
 
@@ -362,7 +364,7 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
                 xls.Cell(4, VENDORCODE, style);
                 string VendorName = ins[i].VendorName;
                 xls.Cell(5, VendorName, style);
-                string ASNCDATE = FormatHelper.ToDateString(ins[i].ASNCDATE);
+                string ASNCDATE = FormatHelper.TODateTimeString(ins[i].ASNCDATE, ins[i].ASNCTIME);
                 xls.Cell(6, ASNCDATE, style);
                 string CARTONNOS = ins[i].CARTONNOCount.ToString();
                 xls.Cell(7, CARTONNOS, style);
@@ -371,7 +373,7 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
                 string VOLUME = ins[i].VOLUME;
                 xls.Cell(9, VOLUME, style);
 
-                string ISSUEDATE1 = FormatHelper.ToDateString(ins[i].IssueDateInt);
+                string ISSUEDATE1 = FormatHelper.TODateTimeString(ins[i].IssueDateInt, ins[i].IssueTimeInt);
                 xls.Cell(10, ISSUEDATE1, style);
 
                 decimal receiveRange = facade.Totalday(ins[i].ReceiveEndDateInt, ins[i].ReceiveEndTimeInt, ins[i].ReceiveBeginDateInt, ins[i].ReceiveBeginTimeInt);
@@ -387,6 +389,12 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
 
                 if (instorageRange < 0)
                     instorageRange = 0;
+
+
+                decimal instorageRange1 = facade.Totalday(ins[i].InStoraeeDateInt, ins[i].InStoraeeTimeInt, ins[i].IQCDateInt, ins[i].IQCTimeInt);
+                if (instorageRange1 < 0)
+                    instorageRange1 = 0;
+
                 string INSTORAGERange = string.Empty;
 
                 INSTORAGERange = (instorageRange).ToString();
@@ -417,7 +425,7 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
                 xls.Cell(15, IQCCDATE, style);
                 string IQCENDDATE = string.Empty;
                 if (ins[i].IQCDate != null)
-                    IQCENDDATE = FormatHelper.ToDateString(ins[i].IQCDateInt);
+                    IQCENDDATE = FormatHelper.TODateTimeString(ins[i].IQCDateInt,ins[i].IQCTimeInt);
                 xls.Cell(16, IQCENDDATE, style);
 
 
@@ -441,14 +449,14 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
                 INSTORAGERANGE = instorageRange.ToString();
 
 
-                    
+
 
 
                 xls.Cell(18, INSTORAGEBEGIN, style);
 
                 xls.Cell(19, INSTORAGEEND, style);
 
-                xls.Cell(20, INSTORAGERANGE, style);
+                xls.Cell(20, instorageRange1.ToString(), style);
 
 
                 rowNum++;

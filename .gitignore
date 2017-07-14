@@ -9,3 +9,7 @@ logs/
 *.sln
 *.xls
 !/bin/*.dll
+exclude.txt
+file1.txt
+file2.txt
+file2_sort.txt

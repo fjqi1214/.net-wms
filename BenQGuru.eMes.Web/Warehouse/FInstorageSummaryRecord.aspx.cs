@@ -179,14 +179,14 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
             row["ASNDOWNCOUNT"] = s.ASNDOWNCOUNT;
             row["StorageCode"] = s.StorageCode;
 
-            decimal averReceive = facade.ReceiveAverPeriod(s.StorageCode, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            decimal averReceive = facade.ReceiveAverPeriod(s.StorageCode, this.drpStorageInTypeQuery.SelectedValue, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                        FormatHelper.TODateInt(dateInDateToQuery.Text));
-            decimal averIQC = facade.IQCAverPeriod(s.StorageCode, string.Empty, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            decimal averIQC = facade.IQCAverPeriod(s.StorageCode, string.Empty, this.drpStorageInTypeQuery.SelectedValue, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                        FormatHelper.TODateInt(dateInDateToQuery.Text));
 
-            decimal averOnShelf = facade.InstorageAverPeriod1(s.StorageCode, this.txtStorageCodeQuery.Text, FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            decimal averOnShelf = facade.InstorageAverPeriod1(s.StorageCode, this.drpStorageInTypeQuery.SelectedValue, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                     FormatHelper.TODateInt(dateInDateToQuery.Text));
-            row["AVERINSTORAGEPERIOD"] = facade.InstorageAverPeriod(s.StorageCode,   FormatHelper.TODateInt(dateInDateFromQuery.Text),
+            row["AVERINSTORAGEPERIOD"] = facade.InstorageAverPeriod(s.StorageCode, FormatHelper.TODateInt(dateInDateFromQuery.Text),
                                     FormatHelper.TODateInt(dateInDateToQuery.Text));
 
 

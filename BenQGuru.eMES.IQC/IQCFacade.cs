@@ -3757,6 +3757,29 @@ WHERE 1=1 ", DomainObjectUtility.GetDomainObjectFieldsString(typeof(AsnIQCDetail
 
         }
 
+        public string GetAsnNewStatus(string stno)
+        {
+
+            string sql = "select sum(qcpassqty) qcpassqty,sum(actqty) actqty from tblasndetailitem where stno='" + stno + "'";
+
+            object[] objs = this.DataProvider.CustomQuery(typeof(Asndetailitem), new SQLCondition(sql));
+            Asndetailitem sum = (Asndetailitem)objs[0];
+            string status = string.Empty;
+            if (sum.QcpassQty <= 0)
+                status = ASNHeadStatus.IQCRejection;
+            else if (sum.QcpassQty > sum.ActQty)
+            {
+                status = ASNHeadStatus.OnLocation;
+            }
+            else if (sum.QcpassQty == sum.ActQty) {
+                status = ASNHeadStatus.Close;
+            }
+
+            Log.Error("GetAsnNewStatus---Return: " + status);
+            return status;
+
+        }
+
         public bool CanToOnlocationStaus(string stno)
         {
             List<AsnIQC> l = new List<AsnIQC>();
@@ -3998,7 +4021,7 @@ WHERE 1=1 ", DomainObjectUtility.GetDomainObjectFieldsString(typeof(AsnIQCDetail
 
         }
 
-        public int GetNGTypesNum(string iqcNo,string cartonno)
+        public int GetNGTypesNum(string iqcNo, string cartonno)
         {
 
             string sql = "SELECT nvl(sum(qty),0) qty FROM tblasniqcdetail WHERE IQCNO='" + iqcNo + "'";

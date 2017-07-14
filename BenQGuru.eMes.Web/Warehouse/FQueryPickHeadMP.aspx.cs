@@ -282,6 +282,10 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
             Type type = pick.GetType();
             row[1] = pick.SerialNumber.ToString();
             BenQGuru.eMES.MOModel.ItemFacade itemFacade = new BenQGuru.eMES.MOModel.ItemFacade(this.DataProvider);
+          
+            _WarehouseFacade=new WarehouseFacade(this.DataProvider);
+
+
             for (int i = 0; i < this.PickHeadViewFieldList.Length; i++)
             {
                 ViewField field = this.PickHeadViewFieldList[i];
@@ -317,6 +321,32 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
                 else if (field.FieldName == "PickFinishDate")
                 {
                     strValue = GetDate(pick.FinishDate);
+                }
+                else if (field.FieldName == "OQCDate") {
+                     string oqcEndStr=_WarehouseFacade.GetOQCEndDateTime(pick.PickNo);
+                     if (!string.IsNullOrEmpty(oqcEndStr))
+                     {
+                       
+                         strValue = oqcEndStr.Split('-')[0];
+                     }
+                     else
+                     {
+                         strValue = string.Empty;
+                     }
+                    
+                       
+                }
+                else if (field.FieldName == "OQCTime") {
+                    string oqcEndStr = _WarehouseFacade.GetOQCEndDateTime(pick.PickNo);
+                    if (!string.IsNullOrEmpty(oqcEndStr))
+                    {
+                       
+                        strValue = oqcEndStr.Split('-')[1];
+                    }
+                    else
+                    {
+                        strValue = string.Empty;
+                    }
                 }
                 else if (field.FieldName == "VenderName")
                 {

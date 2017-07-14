@@ -620,7 +620,7 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
             int count = 0;
             if (!string.IsNullOrEmpty(dt.Rows[5][0].ToString().Trim()))
             {
-                for (int s = 6; s < dt.Rows.Count - 1; s++)
+                for (int s = 6; s <= dt.Rows.Count - 1; s++)
                 {
 
                     if (dt.Rows[s][0].ToString().Trim().ToUpper().Length > 4 && dt.Rows[s][0].ToString().Trim().ToUpper().Substring(0, 5) == "TOTAL")

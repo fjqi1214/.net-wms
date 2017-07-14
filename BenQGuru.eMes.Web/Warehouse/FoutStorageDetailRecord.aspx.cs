@@ -438,7 +438,7 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
 
 
 
-                string DOWNDATE = FormatHelper.ToDateString(details[i].Down_Date);
+                string DOWNDATE = FormatHelper.TODateTimeString(details[i].Down_Date,details[i].Down_Time);
                 xls.Cell(7, DOWNDATE, style);
 
                 string downPeriod = string.Empty;
@@ -532,7 +532,7 @@ namespace BenQGuru.eMES.Web.WarehouseWeb
 
 
                 string CARTONNOS = details[i].CARTONNOS.ToString();
-                xls.Cell(23, OUTSTORAGEPERIOD, style);
+                xls.Cell(23, CARTONNOS, style);
 
 
 
